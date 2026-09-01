@@ -1,6 +1,6 @@
 # OpenCode Go Radar
 
-OpenCode Go 모델의 **가격 · 코딩 성능 · 프라이버시 · provider/routing · 데이터 보존 · 중국 관련 데이터 처리 상태**를 추적하는 정적 리포트입니다.
+OpenCode Go 모델의 **가격 · 코딩 성능 · 프라이버시 · provider/routing · 데이터 보존 · 중국 관련 데이터 처리 상태**를 추적하는 정적 대시보드입니다.
 
 ## Dashboard
 
@@ -28,27 +28,20 @@ GitHub Pages: https://easthelper.github.io/opencode-go-radar/
 - 모델 개발사 국적과 실제 호스팅 위치의 분리
 - 중국 전송 가능성
 - Coding / Value / Privacy 등급
-- 모델 포지셔닝
+- 모델 포지셔닝 및 추천 우선순위
 
 `Unknown`은 임의 추정하지 않고 확인 불가 상태로 남긴 값입니다. 서로 다른 benchmark harness 결과는 단일 점수로 합산하지 않습니다.
 
-## Email report
-
-`scripts/build_email.py`가 같은 데이터로 `reports/email-latest.html`을 생성합니다.
-
-메일 클라이언트에서는 JavaScript 정렬이 지원되지 않기 때문에 이메일은 읽기 좋은 정적 테이블을 사용하고, 전체 정렬/검색/필터는 GitHub Pages 대시보드로 연결합니다.
-
 ## Automation
 
-- `.github/workflows/daily-report.yml`
-  - 매일 `08:00 KST` 실행
-  - JSON 검증
-  - 이메일 HTML 재생성
-  - 변경이 있으면 자동 커밋
-- `.github/workflows/pages.yml`
-  - 대시보드/데이터/리포트 변경 시 GitHub Pages 재배포
+자동화 흐름은 단순하게 유지합니다.
 
-> 현재 workflow는 **리포트 생성/배포**를 자동화합니다. 외부 웹 자료를 AI가 자동 조사해 `models.json`을 갱신하는 단계는 별도입니다. 검증된 조사 결과를 `models.json`에 반영하면 사이트와 이메일은 자동으로 따라 갱신됩니다.
+1. 매일 오전 8시 KST에 ChatGPT 자동 점검이 OpenCode Go 공식 자료와 관련 provider 문서를 조사합니다.
+2. 검증 가능한 변경이 있을 때만 `data/models.json`과 `as_of`를 업데이트합니다.
+3. `data/**` 변경이 `main`에 반영되면 `.github/workflows/pages.yml`이 GitHub Pages를 자동 재배포합니다.
+4. 변경이 없으면 불필요한 repo 커밋이나 Pages 재배포를 만들지 않습니다.
+
+GitHub Actions 자체는 별도의 일일 조사/리포트 생성을 수행하지 않습니다. 조사와 판단은 ChatGPT 자동 점검이 담당하고, GitHub는 정적 사이트 배포만 담당합니다.
 
 ## Cost convention
 
