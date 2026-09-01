@@ -1,0 +1,37 @@
+{
+  "as_of": "2026-09-01",
+  "subscription_usd_per_month": 10,
+  "global_limits": {
+    "five_hour_usage_usd": 12,
+    "weekly_usage_usd": 30,
+    "monthly_usage_usd": 60
+  },
+  "note": "monthly_usage_usd is the model-specific included Usage value published by OpenCode Go. request counts are OpenCode estimates based on observed typical Go request patterns.",
+  "models": {
+    "Grok 4.6": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":169,"requests_week":423,"requests_month":845},
+    "GPT-5.6 Luna": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":2050,"requests_week":5100,"requests_month":10250},
+    "GLM-5.3-Flash": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":1580,"requests_week":3950,"requests_month":7900,"promotion":"2x usage limits for a limited time; effective dollar cap not explicitly stated in the usage table"},
+    "GLM-5.3": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":220,"requests_week":540,"requests_month":1080},
+    "GLM-5.2": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":880,"requests_week":2150,"requests_month":4300},
+    "GLM-5.1": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":880,"requests_week":2150,"requests_month":4300},
+    "Kimi K3": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":110,"requests_week":250,"requests_month":490},
+    "Kimi K2.7 Code": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":1350,"requests_week":3380,"requests_month":6750},
+    "Kimi K2.6": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":1150,"requests_week":2880,"requests_month":5750},
+    "LongCat-2.0": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":11400,"requests_week":28600,"requests_month":57200},
+    "MiMo-V2.5": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":30100,"requests_week":75200,"requests_month":150400},
+    "MiMo-V2.5-Pro": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":3250,"requests_week":8150,"requests_month":16300},
+    "MiniMax M3": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":3200,"requests_week":8000,"requests_month":16000},
+    "MiniMax M2.7": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":3400,"requests_week":8500,"requests_month":17000},
+    "Muse Spark 1.2 Contributor": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":45300,"requests_week":113300,"requests_month":226600},
+    "Qwen3.8 Max": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":160,"requests_week":400,"requests_month":810},
+    "Qwen3.8 Flash": {"monthly_usage_usd":30,"usage_multiplier":3,"requests_5h":5400,"requests_week":13500,"requests_month":27000},
+    "Qwen3.7 Max": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":340,"requests_week":840,"requests_month":1690},
+    "Qwen3.7 Plus": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":4300,"requests_week":10800,"requests_month":21600},
+    "Qwen3.6 Plus": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":3300,"requests_week":8200,"requests_month":16300},
+    "DeepSeek V4 Pro": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":1050,"requests_week":2600,"requests_month":5200},
+    "DeepSeek V4 Flash": {"monthly_usage_usd":30,"usage_multiplier":3,"requests_5h":7600,"requests_week":18900,"requests_month":37800},
+    "DeepSeek V4 Flash Vision Exp": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":3800,"requests_week":9450,"requests_month":18900},
+    "Hy4 preview": {"monthly_usage_usd":30,"usage_multiplier":3,"requests_5h":1350,"requests_week":3380,"requests_month":6770},
+    "Hy3": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":4300,"requests_week":10750,"requests_month":21500}
+  }
+}
