@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-01",
+  "as_of": "2026-09-02",
   "subscription_usd_per_month": 10,
   "global_limits": {
     "five_hour_usage_usd": 12,
@@ -25,7 +25,7 @@
     "Muse Spark 1.2 Contributor": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":45300,"requests_week":113300,"requests_month":226600},
     "Qwen3.8 Max": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":160,"requests_week":400,"requests_month":810},
     "Qwen3.8 Flash": {"monthly_usage_usd":30,"usage_multiplier":3,"requests_5h":5400,"requests_week":13500,"requests_month":27000},
-    "Qwen3.7 Max": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":340,"requests_week":840,"requests_month":1690},
+    "Qwen3.7 Max": {"monthly_usage_usd":30,"usage_multiplier":3,"requests_5h":170,"requests_week":420,"requests_month":840},
     "Qwen3.7 Plus": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":4300,"requests_week":10800,"requests_month":21600},
     "Qwen3.6 Plus": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":3300,"requests_week":8200,"requests_month":16300},
     "DeepSeek V4 Pro": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":1050,"requests_week":2600,"requests_month":5200},
