@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="OpenCode Go 모델 가격·코딩 성능·프라이버시·데이터 처리 현황 추적" />
+  <title>OpenCode Go Radar</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">OPENCODE GO · MODEL INTELLIGENCE</p>
+      <h1>OpenCode Go Radar</h1>
+      <p class="lede">코딩 성능, 실제 비용, 데이터 프라이버시와 호스팅 리스크를 한 화면에서 비교합니다.</p>
+      <div id="meta" class="meta">Loading…</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="summary" class="cards" aria-label="추천 요약"></section>
+
+    <section class="panel controls">
+      <div class="control search-control">
+        <label for="search">검색</label>
+        <input id="search" type="search" placeholder="GLM, Kimi, privacy…" />
+      </div>
+      <div class="control">
+        <label for="privacy">Privacy Risk</label>
+        <select id="privacy"><option value="">전체</option><option>Low</option><option>Medium</option><option>High</option><option>Unknown</option></select>
+      </div>
+      <div class="control">
+        <label for="china">중국 전송</label>
+        <select id="china"><option value="">전체</option><option>Yes</option><option>Possible</option><option>No evidence</option><option>Unknown</option></select>
+      </div>
+      <div class="control">
+        <label for="position">포지셔닝</label>
+        <select id="position"><option value="">전체</option><option>성능 우선</option><option>균형형</option><option>가성비 우선</option><option>저가 서브에이전트</option><option>프라이버시 우선</option></select>
+      </div>
+      <button id="reset" type="button">필터 초기화</button>
+    </section>
+
+    <section class="panel table-panel">
+      <div class="table-head">
+        <div>
+          <h2>모델 비교</h2>
+          <p>헤더를 클릭하면 정렬됩니다. 예상 비용은 Input 1M + Output 200K 기준입니다.</p>
+        </div>
+        <span id="count" class="count"></span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr>
+            <th data-key="model">Model</th>
+            <th data-key="developer">Developer</th>
+            <th data-key="coding_grade">Coding</th>
+            <th data-key="value_grade">Value</th>
+            <th data-key="estimated_cost">Est. Cost*</th>
+            <th data-key="input_price">Input $/M</th>
+            <th data-key="output_price">Output $/M</th>
+            <th data-key="cached_input">Cache $/M</th>
+            <th data-key="context">Context</th>
+            <th data-key="benchmark">Coding benchmark</th>
+            <th data-key="training">Training</th>
+            <th data-key="retention">Retention</th>
+            <th data-key="hosting">Hosting</th>
+            <th data-key="china_transfer">China transfer</th>
+            <th data-key="privacy_risk">Privacy</th>
+            <th>Positioning</th>
+          </tr></thead>
+          <tbody id="models"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel notes">
+      <h2>해석 원칙</h2>
+      <p><strong>중국계 모델</strong>과 <strong>중국 전송</strong>은 별개입니다. 개발사 국적만으로 호스팅 지역이나 데이터 전송을 추정하지 않습니다.</p>
+      <p><strong>Unknown</strong>은 보수적으로 미확인 상태를 뜻합니다. 서로 다른 harness의 벤치마크를 단일 숫자 순위로 합산하지 않습니다.</p>
+      <p>원본 데이터: <a href="data/models.json">data/models.json</a> · 이메일 HTML: <a href="reports/email-latest.html">latest report</a></p>
+    </section>
+  </main>
+
+  <footer><div class="wrap">OpenCode Go Radar · generated from versioned repository data</div></footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>
