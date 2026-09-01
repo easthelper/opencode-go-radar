@@ -1,6 +1,12 @@
 {
   "as_of": "2026-09-01",
   "workload": {"input_tokens": 1000000, "output_tokens": 200000},
+  "recommendations": {
+    "absolute_performance": "GLM-5.3",
+    "best_value": "GLM-5.3-Flash",
+    "sensitive_code": "Kimi K2.6",
+    "cheap_subagent": "MiMo-V2.5"
+  },
   "models": [
     {"model":"Grok 4.6","developer":"xAI","provider":"Undisclosed / xAI path likely","input_price":2.0,"output_price":6.0,"cached_input":0.5,"context":"500K","reasoning":true,"benchmark":"Terminal-Bench 3 26.0","training":"No Training","retention":"30 days","chinese_model":false,"hosting":"Go region undisclosed; xAI native US","china_transfer":"No evidence","coding_grade":"S","value_grade":"B","privacy_risk":"Medium","positioning":["성능 우선"]},
     {"model":"GPT-5.6 Luna","developer":"OpenAI","provider":"Undisclosed / OpenAI path likely","input_price":0.2,"output_price":1.2,"cached_input":0.02,"context":"1.05M","reasoning":true,"benchmark":"SWE-bench Pro 62.7 / Terminal-Bench 2.1 84.7","training":"No Training","retention":"Up to 30 days abuse logs","chinese_model":false,"hosting":"Go region undisclosed","china_transfer":"No evidence","coding_grade":"A","value_grade":"S","privacy_risk":"Medium","positioning":["균형형","가성비 우선"]},
