@@ -6,7 +6,7 @@
     "weekly_usage_usd": 30,
     "monthly_usage_usd": 60
   },
-  "note": "monthly_usage_usd is the model-specific included Usage value published by OpenCode Go. request counts are OpenCode estimates based on observed typical Go request patterns.",
+  "note": "OpenCode Go quota windows are shared across models: $12/5h, $30/week, $60/month. The published per-model Usage value ($15/$30/$60) is not an independent model wallet; it is the effective raw model-dollar usage available if that model were used exclusively before the shared quota is exhausted. Relative quota burn can therefore be read as 4x for $15, 2x for $30, and 1x for $60 models. Request counts are OpenCode estimates based on observed typical Go request patterns.",
   "models": {
     "Grok 4.6": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":169,"requests_week":423,"requests_month":845},
     "GPT-5.6 Luna": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":2050,"requests_week":5100,"requests_month":10250},
