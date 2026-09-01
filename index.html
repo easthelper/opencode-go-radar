@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="OpenCode Go 모델 가격·코딩 성능·월간 사용량·프라이버시·데이터 처리 현황 추적" />
+  <meta name="description" content="OpenCode Go 모델 가격·코딩 성능·실효 사용량·프라이버시·데이터 처리 현황 추적" />
   <title>OpenCode Go Radar</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
@@ -12,7 +12,7 @@
     <div class="wrap">
       <p class="eyebrow">OPENCODE GO · MODEL INTELLIGENCE</p>
       <h1>OpenCode Go Radar</h1>
-      <p class="lede">코딩 성능, 실제 비용, 모델별 사용 한도, 데이터 프라이버시와 호스팅 리스크를 한 화면에서 비교합니다.</p>
+      <p class="lede">코딩 성능, 실제 비용, 공유 quota 소모율, 데이터 프라이버시와 호스팅 리스크를 한 화면에서 비교합니다.</p>
       <div id="meta" class="meta">Loading…</div>
     </div>
   </header>
@@ -44,7 +44,7 @@
       <div class="table-head">
         <div>
           <h2>모델 비교</h2>
-          <p>헤더를 클릭하면 정렬됩니다. Usage는 모델별 월간 포함 dollar-value, Req/mo는 OpenCode의 일반적 요청 패턴 기준 예상치입니다.</p>
+          <p>헤더를 클릭하면 정렬됩니다. Effective/mo는 해당 모델만 사용했을 때 공유 월 quota가 소진되기 전의 실효 raw usage이며, 모델별 독립 한도가 아닙니다.</p>
         </div>
         <span id="count" class="count"></span>
       </div>
@@ -55,7 +55,7 @@
             <th data-key="developer">Developer</th>
             <th data-key="coding_grade">Coding</th>
             <th data-key="value_grade">Value</th>
-            <th data-key="monthly_usage_usd">Usage / mo</th>
+            <th data-key="monthly_usage_usd">Effective / mo</th>
             <th data-key="requests_month">Req / mo</th>
             <th data-key="estimated_cost">Est. Cost*</th>
             <th data-key="input_price">Input $/M</th>
@@ -77,8 +77,10 @@
 
     <section class="panel notes">
       <h2>해석 원칙</h2>
-      <p><strong>Usage / mo</strong>는 OpenCode Go 공식 표의 모델별 포함 사용량입니다. 전체 계정 한도는 5시간 $12 / 주 $30 / 월 최대 $60이지만, 모델에 따라 실제 포함 Usage는 $15·$30·$60으로 다릅니다.</p>
-      <p><strong>GLM-5.3-Flash 2× 프로모션</strong>은 별도 배지로 표시합니다. 공식 Usage 표에는 기본 $15가 기재되어 있어, 프로모션의 유효 dollar cap을 임의로 $30으로 환산하지 않습니다.</p>
+      <p><strong>Go quota는 모델별 독립 지갑이 아니라 공유 풀</strong>입니다. 계정 기준 한도는 5시간 $12 / 주 $30 / 월 $60입니다.</p>
+      <p><strong>Effective / mo</strong>의 $15·$30·$60은 OpenCode가 공개한 모델별 실효 raw usage입니다. 월 $60 공유 quota 기준으로 보면 각각 대략 <strong>4× / 2× / 1× quota burn</strong>에 해당합니다. 따라서 $15 모델을 다 쓴 뒤 다른 $15 모델에서 새 $15가 생기지 않습니다.</p>
+      <p><strong>Req / mo</strong>는 해당 모델만 사용한다고 가정한 OpenCode의 일반적 요청 패턴 기준 예상치입니다.</p>
+      <p><strong>GLM-5.3-Flash 2× 프로모션</strong>은 별도 배지로 표시합니다. 공식 Usage 표에는 기본 $15가 기재되어 있어 프로모션의 유효 dollar cap을 임의 환산하지 않습니다.</p>
       <p><strong>중국계 모델</strong>과 <strong>중국 전송</strong>은 별개입니다. 개발사 국적만으로 호스팅 지역이나 데이터 전송을 추정하지 않습니다.</p>
       <p><strong>Unknown</strong>은 보수적으로 미확인 상태를 뜻합니다. 서로 다른 harness의 벤치마크를 단일 숫자 순위로 합산하지 않습니다.</p>
       <p>원본 데이터: <a href="data/models.json">models.json</a> · <a href="data/usage.json">usage.json</a></p>
