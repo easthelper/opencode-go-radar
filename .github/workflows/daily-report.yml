@@ -28,7 +28,7 @@ jobs:
         run: python scripts/build_email.py
       - name: Commit generated report
         run: |
-          if git diff --quiet -- reports/email-latest.html; then
+          if [ -z "$(git status --porcelain -- reports/email-latest.html)" ]; then
             echo 'No generated report changes.'
             exit 0
           fi
