@@ -1,10 +1,13 @@
 {
-  "as_of": "2026-09-03",
+  "as_of": "2026-09-04",
   "subscription_usd_per_month": 10,
   "global_limits": {
     "five_hour_usage_usd": 12,
     "weekly_usage_usd": 30,
     "monthly_usage_usd": 60
+  },
+  "client_requirements": {
+    "x_opencode_session": "OpenCode now instructs third-party coding agents to include the x-opencode-session header so prompt caching can be optimized."
   },
   "note": "OpenCode Go quota windows are shared across models: $12/5h, $30/week, $60/month. The published per-model Usage value ($15/$30/$60) is not an independent model wallet; it is the effective raw model-dollar usage available if that model were used exclusively before the shared quota is exhausted. Relative quota burn can therefore be read as 4x for $15, 2x for $30, and 1x for $60 models. Request counts are OpenCode estimates based on observed typical Go request patterns.",
   "models": {
