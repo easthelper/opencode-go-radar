@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-04",
+  "as_of": "2026-09-05",
   "subscription_usd_per_month": 10,
   "global_limits": {
     "five_hour_usage_usd": 12,
@@ -9,7 +9,7 @@
   "client_requirements": {
     "x_opencode_session": "OpenCode now instructs third-party coding agents to include the x-opencode-session header so prompt caching can be optimized."
   },
-  "note": "OpenCode Go quota windows are shared across models: $12/5h, $30/week, $60/month. The published per-model Usage value ($15/$30/$60) is not an independent model wallet; it is the effective raw model-dollar usage available if that model were used exclusively before the shared quota is exhausted. Relative quota burn can therefore be read as 4x for $15, 2x for $30, and 1x for $60 models. Request counts are OpenCode estimates based on observed typical Go request patterns.",
+  "note": "OpenCode Go quota windows are shared across models: $12/5h, $30/week, $60/month. The published per-model Usage value ($15/$30/$60/$100) is not an independent model wallet; it is the effective raw model-dollar usage available if that model were used exclusively before the shared quota is exhausted. Relative monthly quota burn is shared monthly quota / model Effective Usage: 4x for $15, 2x for $30, 1x for $60, and 0.6x for $100. Request counts are OpenCode estimates based on observed typical Go request patterns.",
   "models": {
     "Grok 4.6": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":169,"requests_week":423,"requests_month":845},
     "GPT-5.6 Luna": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":2050,"requests_week":5100,"requests_month":10250},
@@ -36,6 +36,7 @@
     "DeepSeek V4 Flash": {"monthly_usage_usd":30,"usage_multiplier":3,"requests_5h":7600,"requests_week":18900,"requests_month":37800},
     "DeepSeek V4 Flash Vision Exp": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":3800,"requests_week":9450,"requests_month":18900},
     "Hy4 preview": {"monthly_usage_usd":30,"usage_multiplier":3,"requests_5h":1350,"requests_week":3380,"requests_month":6770},
-    "Hy3": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":4300,"requests_week":10750,"requests_month":21500}
+    "Hy3": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":4300,"requests_week":10750,"requests_month":21500},
+    "Omen Alpha": {"monthly_usage_usd":100,"usage_multiplier":10,"requests_5h":11600,"requests_week":29000,"requests_month":57900}
   }
 }
