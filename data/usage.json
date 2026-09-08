@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-05",
+  "as_of": "2026-09-08",
   "subscription_usd_per_month": 10,
   "global_limits": {
     "five_hour_usage_usd": 12,
@@ -7,7 +7,22 @@
     "monthly_usage_usd": 60
   },
   "client_requirements": {
-    "x_opencode_session": "OpenCode now instructs third-party coding agents to include the x-opencode-session header so prompt caching can be optimized."
+    "session_header": "OpenCode asks coding-agent clients to send a stable per-conversation session ID so routing and prompt caching can be optimized. x-opencode-session is the generic header; Go also recognizes some clients' native session headers.",
+    "validated_clients": {
+      "Hermes": "Builds containing PR #101864 send the header on main and auxiliary OpenCode requests; v0.21.0 alone predates the merged fix.",
+      "Claude Code": "Native session header recognized; no custom-header wrapper required.",
+      "Codex": "Native session header recognized; some versions and proxy setups may omit it, so forwarding must preserve the header.",
+      "ZCode": "Native session header recognized; x-opencode-session is no longer specifically required.",
+      "Pi": "Current builds send OpenCode session information; older installations should be updated.",
+      "jcode": "v0.81.6 or later includes the session-header fix.",
+      "Kilo Code CLI": "Builds containing PR #13752 restore OpenCode session headers for the CLI; the VS Code extension is not covered by that fix."
+    },
+    "problematic_clients": {
+      "DeepSeek Harness": "Session information is present on some model paths but missing on others; Go recognizes its native header, but all adapters do not yet send it consistently.",
+      "GitHub Copilot Chat": "Automatic session-header support is still requested upstream.",
+      "Kimi Code": "Automatic session-header support is still requested upstream.",
+      "MiMo Code": "A proposed session-header fix exists but had not merged when checked."
+    }
   },
   "note": "OpenCode Go quota windows are shared across models: $12/5h, $30/week, $60/month. The published per-model Usage value ($15/$30/$60/$100) is not an independent model wallet; it is the effective raw model-dollar usage available if that model were used exclusively before the shared quota is exhausted. Relative monthly quota burn is shared monthly quota / model Effective Usage: 4x for $15, 2x for $30, 1x for $60, and 0.6x for $100. Request counts are OpenCode estimates based on observed typical Go request patterns.",
   "models": {
