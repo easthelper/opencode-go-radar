@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-10",
+  "as_of": "2026-09-11",
   "subscription_usd_per_month": 10,
   "global_limits": {
     "five_hour_usage_usd": 12,
@@ -24,11 +24,11 @@
       "MiMo Code": "A proposed session-header fix exists but had not merged when checked."
     }
   },
-  "note": "OpenCode Go quota windows are shared across models: $12/5h, $30/week, $60/month. The published per-model Usage/monthly-limit value is not a separate prepaid wallet; it expresses the effective model-dollar allowance under Go for that model. Relative monthly quota burn is shared monthly quota / model Effective Usage: 4x for $15, 2x for $30, 1x for $60, and 0.6x for $100. Request counts are OpenCode estimates based on typical Go request patterns. As of 2026-09-10, the detailed docs show GLM-5.3-Flash at $60 and 6,320/15,790/31,580 requests while the Go landing page still advertises a 2x usage promotion and older 1,580 requests/5h; the detailed docs are treated as the current source of truth, but the source inconsistency is preserved rather than inferred away.",
+  "note": "OpenCode Go quota windows are shared across models: $12/5h, $30/week, $60/month. The published per-model Usage/monthly-limit value is not a separate prepaid wallet; it expresses the effective model-dollar allowance under Go for that model. Relative monthly quota burn is shared monthly quota / model Effective Usage: 4x for $15, 2x for $30, 1x for $60, and 0.6x for $100. Request counts are OpenCode estimates based on typical Go request patterns. As of 2026-09-11, the detailed docs and landing page agree on GLM-5.3-Flash at $60 and 6,320 requests/5h. The landing page newly advertises DeepSeek V4.1 Flash at 4x usage, showing 26,000 requests/5h and $60 promotional usage, while the detailed docs still list its base $15 monthly limit and 6,500/16,250/32,500 request estimates; both official values are preserved without inferring unlisted promotional weekly/monthly request counts.",
   "models": {
     "Grok 4.6": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":169,"requests_week":423,"requests_month":845},
     "GPT-5.6 Luna": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":2050,"requests_week":5100,"requests_month":10250},
-    "GLM-5.3-Flash": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":6320,"requests_week":15790,"requests_month":31580,"promotion":"Go landing page still says 2x usage; detailed docs now show $60 effective usage and higher request estimates"},
+    "GLM-5.3-Flash": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":6320,"requests_week":15790,"requests_month":31580},
     "GLM-5.3": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":220,"requests_week":540,"requests_month":1080},
     "GLM-5.2": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":880,"requests_week":2150,"requests_month":4300},
     "GLM-5.1": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":880,"requests_week":2150,"requests_month":4300},
@@ -47,7 +47,7 @@
     "Qwen3.7 Max": {"monthly_usage_usd":30,"usage_multiplier":3,"requests_5h":170,"requests_week":420,"requests_month":840},
     "Qwen3.7 Plus": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":4300,"requests_week":10800,"requests_month":21600},
     "Qwen3.6 Plus": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":3300,"requests_week":8200,"requests_month":16300},
-    "DeepSeek V4.1 Flash": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":6500,"requests_week":16250,"requests_month":32500},
+    "DeepSeek V4.1 Flash": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":6500,"requests_week":16250,"requests_month":32500,"promotion":"4x usage on Go landing page","promotional_monthly_usage_usd":60,"promotional_usage_multiplier":6,"promotional_requests_5h":26000,"promotional_quota_burn":1},
     "DeepSeek V4 Pro": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":1050,"requests_week":2600,"requests_month":5200},
     "DeepSeek V4 Flash": {"monthly_usage_usd":30,"usage_multiplier":3,"requests_5h":13000,"requests_week":32500,"requests_month":65000},
     "DeepSeek V4 Flash Vision Exp": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":6500,"requests_week":16250,"requests_month":32500},
