@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-11",
+  "as_of": "2026-09-13",
   "subscription_usd_per_month": 10,
   "global_limits": {
     "five_hour_usage_usd": 12,
@@ -24,7 +24,7 @@
       "MiMo Code": "A proposed session-header fix exists but had not merged when checked."
     }
   },
-  "note": "OpenCode Go quota windows are shared across models: $12/5h, $30/week, $60/month. The published per-model Usage/monthly-limit value is not a separate prepaid wallet; it expresses the effective model-dollar allowance under Go for that model. Relative monthly quota burn is shared monthly quota / model Effective Usage: 4x for $15, 2x for $30, 1x for $60, and 0.6x for $100. Request counts are OpenCode estimates based on typical Go request patterns. As of 2026-09-11, the detailed docs and landing page agree on GLM-5.3-Flash at $60 and 6,320 requests/5h. The landing page newly advertises DeepSeek V4.1 Flash at 4x usage, showing 26,000 requests/5h and $60 promotional usage, while the detailed docs still list its base $15 monthly limit and 6,500/16,250/32,500 request estimates; both official values are preserved without inferring unlisted promotional weekly/monthly request counts.",
+  "note": "OpenCode Go quota windows are shared across models: $12/5h, $30/week, $60/month. The published per-model Usage/monthly-limit value is not a separate prepaid wallet; it expresses the effective model-dollar allowance under Go for that model. Relative monthly quota burn is shared monthly quota / model Effective Usage: 4x for $15, 2x for $30, 1x for $60, and 0.6x for $100. Request counts are OpenCode estimates based on typical Go request patterns. As of 2026-09-13, the detailed docs and landing page agree on GLM-5.3-Flash at $60 and 6,320 requests/5h. The landing page advertises DeepSeek V4.1 Flash at 4x usage, showing 26,000 requests/5h and $60 promotional usage, while the detailed docs still list its base $15 monthly limit and 6,500/16,250/32,500 request estimates; both official values are preserved without inferring unlisted promotional weekly/monthly request counts. MiniMax M2.5 is present in the current Go pricing table and live /v1/models endpoint with a $60 monthly limit, but the current estimated-request table omits it, so request counts are left unknown rather than carrying forward stale estimates.",
   "models": {
     "Grok 4.6": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":169,"requests_week":423,"requests_month":845},
     "GPT-5.6 Luna": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":2050,"requests_week":5100,"requests_month":10250},
@@ -40,6 +40,7 @@
     "MiMo-V2.5-Pro": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":3250,"requests_week":8150,"requests_month":16300},
     "MiniMax M3": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":3200,"requests_week":8000,"requests_month":16000},
     "MiniMax M2.7": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":3400,"requests_week":8500,"requests_month":17000},
+    "MiniMax M2.5": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":null,"requests_week":null,"requests_month":null},
     "Muse Spark 1.3 Contributor": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":45300,"requests_week":113300,"requests_month":226600},
     "Muse Spark 1.2 Contributor": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":45300,"requests_week":113300,"requests_month":226600},
     "Qwen3.8 Max": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":160,"requests_week":400,"requests_month":810},
