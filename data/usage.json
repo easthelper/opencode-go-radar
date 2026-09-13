@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-13",
+  "as_of": "2026-09-14",
   "subscription_usd_per_month": 10,
   "global_limits": {
     "five_hour_usage_usd": 12,
@@ -24,7 +24,7 @@
       "MiMo Code": "A proposed session-header fix exists but had not merged when checked."
     }
   },
-  "note": "OpenCode Go quota windows are shared across models: $12/5h, $30/week, $60/month. The published per-model Usage/monthly-limit value is not a separate prepaid wallet; it expresses the effective model-dollar allowance under Go for that model. Relative monthly quota burn is shared monthly quota / model Effective Usage: 4x for $15, 2x for $30, 1x for $60, and 0.6x for $100. Request counts are OpenCode estimates based on typical Go request patterns. As of 2026-09-13, the detailed docs and landing page agree on GLM-5.3-Flash at $60 and 6,320 requests/5h. The landing page advertises DeepSeek V4.1 Flash at 4x usage, showing 26,000 requests/5h and $60 promotional usage, while the detailed docs still list its base $15 monthly limit and 6,500/16,250/32,500 request estimates; both official values are preserved without inferring unlisted promotional weekly/monthly request counts. MiniMax M2.5 is present in the current Go pricing table and live /v1/models endpoint with a $60 monthly limit, but the current estimated-request table omits it, so request counts are left unknown rather than carrying forward stale estimates.",
+  "note": "OpenCode Go quota windows are shared across models: $12/5h, $30/week, $60/month. The published per-model Usage/monthly-limit value is not a separate prepaid wallet; it expresses the effective model-dollar allowance under Go for that model. Relative monthly quota burn is shared monthly quota / model Effective Usage: 4x for $15, 2x for $30, 1x for $60, and 0.6x for $100. Request counts are OpenCode estimates based on typical Go request patterns. As of 2026-09-14, the detailed docs list DeepSeek V4.1 Flash's 4x promotion through September 20: its base $15 monthly limit is temporarily $60, with 26,000 requests/5h, 65,000/week, and 130,000/month. GLM-5.3-Flash remains at $60 and 6,320 requests/5h. MiniMax M2.5 is present in the current Go pricing table and live /v1/models endpoint with a $60 monthly limit, but the current estimated-request table omits it, so request counts remain unknown rather than carrying forward stale estimates.",
   "models": {
     "Grok 4.6": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":169,"requests_week":423,"requests_month":845},
     "GPT-5.6 Luna": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":2050,"requests_week":5100,"requests_month":10250},
@@ -48,7 +48,7 @@
     "Qwen3.7 Max": {"monthly_usage_usd":30,"usage_multiplier":3,"requests_5h":170,"requests_week":420,"requests_month":840},
     "Qwen3.7 Plus": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":4300,"requests_week":10800,"requests_month":21600},
     "Qwen3.6 Plus": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":3300,"requests_week":8200,"requests_month":16300},
-    "DeepSeek V4.1 Flash": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":6500,"requests_week":16250,"requests_month":32500,"promotion":"4x usage on Go landing page","promotional_monthly_usage_usd":60,"promotional_usage_multiplier":6,"promotional_requests_5h":26000,"promotional_quota_burn":1},
+    "DeepSeek V4.1 Flash": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":6500,"requests_week":16250,"requests_month":32500,"promotion":"4x usage through 2026-09-20","promotional_monthly_usage_usd":60,"promotional_usage_multiplier":6,"promotional_requests_5h":26000,"promotional_requests_week":65000,"promotional_requests_month":130000,"promotional_quota_burn":1},
     "DeepSeek V4 Pro": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":1050,"requests_week":2600,"requests_month":5200},
     "DeepSeek V4 Flash": {"monthly_usage_usd":30,"usage_multiplier":3,"requests_5h":13000,"requests_week":32500,"requests_month":65000},
     "DeepSeek V4 Flash Vision Exp": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":6500,"requests_week":16250,"requests_month":32500},
