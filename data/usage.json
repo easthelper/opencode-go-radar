@@ -53,7 +53,6 @@
     "DeepSeek V4 Flash": {"monthly_usage_usd":30,"usage_multiplier":3,"requests_5h":13000,"requests_week":32500,"requests_month":65000},
     "DeepSeek V4 Flash Vision Exp": {"monthly_usage_usd":15,"usage_multiplier":1.5,"requests_5h":6500,"requests_week":16250,"requests_month":32500},
     "Hy4 preview": {"monthly_usage_usd":30,"usage_multiplier":3,"requests_5h":1350,"requests_week":3380,"requests_month":6770},
-    "Hy3": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":4300,"requests_week":10750,"requests_month":21500},
-    "Omen Alpha": {"monthly_usage_usd":100,"usage_multiplier":10,"requests_5h":11600,"requests_week":29000,"requests_month":57900}
+    "Hy3": {"monthly_usage_usd":60,"usage_multiplier":6,"requests_5h":4300,"requests_week":10750,"requests_month":21500}
   }
 }
