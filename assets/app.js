@@ -94,7 +94,9 @@ async function init() {
   const usage = await usageRes.json();
   state.rows = (data.models || []).map((m) => ({ ...m, ...(usage.models?.[m.model] || {}) }));
   state.recommendations = data.recommendations || {};
-  $('#meta').textContent = `Data as of ${data.as_of} · ${state.rows.length} tracked models · shared Go quota: 5h $${usage.global_limits.five_hour_usage_usd} / week $${usage.global_limits.weekly_usage_usd} / month $${usage.global_limits.monthly_usage_usd}`;
+  const latestAsOf = [data.as_of, usage.as_of].filter(Boolean).sort().at(-1) || 'N/A';
+  const sourceDates = data.as_of === usage.as_of ? '' : ` · models ${data.as_of || 'N/A'} / usage ${usage.as_of || 'N/A'}`;
+  $('#meta').textContent = `Data as of ${latestAsOf}${sourceDates} · ${state.rows.length} tracked models · shared Go quota: 5h $${usage.global_limits.five_hour_usage_usd} / week $${usage.global_limits.weekly_usage_usd} / month $${usage.global_limits.monthly_usage_usd}`;
   summary();
   render();
 }
