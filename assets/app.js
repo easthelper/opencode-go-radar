@@ -57,7 +57,7 @@ function filtered() {
 function render() {
   const rows = filtered();
   $('#count').textContent = `${rows.length} models`;
-  $('#models').innerHTML = rows.map((m) => `<tr><td>${esc(m.model)}${m.promotion ? `<span class="promotion-badge">${esc(m.promotion)}</span>` : ''}</td><td>${esc(m.developer)}</td><td>${badge(m.coding_grade)}</td><td>${badge(m.value_grade)}</td><td class="usage"><strong>$${Number(effectiveMonthlyUsage(m) || 0).toFixed(0)} eq</strong></td><td>${fmtInt(effectiveRequestsMonth(m))}</td><td>$${cost(m).toFixed(3)}</td><td>$${Number(m.input_price).toFixed(3)}</td><td>$${Number(m.output_price).toFixed(3)}</td><td>${m.cached_input == null ? 'N/A' : '$' + Number(m.cached_input).toFixed(4)}</td><td>${esc(m.context)}</td><td>${esc(m.benchmark || 'N/A')}</td><td>${esc(m.training)}</td><td>${esc(m.retention)}</td><td>${esc(m.hosting)}</td><td class="${chinaClass(m.china_transfer)}">${esc(m.china_transfer)}</td><td>${badge(m.privacy_risk, 'risk')}</td><td><div class="tags">${(m.positioning || []).map((x) => `<span class="tag">${esc(x)}</span>`).join('')}</div></td></tr>`).join('');
+  $('#models').innerHTML = rows.map((m) => `<tr><td>${esc(m.model)}${m.promotion ? `<span class="promotion-badge">${esc(m.promotion)}</span>` : ''}</td><td>${esc(m.developer)}</td><td>${badge(m.coding_grade)}</td><td>${badge(m.value_grade)}</td><td class="usage"><strong>$${Number(effectiveMonthlyUsage(m) || 0).toFixed(0)}</strong></td><td>${fmtInt(effectiveRequestsMonth(m))}</td><td>$${cost(m).toFixed(3)}</td><td>$${Number(m.input_price).toFixed(3)}</td><td>$${Number(m.output_price).toFixed(3)}</td><td>${m.cached_input == null ? 'N/A' : '$' + Number(m.cached_input).toFixed(4)}</td><td>${esc(m.context)}</td><td>${esc(m.benchmark || 'N/A')}</td><td>${esc(m.training)}</td><td>${esc(m.retention)}</td><td>${esc(m.hosting)}</td><td class="${chinaClass(m.china_transfer)}">${esc(m.china_transfer)}</td><td>${badge(m.privacy_risk, 'risk')}</td><td><div class="tags">${(m.positioning || []).map((x) => `<span class="tag">${esc(x)}</span>`).join('')}</div></td></tr>`).join('');
 }
 
 function modelByName(name) {
@@ -70,7 +70,7 @@ function summary() {
   const value = modelByName(r.best_value);
   const privacy = modelByName(r.sensitive_code);
   const cheap = modelByName(r.cheap_subagent);
-  const usageDetail = (m) => m ? `$${effectiveMonthlyUsage(m)} eq · 약 ${fmtInt(effectiveRequestsMonth(m))} req/mo` : '';
+  const usageDetail = (m) => m ? `$${effectiveMonthlyUsage(m)} monthly limit · 약 ${fmtInt(effectiveRequestsMonth(m))} req/mo` : '';
   const cards = [
     ['절대 성능', performance?.model || '검증 필요', performance ? `long-horizon 종합 1순위 · ${usageDetail(performance)}` : ''],
     ['가성비', value?.model || '검증 필요', value ? `Est. $${cost(value).toFixed(3)} · ${usageDetail(value)}${value.promotion ? ' · ' + value.promotion : ''}` : ''],
@@ -93,7 +93,11 @@ async function init() {
   state.recommendations = data.recommendations || {};
   const latestAsOf = [data.as_of, usage.as_of].filter(Boolean).sort().at(-1) || 'N/A';
   const sourceDates = data.as_of === usage.as_of ? '' : ` · models ${data.as_of || 'N/A'} / usage ${usage.as_of || 'N/A'}`;
-  $('#meta').textContent = `Data as of ${latestAsOf}${sourceDates} · ${state.rows.length} tracked models · shared Go quota: 5h $${usage.global_limits.five_hour_usage_usd} / week $${usage.global_limits.weekly_usage_usd} / month $${usage.global_limits.monthly_usage_usd}`;
+  const p = usage.limit_policy || {};
+  const limitText = [p.five_hour_fraction, p.weekly_fraction, p.monthly_fraction].every((v) => v != null)
+    ? ` · per-model limit windows: 5h ${Math.round(p.five_hour_fraction * 100)}% / week ${Math.round(p.weekly_fraction * 100)}% / month ${Math.round(p.monthly_fraction * 100)}%`
+    : '';
+  $('#meta').textContent = `Data as of ${latestAsOf}${sourceDates} · ${state.rows.length} tracked models${limitText}`;
   summary();
   render();
 }
