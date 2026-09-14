@@ -30,18 +30,6 @@ function effectiveRequestsMonth(m) {
   return m.promotional_requests_month ?? m.requests_month ?? null;
 }
 
-function burn(m) {
-  const usage = effectiveMonthlyUsage(m);
-  return usage ? 60 / Number(usage) : null;
-}
-
-function fmtBurn(m) {
-  const value = burn(m);
-  if (value == null) return 'N/A';
-  const text = Number.isInteger(value) ? value.toFixed(0) : value.toFixed(1);
-  return `${text}× burn`;
-}
-
 function cmp(a, b, key) {
   let av = key === 'estimated_cost' ? cost(a) : key === 'monthly_usage_usd' ? effectiveMonthlyUsage(a) : key === 'requests_month' ? effectiveRequestsMonth(a) : a[key];
   let bv = key === 'estimated_cost' ? cost(b) : key === 'monthly_usage_usd' ? effectiveMonthlyUsage(b) : key === 'requests_month' ? effectiveRequestsMonth(b) : b[key];
@@ -69,7 +57,7 @@ function filtered() {
 function render() {
   const rows = filtered();
   $('#count').textContent = `${rows.length} models`;
-  $('#models').innerHTML = rows.map((m) => `<tr><td>${esc(m.model)}${m.promotion ? `<span class="promotion-badge">${esc(m.promotion)}</span>` : ''}</td><td>${esc(m.developer)}</td><td>${badge(m.coding_grade)}</td><td>${badge(m.value_grade)}</td><td class="usage"><strong>$${Number(effectiveMonthlyUsage(m) || 0).toFixed(0)} eq</strong><br><span>${esc(fmtBurn(m))}</span></td><td>${fmtInt(effectiveRequestsMonth(m))}</td><td>$${cost(m).toFixed(3)}</td><td>$${Number(m.input_price).toFixed(3)}</td><td>$${Number(m.output_price).toFixed(3)}</td><td>${m.cached_input == null ? 'N/A' : '$' + Number(m.cached_input).toFixed(4)}</td><td>${esc(m.context)}</td><td>${esc(m.benchmark || 'N/A')}</td><td>${esc(m.training)}</td><td>${esc(m.retention)}</td><td>${esc(m.hosting)}</td><td class="${chinaClass(m.china_transfer)}">${esc(m.china_transfer)}</td><td>${badge(m.privacy_risk, 'risk')}</td><td><div class="tags">${(m.positioning || []).map((x) => `<span class="tag">${esc(x)}</span>`).join('')}</div></td></tr>`).join('');
+  $('#models').innerHTML = rows.map((m) => `<tr><td>${esc(m.model)}${m.promotion ? `<span class="promotion-badge">${esc(m.promotion)}</span>` : ''}</td><td>${esc(m.developer)}</td><td>${badge(m.coding_grade)}</td><td>${badge(m.value_grade)}</td><td class="usage"><strong>$${Number(effectiveMonthlyUsage(m) || 0).toFixed(0)} eq</strong></td><td>${fmtInt(effectiveRequestsMonth(m))}</td><td>$${cost(m).toFixed(3)}</td><td>$${Number(m.input_price).toFixed(3)}</td><td>$${Number(m.output_price).toFixed(3)}</td><td>${m.cached_input == null ? 'N/A' : '$' + Number(m.cached_input).toFixed(4)}</td><td>${esc(m.context)}</td><td>${esc(m.benchmark || 'N/A')}</td><td>${esc(m.training)}</td><td>${esc(m.retention)}</td><td>${esc(m.hosting)}</td><td class="${chinaClass(m.china_transfer)}">${esc(m.china_transfer)}</td><td>${badge(m.privacy_risk, 'risk')}</td><td><div class="tags">${(m.positioning || []).map((x) => `<span class="tag">${esc(x)}</span>`).join('')}</div></td></tr>`).join('');
 }
 
 function modelByName(name) {
@@ -82,7 +70,7 @@ function summary() {
   const value = modelByName(r.best_value);
   const privacy = modelByName(r.sensitive_code);
   const cheap = modelByName(r.cheap_subagent);
-  const usageDetail = (m) => m ? `$${effectiveMonthlyUsage(m)} eq · ${fmtBurn(m)} · 약 ${fmtInt(effectiveRequestsMonth(m))} req/mo` : '';
+  const usageDetail = (m) => m ? `$${effectiveMonthlyUsage(m)} eq · 약 ${fmtInt(effectiveRequestsMonth(m))} req/mo` : '';
   const cards = [
     ['절대 성능', performance?.model || '검증 필요', performance ? `long-horizon 종합 1순위 · ${usageDetail(performance)}` : ''],
     ['가성비', value?.model || '검증 필요', value ? `Est. $${cost(value).toFixed(3)} · ${usageDetail(value)}${value.promotion ? ' · ' + value.promotion : ''}` : ''],
