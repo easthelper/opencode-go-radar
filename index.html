@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="OpenCode Go 모델 가격·코딩 성능·실효 사용량·프라이버시·데이터 처리 현황 추적" />
+  <meta name="description" content="OpenCode Go 모델 가격·코딩 성능·월간 사용 한도·프라이버시·데이터 처리 현황 추적" />
   <title>OpenCode Go Radar</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
@@ -12,7 +12,7 @@
     <div class="wrap">
       <p class="eyebrow">OPENCODE GO · MODEL INTELLIGENCE</p>
       <h1>OpenCode Go Radar</h1>
-      <p class="lede">코딩 성능, 실제 비용, 공유 quota 소모율, 데이터 프라이버시와 호스팅 리스크를 한 화면에서 비교합니다.</p>
+      <p class="lede">코딩 성능, 실제 비용, 모델별 사용 한도, 데이터 프라이버시와 호스팅 리스크를 한 화면에서 비교합니다.</p>
       <div id="meta" class="meta">Loading…</div>
     </div>
   </header>
@@ -44,7 +44,7 @@
       <div class="table-head">
         <div>
           <h2>모델 비교</h2>
-          <p>헤더를 클릭하면 정렬됩니다. Effective/mo는 해당 모델만 사용했을 때 공유 월 quota가 소진되기 전의 실효 raw usage이며, 모델별 독립 한도가 아닙니다.</p>
+          <p>헤더를 클릭하면 정렬됩니다. Monthly limit은 OpenCode가 모델별로 공개한 월간 사용 한도이며, 5시간 한도는 그 값의 20%, 주간 한도는 50%입니다.</p>
         </div>
         <span id="count" class="count"></span>
       </div>
@@ -55,7 +55,7 @@
             <th data-key="developer">Developer</th>
             <th data-key="coding_grade">Coding</th>
             <th data-key="value_grade">Value</th>
-            <th data-key="monthly_usage_usd">Effective / mo</th>
+            <th data-key="monthly_usage_usd">Monthly limit</th>
             <th data-key="requests_month">Req / mo</th>
             <th data-key="estimated_cost">Est. Cost*</th>
             <th data-key="input_price">Input $/M</th>
@@ -77,11 +77,11 @@
 
     <section class="panel notes">
       <h2>해석 원칙</h2>
-      <p><strong>Go quota는 모델별 독립 지갑이 아니라 공유 풀</strong>입니다. 계정 기준 한도는 5시간 $12 / 주 $30 / 월 $60입니다.</p>
-      <p><strong>Effective / mo</strong>의 $15·$30·$60은 OpenCode가 공개한 모델별 실효 raw usage입니다. 월 $60 공유 quota 기준으로 보면 각각 대략 <strong>4× / 2× / 1× quota burn</strong>에 해당합니다. 따라서 $15 모델을 다 쓴 뒤 다른 $15 모델에서 새 $15가 생기지 않습니다.</p>
-      <p><strong>Req / mo</strong>는 해당 모델만 사용한다고 가정한 OpenCode의 일반적 요청 패턴 기준 예상치입니다.</p>
-      <p><strong>서드파티 코딩 에이전트</strong>는 OpenCode의 최신 안내에 따라 <code>x-opencode-session</code> 헤더를 포함해야 프롬프트 캐싱을 최적화할 수 있습니다.</p>
-      <p><strong>프로모션</strong>은 기본 Effective Usage/요청 수와 분리해 추적하며, 활성 기간에는 dashboard가 공식 promotional 값을 우선 표시합니다.</p>
+      <p><strong>사용 한도는 모델별 월간 달러 한도</strong>로 공개됩니다. 각 모델에서 5시간 한도는 월간 한도의 20%, 주간 한도는 50%, 월간 한도는 100%입니다. 예를 들어 월 $60 모델은 $12 / $30 / $60이고, 월 $15 모델은 $3 / $7.50 / $15입니다.</p>
+      <p><strong>Monthly limit</strong>은 OpenCode가 공식 문서에 공개한 모델별 포함 사용량입니다. 모델 간 혼합 사용의 내부 회계 방식은 공식 문서에 없는 내용을 임의로 추정하지 않습니다.</p>
+      <p><strong>Req / mo</strong>는 OpenCode의 일반적 Go 요청 패턴을 기준으로 한 공식 예상치입니다.</p>
+      <p><strong>서드파티 코딩 에이전트</strong>는 OpenCode의 최신 안내에 따라 안정적인 세션 ID를 전달해야 라우팅과 프롬프트 캐싱을 최적화할 수 있습니다.</p>
+      <p><strong>프로모션</strong>은 기본 Monthly limit/요청 수와 분리해 추적하며, 활성 기간에는 dashboard가 공식 promotional 값을 우선 표시합니다.</p>
       <p><strong>중국계 모델</strong>과 <strong>중국 전송</strong>은 별개입니다. 개발사 국적만으로 호스팅 지역이나 데이터 전송을 추정하지 않습니다.</p>
       <p><strong>Unknown</strong>은 보수적으로 미확인 상태를 뜻합니다. 서로 다른 harness의 벤치마크를 단일 숫자 순위로 합산하지 않습니다.</p>
 
