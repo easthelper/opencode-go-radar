@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-17",
+  "as_of": "2026-09-19",
   "subscription_usd_per_month": 10,
   "limit_policy": {
     "five_hour_fraction": 0.2,
@@ -24,7 +24,7 @@
       "MiMo Code": "A proposed session-header fix exists but had not merged when checked."
     }
   },
-  "note": "OpenCode documents usage limits per model as dollar amounts: the 5-hour limit is 20% of that model's monthly limit, the weekly limit is 50%, and the monthly limit is 100%. For example, a $60 monthly-limit model has $12 / $30 / $60 windows, while a $15 model has $3 / $7.50 / $15. Request counts are OpenCode estimates based on typical Go request patterns. As of 2026-09-17, DeepSeek V4.1 Flash has a temporary 4x promotion through September 20: its base $15 monthly limit is temporarily $60, with 26,000 requests/5h, 65,000/week, and 130,000/month. Union Alpha Free was added September 16 as a limited-time free model with unlimited usage; no exact end date is published in the Go docs. MiniMax M2.5 remains in the official pricing and endpoint tables with a $60 monthly limit, but the curated model list and estimated-request table omit it, so request counts remain unknown rather than inferred.",
+  "note": "OpenCode documents usage limits per model as dollar amounts: the 5-hour limit is 20% of that model's monthly limit, the weekly limit is 50%, and the monthly limit is 100%. For example, a $60 monthly-limit model has $12 / $30 / $60 windows, while a $15 model has $3 / $7.50 / $15. Request counts are OpenCode estimates based on typical Go request patterns. As of 2026-09-19, DeepSeek V4.1 Flash has a temporary 4x promotion through September 20: its base $15 monthly limit is temporarily $60, with 26,000 requests/5h, 65,000/week, and 130,000/month. MiniMax M2.5 remains in the official pricing and endpoint tables with a $60 monthly limit, but the curated model list and estimated-request table omit it, so request counts remain unknown rather than inferred.",
   "models": {
     "Grok 4.6": {"monthly_usage_usd":15,"requests_5h":169,"requests_week":423,"requests_month":845},
     "GPT-5.6 Luna": {"monthly_usage_usd":15,"requests_5h":2050,"requests_week":5100,"requests_month":10250},
@@ -53,7 +53,6 @@
     "DeepSeek V4 Flash": {"monthly_usage_usd":30,"requests_5h":13000,"requests_week":32500,"requests_month":65000},
     "DeepSeek V4 Flash Vision Exp": {"monthly_usage_usd":15,"requests_5h":6500,"requests_week":16250,"requests_month":32500},
     "Hy4 preview": {"monthly_usage_usd":30,"requests_5h":1350,"requests_week":3380,"requests_month":6770},
-    "Hy3": {"monthly_usage_usd":60,"requests_5h":4300,"requests_week":10750,"requests_month":21500},
-    "Union Alpha Free": {"monthly_usage_usd":null,"requests_5h":null,"requests_week":null,"requests_month":null,"free":true,"unlimited":true,"promotion":"limited time","promotion_end":null}
+    "Hy3": {"monthly_usage_usd":60,"requests_5h":4300,"requests_week":10750,"requests_month":21500}
   }
 }
