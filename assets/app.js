@@ -22,12 +22,19 @@ function fmtInt(v) {
   return v == null ? 'N/A' : Number(v).toLocaleString();
 }
 
+function isPromotionActive(m) {
+  if (!m?.promotion) return false;
+  if (!m.promotion_end) return true;
+  const today = new Date().toISOString().slice(0, 10);
+  return today <= m.promotion_end;
+}
+
 function effectiveMonthlyUsage(m) {
-  return m.promotional_monthly_usage_usd ?? m.monthly_usage_usd ?? null;
+  return isPromotionActive(m) ? (m.promotional_monthly_usage_usd ?? m.monthly_usage_usd ?? null) : (m.monthly_usage_usd ?? null);
 }
 
 function effectiveRequestsMonth(m) {
-  return m.promotional_requests_month ?? m.requests_month ?? null;
+  return isPromotionActive(m) ? (m.promotional_requests_month ?? m.requests_month ?? null) : (m.requests_month ?? null);
 }
 
 function cmp(a, b, key) {
@@ -57,7 +64,7 @@ function filtered() {
 function render() {
   const rows = filtered();
   $('#count').textContent = `${rows.length} models`;
-  $('#models').innerHTML = rows.map((m) => `<tr><td>${esc(m.model)}${m.promotion ? `<span class="promotion-badge">${esc(m.promotion)}</span>` : ''}</td><td>${esc(m.developer)}</td><td>${badge(m.coding_grade)}</td><td>${badge(m.value_grade)}</td><td class="usage"><strong>$${Number(effectiveMonthlyUsage(m) || 0).toFixed(0)}</strong></td><td>${fmtInt(effectiveRequestsMonth(m))}</td><td>$${cost(m).toFixed(3)}</td><td>$${Number(m.input_price).toFixed(3)}</td><td>$${Number(m.output_price).toFixed(3)}</td><td>${m.cached_input == null ? 'N/A' : '$' + Number(m.cached_input).toFixed(4)}</td><td>${esc(m.context)}</td><td>${esc(m.benchmark || 'N/A')}</td><td>${esc(m.training)}</td><td>${esc(m.retention)}</td><td>${esc(m.hosting)}</td><td class="${chinaClass(m.china_transfer)}">${esc(m.china_transfer)}</td><td>${badge(m.privacy_risk, 'risk')}</td><td><div class="tags">${(m.positioning || []).map((x) => `<span class="tag">${esc(x)}</span>`).join('')}</div></td></tr>`).join('');
+  $('#models').innerHTML = rows.map((m) => `<tr><td>${esc(m.model)}${isPromotionActive(m) ? `<span class="promotion-badge">${esc(m.promotion)}</span>` : ''}</td><td>${esc(m.developer)}</td><td>${badge(m.coding_grade)}</td><td>${badge(m.value_grade)}</td><td class="usage"><strong>$${Number(effectiveMonthlyUsage(m) || 0).toFixed(0)}</strong></td><td>${fmtInt(effectiveRequestsMonth(m))}</td><td>$${cost(m).toFixed(3)}</td><td>$${Number(m.input_price).toFixed(3)}</td><td>$${Number(m.output_price).toFixed(3)}</td><td>${m.cached_input == null ? 'N/A' : '$' + Number(m.cached_input).toFixed(4)}</td><td>${esc(m.context)}</td><td>${esc(m.benchmark || 'N/A')}</td><td>${esc(m.training)}</td><td>${esc(m.retention)}</td><td>${esc(m.hosting)}</td><td class="${chinaClass(m.china_transfer)}">${esc(m.china_transfer)}</td><td>${badge(m.privacy_risk, 'risk')}</td><td><div class="tags">${(m.positioning || []).map((x) => `<span class="tag">${esc(x)}</span>`).join('')}</div></td></tr>`).join('');
 }
 
 function modelByName(name) {
@@ -73,7 +80,7 @@ function summary() {
   const usageDetail = (m) => m ? `$${effectiveMonthlyUsage(m)} monthly limit · 약 ${fmtInt(effectiveRequestsMonth(m))} req/mo` : '';
   const cards = [
     ['절대 성능', performance?.model || '검증 필요', performance ? `long-horizon 종합 1순위 · ${usageDetail(performance)}` : ''],
-    ['가성비', value?.model || '검증 필요', value ? `Est. $${cost(value).toFixed(3)} · ${usageDetail(value)}${value.promotion ? ' · ' + value.promotion : ''}` : ''],
+    ['가성비', value?.model || '검증 필요', value ? `Est. $${cost(value).toFixed(3)} · ${usageDetail(value)}${isPromotionActive(value) ? ' · ' + value.promotion : ''}` : ''],
     ['민감 코드', privacy?.model || '검증 필요', privacy ? `현재 Go 내 조건부 추천 · ${usageDetail(privacy)}` : ''],
     ['저가 서브에이전트', cheap?.model || '-', cheap ? `Est. $${cost(cheap).toFixed(3)} · ${usageDetail(cheap)}` : '']
   ];
