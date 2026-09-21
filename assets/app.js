@@ -1,4 +1,5 @@
 const state = { rows: [], recommendations: {}, sortKey: 'model', sortDir: 1 };
+const LAST_CHECKED = '2026-09-21';
 const $ = (s) => document.querySelector(s);
 const gradeRank = { S: 4, A: 3, B: 2, C: 1 };
 
@@ -104,7 +105,7 @@ async function init() {
   const limitText = [p.five_hour_fraction, p.weekly_fraction, p.monthly_fraction].every((v) => v != null)
     ? ` · per-model limit windows: 5h ${Math.round(p.five_hour_fraction * 100)}% / week ${Math.round(p.weekly_fraction * 100)}% / month ${Math.round(p.monthly_fraction * 100)}%`
     : '';
-  $('#meta').textContent = `Data as of ${latestAsOf}${sourceDates} · ${state.rows.length} tracked models${limitText}`;
+  $('#meta').textContent = `Last checked ${LAST_CHECKED} · Data changed ${latestAsOf}${sourceDates} · ${state.rows.length} tracked models${limitText}`;
   summary();
   render();
 }
