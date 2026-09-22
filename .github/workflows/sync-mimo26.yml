@@ -1,0 +1,57 @@
+name: One-shot MiMo 2.6 Go sync
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/sync-mimo26.yml']
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch Radar data
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          today='2026-09-23'
+          mp=Path('data/models.json'); m=json.loads(mp.read_text())
+          names=[x['model'] for x in m['models']]
+          additions=[
+            {'model':'MiMo-V2.6-Flash','developer':'Xiaomi','provider':'Unknown','input_price':0.14,'output_price':0.28,'cached_input':0.0028,'context':'Unknown','reasoning':None,'benchmark':'N/A','training':'No Training','retention':'0 days','chinese_model':True,'hosting':'Unknown','china_transfer':'Unknown','coding_grade':'N/A','value_grade':'N/A','privacy_risk':'Medium','positioning':[],'notes':'Current OpenCode Go official model list, pricing, estimated-request, endpoint, and privacy tables confirm availability. Context, reasoning, benchmark, provider/routing, and hosting are not inferred.'},
+            {'model':'MiMo-V2.6-Pro','developer':'Xiaomi','provider':'Unknown','input_price':0.435,'output_price':0.87,'cached_input':0.003625,'context':'Unknown','reasoning':None,'benchmark':'N/A','training':'No Training','retention':'0 days','chinese_model':True,'hosting':'Unknown','china_transfer':'Unknown','coding_grade':'N/A','value_grade':'N/A','privacy_risk':'Medium','positioning':[],'notes':'Current OpenCode Go official model list, pricing, estimated-request, endpoint, and privacy tables confirm availability. Context, reasoning, benchmark, provider/routing, and hosting are not inferred.'}
+          ]
+          if not any(a['model'] not in names for a in additions):
+            raise SystemExit('MiMo 2.6 models already present')
+          idx=next(i for i,x in enumerate(m['models']) if x['model']=='MiMo-V2.5')
+          for a in reversed(additions):
+            if a['model'] not in names: m['models'].insert(idx,a)
+          m['as_of']=today
+          mp.write_text(json.dumps(m,ensure_ascii=False,indent=2)+'\n')
+          up=Path('data/usage.json'); u=json.loads(up.read_text())
+          ordered={}
+          for k,v in u['models'].items():
+            if k=='MiMo-V2.5':
+              ordered['MiMo-V2.6-Flash']={'monthly_usage_usd':60,'requests_5h':30100,'requests_week':75200,'requests_month':150400}
+              ordered['MiMo-V2.6-Pro']={'monthly_usage_usd':15,'requests_5h':3250,'requests_week':8150,'requests_month':16300}
+            ordered[k]=v
+          u['models']=ordered; u['as_of']=today
+          up.write_text(json.dumps(u,ensure_ascii=False,indent=2)+'\n')
+          Path('.github/workflows/sync-mimo26.yml').unlink()
+          PY
+      - name: Validate and commit
+        run: |
+          python3 - <<'PY'
+          import json
+          m=json.load(open('data/models.json')); u=json.load(open('data/usage.json'))
+          mn=[x['model'] for x in m['models']]; un=list(u['models'])
+          assert set(mn)==set(un), (set(mn)-set(un),set(un)-set(mn))
+          assert all(v in mn for v in m['recommendations'].values())
+          assert 'MiMo-V2.6-Flash' in mn and 'MiMo-V2.6-Pro' in mn
+          PY
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/models.json data/usage.json .github/workflows/sync-mimo26.yml
+          git commit -m 'Add MiMo V2.6 models to OpenCode Go radar'
+          git push
