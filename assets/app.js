@@ -1,5 +1,5 @@
 const state = { rows: [], recommendations: {}, sortKey: 'model', sortDir: 1 };
-const LAST_CHECKED = '2026-09-22';
+const LAST_CHECKED = '2026-09-23';
 const $ = (s) => document.querySelector(s);
 const gradeRank = { S: 4, A: 3, B: 2, C: 1 };
 
