@@ -21,3 +21,4 @@ async function init(){const[modelRes,usageRes]=await Promise.all([fetch('data/mo
 $('#reset').addEventListener('click',()=>{['search','privacy','china','position'].forEach(id=>$(`#${id}`).value='');render();});
 document.querySelectorAll('th[data-key]').forEach(th=>th.addEventListener('click',()=>{const k=th.dataset.key;if(state.sortKey===k)state.sortDir*=-1;else{state.sortKey=k;state.sortDir=1;}render();}));
 init().catch(err=>{$('#meta').textContent='Failed to load model data';console.error(err);});
+// Deployment marker for the 2026-09-24 verified Go lineup sync.
