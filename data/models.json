@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-23",
+  "as_of": "2026-09-24",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -53,6 +53,27 @@
       "positioning": [
         "성능 우선"
       ]
+    },
+    {
+      "model": "GPT 6 Luna",
+      "developer": "OpenAI",
+      "provider": "Unknown",
+      "input_price": 0.1,
+      "output_price": 0.5,
+      "cached_input": 0.01,
+      "context": "Unknown",
+      "reasoning": null,
+      "benchmark": "N/A",
+      "training": "No Training",
+      "retention": "Up to 30 days abuse logs",
+      "chinese_model": false,
+      "hosting": "Unknown",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [],
+      "notes": "Current OpenCode Go official model list, pricing, endpoint, request-estimate, and privacy tables confirm availability. Pricing shown is the <=272K tier; >272K is $0.20 input / $0.75 output / $0.02 cached read / $0.25 cached write. Context maximum, reasoning, benchmark, provider/routing, and hosting are not inferred."
     },
     {
       "model": "GPT-5.6 Luna",
@@ -733,6 +754,27 @@
         "가성비 우선",
         "저가 서브에이전트"
       ]
+    },
+    {
+      "model": "Space Bunny Free",
+      "developer": "Anonymous",
+      "provider": "Unknown",
+      "input_price": 0.0,
+      "output_price": 0.0,
+      "cached_input": 0.0,
+      "context": "Unknown",
+      "reasoning": null,
+      "benchmark": "N/A",
+      "training": "No Training",
+      "retention": "0 days",
+      "chinese_model": false,
+      "hosting": "Unknown",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [],
+      "notes": "Official Go docs and landing page list this anonymous model as free with unlimited usage for a limited time. Identity, context, reasoning, benchmark, provider/routing, hosting, region, and promotion end date are not disclosed, so they are not inferred."
     }
   ]
 }
