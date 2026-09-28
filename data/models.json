@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-24",
+  "as_of": "2026-09-28",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -278,6 +278,27 @@
         "가성비 우선",
         "저가 서브에이전트"
       ]
+    },
+    {
+      "model": "LongCat 2.5 Preview Free",
+      "developer": "Meituan",
+      "provider": "Unknown",
+      "input_price": 0,
+      "output_price": 0,
+      "cached_input": 0,
+      "context": "Unknown",
+      "reasoning": null,
+      "benchmark": "N/A",
+      "training": "No Training",
+      "retention": "0 days",
+      "chinese_model": true,
+      "hosting": "Unknown",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [],
+      "notes": "Current OpenCode Go official model list, pricing, estimated-request, endpoint, and privacy tables confirm availability. It is free with unlimited usage for a limited time. Context, reasoning, benchmark, provider/routing, hosting, region, and promotion end date are not disclosed, so they are not inferred."
     },
     {
       "model": "MiMo-V2.6-Flash",
@@ -626,8 +647,7 @@
         "성능 우선",
         "가성비 우선"
       ],
-      "promotion": "4x usage (Go landing page)",
-      "notes": "DeepSeek's official model card confirms continuously controllable reasoning_effort=1-100. Reported coding-agent results use max effort, temperature=1.0/top_p=0.95, DeepSeek Harness Minimal with a 1M context; DeepSWE uses mini-SWE and SEC-Bench Pro uses Claude Code. Detailed Go docs use model ID deepseek-v4.1-flash. Go lists off-peak pricing at $0.15/$0.60/$0.003 and weekday peak pricing at $0.30/$1.20/$0.006. The official Go docs advertise 4x usage through Sep 27 at 26,000 requests/5h and $60 promotional usage. OpenCode confirms DeepSeek ZDR through 2026-09-30. Hosting/routing and OpenCode Go exposure of numeric effort control remain unconfirmed."
+      "notes": "DeepSeek's official model card confirms continuously controllable reasoning_effort=1-100. Reported coding-agent results use max effort and vendor-specific harnesses, so scores are not treated as apples-to-apples independent measurements. As of 2026-09-28, OpenCode Go lists a $60 monthly limit and 26,000 / 65,000 / 130,000 estimated requests without a promotion label. Go lists off-peak pricing at $0.15/$0.60/$0.003 and weekday peak pricing at $0.30/$1.20/$0.006. OpenCode confirms DeepSeek ZDR through 2026-09-30. Hosting/routing and OpenCode Go exposure of numeric effort control remain unconfirmed."
     },
     {
       "model": "DeepSeek V4 Pro",
@@ -759,9 +779,9 @@
       "model": "Space Bunny Free",
       "developer": "Anonymous",
       "provider": "Unknown",
-      "input_price": 0.0,
-      "output_price": 0.0,
-      "cached_input": 0.0,
+      "input_price": 0,
+      "output_price": 0,
+      "cached_input": 0,
       "context": "Unknown",
       "reasoning": null,
       "benchmark": "N/A",

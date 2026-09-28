@@ -1,10 +1,10 @@
 {
-  "as_of": "2026-09-24",
+  "as_of": "2026-09-28",
   "subscription_usd_per_month": 10,
   "limit_policy": {
     "five_hour_fraction": 0.2,
     "weekly_fraction": 0.5,
-    "monthly_fraction": 1.0
+    "monthly_fraction": 1
   },
   "client_requirements": {
     "session_header": "OpenCode asks coding-agent clients to send a stable per-conversation session ID so routing and prompt caching can be optimized. x-opencode-session is the generic header; Go also recognizes some clients' native session headers.",
@@ -24,7 +24,7 @@
       "MiMo Code": "A proposed session-header fix exists but had not merged when checked."
     }
   },
-  "note": "OpenCode documents usage limits per model as dollar amounts: the 5-hour limit is 20% of that model's monthly limit, the weekly limit is 50%, and the monthly limit is 100%. Request counts are OpenCode estimates based on typical Go request patterns. As of 2026-09-22, DeepSeek V4.1 Flash has a temporary 4x promotion through September 27: its base $15 monthly limit is temporarily $60, with 26,000 requests/5h, 65,000/week, and 130,000/month. MiniMax M2.5 remains in the official pricing and endpoint tables with a $60 monthly limit, but the curated model list and estimated-request table omit it, so request counts remain unknown rather than inferred.",
+  "note": "OpenCode documents usage limits per model as dollar amounts: the 5-hour limit is 20% of that model's monthly limit, the weekly limit is 50%, and the monthly limit is 100%. Request counts are OpenCode estimates based on typical Go request patterns. As of 2026-09-28, the official Go tables list DeepSeek V4.1 Flash at a $60 monthly limit with 26,000 / 65,000 / 130,000 estimated requests and no promotion label, so the prior temporary-promotion fields are no longer carried forward. MiniMax M2.5 remains in the official pricing and endpoint tables with a $60 monthly limit, but the curated model list and estimated-request table omit it, so request counts remain unknown rather than inferred. LongCat 2.5 Preview Free is currently listed as free with unlimited usage for a limited time; no end date is published.",
   "models": {
     "Grok 4.7": {
       "monthly_usage_usd": 15,
@@ -177,16 +177,10 @@
       "requests_month": 16300
     },
     "DeepSeek V4.1 Flash": {
-      "monthly_usage_usd": 15,
-      "requests_5h": 6500,
-      "requests_week": 16250,
-      "requests_month": 32500,
-      "promotion": "4x usage through 2026-09-27",
-      "promotion_end": "2026-09-27",
-      "promotional_monthly_usage_usd": 60,
-      "promotional_requests_5h": 26000,
-      "promotional_requests_week": 65000,
-      "promotional_requests_month": 130000
+      "monthly_usage_usd": 60,
+      "requests_5h": 26000,
+      "requests_week": 65000,
+      "requests_month": 130000
     },
     "DeepSeek V4 Pro": {
       "monthly_usage_usd": 15,
@@ -225,6 +219,15 @@
       "requests_month": 21130
     },
     "Space Bunny Free": {
+      "monthly_usage_usd": null,
+      "requests_5h": null,
+      "requests_week": null,
+      "requests_month": null,
+      "unlimited": true,
+      "promotion": "Free for a limited time",
+      "promotion_end": null
+    },
+    "LongCat 2.5 Preview Free": {
       "monthly_usage_usd": null,
       "requests_5h": null,
       "requests_week": null,
