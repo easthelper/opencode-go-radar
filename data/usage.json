@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-28",
+  "as_of": "2026-09-29",
   "subscription_usd_per_month": 10,
   "limit_policy": {
     "five_hour_fraction": 0.2,
@@ -24,7 +24,7 @@
       "MiMo Code": "A proposed session-header fix exists but had not merged when checked."
     }
   },
-  "note": "OpenCode documents usage limits per model as dollar amounts: the 5-hour limit is 20% of that model's monthly limit, the weekly limit is 50%, and the monthly limit is 100%. Request counts are OpenCode estimates based on typical Go request patterns. As of 2026-09-28, the official Go tables list DeepSeek V4.1 Flash at a $60 monthly limit with 26,000 / 65,000 / 130,000 estimated requests and no promotion label, so the prior temporary-promotion fields are no longer carried forward. MiniMax M2.5 remains in the official pricing and endpoint tables with a $60 monthly limit, but the curated model list and estimated-request table omit it, so request counts remain unknown rather than inferred. LongCat 2.5 Preview Free is currently listed as free with unlimited usage for a limited time; no end date is published.",
+  "note": "OpenCode documents usage limits per model as dollar amounts: the 5-hour limit is 20% of that model's monthly limit, the weekly limit is 50%, and the monthly limit is 100%. Request counts are OpenCode estimates based on typical Go request patterns. As of 2026-09-28, the official Go tables list DeepSeek V4.1 Flash at a $60 monthly limit with 26,000 / 65,000 / 130,000 estimated requests and no promotion label, so the prior temporary-promotion fields are no longer carried forward. 5 Preview Free is currently listed as free with unlimited usage for a limited time; no end date is published.",
   "models": {
     "Grok 4.7": {
       "monthly_usage_usd": 15,
@@ -57,12 +57,6 @@
       "requests_month": 1080
     },
     "GLM-5.2": {
-      "monthly_usage_usd": 60,
-      "requests_5h": 880,
-      "requests_week": 2150,
-      "requests_month": 4300
-    },
-    "GLM-5.1": {
       "monthly_usage_usd": 60,
       "requests_5h": 880,
       "requests_week": 2150,
@@ -128,12 +122,6 @@
       "requests_week": 8500,
       "requests_month": 17000
     },
-    "MiniMax M2.5": {
-      "monthly_usage_usd": 60,
-      "requests_5h": null,
-      "requests_week": null,
-      "requests_month": null
-    },
     "Muse Spark 1.3 Contributor": {
       "monthly_usage_usd": 60,
       "requests_5h": 45300,
@@ -158,23 +146,11 @@
       "requests_week": 13500,
       "requests_month": 27000
     },
-    "Qwen3.7 Max": {
-      "monthly_usage_usd": 30,
-      "requests_5h": 170,
-      "requests_week": 420,
-      "requests_month": 840
-    },
     "Qwen3.7 Plus": {
       "monthly_usage_usd": 60,
       "requests_5h": 4300,
       "requests_week": 10800,
       "requests_month": 21600
-    },
-    "Qwen3.6 Plus": {
-      "monthly_usage_usd": 60,
-      "requests_5h": 3300,
-      "requests_week": 8200,
-      "requests_month": 16300
     },
     "DeepSeek V4.1 Flash": {
       "monthly_usage_usd": 60,
