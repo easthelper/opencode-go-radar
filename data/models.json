@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-29",
+  "as_of": "2026-10-01",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -76,7 +76,7 @@
       "notes": "Current OpenCode Go official model list, pricing, endpoint, request-estimate, and privacy tables confirm availability. Pricing shown is the <=272K tier; >272K is $0.20 input / $0.75 output / $0.02 cached read / $0.25 cached write. Context maximum, reasoning, benchmark, provider/routing, and hosting are not inferred."
     },
     {
-      "model": "GPT-5.6 Luna",
+      "model": "GPT 5.6 Luna",
       "developer": "OpenAI",
       "provider": "Undisclosed / OpenAI path likely",
       "input_price": 0.2,
@@ -573,7 +573,7 @@
       "reasoning": true,
       "benchmark": "SWE-bench Verified 80.6 / Terminal-Bench 2.1 87.9 (checkpoint-dependent)",
       "training": "No Training",
-      "retention": "0 days (ZDR valid through 2026-09-30)",
+      "retention": "0 days (ZDR valid through 2026-10-31)",
       "chinese_model": true,
       "hosting": "PRC",
       "china_transfer": "Yes",
@@ -584,7 +584,7 @@
         "성능 우선",
         "가성비 우선"
       ],
-      "notes": "OpenCode confirms the current monthly DeepSeek ZDR agreement is valid through 2026-09-30. Go documents weekday peak pricing at 2x the listed off-peak rates."
+      "notes": "OpenCode confirms the current monthly DeepSeek ZDR agreement is valid through 2026-10-31. Go documents weekday peak pricing at 2x the listed off-peak rates."
     },
     {
       "model": "DeepSeek V4 Flash",
@@ -600,7 +600,7 @@
       "reasoning": true,
       "benchmark": "SWE-bench Verified 79.0 / Terminal-Bench 2.1 82.7",
       "training": "No Training",
-      "retention": "0 days (ZDR valid through 2026-09-30)",
+      "retention": "0 days (ZDR valid through 2026-10-31)",
       "chinese_model": true,
       "hosting": "PRC",
       "china_transfer": "Yes",
@@ -611,7 +611,7 @@
         "가성비 우선",
         "저가 서브에이전트"
       ],
-      "notes": "OpenCode confirms the current monthly DeepSeek ZDR agreement is valid through 2026-09-30. Prices shown are off-peak; weekday peak rates are $0.30 input / $1.20 output / $0.006 cached read."
+      "notes": "OpenCode confirms the current monthly DeepSeek ZDR agreement is valid through 2026-10-31. Prices shown are off-peak; weekday peak rates are $0.30 input / $1.20 output / $0.006 cached read."
     },
     {
       "model": "DeepSeek V4 Flash Vision Exp",
@@ -627,7 +627,7 @@
       "reasoning": true,
       "benchmark": "Terminal-Bench 2.1 83.9",
       "training": "No Training",
-      "retention": "0 days (ZDR valid through 2026-09-30)",
+      "retention": "0 days (ZDR valid through 2026-10-31)",
       "chinese_model": true,
       "hosting": "PRC likely",
       "china_transfer": "Yes",
@@ -637,7 +637,7 @@
       "positioning": [
         "가성비 우선"
       ],
-      "notes": "OpenCode confirms the current monthly DeepSeek ZDR agreement is valid through 2026-09-30. Prices shown are off-peak; weekday peak rates are $0.30 input / $1.20 output / $0.006 cached read."
+      "notes": "OpenCode confirms the current monthly DeepSeek ZDR agreement is valid through 2026-10-31. Prices shown are off-peak; weekday peak rates are $0.30 input / $1.20 output / $0.006 cached read."
     },
     {
       "model": "Hy4 preview",

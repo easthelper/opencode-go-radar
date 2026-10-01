@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-29",
+  "as_of": "2026-10-01",
   "subscription_usd_per_month": 10,
   "limit_policy": {
     "five_hour_fraction": 0.2,
@@ -37,12 +37,6 @@
       "requests_5h": 169,
       "requests_week": 423,
       "requests_month": 845
-    },
-    "GPT-5.6 Luna": {
-      "monthly_usage_usd": 15,
-      "requests_5h": 2050,
-      "requests_week": 5100,
-      "requests_month": 10250
     },
     "GLM-5.3-Flash": {
       "monthly_usage_usd": 60,
@@ -211,6 +205,12 @@
       "unlimited": true,
       "promotion": "Free for a limited time",
       "promotion_end": null
+    },
+    "GPT 5.6 Luna": {
+      "monthly_usage_usd": 15,
+      "requests_5h": 2050,
+      "requests_week": 5100,
+      "requests_month": 10250
     }
   }
 }
