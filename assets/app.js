@@ -1,5 +1,5 @@
 const state = { rows: [], recommendations: {}, sortKey: 'model', sortDir: 1 };
-const LAST_CHECKED = '2026-10-01';
+const LAST_CHECKED = '2026-10-06';
 const $ = (s) => document.querySelector(s);
 const gradeRank = { S: 4, A: 3, B: 2, C: 1 };
 
@@ -21,4 +21,4 @@ async function init(){const[modelRes,usageRes]=await Promise.all([fetch('data/mo
 $('#reset').addEventListener('click',()=>{['search','privacy','china','position'].forEach(id=>$(`#${id}`).value='');render();});
 document.querySelectorAll('th[data-key]').forEach(th=>th.addEventListener('click',()=>{const k=th.dataset.key;if(state.sortKey===k)state.sortDir*=-1;else{state.sortKey=k;state.sortDir=1;}render();}));
 init().catch(err=>{$('#meta').textContent='Failed to load model data';console.error(err);});
-// Deployment marker for the 2026-10-01 verified Go sync.
+// Deployment marker for the 2026-10-06 verified Go sync.
