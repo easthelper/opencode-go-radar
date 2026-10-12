@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-01",
+  "as_of": "2026-10-12",
   "subscription_usd_per_month": 10,
   "limit_policy": {
     "five_hour_fraction": 0.2,
@@ -24,7 +24,7 @@
       "MiMo Code": "A proposed session-header fix exists but had not merged when checked."
     }
   },
-  "note": "OpenCode documents usage limits per model as dollar amounts: the 5-hour limit is 20% of that model's monthly limit, the weekly limit is 50%, and the monthly limit is 100%. Request counts are OpenCode estimates based on typical Go request patterns. As of 2026-09-28, the official Go tables list DeepSeek V4.1 Flash at a $60 monthly limit with 26,000 / 65,000 / 130,000 estimated requests and no promotion label, so the prior temporary-promotion fields are no longer carried forward. 5 Preview Free is currently listed as free with unlimited usage for a limited time; no end date is published.",
+  "note": "OpenCode documents usage limits per model as dollar amounts: the 5-hour limit is 20% of that model's monthly limit, the weekly limit is 50%, and the monthly limit is 100%. Request counts are OpenCode estimates based on typical Go request patterns. As of 2026-09-28, the official Go tables list DeepSeek V4.1 Flash at a $60 monthly limit with 26,000 / 65,000 / 130,000 estimated requests and no promotion label, so the prior temporary-promotion fields are no longer carried forward. 5 Preview Free is currently listed as free with unlimited usage for a limited time; no end date is published. Current OpenCode Go v2 docs also list Claude Haiku 5.5 ($15 monthly limit; 3,850 / 9,620 / 19,230 estimated requests) and Step 5 Preview Free (unlimited for a limited time; no end date published). Older docs.opencode.ai Go page omits these entries, so official source-version discrepancy is documented.",
   "models": {
     "Grok 4.7": {
       "monthly_usage_usd": 15,
@@ -188,15 +188,6 @@
       "requests_week": 10560,
       "requests_month": 21130
     },
-    "Space Bunny Free": {
-      "monthly_usage_usd": null,
-      "requests_5h": null,
-      "requests_week": null,
-      "requests_month": null,
-      "unlimited": true,
-      "promotion": "Free for a limited time",
-      "promotion_end": null
-    },
     "LongCat 2.5 Preview Free": {
       "monthly_usage_usd": null,
       "requests_5h": null,
@@ -211,6 +202,27 @@
       "requests_5h": 2050,
       "requests_week": 5100,
       "requests_month": 10250
+    },
+    "Space Bunny": {
+      "monthly_usage_usd": 30,
+      "requests_5h": 3130,
+      "requests_week": 7810,
+      "requests_month": 15630
+    },
+    "Claude Haiku 5.5": {
+      "monthly_usage_usd": 15,
+      "requests_5h": 3850,
+      "requests_week": 9620,
+      "requests_month": 19230
+    },
+    "Step 5 Preview Free": {
+      "monthly_usage_usd": null,
+      "requests_5h": null,
+      "requests_week": null,
+      "requests_month": null,
+      "unlimited": true,
+      "promotion": "Free for a limited time",
+      "promotion_end": null
     }
   }
 }
