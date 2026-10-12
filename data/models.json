@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-01",
+  "as_of": "2026-10-12",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -686,12 +686,12 @@
       ]
     },
     {
-      "model": "Space Bunny Free",
-      "developer": "Anonymous",
+      "model": "Space Bunny",
+      "developer": "Unknown",
       "provider": "Unknown",
-      "input_price": 0,
-      "output_price": 0,
-      "cached_input": 0,
+      "input_price": 0.15,
+      "output_price": 0.6,
+      "cached_input": 0.03,
       "context": "Unknown",
       "reasoning": null,
       "benchmark": "N/A",
@@ -704,7 +704,49 @@
       "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [],
-      "notes": "Official Go docs and landing page list this anonymous model as free with unlimited usage for a limited time. Identity, context, reasoning, benchmark, provider/routing, hosting, region, and promotion end date are not disclosed, so they are not inferred."
+      "notes": "Current official Go pricing/API table lists Space Bunny at $0.15 input / $0.60 output / $0.03 cached read and a $30 monthly limit. Current official docs differ on curated-list visibility; current pricing and endpoint table confirm availability. Context, reasoning, benchmark, provider/routing, hosting, and region are not inferred."
+    },
+    {
+      "model": "Claude Haiku 5.5",
+      "developer": "Anthropic",
+      "provider": "Anthropic API path (official Go endpoint; upstream routing not independently verified)",
+      "input_price": 0.1,
+      "output_price": 0.5,
+      "cached_input": 0.01,
+      "context": "Unknown",
+      "reasoning": null,
+      "benchmark": "N/A",
+      "training": "No Training",
+      "retention": "30 days",
+      "chinese_model": false,
+      "hosting": "Unknown",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [],
+      "notes": "Current OpenCode Go v2 docs list Claude Haiku 5.5 in model, pricing, endpoint, request-estimate, and privacy tables. Prices are <=100K tokens; >100K is $0.50 input / $2.50 output / $0.05 cached read. Cached write is $0.125 <=100K and $0.625 >100K. Context/reasoning/benchmark and Go hosting region are not inferred. Older docs.opencode.ai Go page omits this model; source-version discrepancy noted."
+    },
+    {
+      "model": "Step 5 Preview Free",
+      "developer": "StepFun",
+      "provider": "Unknown",
+      "input_price": 0,
+      "output_price": 0,
+      "cached_input": 0,
+      "context": "Unknown",
+      "reasoning": null,
+      "benchmark": "N/A",
+      "training": "No Training",
+      "retention": "0 days",
+      "chinese_model": true,
+      "hosting": "Unknown",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [],
+      "notes": "Current OpenCode Go v2 documentation lists Step 5 Preview Free as a limited-time free model in current model/usage/privacy tables; no promotion end date is published. Context, reasoning, benchmark, provider/routing, hosting, and data region are not inferred. Older docs.opencode.ai Go page omits this model."
     }
   ]
 }
