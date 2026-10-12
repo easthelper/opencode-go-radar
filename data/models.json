@@ -729,7 +729,7 @@
     },
     {
       "model": "Step 5 Preview Free",
-      "developer": "StepFun",
+      "developer": "Unknown",
       "provider": "Unknown",
       "input_price": 0,
       "output_price": 0,
@@ -739,14 +739,14 @@
       "benchmark": "N/A",
       "training": "No Training",
       "retention": "0 days",
-      "chinese_model": true,
+      "chinese_model": null,
       "hosting": "Unknown",
       "china_transfer": "Unknown",
       "coding_grade": "N/A",
       "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [],
-      "notes": "Current OpenCode Go v2 documentation lists Step 5 Preview Free as a limited-time free model in current model/usage/privacy tables; no promotion end date is published. Context, reasoning, benchmark, provider/routing, hosting, and data region are not inferred. Older docs.opencode.ai Go page omits this model."
+      "notes": "Current OpenCode Go v2 documentation lists Step 5 Preview Free as a limited-time free model in current model, pricing, estimated-request, and privacy tables; no promotion end date is published. The Go documentation does not identify its developer, context, reasoning, benchmark, provider/routing, hosting, or data region, so these remain unknown."
     }
   ]
 }
