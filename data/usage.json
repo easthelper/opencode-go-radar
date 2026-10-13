@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-12",
+  "as_of": "2026-10-13",
   "subscription_usd_per_month": 10,
   "limit_policy": {
     "five_hour_fraction": 0.2,
@@ -24,7 +24,7 @@
       "MiMo Code": "A proposed session-header fix exists but had not merged when checked."
     }
   },
-  "note": "OpenCode documents usage limits per model as dollar amounts: the 5-hour limit is 20% of that model's monthly limit, the weekly limit is 50%, and the monthly limit is 100%. Request counts are OpenCode estimates based on typical Go request patterns. As of 2026-09-28, the official Go tables list DeepSeek V4.1 Flash at a $60 monthly limit with 26,000 / 65,000 / 130,000 estimated requests and no promotion label, so the prior temporary-promotion fields are no longer carried forward. 5 Preview Free is currently listed as free with unlimited usage for a limited time; no end date is published. Current OpenCode Go v2 docs also list Claude Haiku 5.5 ($15 monthly limit; 3,850 / 9,620 / 19,230 estimated requests) and Step 5 Preview Free (unlimited for a limited time; no end date published). Older docs.opencode.ai Go page omits these entries, so official source-version discrepancy is documented.",
+  "note": "OpenCode documents usage limits per model as dollar amounts: the 5-hour limit is 20% of that model's monthly limit, the weekly limit is 50%, and the monthly limit is 100%. Request counts are OpenCode estimates based on typical Go request patterns. As of 2026-09-28, the official Go tables list DeepSeek V4.1 Flash at a $60 monthly limit with 26,000 / 65,000 / 130,000 estimated requests and no promotion label, so the prior temporary-promotion fields are no longer carried forward. 5 Preview Free is currently listed as free with unlimited usage for a limited time; no end date is published. Current OpenCode Go v2 docs also list Claude Haiku 5.5 ($15 monthly limit; 3,850 / 9,620 / 19,230 estimated requests) and Step 5 Preview Free (unlimited for a limited time; no end date published). Older docs.opencode.ai Go page omits these entries, so official source-version discrepancy is documented. On 2026-10-13, current OpenCode Go v2 official tables show DeepSeek V4.1 Flash at $80 monthly limit and estimated requests 34,670 / 86,670 / 173,330 (5h/week/month); prior $60 and 26,000 / 65,000 / 130,000 values are superseded. Peak/off-peak prices remain $0.30/$1.20/$0.006 and $0.15/$0.60/$0.003 respectively.",
   "models": {
     "Grok 4.7": {
       "monthly_usage_usd": 15,
@@ -147,10 +147,10 @@
       "requests_month": 21600
     },
     "DeepSeek V4.1 Flash": {
-      "monthly_usage_usd": 60,
-      "requests_5h": 26000,
-      "requests_week": 65000,
-      "requests_month": 130000
+      "monthly_usage_usd": 80,
+      "requests_5h": 34670,
+      "requests_week": 86670,
+      "requests_month": 173330
     },
     "DeepSeek V4 Pro": {
       "monthly_usage_usd": 15,
