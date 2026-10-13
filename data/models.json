@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-12",
+  "as_of": "2026-10-14",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -747,6 +747,27 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "notes": "Current OpenCode Go v2 documentation lists Step 5 Preview Free as a limited-time free model in current model, pricing, estimated-request, and privacy tables; no promotion end date is published. The Go documentation does not identify its developer, context, reasoning, benchmark, provider/routing, hosting, or data region, so these remain unknown."
+    },
+    {
+      "model": "Cat Jam Free",
+      "developer": "Unknown",
+      "provider": "Unknown",
+      "input_price": 0,
+      "output_price": 0,
+      "cached_input": 0,
+      "context": "Unknown",
+      "reasoning": null,
+      "benchmark": "N/A",
+      "training": "May Train",
+      "retention": "Not ZDR",
+      "chinese_model": null,
+      "hosting": "Unknown",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "High",
+      "positioning": [],
+      "notes": "Current OpenCode Go v2 documentation lists Cat Jam Free in the current model, pricing, estimated-request, endpoint, and privacy tables. It is free with unlimited usage for a limited time; the official docs say collected data may be used to improve the model. No promotion end date is published. Developer, context, reasoning, benchmark, provider/routing, hosting, and data region are not disclosed. Source discrepancy: the detailed v2 model/pricing/API tables include Cat Jam Free, while the Go landing page's featured table omits it and reports 31 models; the current detailed tables are treated as the primary availability evidence."
     }
   ]
 }
