@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-14",
+  "as_of": "2026-10-15",
   "subscription_usd_per_month": 10,
   "limit_policy": {
     "five_hour_fraction": 0.2,
@@ -24,7 +24,7 @@
       "MiMo Code": "A proposed session-header fix exists but had not merged when checked."
     }
   },
-  "note": "OpenCode documents usage limits per model as dollar amounts: the 5-hour limit is 20% of that model's monthly limit, the weekly limit is 50%, and the monthly limit is 100%. Request counts are OpenCode estimates based on typical Go request patterns. As of 2026-09-28, the official Go tables list DeepSeek V4.1 Flash at a $60 monthly limit with 26,000 / 65,000 / 130,000 estimated requests and no promotion label, so the prior temporary-promotion fields are no longer carried forward. 5 Preview Free is currently listed as free with unlimited usage for a limited time; no end date is published. Current OpenCode Go v2 docs also list Claude Haiku 5.5 ($15 monthly limit; 3,850 / 9,620 / 19,230 estimated requests) and Step 5 Preview Free (unlimited for a limited time; no end date published). Older docs.opencode.ai Go page omits these entries, so official source-version discrepancy is documented. On 2026-10-13, current OpenCode Go v2 official tables show DeepSeek V4.1 Flash at $80 monthly limit and estimated requests 34,670 / 86,670 / 173,330 (5h/week/month); prior $60 and 26,000 / 65,000 / 130,000 values are superseded. Peak/off-peak prices remain $0.30/$1.20/$0.006 and $0.15/$0.60/$0.003 respectively. On 2026-10-14, current OpenCode Go v2 documentation added Cat Jam Free to the model, pricing, estimated-request, endpoint, and privacy tables: free with unlimited requests for a limited time, no published end date, and collected data may be used to improve the model. Its base monthly usage and request estimates are not separately published, so base values remain null; the limited-time free status is recorded as a promotion. The Go landing page still reports 31 models and omits Cat Jam Free from its featured table, so the detailed current tables are the primary availability evidence.",
+  "note": "OpenCode documents usage limits per model as dollar amounts: the 5-hour limit is 20% of that model's monthly limit, the weekly limit is 50%, and the monthly limit is 100%. Request counts are OpenCode estimates based on typical Go request patterns. As of 2026-09-28, the official Go tables list DeepSeek V4.1 Flash at a $60 monthly limit with 26,000 / 65,000 / 130,000 estimated requests and no promotion label, so the prior temporary-promotion fields are no longer carried forward. 5 Preview Free is currently listed as free with unlimited usage for a limited time; no end date is published. Current OpenCode Go v2 docs also list Claude Haiku 5.5 ($15 monthly limit; 3,850 / 9,620 / 19,230 estimated requests) and Step 5 Preview Free (unlimited for a limited time; no end date published). Older docs.opencode.ai Go page omits these entries, so official source-version discrepancy is documented. On 2026-10-13, current OpenCode Go v2 official tables show DeepSeek V4.1 Flash at $80 monthly limit and estimated requests 34,670 / 86,670 / 173,330 (5h/week/month); prior $60 and 26,000 / 65,000 / 130,000 values are superseded. Peak/off-peak prices remain $0.30/$1.20/$0.006 and $0.15/$0.60/$0.003 respectively. On 2026-10-14, current OpenCode Go v2 documentation added Cat Jam Free to the model, pricing, estimated-request, endpoint, and privacy tables: free with unlimited requests for a limited time and no published end date. Its base monthly usage and request estimates are not separately published, so base values remain null. On 2026-10-15, the current privacy table says model training is not used and data retention is 30 days; the model is region-limited, including China, Hong Kong, and Macau. This supersedes the prior conflicting note that collected data may be used to improve the model. On 2026-10-15, the current Go landing page advertises Gemini 4 Argon Contributor with a 2x limited-time promotion and reports 31 models, while the detailed OpenCode Go v2 model/pricing/request/API/privacy tables enumerate 32 current entries. The active list follows the detailed tables: Gemini 4 Argon Contributor is added; DeepSeek V4 Flash and DeepSeek V4 Flash Vision Exp are removed because they no longer appear in the current detailed model, pricing, endpoint, or privacy tables. Gemini's base Go usage and request estimates are preserved separately from the 2x promotional values (no end date published).",
   "models": {
     "Grok 4.7": {
       "monthly_usage_usd": 15,
@@ -158,18 +158,6 @@
       "requests_week": 2600,
       "requests_month": 5200
     },
-    "DeepSeek V4 Flash": {
-      "monthly_usage_usd": 30,
-      "requests_5h": 13000,
-      "requests_week": 32500,
-      "requests_month": 65000
-    },
-    "DeepSeek V4 Flash Vision Exp": {
-      "monthly_usage_usd": 15,
-      "requests_5h": 6500,
-      "requests_week": 16250,
-      "requests_month": 32500
-    },
     "Hy4 preview": {
       "monthly_usage_usd": 30,
       "requests_5h": 1350,
@@ -232,6 +220,18 @@
       "unlimited": true,
       "promotion": "Free for a limited time",
       "promotion_end": null
+    },
+    "Gemini 4 Argon Contributor": {
+      "monthly_usage_usd": 30,
+      "requests_5h": 220,
+      "requests_week": 540,
+      "requests_month": 1060,
+      "promotion": "2x usage for a limited time",
+      "promotion_end": null,
+      "promotional_monthly_usage_usd": 60,
+      "promotional_requests_5h": 440,
+      "promotional_requests_week": 1080,
+      "promotional_requests_month": 2120
     }
   }
 }
