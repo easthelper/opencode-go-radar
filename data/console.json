@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-16",
+  "as_of": "2026-10-17",
   "schema_version": 1,
   "scope": "Official OpenCode Console (Zen) endpoint/pricing catalog only; arbitrary third-party provider catalogs excluded.",
   "sources": [
@@ -2963,11 +2963,11 @@
       ]
     },
     {
-      "offering_id": "console:cat-jam-free",
+      "offering_id": "console:beam-free",
       "offering": "console-free",
-      "model": "Cat Jam Free",
-      "model_id": "cat-jam-free",
-      "selection_id": "opencode/cat-jam-free",
+      "model": "Beam Free",
+      "model_id": "beam-free",
+      "selection_id": "opencode/beam-free",
       "endpoint": "https://opencode.ai/inference/openai/v1/chat/completions",
       "developer": "Unknown",
       "provider": "Undisclosed",
@@ -2987,14 +2987,14 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings.",
-      "limits": "Region restrictions: unavailable in Angola, Belarus, Cambodia, China (including Hong Kong/Macau), Cuba, DR Congo, Equatorial Guinea, Iran, Iraq, Laos, Libya, Nigeria, North Korea, Russia, Syria, Turkmenistan, Uzbekistan, Venezuela, Crimea, Donetsk and Luhansk.",
+      "checked_at": "2026-10-17",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Beam Free is explicitly listed as limited-time free, with no training and 30-day safety retention. No claim is made that it is a rename of a previous offering.",
+      "limits": "Region restrictions: unavailable in Angola, Belarus, Cambodia, China (including Hong Kong/Macau), Cuba, DR Congo, Equatorial Guinea, Iran, Iraq, Laos, Libya, Nigeria, North Korea, Russia, Syria, Turkmenistan, Uzbekistan, Venezuela, Crimea, Donetsk and Luhansk. Numeric request limits are not disclosed; free does not establish unlimited usage.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
       "price_tiers": [
         {
-          "label": "Cat Jam Free",
+          "label": "Beam Free",
           "input_price": 0,
           "output_price": 0,
           "cached_input": 0,
@@ -3411,6 +3411,13 @@
       "model_id": "kimi-k2.5",
       "deprecation_date": "August 5, 2026",
       "reason": "Still present in endpoint/pricing tables, but explicitly deprecated in the same official document; excluded from active offerings."
+    },
+    {
+      "model": "Cat Jam Free",
+      "model_id": "cat-jam-free",
+      "deprecation_date": null,
+      "reason": "Absent from the current official Console endpoint, pricing and free-model sections on 2026-10-17; no current offering evidence. Not explicitly marked deprecated.",
+      "source": "https://opencode.ai/v2/docs/console/models/"
     }
   ]
 }

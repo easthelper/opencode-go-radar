@@ -1,6 +1,6 @@
 const state = { rows: [], recommendations: {}, sortKey: 'model', sortDir: 1 };
 const DEFAULT_OFFERING = 'go-free';
-const LAST_CHECKED = '2026-10-16';
+const LAST_CHECKED = '2026-10-17';
 const $ = (s) => document.querySelector(s);
 const gradeRank = { S: 4, A: 3, B: 2, C: 1 };
 

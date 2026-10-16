@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-16",
+  "as_of": "2026-10-17",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -7,7 +7,7 @@
   "recommendations": {
     "absolute_performance": "GLM-5.3",
     "best_value": "MiMo-V2.6-Flash",
-    "sensitive_code": "Kimi K2.6",
+    "sensitive_code": null,
     "cheap_subagent": "MiMo-V2.6-Flash"
   },
   "models": [
@@ -31,28 +31,6 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "notes": "Current OpenCode Go official model, pricing, endpoint, request-estimate, and privacy tables confirm availability. Pricing shown is the <=200K tier; >200K is $4 input / $12 output / $1 cached read. Context maximum, reasoning, benchmark, provider/routing, and hosting are not inferred."
-    },
-    {
-      "model": "Grok 4.6",
-      "developer": "xAI",
-      "provider": "Undisclosed / xAI path likely",
-      "input_price": 2,
-      "output_price": 6,
-      "cached_input": 0.5,
-      "context": "500K",
-      "reasoning": true,
-      "benchmark": "Terminal-Bench 3 26.0",
-      "training": "No Training",
-      "retention": "30 days",
-      "chinese_model": false,
-      "hosting": "Go region undisclosed; xAI native US",
-      "china_transfer": "No evidence",
-      "coding_grade": "S",
-      "value_grade": "B",
-      "privacy_risk": "Medium",
-      "positioning": [
-        "성능 우선"
-      ]
     },
     {
       "model": "GPT 6 Luna",
@@ -208,29 +186,6 @@
       "value_grade": "A",
       "privacy_risk": "Medium",
       "positioning": [
-        "균형형"
-      ]
-    },
-    {
-      "model": "Kimi K2.6",
-      "developer": "Moonshot AI",
-      "provider": "Moonshot observed",
-      "input_price": 0.95,
-      "output_price": 4,
-      "cached_input": 0.16,
-      "context": "262K",
-      "reasoning": true,
-      "benchmark": "SWE-bench Verified 80.2 / Terminal-Bench 2.0 66.7",
-      "training": "No Training",
-      "retention": "0 days",
-      "chinese_model": true,
-      "hosting": "Singapore observed for Moonshot international API",
-      "china_transfer": "No evidence",
-      "coding_grade": "A",
-      "value_grade": "B",
-      "privacy_risk": "Low",
-      "positioning": [
-        "프라이버시 우선",
         "균형형"
       ]
     },
@@ -393,28 +348,6 @@
       "positioning": [
         "가성비 우선",
         "균형형"
-      ]
-    },
-    {
-      "model": "MiniMax M2.7",
-      "developer": "MiniMax",
-      "provider": "Undisclosed",
-      "input_price": 0.3,
-      "output_price": 1.2,
-      "cached_input": 0.06,
-      "context": "~205K",
-      "reasoning": true,
-      "benchmark": "SWE-bench Pro 56.2 / Terminal-Bench 2.0 57",
-      "training": "No Training",
-      "retention": "0 days",
-      "chinese_model": true,
-      "hosting": "Unknown",
-      "china_transfer": "Unknown",
-      "coding_grade": "B",
-      "value_grade": "A",
-      "privacy_risk": "Medium",
-      "positioning": [
-        "저가 서브에이전트"
       ]
     },
     {
@@ -714,10 +647,10 @@
       "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [],
-      "notes": "Current OpenCode Go v2 detailed model list, pricing, endpoint, estimated-request, and privacy tables identify this model as Step 5 Preview (model ID step-5-preview), with $1.00 input / $2.70 output / $0.10 cached read per 1M tokens. The Go base monthly limit is $15 with 430 / 1,070 / 2,130 estimated requests (5h/week/month); the current 4x limited-time promotion raises this to $60 and 1,720 / 4,280 / 8,520. No promotion end date is published. The Go landing page now agrees with the detailed v2 pricing/API tables on Step 5 Preview's paid base usage and 4x limited-time promotion. The landing page still advertises 31 models while the detailed current list contains 32. Privacy table says training is not used and retention is 0 days. Developer, context, reasoning, benchmark, provider/routing, hosting, and region remain undisclosed."
+      "notes": "Current OpenCode Go v2 detailed model list, pricing, endpoint, estimated-request, and privacy tables identify this model as Step 5 Preview (model ID step-5-preview), with $1.00 input / $2.70 output / $0.10 cached read per 1M tokens. The Go base monthly limit is $15 with 430 / 1,070 / 2,130 estimated requests (5h/week/month); the current 4x limited-time promotion raises this to $60 and 1,720 / 4,280 / 8,520. No promotion end date is published. The Go landing page now agrees with the detailed v2 pricing/API tables on Step 5 Preview's paid base usage and 4x limited-time promotion. The landing page and detailed current list now agree on 29 models. Privacy table says training is not used and retention is 0 days. Developer, context, reasoning, benchmark, provider/routing, hosting, and region remain undisclosed."
     },
     {
-      "model": "Cat Jam Free",
+      "model": "Beam Free",
       "developer": "Unknown",
       "provider": "Unknown",
       "input_price": 0,
@@ -735,7 +668,7 @@
       "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [],
-      "notes": "Current OpenCode Go v2 model, pricing, endpoint, and privacy tables confirm availability as a limited-time free model with unlimited estimated requests and regional restrictions (including China, Hong Kong, and Macau). The current privacy table says model training: Not used and data retention: 30 days; this supersedes the prior day's conflicting note that collected data may be used to improve the model. Promotion end date, developer, context, reasoning, benchmark, upstream provider, hosting, and data region are not disclosed."
+      "notes": "Official Go tables list Beam Free (beam-free): free input, output, and cached read; unlimited requests for a limited time; no training; 30-day retention. Region restrictions apply, including China, Hong Kong, and Macau; see https://opencode.ai/v2/docs/console/go/#usage-limits for the complete list. Developer, provider, context, reasoning, benchmark, hosting, data region, and promotion end date are undisclosed."
     }
   ]
 }
