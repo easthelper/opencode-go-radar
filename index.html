@@ -3,24 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="OpenCode Go 모델 가격·코딩 성능·월간 사용 한도·프라이버시·데이터 처리 현황 추적" />
-  <title>OpenCode Go Radar</title>
+  <meta name="description" content="OpenCode Go 및 Console 무료·PAYG 모델 가격·코딩 성능·월간 사용 한도·프라이버시·데이터 처리 현황 추적" />
+  <title>OpenCode Model Radar</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
   <header class="hero">
     <div class="wrap">
-      <p class="eyebrow">OPENCODE GO · MODEL INTELLIGENCE</p>
-      <h1>OpenCode Go Radar</h1>
+      <p class="eyebrow">OPENCODE GO + CONSOLE · MODEL INTELLIGENCE</p>
+      <h1>OpenCode Model Radar</h1>
       <p class="lede">코딩 성능, 실제 비용, 모델별 사용 한도, 데이터 프라이버시와 호스팅 리스크를 한 화면에서 비교합니다.</p>
       <div id="meta" class="meta">Loading…</div>
     </div>
   </header>
 
   <main class="wrap">
+    <p class="scope-note">추천 카드는 기존 Go 구독 기준입니다. 아래 표에서 Console 무료·PAYG 모델을 별도 비교할 수 있습니다.</p>
     <section id="summary" class="cards" aria-label="추천 요약"></section>
 
     <section class="panel controls">
+      <div class="control"><label for="offering">제공 방식</label><select id="offering"><option value="">전체</option><option value="go">Go 구독</option><option value="console-free">Console 무료</option><option value="console-payg">Console PAYG</option></select></div>
       <div class="control search-control">
         <label for="search">검색</label>
         <input id="search" type="search" placeholder="GLM, Kimi, privacy…" />
@@ -44,7 +46,7 @@
       <div class="table-head">
         <div>
           <h2>모델 비교</h2>
-          <p>헤더를 클릭하면 정렬됩니다. Monthly limit은 OpenCode가 모델별로 공개한 월간 사용 한도이며, 5시간 한도는 그 값의 20%, 주간 한도는 50%입니다.</p>
+          <p>헤더를 클릭하면 정렬됩니다. Go Effective Usage와 요청 예상치는 Go 행에만 적용됩니다. Console 무료는 무제한을 의미하지 않으며, PAYG는 별도 사용량 과금입니다. 모델명의 상세 / 조건에서 ID·제한·출처·가격 구간을 확인하세요.</p>
         </div>
         <span id="count" class="count"></span>
       </div>
@@ -55,7 +57,7 @@
             <th data-key="developer">Developer</th>
             <th data-key="coding_grade">Coding</th>
             <th data-key="value_grade">Value</th>
-            <th data-key="monthly_usage_usd">Monthly limit</th>
+            <th data-key="monthly_usage_usd">Go Effective Usage</th>
             <th data-key="requests_month">Req / mo</th>
             <th data-key="estimated_cost">Est. Cost*</th>
             <th data-key="input_price">Input $/M</th>
@@ -77,7 +79,10 @@
 
     <section class="panel notes">
       <h2>해석 원칙</h2>
-      <p><strong>사용 한도는 모델별 월간 달러 한도</strong>로 공개됩니다. 각 모델에서 5시간 한도는 월간 한도의 20%, 주간 한도는 50%, 월간 한도는 100%입니다. 예를 들어 월 $60 모델은 $12 / $30 / $60이고, 월 $15 모델은 $3 / $7.50 / $15입니다.</p>
+      <p><strong>Go / Console 분리:</strong> 동일 모델도 제공 방식마다 가격·제한·학습·보존 정책이 다릅니다. Console은 OpenCode 직접 제공 카탈로그(기존 Zen)를 뜻하며 임의의 외부 provider 전체 목록은 포함하지 않습니다. 공식 deprecated 항목은 활성 목록에서 제외합니다.</p>
+      <p><strong>Console 무료:</strong> 한시적 무료의 종료일·요청 한도가 미공개이면 Unknown / Not stated로 표시합니다. 무료 DeepSeek V4.1 Flash는 별도 ID이며 Go ZDR 종료일을 적용하지 않습니다. Console의 US/EU 표시는 공식 Console 전체 정책이며 개별 upstream·정확한 처리 지역은 미공개입니다.</p>
+      <p><strong>Est. Cost:</strong> input 1M + output 200K 토큰의 단순 합산 예시이며 한 번의 1M-context 요청 견적이 아닙니다. 표는 기본 짧은-context 구간을 표시하고 추가 구간은 상세에 표시합니다. 캐시·카드 수수료는 제외합니다. Console 카드 수수료는 충전 건당 4.4% + $0.30입니다.</p>
+      <p><strong>Go 사용 한도는 모델별 월간 달러 한도</strong>로 공개됩니다. 각 모델에서 5시간 한도는 월간 한도의 20%, 주간 한도는 50%, 월간 한도는 100%입니다. 예를 들어 월 $60 모델은 $12 / $30 / $60이고, 월 $15 모델은 $3 / $7.50 / $15입니다.</p>
       <p><strong>Monthly limit</strong>은 OpenCode가 공식 문서에 공개한 모델별 포함 사용량입니다. 모델 간 혼합 사용의 내부 회계 방식은 공식 문서에 없는 내용을 임의로 추정하지 않습니다.</p>
       <p><strong>Req / mo</strong>는 OpenCode의 일반적 Go 요청 패턴을 기준으로 한 공식 예상치입니다.</p>
       <p><strong>서드파티 코딩 에이전트</strong>는 OpenCode의 최신 안내에 따라 안정적인 세션 ID를 전달해야 라우팅과 프롬프트 캐싱을 최적화할 수 있습니다.</p>
@@ -86,6 +91,7 @@
       <p><strong>Unknown</strong>은 보수적으로 미확인 상태를 뜻합니다. 서로 다른 harness의 벤치마크를 단일 숫자 순위로 합산하지 않습니다.</p>
 
       <h2>주요 레퍼런스</h2>
+      <p>OpenCode Console 공식 모델·가격·프라이버시: <a href="https://opencode.ai/v2/docs/console/models/">Console Models (Zen)</a></p>
       <p>OpenCode Go 공식 문서: <a href="https://dev.opencode.ai/docs/go/" target="_blank" rel="noopener noreferrer">https://dev.opencode.ai/docs/go/</a></p>
       <p>OpenCode Go 한국어 문서: <a href="https://dev.opencode.ai/docs/ko/go/" target="_blank" rel="noopener noreferrer">https://dev.opencode.ai/docs/ko/go/</a></p>
       <p>OpenCode Go 콘솔 문서: <a href="https://opencode.ai/v2/docs/console/go" target="_blank" rel="noopener noreferrer">https://opencode.ai/v2/docs/console/go</a></p>
@@ -93,11 +99,12 @@
       <p>OpenCode 모델/variant 문서: <a href="https://dev.opencode.ai/docs/models/" target="_blank" rel="noopener noreferrer">https://dev.opencode.ai/docs/models/</a></p>
       <p>OpenCode 공식 Go 문서 소스: <a href="https://github.com/anomalyco/opencode/blob/dev/packages/web/src/content/docs/go.mdx" target="_blank" rel="noopener noreferrer">https://github.com/anomalyco/opencode/blob/dev/packages/web/src/content/docs/go.mdx</a></p>
       <p>Radar 저장소: <a href="https://github.com/easthelper/opencode-go-radar" target="_blank" rel="noopener noreferrer">https://github.com/easthelper/opencode-go-radar</a></p>
-      <p>원본 데이터: <a href="data/models.json">models.json</a> · <a href="data/usage.json">usage.json</a></p>
+      <p>원본 데이터: <a href="data/models.json">models.json</a> · <a href="data/usage.json">usage.json (Go)</a> · <a href="data/console.json">console.json</a></p>
     </section>
   </main>
 
-  <footer><div class="wrap">OpenCode Go Radar · generated from versioned repository data</div></footer>
+  <footer><div class="wrap">OpenCode Model Radar · generated from versioned repository data</div></footer>
   <script src="assets/app.js"></script>
 </body>
 </html>
+
