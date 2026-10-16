@@ -18,11 +18,11 @@
   </header>
 
   <main class="wrap">
-    <p class="scope-note">추천 카드는 기존 Go 구독 기준입니다. 아래 표에서 Console 무료·PAYG 모델을 별도 비교할 수 있습니다.</p>
+    <p class="scope-note">추천 카드는 기존 Go 구독 기준입니다. 아래 표는 Go + OpenCode Free가 기본이며, 무료만 또는 전체·PAYG로 바꿔 비교할 수 있습니다.</p>
     <section id="summary" class="cards" aria-label="추천 요약"></section>
 
     <section class="panel controls">
-      <div class="control"><label for="offering">제공 방식</label><select id="offering"><option value="">전체</option><option value="go">Go 구독</option><option value="console-free">Console 무료</option><option value="console-payg">Console PAYG</option></select></div>
+      <div class="control"><label for="offering">제공 방식</label><select id="offering"><option value="go-free" selected>Go + Free (기본)</option><option value="console-free">OpenCode Free만</option><option value="go">Go 구독만</option><option value="console-payg">Console PAYG만</option><option value="">전체</option></select></div>
       <div class="control search-control">
         <label for="search">검색</label>
         <input id="search" type="search" placeholder="GLM, Kimi, privacy…" />
@@ -48,7 +48,7 @@
           <h2>모델 비교</h2>
           <p>헤더를 클릭하면 정렬됩니다. Go Effective Usage와 요청 예상치는 Go 행에만 적용됩니다. Console 무료는 무제한을 의미하지 않으며, PAYG는 별도 사용량 과금입니다. 모델명의 상세 / 조건에서 ID·제한·출처·가격 구간을 확인하세요.</p>
         </div>
-        <span id="count" class="count"></span>
+        <span id="count" class="count" role="status" aria-live="polite"></span>
       </div>
       <div class="table-wrap">
         <table>
@@ -104,7 +104,17 @@
   </main>
 
   <footer><div class="wrap">OpenCode Model Radar · generated from versioned repository data</div></footer>
+  <dialog id="model-dialog" aria-labelledby="model-dialog-title">
+    <div class="dialog-shell">
+      <header class="dialog-header">
+        <div><p id="model-dialog-offering" class="offering-label"></p><h2 id="model-dialog-title"></h2></div>
+        <button id="close-details" type="button" autofocus>닫기</button>
+      </header>
+      <div id="model-dialog-content" class="dialog-content" tabindex="0" aria-label="모델 상세 및 조건"></div>
+    </div>
+  </dialog>
   <script src="assets/app.js"></script>
 </body>
 </html>
+
 

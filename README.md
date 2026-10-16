@@ -65,3 +65,8 @@ The dashboard now covers OpenCode's own Go and Console (formerly Zen) offerings.
 Check the current official Go and Console documentation for availability, price tiers, free promotions, expiration, training/retention, routing and regional restrictions. Treat Console free and paid versions as separate offerings. Do not copy DeepSeek Go's ZDR expiration onto the free Console ID. Preserve base versus promotional pricing/usage. Never infer unlimited usage from a zero token price. Audit source conflicts and deprecated records before marking models active.
 
 Local regression checks: `node tests/dashboard.test.cjs`. Serve the repository root with a static HTTP server to inspect the UI.
+
+
+### Compact filters and details
+
+The initial view and filter reset show Go + Console Free. Choose OpenCode Free only, Go only, PAYG only or all offerings from the offering selector. Details open in a shared native modal outside the table; its bounded content scrolls independently. Close with the button, Escape or backdrop, then keyboard focus returns to the triggering row.
