@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-17",
+  "as_of": "2026-10-18",
   "schema_version": 1,
   "scope": "Official OpenCode Console (Zen) endpoint/pricing catalog only; arbitrary third-party provider catalogs excluded.",
   "sources": [
@@ -32,8 +32,8 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Displayed token prices use the first (short-context) tier; see expanded pricing for long-context rates. Est. Cost is a token-volume illustration, not a single 1M-context request.",
+      "checked_at": "2026-10-18",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Displayed token prices use the first (short-context) tier; see expanded pricing for long-context rates. Est. Cost is a token-volume illustration, not a single 1M-context request. Native vendor capability (not a verified Console endpoint limit): context 1050000; reasoning True. Native model specs. Console maximum context and parameter passthrough are unverified. Native GPT-6.1 Sol cached input is $0.10; Console remains $0.20 in current catalog, so do not overwrite.",
       "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
       "promotion": null,
       "promotion_end": null,
@@ -52,6 +52,10 @@
           "cached_input": 2.0,
           "cached_write": 25.0
         }
+      ],
+      "sources": [
+        "https://developers.openai.com/api/docs/models/gpt-6-astra",
+        "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
       ]
     },
     {
@@ -126,8 +130,8 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Displayed token prices use the first (short-context) tier; see expanded pricing for long-context rates. Est. Cost is a token-volume illustration, not a single 1M-context request.",
+      "checked_at": "2026-10-18",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Displayed token prices use the first (short-context) tier; see expanded pricing for long-context rates. Est. Cost is a token-volume illustration, not a single 1M-context request. Native vendor capability (not a verified Console endpoint limit): context 1050000; reasoning True. Native model specs. Console maximum context and parameter passthrough are unverified. Native GPT-6.1 Sol cached input is $0.10; Console remains $0.20 in current catalog, so do not overwrite.",
       "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
       "promotion": null,
       "promotion_end": null,
@@ -146,6 +150,10 @@
           "cached_input": 0.4,
           "cached_write": 5.0
         }
+      ],
+      "sources": [
+        "https://developers.openai.com/api/docs/models/gpt-6-astra",
+        "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
       ]
     },
     {
@@ -855,8 +863,8 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings.",
+      "checked_at": "2026-10-18",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Native vendor capability (not a verified Console endpoint limit): context 1M; reasoning Adaptive; always-on for Fable and Opus. Confirmed vendor comparison table. Keep Console fields unknown unless explicitly labeled native model capability rather than endpoint guarantee.",
       "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
       "promotion": null,
       "promotion_end": null,
@@ -868,6 +876,9 @@
           "cached_input": 0.25,
           "cached_write": 12.5
         }
+      ],
+      "sources": [
+        "https://platform.claude.com/docs/en/models/fable-5-1/overview"
       ]
     },
     {
@@ -935,8 +946,8 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings.",
+      "checked_at": "2026-10-18",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Native vendor capability (not a verified Console endpoint limit): context 1M; reasoning Adaptive; always-on for Fable and Opus. Confirmed vendor comparison table. Keep Console fields unknown unless explicitly labeled native model capability rather than endpoint guarantee.",
       "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
       "promotion": null,
       "promotion_end": null,
@@ -948,6 +959,9 @@
           "cached_input": 0.2,
           "cached_write": 5.0
         }
+      ],
+      "sources": [
+        "https://platform.claude.com/docs/en/models/fable-5-1/overview"
       ]
     },
     {
@@ -1175,8 +1189,8 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings.",
+      "checked_at": "2026-10-18",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Native vendor capability (not a verified Console endpoint limit): context 1M; reasoning Adaptive; always-on for Fable and Opus. Confirmed vendor comparison table. Keep Console fields unknown unless explicitly labeled native model capability rather than endpoint guarantee.",
       "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
       "promotion": null,
       "promotion_end": null,
@@ -1188,6 +1202,9 @@
           "cached_input": 0.2,
           "cached_write": 2.5
         }
+      ],
+      "sources": [
+        "https://platform.claude.com/docs/en/models/fable-5-1/overview"
       ]
     },
     {
@@ -1342,8 +1359,8 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Displayed token prices use the first (short-context) tier; see expanded pricing for long-context rates. Est. Cost is a token-volume illustration, not a single 1M-context request.",
+      "checked_at": "2026-10-18",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Displayed token prices use the first (short-context) tier; see expanded pricing for long-context rates. Est. Cost is a token-volume illustration, not a single 1M-context request. Native vendor capability (not a verified Console endpoint limit): context 1M; reasoning Adaptive; always-on for Fable and Opus. Confirmed vendor comparison table. Keep Console fields unknown unless explicitly labeled native model capability rather than endpoint guarantee.",
       "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
       "promotion": null,
       "promotion_end": null,
@@ -1362,6 +1379,9 @@
           "cached_input": 0.05,
           "cached_write": 0.625
         }
+      ],
+      "sources": [
+        "https://platform.claude.com/docs/en/models/fable-5-1/overview"
       ]
     },
     {
@@ -2102,8 +2122,8 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings.",
+      "checked_at": "2026-10-18",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Listed in the official Console documentation, but absent from the public Console models API during the 2026-10-18 KST audit. Current executable availability is unconfirmed; not explicitly deprecated.",
       "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
       "promotion": null,
       "promotion_end": null,
@@ -2115,6 +2135,9 @@
           "cached_input": 0.5,
           "cached_write": 3.125
         }
+      ],
+      "sources": [
+        "https://opencode.ai/inference/v1/models"
       ]
     },
     {
@@ -2142,8 +2165,8 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings.",
+      "checked_at": "2026-10-18",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Listed in the official Console documentation, but absent from the public Console models API during the 2026-10-18 KST audit. Current executable availability is unconfirmed; not explicitly deprecated.",
       "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
       "promotion": null,
       "promotion_end": null,
@@ -2155,6 +2178,9 @@
           "cached_input": 0.04,
           "cached_write": 0.5
         }
+      ],
+      "sources": [
+        "https://opencode.ai/inference/v1/models"
       ]
     },
     {
@@ -2262,8 +2288,8 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings.",
+      "checked_at": "2026-10-18",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Native vendor capability (not a verified Console endpoint limit): context 1M; reasoning Integer effort 1–100. Different harnesses, not comparable endpoint measurements. Native deepseek-flash now points to V4.1-Flash-1017, but Console checkpoint and numeric effort exposure remain unknown. DeepSeek-reported max-effort TB2.1 90.6; DeepSWE v1.1 74.2. OpenCode scaffold in same model card: TB2.1 85.0, DeepSWE 65.5.",
       "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
       "promotion": null,
       "promotion_end": null,
@@ -2275,6 +2301,9 @@
           "cached_input": 0.006,
           "cached_write": null
         }
+      ],
+      "sources": [
+        "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
       ]
     },
     {
@@ -2907,8 +2936,8 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Official free-model section explicitly confirms no training and zero retention. No free end date, numeric rate limit, or specific upstream is published here; Go ZDR expiry is not transferred.",
+      "checked_at": "2026-10-18",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Official free-model section explicitly confirms no training and zero retention. No free end date, numeric rate limit, or specific upstream is published here; Go ZDR expiry is not transferred. Native vendor capability (not a verified Console endpoint limit): context 1M; reasoning Integer effort 1–100. Different harnesses, not comparable endpoint measurements. Native deepseek-flash now points to V4.1-Flash-1017, but Console checkpoint and numeric effort exposure remain unknown. DeepSeek-reported max-effort TB2.1 90.6; DeepSWE v1.1 74.2. OpenCode scaffold in same model card: TB2.1 85.0, DeepSWE 65.5.",
       "limits": "Not disclosed; free does not establish unlimited usage.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
@@ -2920,6 +2949,9 @@
           "cached_input": 0,
           "cached_write": null
         }
+      ],
+      "sources": [
+        "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
       ]
     },
     {
@@ -3027,8 +3059,8 @@
       "privacy_risk": "High",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code.",
+      "checked_at": "2026-10-18",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code. Listed in the official Console documentation, but absent from the public Console models API during the 2026-10-18 KST audit. Current executable availability is unconfirmed; not explicitly deprecated.",
       "limits": "Not disclosed; free does not establish unlimited usage.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
@@ -3040,6 +3072,9 @@
           "cached_input": 0,
           "cached_write": null
         }
+      ],
+      "sources": [
+        "https://opencode.ai/inference/v1/models"
       ]
     },
     {
@@ -3107,8 +3142,8 @@
       "privacy_risk": "High",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code.",
+      "checked_at": "2026-10-18",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code. Listed in the official Console documentation, but absent from the public Console models API during the 2026-10-18 KST audit. Current executable availability is unconfirmed; not explicitly deprecated.",
       "limits": "Not disclosed; free does not establish unlimited usage.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
@@ -3120,6 +3155,9 @@
           "cached_input": 0,
           "cached_write": null
         }
+      ],
+      "sources": [
+        "https://opencode.ai/inference/v1/models"
       ]
     },
     {
@@ -3187,8 +3225,8 @@
       "privacy_risk": "High",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code.",
+      "checked_at": "2026-10-18",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code. Listed in the official Console documentation, but absent from the public Console models API during the 2026-10-18 KST audit. Current executable availability is unconfirmed; not explicitly deprecated.",
       "limits": "Not disclosed; free does not establish unlimited usage.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
@@ -3200,6 +3238,9 @@
           "cached_input": 0,
           "cached_write": null
         }
+      ],
+      "sources": [
+        "https://opencode.ai/inference/v1/models"
       ]
     },
     {
@@ -3227,8 +3268,8 @@
       "privacy_risk": "High",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code.",
+      "checked_at": "2026-10-18",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code. Listed in the official Console documentation, but absent from the public Console models API during the 2026-10-18 KST audit. Current executable availability is unconfirmed; not explicitly deprecated.",
       "limits": "Trial use only; no personal or confidential data. Session logging for security and product/service improvement.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
@@ -3240,6 +3281,9 @@
           "cached_input": 0,
           "cached_write": null
         }
+      ],
+      "sources": [
+        "https://opencode.ai/inference/v1/models"
       ]
     },
     {
@@ -3321,46 +3365,6 @@
           "cached_write": null
         }
       ]
-    },
-    {
-      "offering_id": "console:muse-spark-1.3-contributor-free",
-      "offering": "console-free",
-      "model": "Muse Spark 1.3 Contributor Free",
-      "model_id": "muse-spark-1.3-contributor-free",
-      "selection_id": "opencode/muse-spark-1.3-contributor-free",
-      "endpoint": "https://opencode.ai/inference/openai/v1/responses",
-      "developer": "Meta",
-      "provider": "Undisclosed",
-      "input_price": 0,
-      "output_price": 0,
-      "cached_input": 0,
-      "cached_write": null,
-      "context": "Unknown",
-      "reasoning": null,
-      "benchmark": "N/A",
-      "training": "May Train / model improvement",
-      "retention": "Unknown (data collection permitted)",
-      "hosting": "US / EU (Console-wide official policy; exact region undisclosed)",
-      "china_transfer": "No evidence",
-      "coding_grade": "N/A",
-      "value_grade": "N/A",
-      "privacy_risk": "High",
-      "positioning": [],
-      "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code.",
-      "limits": "Not disclosed; free does not establish unlimited usage.",
-      "promotion": "Limited-time free; end date unknown",
-      "promotion_end": null,
-      "price_tiers": [
-        {
-          "label": "Muse Spark 1.3 Contributor Free",
-          "input_price": 0,
-          "output_price": 0,
-          "cached_input": 0,
-          "cached_write": null
-        }
-      ]
     }
   ],
   "excluded_models": [
@@ -3417,6 +3421,13 @@
       "model_id": "cat-jam-free",
       "deprecation_date": null,
       "reason": "Absent from the current official Console endpoint, pricing and free-model sections on 2026-10-17; no current offering evidence. Not explicitly marked deprecated.",
+      "source": "https://opencode.ai/v2/docs/console/models/"
+    },
+    {
+      "model": "Muse Spark 1.3 Contributor Free",
+      "model_id": "muse-spark-1.3-contributor-free",
+      "deprecation_date": null,
+      "reason": "Absent from current official Console endpoint, pricing, free-model and privacy sections and public models API; no current offering evidence. Not explicitly marked deprecated.",
       "source": "https://opencode.ai/v2/docs/console/models/"
     }
   ]

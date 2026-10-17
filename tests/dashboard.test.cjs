@@ -23,6 +23,9 @@ sandbox.trigger=trigger;
 run("openDetails('console:deepseek-v4.1-flash-free', trigger)");
 assert.equal(el('#model-dialog').open,true);
 assert.ok(el('#model-dialog-content').innerHTML.includes('opencode/deepseek-v4.1-flash-free'));
+assert.ok(el('#model-dialog-content').innerHTML.includes('Context:'));
+assert.ok(el('#model-dialog-content').innerHTML.includes('Benchmark:'));
+assert.ok(el('#model-dialog-content').innerHTML.includes('Additional sources:'));
 assert.equal(el('#model-dialog-content').scrollTop,0);
 el('#close-details').listeners.click();assert.equal(el('#model-dialog').open,false);assert.equal(focused,true);
 run("openDetails('console:deepseek-v4.1-flash-free', trigger)");
@@ -33,5 +36,6 @@ assert.ok(html.includes('<dialog id="model-dialog" aria-labelledby="model-dialog
 assert.ok(html.indexOf('<dialog')>html.indexOf('</table>'));
 const css=fs.readFileSync(path.join(root,'assets/style.css'),'utf8');assert.ok(css.includes('max-height:calc(100dvh - 34px)'));assert.ok(css.includes('overflow-y:auto'));
 el('#offering').value='console-free';run('render()');assert.equal(run('filtered().length'),con.models.filter(m=>m.offering==='console-free').length);assert.ok(el('#models').innerHTML.includes('Not stated'));assert.ok(!el('#models').innerHTML.includes('Unlimited'));el('#search').value='deepseek';run('render()');assert.equal(run('filtered().length'),1);assert.ok(el('#models').innerHTML.includes('console:deepseek-v4.1-flash-free'));assert.ok(run('details(filtered()[0])').includes('opencode/deepseek-v4.1-flash-free')); el('#reset').listeners.click();assert.equal(run('filtered().length'),go.models.length+con.models.filter(m=>m.offering==='console-free').length);assert.equal(run('monthlyLabel({offering:"go",monthly_usage_usd:null})'),'N/A');assert.equal(run('cost({input_price:null,output_price:2})'),null);assert.ok(el('#meta').textContent.includes(con.as_of));assert.ok(!el('#models').innerHTML.includes('NaN'));console.log(`PASS: ${go.models.length} Go, ${con.models.length} Console offerings, ${con.excluded_models.length} inactive exclusions; identity, usage isolation, recommendations, free privacy, filters/reset, nulls and metadata.`);},0);
+
 
 

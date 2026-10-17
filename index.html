@@ -88,14 +88,14 @@
       <p><strong>서드파티 코딩 에이전트</strong>는 OpenCode의 최신 안내에 따라 안정적인 세션 ID를 전달해야 라우팅과 프롬프트 캐싱을 최적화할 수 있습니다.</p>
       <p><strong>프로모션</strong>은 기본 Monthly limit/요청 수와 분리해 추적하며, 활성 기간에는 dashboard가 공식 promotional 값을 우선 표시합니다.</p>
       <p><strong>중국계 모델</strong>과 <strong>중국 전송</strong>은 별개입니다. 개발사 국적만으로 호스팅 지역이나 데이터 전송을 추정하지 않습니다.</p>
-      <p><strong>Unknown</strong>은 보수적으로 미확인 상태를 뜻합니다. 서로 다른 harness의 벤치마크를 단일 숫자 순위로 합산하지 않습니다.</p>
+      <p><strong>Unknown</strong>은 보수적으로 미확인 상태를 뜻합니다. 서로 다른 harness의 벤치마크를 단일 숫자 순위로 합산하지 않습니다. Context·Reasoning은 표시된 개발사 원본 모델 사양이며 Go/Console endpoint의 실제 한도·옵션 지원은 별도 확인이 필요합니다. Coding·Value 등급은 편집상 참고 분류이며 검증된 전체 순위가 아닙니다.</p>
 
       <h2>주요 레퍼런스</h2>
       <p>OpenCode Console 공식 모델·가격·프라이버시: <a href="https://opencode.ai/v2/docs/console/models/">Console Models (Zen)</a></p>
       <p>OpenCode Go 공식 문서: <a href="https://dev.opencode.ai/docs/go/" target="_blank" rel="noopener noreferrer">https://dev.opencode.ai/docs/go/</a></p>
       <p>OpenCode Go 한국어 문서: <a href="https://dev.opencode.ai/docs/ko/go/" target="_blank" rel="noopener noreferrer">https://dev.opencode.ai/docs/ko/go/</a></p>
       <p>OpenCode Go 콘솔 문서: <a href="https://opencode.ai/v2/docs/console/go" target="_blank" rel="noopener noreferrer">https://opencode.ai/v2/docs/console/go</a></p>
-      <p>OpenCode Go live models API: <a href="https://opencode.ai/zen/go/v1/models" target="_blank" rel="noopener noreferrer">https://opencode.ai/zen/go/v1/models</a></p>
+      <p>OpenCode Go live models API: <a href="https://opencode.ai/inference/go/v1/models" target="_blank" rel="noopener noreferrer">https://opencode.ai/inference/go/v1/models</a></p>
       <p>OpenCode 모델/variant 문서: <a href="https://dev.opencode.ai/docs/models/" target="_blank" rel="noopener noreferrer">https://dev.opencode.ai/docs/models/</a></p>
       <p>OpenCode 공식 Go 문서 소스: <a href="https://github.com/anomalyco/opencode/blob/dev/packages/web/src/content/docs/go.mdx" target="_blank" rel="noopener noreferrer">https://github.com/anomalyco/opencode/blob/dev/packages/web/src/content/docs/go.mdx</a></p>
       <p>Radar 저장소: <a href="https://github.com/easthelper/opencode-go-radar" target="_blank" rel="noopener noreferrer">https://github.com/easthelper/opencode-go-radar</a></p>
@@ -113,9 +113,10 @@
       <div id="model-dialog-content" class="dialog-content" tabindex="0" aria-label="모델 상세 및 조건"></div>
     </div>
   </dialog>
-  <script src="assets/app.js?v=20261017-models"></script>
+  <script src="assets/app.js?v=20261018-audit"></script>
 </body>
 </html>
+
 
 
 

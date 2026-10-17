@@ -1,11 +1,11 @@
 {
-  "as_of": "2026-10-17",
+  "as_of": "2026-10-18",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
   },
   "recommendations": {
-    "absolute_performance": "GLM-5.3",
+    "absolute_performance": null,
     "best_value": "MiMo-V2.6-Flash",
     "sensitive_code": null,
     "cheap_subagent": "MiMo-V2.6-Flash"
@@ -14,370 +14,694 @@
     {
       "model": "Grok 4.7",
       "developer": "xAI",
-      "provider": "Unknown",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 2,
       "output_price": 6,
       "cached_input": 0.5,
-      "context": "Unknown",
-      "reasoning": null,
+      "context": "500K",
+      "reasoning": true,
       "benchmark": "N/A",
       "training": "No Training",
       "retention": "30 days",
       "chinese_model": false,
-      "hosting": "Unknown",
+      "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
       "coding_grade": "N/A",
       "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [],
-      "notes": "Current OpenCode Go official model, pricing, endpoint, request-estimate, and privacy tables confirm availability. Pricing shown is the <=200K tier; >200K is $4 input / $12 output / $1 cached read. Context maximum, reasoning, benchmark, provider/routing, and hosting are not inferred."
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.",
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://docs.x.ai/developers/grok-4-7"
+      ],
+      "reasoning_effort": "low, medium, high (default), xhigh; native API, Go exposure unverified",
+      "capability_source": "https://docs.x.ai/developers/grok-4-7",
+      "price_tiers": [
+        {
+          "label": "Grok 4.7 (≤ 200K tokens)",
+          "input_price": 2.0,
+          "output_price": 6.0,
+          "cached_input": 0.5,
+          "cached_write": null
+        },
+        {
+          "label": "Grok 4.7 (> 200K tokens)",
+          "input_price": 4.0,
+          "output_price": 12.0,
+          "cached_input": 1.0,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "GPT 6 Luna",
       "developer": "OpenAI",
-      "provider": "Unknown",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.1,
       "output_price": 0.5,
       "cached_input": 0.01,
-      "context": "Unknown",
-      "reasoning": null,
+      "context": "1.05M",
+      "reasoning": true,
       "benchmark": "N/A",
       "training": "No Training",
       "retention": "Up to 30 days abuse logs",
       "chinese_model": false,
-      "hosting": "Unknown",
+      "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
       "coding_grade": "N/A",
       "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [],
-      "notes": "Current OpenCode Go official model list, pricing, endpoint, request-estimate, and privacy tables confirm availability. Pricing shown is the <=272K tier; >272K is $0.20 input / $0.75 output / $0.02 cached read / $0.25 cached write. Context maximum, reasoning, benchmark, provider/routing, and hosting are not inferred."
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.",
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://developers.openai.com/api/docs/models/gpt-6-luna"
+      ],
+      "reasoning_effort": "none, low, medium (default), high, xhigh, max; native API, Go exposure unverified",
+      "capability_source": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+      "price_tiers": [
+        {
+          "label": "GPT 6 Luna (≤ 272K tokens)",
+          "input_price": 0.1,
+          "output_price": 0.5,
+          "cached_input": 0.01,
+          "cached_write": 0.125
+        },
+        {
+          "label": "GPT 6 Luna (> 272K tokens)",
+          "input_price": 0.2,
+          "output_price": 0.75,
+          "cached_input": 0.02,
+          "cached_write": 0.25
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": 0.125
     },
     {
       "model": "GPT 5.6 Luna",
       "developer": "OpenAI",
-      "provider": "Undisclosed / OpenAI path likely",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.2,
       "output_price": 1.2,
       "cached_input": 0.02,
       "context": "1.05M",
       "reasoning": true,
-      "benchmark": "SWE-bench Pro 62.7 / Terminal-Bench 2.1 84.7",
+      "benchmark": "SWE-bench Pro 62.7 / Terminal-Bench 2.1 84.7 (OpenAI-reported)",
       "training": "No Training",
       "retention": "Up to 30 days abuse logs",
       "chinese_model": false,
-      "hosting": "Go region undisclosed",
-      "china_transfer": "No evidence",
-      "coding_grade": "A",
-      "value_grade": "S",
+      "hosting": "Unknown (Go hosting region undisclosed)",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [
         "균형형",
         "가성비 우선"
-      ]
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+        "https://openai.com/index/gpt-5-6/"
+      ],
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.",
+      "reasoning_effort": "none, low, medium (default), high, xhigh, max; native API",
+      "capability_source": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+      "benchmark_source": "https://openai.com/index/gpt-5-6/",
+      "price_tiers": [
+        {
+          "label": "GPT 5.6 Luna (≤ 272K tokens)",
+          "input_price": 0.2,
+          "output_price": 1.2,
+          "cached_input": 0.02,
+          "cached_write": 0.25
+        },
+        {
+          "label": "GPT 5.6 Luna (> 272K tokens)",
+          "input_price": 0.4,
+          "output_price": 1.8,
+          "cached_input": 0.04,
+          "cached_write": 0.5
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": 0.25
     },
     {
       "model": "GLM-5.3-Flash",
       "developer": "Z.ai",
-      "provider": "Dynamic / undisclosed",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.15,
       "output_price": 0.5,
       "cached_input": 0.03,
       "context": "1M",
       "reasoning": true,
-      "benchmark": "Terminal-Bench 2.1 84.3",
+      "benchmark": "Terminal-Bench 2.1 84.3 (Z.ai-reported, Claude Code 2.1.207, max effort)",
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": true,
-      "hosting": "Unknown",
-      "china_transfer": "Possible",
-      "coding_grade": "A",
-      "value_grade": "S",
+      "hosting": "Unknown (Go hosting region undisclosed)",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [
         "가성비 우선",
         "균형형"
       ],
-      "notes": "Go landing page and detailed docs agree on $60 effective usage and 6,320 estimated requests/5h."
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Native multimodal; 128K max output. Text settings consistent with GLM-5.3.",
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "https://huggingface.co/zai-org/GLM-5.3-Flash"
+      ],
+      "reasoning_effort": "always enabled; low/high/max, default max; native model",
+      "capability_source": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+      "benchmark_source": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+      "price_tiers": [
+        {
+          "label": "GLM-5.3-Flash",
+          "input_price": 0.15,
+          "output_price": 0.5,
+          "cached_input": 0.03,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "GLM-5.3",
       "developer": "Z.ai",
-      "provider": "Dynamic / undisclosed",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 1.4,
       "output_price": 4.4,
       "cached_input": 0.26,
       "context": "1M",
       "reasoning": true,
-      "benchmark": "Terminal-Bench 2.1 88.2 / TB3 28.3",
+      "benchmark": "Terminal-Bench 2.1 88.2 / TB3 28.3 (Claude Code 2.1.207); DeepSWE v1.1 66.9 (mini-SWE; Z.ai-reported, max effort)",
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": true,
-      "hosting": "Unknown",
-      "china_transfer": "Possible",
-      "coding_grade": "S",
-      "value_grade": "A",
+      "hosting": "Unknown (Go hosting region undisclosed)",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [
         "성능 우선"
       ],
-      "notes": "OpenCode Go upstream routing is not pinned publicly."
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.",
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://docs.z.ai/guides/llm/glm-5.3",
+        "https://huggingface.co/zai-org/GLM-5.3"
+      ],
+      "reasoning_effort": "always enabled; low/high/max (default max); native API",
+      "capability_source": "https://docs.z.ai/guides/llm/glm-5.3",
+      "benchmark_source": "https://huggingface.co/zai-org/GLM-5.3",
+      "price_tiers": [
+        {
+          "label": "GLM-5.3",
+          "input_price": 1.4,
+          "output_price": 4.4,
+          "cached_input": 0.26,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "GLM-5.2",
       "developer": "Z.ai",
-      "provider": "Dynamic / undisclosed; multiple upstreams observed historically",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 1.4,
       "output_price": 4.4,
       "cached_input": 0.26,
       "context": "1M",
       "reasoning": true,
-      "benchmark": "Terminal-Bench 2.1 81.0 / SWE-bench Pro ~62.1 (harness-dependent)",
+      "benchmark": "Terminal-Bench 2.1 81.0 / SWE-bench Pro 62.1 (Z.ai-reported)",
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": true,
-      "hosting": "Unknown",
-      "china_transfer": "Possible",
-      "coding_grade": "A",
-      "value_grade": "B",
+      "hosting": "Unknown (Go hosting region undisclosed)",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [
         "균형형"
-      ]
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://docs.z.ai/guides/llm/glm-5.2"
+      ],
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.",
+      "capability_source": "https://docs.z.ai/guides/llm/glm-5.2",
+      "price_tiers": [
+        {
+          "label": "GLM-5.2",
+          "input_price": 1.4,
+          "output_price": 4.4,
+          "cached_input": 0.26,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "Kimi K3",
       "developer": "Moonshot AI",
-      "provider": "Undisclosed",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 3,
       "output_price": 15,
       "cached_input": 0.3,
       "context": "1M",
       "reasoning": true,
-      "benchmark": "Terminal-Bench 2.1 88.3 / TB3 17.4",
+      "benchmark": "Terminal-Bench 2.1 88.3 / DeepSWE v1.1 67.5 (Moonshot-reported, Kimi Code, max effort)",
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": true,
-      "hosting": "Unknown",
+      "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
-      "coding_grade": "S",
-      "value_grade": "C",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [
         "성능 우선"
-      ]
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://forum.moonshot.ai/t/kimi-k3-is-here-our-most-capable-model/480",
+        "https://huggingface.co/moonshotai/Kimi-K3"
+      ],
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. TB3 17.4 is a Z.ai cross-model evaluation, while DeepSeek reports 17.7; do not present either as a universal model score.",
+      "reasoning_effort": "low/high/max; native API",
+      "capability_source": "https://forum.moonshot.ai/t/kimi-k3-is-here-our-most-capable-model/480",
+      "benchmark_source": "https://huggingface.co/moonshotai/Kimi-K3",
+      "price_tiers": [
+        {
+          "label": "Kimi K3",
+          "input_price": 3.0,
+          "output_price": 15.0,
+          "cached_input": 0.3,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "Kimi K2.7 Code",
       "developer": "Moonshot AI",
-      "provider": "Undisclosed",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.95,
       "output_price": 4,
       "cached_input": 0.19,
-      "context": "262K",
+      "context": "262,144 (256K)",
       "reasoning": true,
-      "benchmark": "N/A",
+      "benchmark": "Kimi Code Bench v2 62.0 / Program Bench 53.6 (Moonshot-reported, Kimi Code CLI, thinking enabled)",
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": true,
-      "hosting": "Unknown",
+      "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
-      "coding_grade": "A",
-      "value_grade": "A",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [
         "균형형"
-      ]
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://huggingface.co/moonshotai/Kimi-K2.7-Code"
+      ],
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.",
+      "capability_source": "https://huggingface.co/moonshotai/Kimi-K2.7-Code",
+      "price_tiers": [
+        {
+          "label": "Kimi K2.7 Code",
+          "input_price": 0.95,
+          "output_price": 4.0,
+          "cached_input": 0.19,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "LongCat-2.0",
       "developer": "Meituan",
-      "provider": "Undisclosed",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.3,
       "output_price": 1.2,
       "cached_input": 0.006,
       "context": "1M",
       "reasoning": true,
-      "benchmark": "SWE-bench Pro 59.5 / Terminal-Bench 2.1 70.8",
+      "benchmark": "SWE-bench Pro 59.5 / Terminal-Bench 2.1 70.8 (Meituan-reported, Claude Code)",
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": true,
-      "hosting": "Unknown",
+      "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
-      "coding_grade": "B",
-      "value_grade": "A",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [
         "가성비 우선",
         "저가 서브에이전트"
-      ]
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://longcat.ai/blog/longcat-2.0/"
+      ],
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.",
+      "capability_source": "https://longcat.ai/blog/longcat-2.0/",
+      "price_tiers": [
+        {
+          "label": "LongCat-2.0",
+          "input_price": 0.3,
+          "output_price": 1.2,
+          "cached_input": 0.006,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "LongCat 2.5 Preview Free",
       "developer": "Meituan",
-      "provider": "Unknown",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0,
       "output_price": 0,
       "cached_input": 0,
-      "context": "Unknown",
-      "reasoning": null,
+      "context": "1,048,576 (native model)",
+      "reasoning": true,
       "benchmark": "N/A",
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": true,
-      "hosting": "Unknown",
+      "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
       "coding_grade": "N/A",
       "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [],
-      "notes": "Current OpenCode Go official model list, pricing, estimated-request, endpoint, and privacy tables confirm availability. It is free with unlimited usage for a limited time. Context, reasoning, benchmark, provider/routing, hosting, region, and promotion end date are not disclosed, so they are not inferred."
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Native docs disagree on max output: parameter reference 256K vs quickstart 128K; Go cap unconfirmed. Go currently confirms limited-time free usage with unlimited requests; no end date published. This does not apply to the separate Console offering.",
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://longcat.ai/platform/docs/api/model-params"
+      ],
+      "reasoning_effort": "thinking enabled (default) / disabled; native API",
+      "capability_source": "https://longcat.ai/platform/docs/api/model-params",
+      "price_tiers": [
+        {
+          "label": "LongCat 2.5 Preview Free",
+          "input_price": 0,
+          "output_price": 0,
+          "cached_input": 0,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "MiMo-V2.6-Flash",
       "developer": "Xiaomi",
-      "provider": "Unknown",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.14,
       "output_price": 0.28,
       "cached_input": 0.0028,
       "context": "1M",
       "reasoning": true,
-      "benchmark": "DeepSWE v1.1 67.9 / Terminal-Bench 2.1 87.6 / TB4 28.8 / Toolathlon-Verified 73.6 (Xiaomi-reported)",
+      "benchmark": "DeepSWE 67.9 / Terminal-Bench 4.0 28.8 (Xiaomi-reported)",
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": true,
-      "hosting": "Unknown",
+      "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
-      "coding_grade": "A",
-      "value_grade": "S",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [
         "가성비 우선",
         "균형형",
         "저가 서브에이전트"
       ],
-      "notes": "OpenCode Go confirms $60 monthly usage and 30,100 / 75,200 / 150,400 estimated requests. Xiaomi's official model page confirms 1M context, reasoning/deep-thinking support, and $0.14 input / $0.28 output / $0.0028 cached input. Xiaomi-reported agent benchmarks include Terminal-Bench 2.1 87.6, DeepSWE v1.1 67.9, TB4 28.8, and Toolathlon-Verified 73.6; these are vendor-reported and not treated as apples-to-apples independent measurements. Go provider/routing and hosting remain unconfirmed."
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.",
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://mimo.mi.com/models/en-US/mimo-v2.6-flash",
+        "https://aistudio-cdn.xiaomimimo.com/xiaomimimo-static/mimo-docs-figures/others/model-v2.6-advantage.png"
+      ],
+      "capability_source": "https://mimo.mi.com/models/en-US/mimo-v2.6-flash",
+      "benchmark_source": "https://aistudio-cdn.xiaomimimo.com/xiaomimimo-static/mimo-docs-figures/others/model-v2.6-advantage.png",
+      "price_tiers": [
+        {
+          "label": "MiMo-V2.6-Flash",
+          "input_price": 0.14,
+          "output_price": 0.28,
+          "cached_input": 0.0028,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "MiMo-V2.6-Pro",
       "developer": "Xiaomi",
-      "provider": "Unknown",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.435,
       "output_price": 0.87,
       "cached_input": 0.003625,
       "context": "1M",
       "reasoning": true,
-      "benchmark": "DeepSWE v1.1 71.9 / Terminal-Bench 2.1 89.9 / TB4 34.9 / Toolathlon-Verified 76.9 (Xiaomi-reported)",
+      "benchmark": "DeepSWE 71.9 / Terminal-Bench 4.0 34.9 (Xiaomi-reported)",
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": true,
-      "hosting": "Unknown",
+      "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
-      "coding_grade": "S",
-      "value_grade": "A",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [
         "성능 우선",
         "균형형"
       ],
-      "notes": "OpenCode Go confirms $15 monthly usage and 3,250 / 8,150 / 16,300 estimated requests. Xiaomi's official model page confirms 1M context, reasoning/deep-thinking support, and $0.435 input / $0.87 output / $0.003625 cached input. Xiaomi-reported agent benchmarks include Terminal-Bench 2.1 89.9, DeepSWE v1.1 71.9, TB4 34.9, and Toolathlon-Verified 76.9; these are vendor-reported and not treated as apples-to-apples independent measurements. Go provider/routing and hosting remain unconfirmed."
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.",
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://mimo.mi.com/models/en-US/mimo-v2.6-pro",
+        "https://aistudio-cdn.xiaomimimo.com/xiaomimimo-static/mimo-docs-figures/others/model-v2.6-advantage.png"
+      ],
+      "capability_source": "https://mimo.mi.com/models/en-US/mimo-v2.6-pro",
+      "benchmark_source": "https://aistudio-cdn.xiaomimimo.com/xiaomimimo-static/mimo-docs-figures/others/model-v2.6-advantage.png",
+      "price_tiers": [
+        {
+          "label": "MiMo-V2.6-Pro",
+          "input_price": 0.435,
+          "output_price": 0.87,
+          "cached_input": 0.003625,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "MiMo-V2.5",
       "developer": "Xiaomi",
-      "provider": "Undisclosed",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.14,
       "output_price": 0.28,
       "cached_input": 0.0028,
       "context": "1M",
       "reasoning": true,
-      "benchmark": "SWE-bench Pro ~56 / Terminal-Bench 2.0 ~65.8",
+      "benchmark": "N/A",
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": true,
-      "hosting": "Unknown",
+      "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
-      "coding_grade": "B",
-      "value_grade": "S",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [
         "저가 서브에이전트"
-      ]
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://mimo.mi.com/models/en-US/mimo-v2.5"
+      ],
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.  Earlier numeric coding benchmark not reverified; omitted pending primary evidence.",
+      "capability_source": "https://mimo.mi.com/models/en-US/mimo-v2.5",
+      "price_tiers": [
+        {
+          "label": "MiMo-V2.5",
+          "input_price": 0.14,
+          "output_price": 0.28,
+          "cached_input": 0.0028,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "MiMo-V2.5-Pro",
       "developer": "Xiaomi",
-      "provider": "Undisclosed",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.435,
       "output_price": 0.87,
       "cached_input": 0.003625,
-      "context": "~1M",
+      "context": "1M",
       "reasoning": true,
-      "benchmark": "SWE-bench Verified 78.9 / SWE-bench Pro 57.2 / Terminal-Bench 2.0 68.4",
+      "benchmark": "N/A",
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": true,
-      "hosting": "Unknown",
+      "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
-      "coding_grade": "A",
-      "value_grade": "S",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [
         "균형형",
         "가성비 우선"
-      ]
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://mimo.mi.com/models/en-US/mimo-v2.5-pro"
+      ],
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.  Earlier numeric coding benchmark not reverified; omitted pending primary evidence.",
+      "capability_source": "https://mimo.mi.com/models/en-US/mimo-v2.5-pro",
+      "price_tiers": [
+        {
+          "label": "MiMo-V2.5-Pro",
+          "input_price": 0.435,
+          "output_price": 0.87,
+          "cached_input": 0.003625,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "MiniMax M3",
       "developer": "MiniMax",
-      "provider": "Undisclosed",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.3,
       "output_price": 1.2,
       "cached_input": 0.06,
-      "context": "1M",
+      "context": "Up to 1M (native API guarantees minimum 512K)",
       "reasoning": true,
-      "benchmark": "SWE-bench Verified 80.5 / SWE-bench Pro 59.0",
+      "benchmark": "SWE-bench Pro 59.0 / Terminal-Bench 2.1 66.0 (MiniMax-reported)",
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": true,
-      "hosting": "Unknown; MiniMax native API has US option",
+      "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
-      "coding_grade": "A",
-      "value_grade": "S",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [
         "가성비 우선",
         "균형형"
-      ]
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://www.minimax.io/models/text/m3",
+        "https://www.minimax.io/blog/minimax-m3"
+      ],
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.",
+      "capability_source": "https://www.minimax.io/models/text/m3",
+      "benchmark_source": "https://www.minimax.io/blog/minimax-m3",
+      "price_tiers": [
+        {
+          "label": "MiniMax M3",
+          "input_price": 0.3,
+          "output_price": 1.2,
+          "cached_input": 0.06,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "Muse Spark 1.3 Contributor",
       "developer": "Meta",
-      "provider": "Meta terms / mapping undisclosed",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.1,
       "output_price": 0.2,
       "cached_input": 0.002,
       "context": "1M",
       "reasoning": true,
-      "benchmark": "DeepSWE v1.1 75.4 / Terminal-Bench 2.1 88.8 (Meta-reported)",
+      "benchmark": "N/A (standard-model max-effort benchmarks do not apply to Contributor)",
       "training": "May Train",
       "retention": "Not ZDR",
       "chinese_model": false,
-      "hosting": "Unknown",
-      "china_transfer": "No evidence",
-      "coding_grade": "S",
-      "value_grade": "S",
+      "hosting": "Unknown (Go hosting region undisclosed)",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "High",
       "positioning": [
         "성능 우선",
         "저가 서브에이전트"
       ],
-      "notes": "Contributor tier may use prompts and completions to train future Meta models; do not use for confidential source code."
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Meta explicitly excludes max effort from muse-spark-1.3-contributor. The 75.4 DeepSWE and 88.8 TB2.1 scores are standard Muse Spark 1.3 max results, not Contributor scores. DeepSWE used mini-SWE; TB2.1 used native coding harnesses. Avoid confidential code: Go permits training and is not ZDR. Go permits training on prompts/completions and is not ZDR; avoid confidential source code.",
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://dev.meta.ai/products/meta-model-api",
+        "https://dev.meta.ai/docs/reasoning"
+      ],
+      "reasoning_effort": "minimal, low, medium, high, xhigh; max unavailable for Contributor; none unsupported (native API)",
+      "capability_source": "https://dev.meta.ai/products/meta-model-api",
+      "price_tiers": [
+        {
+          "label": "Muse Spark 1.3 Contributor",
+          "input_price": 0.1,
+          "output_price": 0.2,
+          "cached_input": 0.002,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "Muse Spark 1.2 Contributor",
       "developer": "Meta",
-      "provider": "Meta terms / mapping undisclosed",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.1,
       "output_price": 0.2,
       "cached_input": 0.002,
@@ -387,87 +711,169 @@
       "training": "May Train",
       "retention": "Not ZDR",
       "chinese_model": false,
-      "hosting": "Unknown",
-      "china_transfer": "No evidence",
-      "coding_grade": "A",
-      "value_grade": "S",
+      "hosting": "Unknown (Go hosting region undisclosed)",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "High",
       "positioning": [
         "저가 서브에이전트"
       ],
-      "notes": "Do not use for confidential source code because contributor tier may permit training on inputs/outputs."
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Contributor data may train future Meta models. No Contributor-specific coding score verified. Go permits training on prompts/completions and is not ZDR; avoid confidential source code.",
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://dev.meta.ai/products/meta-model-api",
+        "https://dev.meta.ai/docs/reasoning"
+      ],
+      "reasoning_effort": "minimal, low, medium, high, xhigh; none unsupported (native API)",
+      "capability_source": "https://dev.meta.ai/products/meta-model-api",
+      "price_tiers": [
+        {
+          "label": "Muse Spark 1.2 Contributor",
+          "input_price": 0.1,
+          "output_price": 0.2,
+          "cached_input": 0.002,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "Qwen3.8 Max",
       "developer": "Alibaba",
-      "provider": "Undisclosed / Alibaba observed",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 2,
       "output_price": 6,
       "cached_input": 0.25,
-      "context": "1M",
+      "context": "1,000,000",
       "reasoning": true,
-      "benchmark": "SWE-bench Pro ~67.7 / Terminal-Bench 2.1 86.6",
+      "benchmark": "SWE-bench Pro 67.7 / Terminal-Bench 2.1 86.6 (Qwen-reported, Claude Code; SWE-Pro refined task set)",
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": true,
-      "hosting": "Alibaba region undisclosed",
-      "china_transfer": "Possible",
-      "coding_grade": "S",
-      "value_grade": "B",
+      "hosting": "Unknown (Go hosting region undisclosed)",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [
         "성능 우선"
-      ]
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-max",
+        "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
+      ],
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.",
+      "capability_source": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-max",
+      "benchmark_source": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+      "price_tiers": [
+        {
+          "label": "Qwen3.8 Max",
+          "input_price": 2.0,
+          "output_price": 6.0,
+          "cached_input": 0.25,
+          "cached_write": 2.5
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": 2.5
     },
     {
       "model": "Qwen3.8 Flash",
       "developer": "Alibaba",
-      "provider": "Undisclosed / Alibaba observed",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.15,
       "output_price": 0.47,
       "cached_input": 0.016,
-      "context": "~1M",
+      "context": "1M",
       "reasoning": true,
-      "benchmark": "SWE-bench Pro 62.5 / DeepSWE 58.7",
+      "benchmark": "N/A",
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": true,
-      "hosting": "Alibaba region undisclosed",
-      "china_transfer": "Possible",
-      "coding_grade": "A",
-      "value_grade": "S",
+      "hosting": "Unknown (Go hosting region undisclosed)",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [
         "가성비 우선",
         "균형형"
-      ]
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://www.alibabacloud.com/help/en/model-studio/opencode"
+      ],
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Native OpenCode example sets context 983616 and output 131072 (input allowance vs total context); visual-understanding table gives 1M total. Earlier numeric coding benchmark not reverified; omitted pending primary evidence.",
+      "capability_source": "https://www.alibabacloud.com/help/en/model-studio/opencode",
+      "price_tiers": [
+        {
+          "label": "Qwen3.8 Flash",
+          "input_price": 0.15,
+          "output_price": 0.47,
+          "cached_input": 0.016,
+          "cached_write": 0.2
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": 0.2
     },
     {
       "model": "Qwen3.7 Plus",
       "developer": "Alibaba",
-      "provider": "Alibaba observed",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.4,
       "output_price": 1.6,
       "cached_input": 0.04,
-      "context": "~1M",
+      "context": "1,000,000",
       "reasoning": true,
-      "benchmark": "SWE-bench Pro ~55-56 / Terminal-Bench 2.0 ~70 (harness-dependent)",
+      "benchmark": "N/A",
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": true,
-      "hosting": "Region undisclosed",
-      "china_transfer": "Possible",
-      "coding_grade": "B",
-      "value_grade": "A",
+      "hosting": "Unknown (Go hosting region undisclosed)",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [
         "균형형"
-      ]
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://docs.modelstudio.console.alibabacloud.com/en/model-studio/qwen3-7-plus"
+      ],
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.  Earlier numeric coding benchmark not reverified; omitted pending primary evidence.",
+      "capability_source": "https://docs.modelstudio.console.alibabacloud.com/en/model-studio/qwen3-7-plus",
+      "price_tiers": [
+        {
+          "label": "Qwen3.7 Plus (≤ 256K tokens)",
+          "input_price": 0.4,
+          "output_price": 1.6,
+          "cached_input": 0.04,
+          "cached_write": 0.5
+        },
+        {
+          "label": "Qwen3.7 Plus (> 256K tokens)",
+          "input_price": 1.2,
+          "output_price": 4.8,
+          "cached_input": 0.12,
+          "cached_write": 1.5
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": 0.5
     },
     {
       "model": "DeepSeek V4.1 Flash",
       "developer": "DeepSeek",
-      "provider": "Undisclosed / DeepSeek path likely",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.15,
       "output_price": 0.6,
       "cached_input": 0.003,
@@ -476,26 +882,50 @@
       "peak_cached_input": 0.006,
       "context": "1M",
       "reasoning": true,
-      "reasoning_effort": "1-100 supported by the model; OpenCode Go UI exposure unconfirmed",
-      "benchmark": "Terminal-Bench 2.1 90.6 / TB3 30.0 / TB4 31.2 / DeepSWE v1.1 74.2 / NL2Repo 64.0 (DeepSeek-reported, max effort)",
+      "reasoning_effort": "1–100 (card); max benchmark=100",
+      "benchmark": "TB2.1 90.6 DSH Minimal; DeepSWE v1.1 74.2 mini-SWE; OpenCode scaffold 85.0 TB2.1 and 65.5 DeepSWE (all DeepSeek-reported)",
       "training": "No Training",
       "retention": "0 days (ZDR valid through 2026-10-31)",
       "chinese_model": true,
-      "hosting": "Unknown",
+      "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
-      "coding_grade": "S",
-      "value_grade": "S",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "High",
       "positioning": [
         "성능 우선",
         "가성비 우선"
       ],
-      "notes": "Current OpenCode Go v2 tables list an $80 monthly limit and 34,670 / 86,670 / 173,330 estimated requests (5h/week/month), with no promotion label. Off-peak pricing is $0.15/$0.60/$0.003 and weekday peak pricing is $0.30/$1.20/$0.006. Earlier $60 and 26,000/65,000/130,000 values were superseded on 2026-10-13. DeepSeek's official model card confirms continuously controllable reasoning_effort=1-100; Go UI exposure of numeric effort remains unconfirmed. Reported coding-agent results use max effort and vendor-specific harnesses, not directly comparable independent measurements. OpenCode confirms the DeepSeek ZDR agreement is valid through 2026-10-31. Hosting/routing remains undisclosed."
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Native API deepseek-flash now V4.1-Flash-1017 per https://api-docs.deepseek.com/ ; no proof Go same checkpoint. Go zero-retention agreement is valid through October31,2026 and renewed monthly. Go DeepSeek ZDR agreement is currently valid through 2026-10-31. Peak pricing applies Monday–Friday 01:00–04:00 and 06:00–10:00 UTC; all other times, including weekends, are off-peak. Go checkpoint is unconfirmed.",
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+      ],
+      "capability_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "price_tiers": [
+        {
+          "label": "DeepSeek V4.1 Flash (Off-Peak)",
+          "input_price": 0.15,
+          "output_price": 0.6,
+          "cached_input": 0.003,
+          "cached_write": null
+        },
+        {
+          "label": "DeepSeek V4.1 Flash (Peak)",
+          "input_price": 0.3,
+          "output_price": 1.2,
+          "cached_input": 0.006,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "DeepSeek V4 Pro",
       "developer": "DeepSeek",
-      "provider": "DeepSeek observed",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.66,
       "output_price": 1.98,
       "cached_input": 0.022,
@@ -504,71 +934,132 @@
       "peak_cached_input": 0.044,
       "context": "1M",
       "reasoning": true,
-      "benchmark": "SWE-bench Verified 80.6 / Terminal-Bench 2.1 87.9 (checkpoint-dependent)",
+      "benchmark": "SWE-bench Verified 80.6 / Terminal-Bench 2.0 67.9 (DeepSeek original V4-Pro card, max effort); TB2.1 87.9 is later V4.1-Flash comparison-table result, checkpoint/scaffold not established for Go",
       "training": "No Training",
       "retention": "0 days (ZDR valid through 2026-10-31)",
       "chinese_model": true,
-      "hosting": "PRC",
-      "china_transfer": "Yes",
-      "coding_grade": "S",
-      "value_grade": "S",
+      "hosting": "Unknown (Go hosting region undisclosed)",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "High",
       "positioning": [
         "성능 우선",
         "가성비 우선"
       ],
-      "notes": "OpenCode confirms the current monthly DeepSeek ZDR agreement is valid through 2026-10-31. Go documents weekday peak pricing at 2x the listed off-peak rates."
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Original card SWE-bench Verified 80.6 and TB2.0 67.9 are one release/evaluation. Z.ai GLM-5.3 comparison identifies TB2.1 87.9 as DeepSeek-V4-Pro-0813. Do not mix these as a single Go checkpoint; Go checkpoint and region are undisclosed. Go zero-retention agreement is valid through October31,2026 and renewed monthly. Go DeepSeek ZDR agreement is currently valid through 2026-10-31. Peak pricing applies Monday–Friday 01:00–04:00 and 06:00–10:00 UTC; all other times, including weekends, are off-peak. Go checkpoint is unconfirmed.",
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "capability_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+      "price_tiers": [
+        {
+          "label": "DeepSeek V4 Pro (Off-Peak)",
+          "input_price": 0.66,
+          "output_price": 1.98,
+          "cached_input": 0.022,
+          "cached_write": null
+        },
+        {
+          "label": "DeepSeek V4 Pro (Peak)",
+          "input_price": 1.32,
+          "output_price": 3.96,
+          "cached_input": 0.044,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "Hy4 preview",
       "developer": "Tencent",
-      "provider": "Undisclosed",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.834,
       "output_price": 2.501,
       "cached_input": 0.042,
-      "context": "1M+",
+      "context": "1M",
       "reasoning": true,
-      "benchmark": "SWE-bench Pro 65.7 / Terminal-Bench 2.1 85.4",
+      "benchmark": "N/A",
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": true,
-      "hosting": "Unknown",
+      "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
-      "coding_grade": "S",
-      "value_grade": "A",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [
         "성능 우선",
         "균형형"
-      ]
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://huggingface.co/tencent/Hy4-preview"
+      ],
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.  Earlier numeric coding benchmark not reverified; omitted pending primary evidence.",
+      "reasoning_effort": "high default / no_think for direct responses; model template",
+      "capability_source": "https://huggingface.co/tencent/Hy4-preview",
+      "price_tiers": [
+        {
+          "label": "Hy4 preview",
+          "input_price": 0.834,
+          "output_price": 2.501,
+          "cached_input": 0.042,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "Hy3",
       "developer": "Tencent",
-      "provider": "Undisclosed",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.14,
       "output_price": 0.58,
       "cached_input": 0.035,
-      "context": "~256K",
+      "context": "256K",
       "reasoning": true,
-      "benchmark": "SWE-bench Verified 78 / SWE-bench Pro 57.9 / Terminal-Bench 2.1 71.7",
+      "benchmark": "Terminal-Bench 2.1 71.7 (developer model-card evaluation export; scaffold not established in this audit)",
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": true,
-      "hosting": "Unknown",
+      "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
-      "coding_grade": "A",
-      "value_grade": "S",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [
         "가성비 우선",
         "저가 서브에이전트"
-      ]
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://huggingface.co/tencent/Hy3"
+      ],
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Earlier SWE-bench Verified 78 and SWE-bench Pro 57.9 not reverified; omitted.",
+      "capability_source": "https://huggingface.co/tencent/Hy3",
+      "price_tiers": [
+        {
+          "label": "Hy3",
+          "input_price": 0.14,
+          "output_price": 0.58,
+          "cached_input": 0.035,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "Space Bunny",
       "developer": "Unknown",
-      "provider": "Unknown",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.15,
       "output_price": 0.6,
       "cached_input": 0.03,
@@ -578,81 +1069,158 @@
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": false,
-      "hosting": "Unknown",
+      "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
       "coding_grade": "N/A",
       "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [],
-      "notes": "Current official Go pricing/API table lists Space Bunny at $0.15 input / $0.60 output / $0.03 cached read and a $30 monthly limit. Current official docs differ on curated-list visibility; current pricing and endpoint table confirm availability. Context, reasoning, benchmark, provider/routing, hosting, and region are not inferred."
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Developer identity and model capabilities remain unverified.",
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy"
+      ],
+      "price_tiers": [
+        {
+          "label": "Space Bunny",
+          "input_price": 0.15,
+          "output_price": 0.6,
+          "cached_input": 0.03,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "Claude Haiku 5.5",
       "developer": "Anthropic",
-      "provider": "Anthropic API path (official Go endpoint; upstream routing not independently verified)",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0.1,
       "output_price": 0.5,
       "cached_input": 0.01,
-      "context": "Unknown",
-      "reasoning": null,
+      "context": "1M",
+      "reasoning": true,
       "benchmark": "N/A",
       "training": "No Training",
       "retention": "30 days",
       "chinese_model": false,
-      "hosting": "Unknown",
+      "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
       "coding_grade": "N/A",
       "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [],
-      "notes": "Current OpenCode Go v2 docs list Claude Haiku 5.5 in model, pricing, endpoint, request-estimate, and privacy tables. Prices are <=100K tokens; >100K is $0.50 input / $2.50 output / $0.05 cached read. Cached write is $0.125 <=100K and $0.625 >100K. Context/reasoning/benchmark and Go hosting region are not inferred. Older docs.opencode.ai Go page omits this model; source-version discrepancy noted."
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.",
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://platform.claude.com/docs/en/models/haiku-5-5/whats-new-haiku-5-5"
+      ],
+      "reasoning_effort": "adaptive thinking enabled by default, medium default; Go exposure unverified",
+      "capability_source": "https://platform.claude.com/docs/en/models/haiku-5-5/whats-new-haiku-5-5",
+      "price_tiers": [
+        {
+          "label": "Claude Haiku 5.5 (≤ 100K tokens)",
+          "input_price": 0.1,
+          "output_price": 0.5,
+          "cached_input": 0.01,
+          "cached_write": 0.125
+        },
+        {
+          "label": "Claude Haiku 5.5 (> 100K tokens)",
+          "input_price": 0.5,
+          "output_price": 2.5,
+          "cached_input": 0.05,
+          "cached_write": 0.625
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": 0.125
     },
     {
       "model": "Gemini 4 Argon Contributor",
       "developer": "Google",
-      "provider": "Google SDK adapter (@ai-sdk/google); upstream routing undisclosed",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 4,
       "output_price": 20,
       "cached_input": 0.2,
-      "context": "Unknown",
-      "reasoning": null,
+      "context": "1,048,576 unified input/output (base Gemini 4 Argon)",
+      "reasoning": true,
       "benchmark": "N/A",
       "training": "May Train",
       "retention": "Not ZDR",
       "chinese_model": false,
-      "hosting": "Unknown",
+      "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
       "coding_grade": "N/A",
       "value_grade": "N/A",
       "privacy_risk": "High",
       "positioning": [],
-      "notes": "Current OpenCode Go v2 model list, pricing, estimated-request, endpoint, and privacy tables confirm availability. Token prices are $4 input / $20 output / $0.20 cached read per 1M tokens. Base Go monthly usage is $30 with 220 / 540 / 1,060 estimated requests (5h/week/month); the official 2x limited-time promotion raises this to $60 and 440 / 1,080 / 2,120. No promotion end date is published. The official privacy table says prompts and completions may be used to train future Google models and retention is Not ZDR. Context, reasoning, benchmark, upstream routing, hosting, and data region are not disclosed."
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Must label base-model spec; Go Contributor mapping/caps unverified. Go permits training on prompts/completions and is not ZDR; avoid confidential source code.",
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon"
+      ],
+      "reasoning_effort": "low, medium (default), high; base model native API, Contributor/Go exposure unverified",
+      "capability_source": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
+      "price_tiers": [
+        {
+          "label": "Gemini 4 Argon Contributor",
+          "input_price": 4.0,
+          "output_price": 20.0,
+          "cached_input": 0.2,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "Step 5 Preview",
-      "developer": "Unknown",
-      "provider": "Unknown",
+      "developer": "StepFun",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 1,
       "output_price": 2.7,
       "cached_input": 0.1,
-      "context": "Unknown",
-      "reasoning": null,
+      "context": "Up to 1M (native model)",
+      "reasoning": true,
       "benchmark": "N/A",
       "training": "No Training",
       "retention": "0 days",
-      "chinese_model": null,
-      "hosting": "Unknown",
+      "chinese_model": true,
+      "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
       "coding_grade": "N/A",
       "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [],
-      "notes": "Current OpenCode Go v2 detailed model list, pricing, endpoint, estimated-request, and privacy tables identify this model as Step 5 Preview (model ID step-5-preview), with $1.00 input / $2.70 output / $0.10 cached read per 1M tokens. The Go base monthly limit is $15 with 430 / 1,070 / 2,130 estimated requests (5h/week/month); the current 4x limited-time promotion raises this to $60 and 1,720 / 4,280 / 8,520. No promotion end date is published. The Go landing page now agrees with the detailed v2 pricing/API tables on Step 5 Preview's paid base usage and 4x limited-time promotion. The landing page and detailed current list now agree on 29 models. Privacy table says training is not used and retention is 0 days. Developer, context, reasoning, benchmark, provider/routing, hosting, and region remain undisclosed."
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.",
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://platform.stepfun.com/blog/inside-step-5-preview",
+        "https://platform.stepfun.com/cookbook/step-5-reasoning"
+      ],
+      "reasoning_effort": "low, medium, high; native API",
+      "capability_source": "https://platform.stepfun.com/blog/inside-step-5-preview",
+      "price_tiers": [
+        {
+          "label": "Step 5 Preview",
+          "input_price": 1.0,
+          "output_price": 2.7,
+          "cached_input": 0.1,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     },
     {
       "model": "Beam Free",
       "developer": "Unknown",
-      "provider": "Unknown",
+      "provider": "Unknown (Go upstream routing undisclosed)",
       "input_price": 0,
       "output_price": 0,
       "cached_input": 0,
@@ -662,13 +1230,29 @@
       "training": "No Training",
       "retention": "30 days",
       "chinese_model": null,
-      "hosting": "Unknown",
+      "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
       "coding_grade": "N/A",
       "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [],
-      "notes": "Official Go tables list Beam Free (beam-free): free input, output, and cached read; unlimited requests for a limited time; no training; 30-day retention. Region restrictions apply, including China, Hong Kong, and Macau; see https://opencode.ai/v2/docs/console/go/#usage-limits for the complete list. Developer, provider, context, reasoning, benchmark, hosting, data region, and promotion end date are undisclosed."
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Developer identity and model capabilities remain unverified. Official Go tables list Beam Free (beam-free): free input, output, and cached read; unlimited requests for a limited time; no training; 30-day retention. Region restrictions apply, including China, Hong Kong, and Macau; see https://opencode.ai/v2/docs/console/go/#usage-limits for the complete list. Developer, provider, context, reasoning, benchmark, hosting, data region, and promotion end date are undisclosed.",
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy"
+      ],
+      "price_tiers": [
+        {
+          "label": "Beam Free",
+          "input_price": 0,
+          "output_price": 0,
+          "cached_input": 0,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-10-18",
+      "cached_write": null
     }
-  ]
+  ],
+  "recommendation_note": "No comparable independent Go model/provider/harness evaluation establishes an absolute winner. Value/cheap picks are conditional workload heuristics; vendor benchmarks are scaffold- and checkpoint-dependent. Letter grades removed because no reproducible grading rubric was supplied."
 }
