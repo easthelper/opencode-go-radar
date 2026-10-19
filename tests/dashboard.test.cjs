@@ -79,3 +79,28 @@ assert.deepEqual(run('state.rows.map(m=>valueIndex(m))'),run('state.rows.map(m=>
 for(const dir of [1,-1]){run(`state.sortDir=${dir};state.sortKey='value_grade'`);el('#offering').value='';let missing=false;for(const v of run('filtered().map(m=>valueIndex(m))')){if(v===null)missing=true;else assert.ok(!missing);}}
 console.log('PASS: performance-weighted subscription value, exact token cost, normalization, measured zero, missing/free/Console exclusions, promo expiry and filter-independent missing-last sorting.');
 },0);
+
+setTimeout(()=>{const run=s=>vm.runInContext(s,sandbox);
+for(const t of [null,undefined,false,true,'Unknown','May Train','No Training if opted out','not No Training']){sandbox.t=t;assert.equal(run('privacyEligibility({training:t}).noTraining'),false);}
+assert.equal(run('privacyEligibility({training:"No Training"}).noTraining'),true);
+for(const t of [null,undefined,false,true,0,'30 days','Not ZDR','0 days if approved','Unknown (0 days possible)','0 days (ZDR valid through 2026-02-30)']){sandbox.t=t;assert.equal(run('privacyEligibility({retention:t},"2026-10-19").zeroRetention'),false);}
+assert.equal(run('privacyEligibility({retention:"0 days (ZDR valid through 2026-10-31)"},"2026-10-31").zeroRetention'),true);
+assert.equal(run('privacyEligibility({retention:"0 days (ZDR valid through 2026-10-31)"},"2026-11-01").zeroRetention'),false);
+assert.equal(run('privacyEligibility({retention:"0 days"},"2026-11-01").zeroRetention'),true);
+assert.ok(run('privacyFilterDetails({retention:"0 days (ZDR valid through 2020-01-01)"})').includes('確認')===false);
+assert.ok(run('privacyFilterDetails({retention:"0 days (ZDR valid through 2020-01-01)"})').includes('확인 기한 만료'));
+const goRows=go.models.map(m=>({...m,offering:'go'})),all=[...goRows,...con.models];
+for(const offering of ['go-free','go','console-free','console-payg','']) for(const a of [false,true]) for(const b of [false,true]){
+ el('#offering').value=offering;el('#no-training').checked=a;el('#zero-retention').checked=b;
+ const expected=all.filter(m=>(!offering||(offering==='go-free'?['go','console-free'].includes(m.offering):m.offering===offering))&&(!a||m.training==='No Training')&&(!b||m.retention==='0 days'||m.retention==='0 days (ZDR valid through 2026-10-31)')).length;
+ assert.equal(run('filtered().length'),expected);
+}
+const before=JSON.stringify(run('state.rows.map(m=>valueIndex(m))'));
+el('#offering').value='console-free';el('#no-training').checked=true;el('#zero-retention').checked=true;el('#search').value='deepseek';
+assert.equal(run('filtered().length'),1);assert.equal(run('filtered()[0].model_id'),'deepseek-v4.1-flash-free');
+el('#privacy').value='High';assert.equal(run('filtered().length'),0);
+assert.equal(JSON.stringify(run('state.rows.map(m=>valueIndex(m))')),before);
+el('#reset').listeners.click();assert.equal(el('#no-training').checked,false);assert.equal(el('#zero-retention').checked,false);assert.equal(el('#offering').value,'go-free');assert.equal(run('filtered().length'),43);
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');assert.ok(html.includes('id="no-training" type="checkbox"'));assert.ok(html.includes('id="zero-retention" type="checkbox"'));assert.ok(html.includes('aria-describedby="privacy-filter-help"'));
+console.log('PASS: independent privacy filters/AND across all offerings, null/boolean/unknown/conditional false positives, inclusive expiry, free scope, risk/search intersection, reset and invariant Value cohort.');
+},0);
