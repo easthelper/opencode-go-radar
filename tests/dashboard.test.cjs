@@ -39,3 +39,21 @@ el('#offering').value='console-free';run('render()');assert.equal(run('filtered(
 
 
 
+
+setTimeout(()=>{const run=s=>vm.runInContext(s,sandbox);
+assert.equal(run('codingScore({offering:"go",coding_evaluation:{cohort:CODING_COHORT,status:"matched",score_pct:0}})'),0);
+assert.equal(run('codingScore({offering:"console-free",coding_evaluation:{cohort:CODING_COHORT,status:"matched",score_pct:99}})'),null);
+assert.equal(run('codingScore({offering:"go",coding_evaluation:{cohort:"other",status:"matched",score_pct:99}})'),null);
+assert.equal(run('codingScore({offering:"go",coding_evaluation:{cohort:CODING_COHORT,status:"checkpoint_unconfirmed",score_pct:99}})'),null);
+assert.equal(run('workloadCapacity({offering:"go",monthly_usage_usd:60,input_price:1,output_price:1})'),50);
+assert.equal(run('workloadCapacity({offering:"console-free",monthly_usage_usd:60,input_price:1,output_price:1})'),null);
+assert.equal(run('workloadCapacity({offering:"go",unlimited:true,input_price:0,output_price:0})'),null);
+assert.equal(run('workloadCapacity({offering:"go",monthly_usage_usd:null,input_price:1,output_price:1})'),null);
+assert.equal(run('workloadCapacity({offering:"go",monthly_usage_usd:15,promotion:"test",promotion_end:"2099-01-01",promotional_monthly_usage_usd:60,input_price:1,output_price:1})'),50);
+assert.equal(run('workloadCapacity({offering:"go",monthly_usage_usd:15,promotion:"expired",promotion_end:"2020-01-01",promotional_monthly_usage_usd:60,input_price:1,output_price:1})'),12.5);
+assert.ok(run('metricDetails({offering:"go",monthly_usage_usd:60,input_price:1,output_price:1})').includes('공식 Req/mo와 별도'));
+assert.ok(run('valueCell({offering:"console-payg"})').includes('Go 전용'));
+assert.ok(el('#benchmark-coverage').textContent.includes('미평가는 0점이 아닙니다'));
+for(const dir of [1,-1]) { run(`state.sortDir=${dir};state.sortKey='coding_grade'`);el('#offering').value='go';const scores=run('filtered().map(codingScore)');let missing=false;for(const score of scores){if(score===null)missing=true;else assert.ok(!missing,'missing scores must sort last');}}
+console.log('PASS: zero score, cohort/Console exclusion, nulls, finite capacity, promo expiry, missing-last sorting and rubric explanations.');
+},0);
