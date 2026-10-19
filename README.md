@@ -87,3 +87,10 @@ Artificial Analysis provides independently measured current base-model results a
 
 The official Terminal-Bench leaderboard, SWE-bench and Aider offer additional agent/model evaluations, but different task versions, agents, effort and model checkpoints cannot be treated as one ranking. Developer model cards remain useful vendor-reported evidence; their existing benchmark strings remain separate in this dashboard. The recorded `coding_evaluation` objects expose source and methodology URLs for every included value.
 
+
+
+### Privacy filters (2026-10-19)
+
+Independent native checkbox filters select **No Training** and **Retention 0 (ZDR)**; enabling both requires both, together with search/offering/risk/region/position filters. Both start unchecked and reset clears them while restoring Go + Free. They do not change the Value reference cohort.
+
+Eligibility uses exact recorded offering-level policies, not model names, numeric substrings, developer nationality or risk grades. Only `No Training` passes the training filter. Only `0 days` or the exact `0 days (ZDR valid through YYYY-MM-DD)` form with a valid unexpired date passes zero retention. Dates are inclusive through that UTC calendar date; expired assurances fail closed until data is reverified. Unknown, null, boolean, conditional/ambiguous and unfamiliar policy values are excluded. Updating policy wording requires an explicit parser/test update rather than a permissive guess. These filters reflect published policy, not measured enforcement. Unknown upstream/hosting region remains unknown even when the offering-level policy passes; region safety is not inferred. Console never inherits Go conditions or expiry.
