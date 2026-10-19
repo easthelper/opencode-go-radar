@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="OpenCode Go 및 Console 무료·PAYG 모델 가격·코딩 성능·월간 사용 한도·프라이버시·데이터 처리 현황 추적" />
   <title>OpenCode Model Radar</title>
-  <link rel="stylesheet" href="assets/style.css?v=20261016-compact" />
+  <link rel="stylesheet" href="assets/style.css?v=20261019-metrics" />
 </head>
 <body>
   <header class="hero">
@@ -42,6 +42,7 @@
       <button id="reset" type="button">필터 초기화</button>
     </section>
 
+    <p id="benchmark-coverage" class="scope-note" role="status"></p>
     <section class="panel table-panel">
       <div class="table-head">
         <div>
@@ -55,8 +56,8 @@
           <thead><tr>
             <th data-key="model">Model</th>
             <th data-key="developer">Developer</th>
-            <th data-key="coding_grade">Coding</th>
-            <th data-key="value_grade">Value</th>
+            <th data-key="coding_grade">Coding · TB4 %</th>
+            <th data-key="value_grade">Value · 용량*</th>
             <th data-key="monthly_usage_usd">Go Effective Usage</th>
             <th data-key="requests_month">Req / mo</th>
             <th data-key="estimated_cost">Est. Cost*</th>
@@ -88,8 +89,12 @@
       <p><strong>서드파티 코딩 에이전트</strong>는 OpenCode의 최신 안내에 따라 안정적인 세션 ID를 전달해야 라우팅과 프롬프트 캐싱을 최적화할 수 있습니다.</p>
       <p><strong>프로모션</strong>은 기본 Monthly limit/요청 수와 분리해 추적하며, 활성 기간에는 dashboard가 공식 promotional 값을 우선 표시합니다.</p>
       <p><strong>중국계 모델</strong>과 <strong>중국 전송</strong>은 별개입니다. 개발사 국적만으로 호스팅 지역이나 데이터 전송을 추정하지 않습니다.</p>
-      <p><strong>Unknown</strong>은 보수적으로 미확인 상태를 뜻합니다. 서로 다른 harness의 벤치마크를 단일 숫자 순위로 합산하지 않습니다. Context·Reasoning은 표시된 개발사 원본 모델 사양이며 Go/Console endpoint의 실제 한도·옵션 지원은 별도 확인이 필요합니다. Coding·Value 등급은 편집상 참고 분류이며 검증된 전체 순위가 아닙니다.</p>
+      <p><strong>Unknown</strong>은 보수적으로 미확인 상태를 뜻합니다. 서로 다른 harness의 벤치마크를 단일 숫자 순위로 합산하지 않습니다. Context·Reasoning은 표시된 개발사 원본 모델 사양이며 Go/Console endpoint의 실제 한도·옵션 지원은 별도 확인이 필요합니다. Coding은 Artificial Analysis의 동일 Terminal-Bench 4.0 평가 결과만 정렬합니다. Vendor-reported 및 다른 harness 결과는 Coding benchmark 원문과 상세에서 별도로 읽으세요. Value는 성능 종합 등급이 아닌 고정 토큰 용량 예시입니다.</p>
 
+      <h2>Coding / Value 기준</h2>
+      <p>Coding은 AA Terminal-Bench 4.0의 mini-swe-agent · 66 tasks · pass@1 · 3회 반복 평가입니다. 표시된 원모델·effort 조건에 한정하며 Go endpoint 성능, 다른 benchmark 버전, vendor 점수와 합산하지 않습니다. 정확한 모델 매핑이 없으면 미평가 사유를 상세에 표시합니다.</p>
+      <p>Value = 현재 Go Effective Usage ÷ (input $/M + output $/M × 0.2). 1 workload = input 1M + output 200K tokens, 캐시 0%, 여러 짧은-context 요청, 기본 가격 가정입니다. DeepSeek는 off-peak이며 peak·긴-context 가격이면 용량이 줄어듭니다. 활성 프로모션은 반영하되 무료는 숫자로 순위화하지 않습니다. 공유 quota의 5h/주간 제한이 함께 적용되어 모델별 용량을 더할 수 없습니다. 공식 Req/mo와 다르며 성공 작업 수를 예측하지 않습니다.</p>
+      <p><a href="https://artificialanalysis.ai/evaluations/terminalbench-4-0" target="_blank" rel="noopener noreferrer">Artificial Analysis · Terminal-Bench 4.0</a></p>
       <h2>주요 레퍼런스</h2>
       <p>OpenCode Console 공식 모델·가격·프라이버시: <a href="https://opencode.ai/v2/docs/console/models/">Console Models (Zen)</a></p>
       <p>OpenCode Go 공식 문서: <a href="https://dev.opencode.ai/docs/go/" target="_blank" rel="noopener noreferrer">https://dev.opencode.ai/docs/go/</a></p>
@@ -113,9 +118,10 @@
       <div id="model-dialog-content" class="dialog-content" tabindex="0" aria-label="모델 상세 및 조건"></div>
     </div>
   </dialog>
-  <script src="assets/app.js?v=20261019-check"></script>
+  <script src="assets/app.js?v=20261019-metrics"></script>
 </body>
 </html>
+
 
 
 
