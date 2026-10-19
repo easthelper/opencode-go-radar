@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-18",
+  "as_of": "2026-10-19",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -55,7 +55,42 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "model": "Grok 4.7",
+        "evaluated_model": "Grok 4.7 (Xhigh)",
+        "model_slug": "grok-4-7",
+        "model_source": "https://artificialanalysis.ai/models/grok-4-7",
+        "benchmark": "Terminal-Bench 4.0",
+        "benchmark_version": "4.0",
+        "score": 25.757576,
+        "unit": "percent",
+        "scoring": "pass@1 averaged over 3 repeats",
+        "tasks": 66,
+        "repeats": 3,
+        "scaffold": "mini-swe-agent",
+        "scaffold_version": null,
+        "effort": "xhigh",
+        "effort_note": null,
+        "source": "https://artificialanalysis.ai/models/grok-4-7",
+        "methodology_source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking#terminal-bench-4-0",
+        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "publisher": "Artificial Analysis",
+        "evidence_type": "independent",
+        "comparison_group": "aa-terminalbench-4.0-mini-swe-66x3",
+        "checked_at": "2026-10-19",
+        "evaluated_at": null,
+        "go_endpoint_tested": false,
+        "go_mapping": "same named base model; Go checkpoint, effort parity and routing unverified",
+        "note": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음.",
+        "status": "matched",
+        "cohort": "aa-terminalbench-4.0-mini-swe",
+        "score_pct": 25.757576,
+        "evaluator": "Artificial Analysis",
+        "harness": "mini-swe-agent",
+        "metric": "pass@1 averaged over 3 repeats",
+        "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음."
+      }
     },
     {
       "model": "GPT 6 Luna",
@@ -101,7 +136,42 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": 0.125
+      "cached_write": 0.125,
+      "coding_evaluation": {
+        "model": "GPT 6 Luna",
+        "evaluated_model": "GPT-6 Luna (Max)",
+        "model_slug": "gpt-6-luna",
+        "model_source": "https://artificialanalysis.ai/models/gpt-6-luna",
+        "benchmark": "Terminal-Bench 4.0",
+        "benchmark_version": "4.0",
+        "score": 12.626263,
+        "unit": "percent",
+        "scoring": "pass@1 averaged over 3 repeats",
+        "tasks": 66,
+        "repeats": 3,
+        "scaffold": "mini-swe-agent",
+        "scaffold_version": null,
+        "effort": "max",
+        "effort_note": null,
+        "source": "https://artificialanalysis.ai/models/gpt-6-luna",
+        "methodology_source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking#terminal-bench-4-0",
+        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "publisher": "Artificial Analysis",
+        "evidence_type": "independent",
+        "comparison_group": "aa-terminalbench-4.0-mini-swe-66x3",
+        "checked_at": "2026-10-19",
+        "evaluated_at": null,
+        "go_endpoint_tested": false,
+        "go_mapping": "same named base model; Go checkpoint, effort parity and routing unverified",
+        "note": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음.",
+        "status": "matched",
+        "cohort": "aa-terminalbench-4.0-mini-swe",
+        "score_pct": 12.626263,
+        "evaluator": "Artificial Analysis",
+        "harness": "mini-swe-agent",
+        "metric": "pass@1 averaged over 3 repeats",
+        "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음."
+      }
     },
     {
       "model": "GPT 5.6 Luna",
@@ -152,7 +222,43 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": 0.25
+      "cached_write": 0.25,
+      "coding_evaluation": {
+        "model": "GPT 5.6 Luna",
+        "evaluated_model": "GPT-5.6 Luna (Max)",
+        "model_slug": "gpt-5-6-luna",
+        "model_source": "https://artificialanalysis.ai/models/gpt-5-6-luna",
+        "benchmark": "Terminal-Bench 4.0",
+        "benchmark_version": "4.0",
+        "score": 11.616162,
+        "unit": "percent",
+        "scoring": "pass@1 averaged over 3 repeats",
+        "tasks": 66,
+        "repeats": 3,
+        "scaffold": "mini-swe-agent",
+        "scaffold_version": null,
+        "effort": "max",
+        "effort_note": null,
+        "source": "https://artificialanalysis.ai/models/gpt-5-6-luna",
+        "methodology_source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking#terminal-bench-4-0",
+        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "publisher": "Artificial Analysis",
+        "evidence_type": "independent",
+        "comparison_group": "aa-terminalbench-4.0-mini-swe-66x3",
+        "checked_at": "2026-10-19",
+        "evaluated_at": null,
+        "go_endpoint_tested": false,
+        "go_mapping": "same named base model; Go checkpoint, effort parity and routing unverified",
+        "note": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음. AA deprecated 표시는 AA 평가상태이며 Go 제공종료를 뜻하지 않음.",
+        "aa_deprecated": true,
+        "status": "matched",
+        "cohort": "aa-terminalbench-4.0-mini-swe",
+        "score_pct": 11.616162,
+        "evaluator": "Artificial Analysis",
+        "harness": "mini-swe-agent",
+        "metric": "pass@1 averaged over 3 repeats",
+        "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음. AA deprecated 표시는 AA 평가상태이며 Go 제공종료를 뜻하지 않음."
+      }
     },
     {
       "model": "GLM-5.3-Flash",
@@ -196,7 +302,42 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "model": "GLM-5.3-Flash",
+        "evaluated_model": "GLM-5.3-Flash",
+        "model_slug": "glm-5-3-flash",
+        "model_source": "https://artificialanalysis.ai/models/glm-5-3-flash",
+        "benchmark": "Terminal-Bench 4.0",
+        "benchmark_version": "4.0",
+        "score": 32.828283,
+        "unit": "percent",
+        "scoring": "pass@1 averaged over 3 repeats",
+        "tasks": 66,
+        "repeats": 3,
+        "scaffold": "mini-swe-agent",
+        "scaffold_version": null,
+        "effort": null,
+        "effort_note": "AA row effort not separately labeled",
+        "source": "https://artificialanalysis.ai/models/glm-5-3-flash",
+        "methodology_source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking#terminal-bench-4-0",
+        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "publisher": "Artificial Analysis",
+        "evidence_type": "independent",
+        "comparison_group": "aa-terminalbench-4.0-mini-swe-66x3",
+        "checked_at": "2026-10-19",
+        "evaluated_at": null,
+        "go_endpoint_tested": false,
+        "go_mapping": "same named base model; Go checkpoint, effort parity and routing unverified",
+        "note": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음.",
+        "status": "matched",
+        "cohort": "aa-terminalbench-4.0-mini-swe",
+        "score_pct": 32.828283,
+        "evaluator": "Artificial Analysis",
+        "harness": "mini-swe-agent",
+        "metric": "pass@1 averaged over 3 repeats",
+        "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음."
+      }
     },
     {
       "model": "GLM-5.3",
@@ -239,7 +380,42 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "model": "GLM-5.3",
+        "evaluated_model": "GLM-5.3 (Max)",
+        "model_slug": "glm-5-3",
+        "model_source": "https://artificialanalysis.ai/models/glm-5-3",
+        "benchmark": "Terminal-Bench 4.0",
+        "benchmark_version": "4.0",
+        "score": 41.919192,
+        "unit": "percent",
+        "scoring": "pass@1 averaged over 3 repeats",
+        "tasks": 66,
+        "repeats": 3,
+        "scaffold": "mini-swe-agent",
+        "scaffold_version": null,
+        "effort": "max",
+        "effort_note": null,
+        "source": "https://artificialanalysis.ai/models/glm-5-3",
+        "methodology_source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking#terminal-bench-4-0",
+        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "publisher": "Artificial Analysis",
+        "evidence_type": "independent",
+        "comparison_group": "aa-terminalbench-4.0-mini-swe-66x3",
+        "checked_at": "2026-10-19",
+        "evaluated_at": null,
+        "go_endpoint_tested": false,
+        "go_mapping": "same named base model; Go checkpoint, effort parity and routing unverified",
+        "note": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음.",
+        "status": "matched",
+        "cohort": "aa-terminalbench-4.0-mini-swe",
+        "score_pct": 41.919192,
+        "evaluator": "Artificial Analysis",
+        "harness": "mini-swe-agent",
+        "metric": "pass@1 averaged over 3 repeats",
+        "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음."
+      }
     },
     {
       "model": "GLM-5.2",
@@ -279,7 +455,43 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "model": "GLM-5.2",
+        "evaluated_model": "GLM-5.2 (Max)",
+        "model_slug": "glm-5-2",
+        "model_source": "https://artificialanalysis.ai/models/glm-5-2",
+        "benchmark": "Terminal-Bench 4.0",
+        "benchmark_version": "4.0",
+        "score": 1.010101,
+        "unit": "percent",
+        "scoring": "pass@1 averaged over 3 repeats",
+        "tasks": 66,
+        "repeats": 3,
+        "scaffold": "mini-swe-agent",
+        "scaffold_version": null,
+        "effort": "max",
+        "effort_note": null,
+        "source": "https://artificialanalysis.ai/models/glm-5-2",
+        "methodology_source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking#terminal-bench-4-0",
+        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "publisher": "Artificial Analysis",
+        "evidence_type": "independent",
+        "comparison_group": "aa-terminalbench-4.0-mini-swe-66x3",
+        "checked_at": "2026-10-19",
+        "evaluated_at": null,
+        "go_endpoint_tested": false,
+        "go_mapping": "same named base model; Go checkpoint, effort parity and routing unverified",
+        "note": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음. AA deprecated 표시는 AA 평가상태이며 Go 제공종료를 뜻하지 않음.",
+        "aa_deprecated": true,
+        "status": "matched",
+        "cohort": "aa-terminalbench-4.0-mini-swe",
+        "score_pct": 1.010101,
+        "evaluator": "Artificial Analysis",
+        "harness": "mini-swe-agent",
+        "metric": "pass@1 averaged over 3 repeats",
+        "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음. AA deprecated 표시는 AA 평가상태이며 Go 제공종료를 뜻하지 않음."
+      }
     },
     {
       "model": "Kimi K3",
@@ -322,7 +534,42 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "model": "Kimi K3",
+        "evaluated_model": "Kimi K3 (Max)",
+        "model_slug": "kimi-k3",
+        "model_source": "https://artificialanalysis.ai/models/kimi-k3",
+        "benchmark": "Terminal-Bench 4.0",
+        "benchmark_version": "4.0",
+        "score": 12.626263,
+        "unit": "percent",
+        "scoring": "pass@1 averaged over 3 repeats",
+        "tasks": 66,
+        "repeats": 3,
+        "scaffold": "mini-swe-agent",
+        "scaffold_version": null,
+        "effort": "max",
+        "effort_note": null,
+        "source": "https://artificialanalysis.ai/models/kimi-k3",
+        "methodology_source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking#terminal-bench-4-0",
+        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "publisher": "Artificial Analysis",
+        "evidence_type": "independent",
+        "comparison_group": "aa-terminalbench-4.0-mini-swe-66x3",
+        "checked_at": "2026-10-19",
+        "evaluated_at": null,
+        "go_endpoint_tested": false,
+        "go_mapping": "same named base model; Go checkpoint, effort parity and routing unverified",
+        "note": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음.",
+        "status": "matched",
+        "cohort": "aa-terminalbench-4.0-mini-swe",
+        "score_pct": 12.626263,
+        "evaluator": "Artificial Analysis",
+        "harness": "mini-swe-agent",
+        "metric": "pass@1 averaged over 3 repeats",
+        "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음."
+      }
     },
     {
       "model": "Kimi K2.7 Code",
@@ -362,7 +609,42 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "model": "Kimi K2.7 Code",
+        "evaluated_model": "Kimi K2.7 Code",
+        "model_slug": "kimi-k2-7-code",
+        "model_source": "https://artificialanalysis.ai/models/kimi-k2-7-code",
+        "benchmark": "Terminal-Bench 4.0",
+        "benchmark_version": "4.0",
+        "score": 1.010101,
+        "unit": "percent",
+        "scoring": "pass@1 averaged over 3 repeats",
+        "tasks": 66,
+        "repeats": 3,
+        "scaffold": "mini-swe-agent",
+        "scaffold_version": null,
+        "effort": null,
+        "effort_note": "AA row effort not separately labeled",
+        "source": "https://artificialanalysis.ai/models/kimi-k2-7-code",
+        "methodology_source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking#terminal-bench-4-0",
+        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "publisher": "Artificial Analysis",
+        "evidence_type": "independent",
+        "comparison_group": "aa-terminalbench-4.0-mini-swe-66x3",
+        "checked_at": "2026-10-19",
+        "evaluated_at": null,
+        "go_endpoint_tested": false,
+        "go_mapping": "same named base model; Go checkpoint, effort parity and routing unverified",
+        "note": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음.",
+        "status": "matched",
+        "cohort": "aa-terminalbench-4.0-mini-swe",
+        "score_pct": 1.010101,
+        "evaluator": "Artificial Analysis",
+        "harness": "mini-swe-agent",
+        "metric": "pass@1 averaged over 3 repeats",
+        "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음."
+      }
     },
     {
       "model": "LongCat-2.0",
@@ -403,7 +685,42 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "model": "LongCat-2.0",
+        "evaluated_model": "LongCat 2.0",
+        "model_slug": "longcat-2-0",
+        "model_source": "https://artificialanalysis.ai/models/longcat-2-0",
+        "benchmark": "Terminal-Bench 4.0",
+        "benchmark_version": "4.0",
+        "score": 0,
+        "unit": "percent",
+        "scoring": "pass@1 averaged over 3 repeats",
+        "tasks": 66,
+        "repeats": 3,
+        "scaffold": "mini-swe-agent",
+        "scaffold_version": null,
+        "effort": null,
+        "effort_note": "AA row effort not separately labeled",
+        "source": "https://artificialanalysis.ai/models/longcat-2-0",
+        "methodology_source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking#terminal-bench-4-0",
+        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "publisher": "Artificial Analysis",
+        "evidence_type": "independent",
+        "comparison_group": "aa-terminalbench-4.0-mini-swe-66x3",
+        "checked_at": "2026-10-19",
+        "evaluated_at": null,
+        "go_endpoint_tested": false,
+        "go_mapping": "same named base model; Go checkpoint, effort parity and routing unverified",
+        "note": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음.",
+        "status": "matched",
+        "cohort": "aa-terminalbench-4.0-mini-swe",
+        "score_pct": 0,
+        "evaluator": "Artificial Analysis",
+        "harness": "mini-swe-agent",
+        "metric": "pass@1 averaged over 3 repeats",
+        "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음."
+      }
     },
     {
       "model": "LongCat 2.5 Preview Free",
@@ -442,7 +759,12 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "status": "unavailable",
+        "reason": "같은 원모델의 AA Terminal-Bench 4.0 결과를 확인하지 못했습니다. 기존 개발사 벤치마크는 별도로 참고하세요.",
+        "checked_at": "2026-10-19"
+      }
     },
     {
       "model": "MiMo-V2.6-Flash",
@@ -486,7 +808,42 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "model": "MiMo-V2.6-Flash",
+        "evaluated_model": "MiMo-V2.6-Flash",
+        "model_slug": "mimo-v2-6-flash",
+        "model_source": "https://artificialanalysis.ai/models/mimo-v2-6-flash",
+        "benchmark": "Terminal-Bench 4.0",
+        "benchmark_version": "4.0",
+        "score": 22.727273,
+        "unit": "percent",
+        "scoring": "pass@1 averaged over 3 repeats",
+        "tasks": 66,
+        "repeats": 3,
+        "scaffold": "mini-swe-agent",
+        "scaffold_version": null,
+        "effort": null,
+        "effort_note": "AA row effort not separately labeled",
+        "source": "https://artificialanalysis.ai/models/mimo-v2-6-flash",
+        "methodology_source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking#terminal-bench-4-0",
+        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "publisher": "Artificial Analysis",
+        "evidence_type": "independent",
+        "comparison_group": "aa-terminalbench-4.0-mini-swe-66x3",
+        "checked_at": "2026-10-19",
+        "evaluated_at": null,
+        "go_endpoint_tested": false,
+        "go_mapping": "same named base model; Go checkpoint, effort parity and routing unverified",
+        "note": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음.",
+        "status": "matched",
+        "cohort": "aa-terminalbench-4.0-mini-swe",
+        "score_pct": 22.727273,
+        "evaluator": "Artificial Analysis",
+        "harness": "mini-swe-agent",
+        "metric": "pass@1 averaged over 3 repeats",
+        "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음."
+      }
     },
     {
       "model": "MiMo-V2.6-Pro",
@@ -529,7 +886,42 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "model": "MiMo-V2.6-Pro",
+        "evaluated_model": "MiMo-V2.6-Pro",
+        "model_slug": "mimo-v2-6-pro",
+        "model_source": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
+        "benchmark": "Terminal-Bench 4.0",
+        "benchmark_version": "4.0",
+        "score": 34.848485,
+        "unit": "percent",
+        "scoring": "pass@1 averaged over 3 repeats",
+        "tasks": 66,
+        "repeats": 3,
+        "scaffold": "mini-swe-agent",
+        "scaffold_version": null,
+        "effort": null,
+        "effort_note": "AA row effort not separately labeled",
+        "source": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
+        "methodology_source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking#terminal-bench-4-0",
+        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "publisher": "Artificial Analysis",
+        "evidence_type": "independent",
+        "comparison_group": "aa-terminalbench-4.0-mini-swe-66x3",
+        "checked_at": "2026-10-19",
+        "evaluated_at": null,
+        "go_endpoint_tested": false,
+        "go_mapping": "same named base model; Go checkpoint, effort parity and routing unverified",
+        "note": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음.",
+        "status": "matched",
+        "cohort": "aa-terminalbench-4.0-mini-swe",
+        "score_pct": 34.848485,
+        "evaluator": "Artificial Analysis",
+        "harness": "mini-swe-agent",
+        "metric": "pass@1 averaged over 3 repeats",
+        "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음."
+      }
     },
     {
       "model": "MiMo-V2.5",
@@ -569,7 +961,19 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "status": "checkpoint_unconfirmed",
+        "reason": "AA 모델 URL이 0424 checkpoint를 지칭합니다. Go checkpoint가 확인되지 않아 숫자 정렬에서 제외합니다.",
+        "source": "https://artificialanalysis.ai/models/mimo-v2-5-0424",
+        "checked_at": "2026-10-19",
+        "reference": {
+          "evaluated_model": "MiMo-V2.5 (AA slug 0424)",
+          "score_pct": 0,
+          "benchmark": "Terminal-Bench 4.0",
+          "evidence_type": "independent"
+        }
+      }
     },
     {
       "model": "MiMo-V2.5-Pro",
@@ -610,7 +1014,43 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "model": "MiMo-V2.5-Pro",
+        "evaluated_model": "MiMo-V2.5-Pro (Reasoning)",
+        "model_slug": "mimo-v2-5-pro",
+        "model_source": "https://artificialanalysis.ai/models/mimo-v2-5-pro",
+        "benchmark": "Terminal-Bench 4.0",
+        "benchmark_version": "4.0",
+        "score": 0,
+        "unit": "percent",
+        "scoring": "pass@1 averaged over 3 repeats",
+        "tasks": 66,
+        "repeats": 3,
+        "scaffold": "mini-swe-agent",
+        "scaffold_version": null,
+        "effort": "reasoning",
+        "effort_note": null,
+        "source": "https://artificialanalysis.ai/models/mimo-v2-5-pro",
+        "methodology_source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking#terminal-bench-4-0",
+        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "publisher": "Artificial Analysis",
+        "evidence_type": "independent",
+        "comparison_group": "aa-terminalbench-4.0-mini-swe-66x3",
+        "checked_at": "2026-10-19",
+        "evaluated_at": null,
+        "go_endpoint_tested": false,
+        "go_mapping": "same named base model; Go checkpoint, effort parity and routing unverified",
+        "note": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음. AA deprecated 표시는 AA 평가상태이며 Go 제공종료를 뜻하지 않음.",
+        "aa_deprecated": true,
+        "status": "matched",
+        "cohort": "aa-terminalbench-4.0-mini-swe",
+        "score_pct": 0,
+        "evaluator": "Artificial Analysis",
+        "harness": "mini-swe-agent",
+        "metric": "pass@1 averaged over 3 repeats",
+        "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음. AA deprecated 표시는 AA 평가상태이며 Go 제공종료를 뜻하지 않음."
+      }
     },
     {
       "model": "MiniMax M3",
@@ -653,7 +1093,42 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "model": "MiniMax M3",
+        "evaluated_model": "MiniMax-M3",
+        "model_slug": "minimax-m3",
+        "model_source": "https://artificialanalysis.ai/models/minimax-m3",
+        "benchmark": "Terminal-Bench 4.0",
+        "benchmark_version": "4.0",
+        "score": 2.020202,
+        "unit": "percent",
+        "scoring": "pass@1 averaged over 3 repeats",
+        "tasks": 66,
+        "repeats": 3,
+        "scaffold": "mini-swe-agent",
+        "scaffold_version": null,
+        "effort": null,
+        "effort_note": "AA row effort not separately labeled",
+        "source": "https://artificialanalysis.ai/models/minimax-m3",
+        "methodology_source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking#terminal-bench-4-0",
+        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "publisher": "Artificial Analysis",
+        "evidence_type": "independent",
+        "comparison_group": "aa-terminalbench-4.0-mini-swe-66x3",
+        "checked_at": "2026-10-19",
+        "evaluated_at": null,
+        "go_endpoint_tested": false,
+        "go_mapping": "same named base model; Go checkpoint, effort parity and routing unverified",
+        "note": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음.",
+        "status": "matched",
+        "cohort": "aa-terminalbench-4.0-mini-swe",
+        "score_pct": 2.020202,
+        "evaluator": "Artificial Analysis",
+        "harness": "mini-swe-agent",
+        "metric": "pass@1 averaged over 3 repeats",
+        "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음."
+      }
     },
     {
       "model": "Muse Spark 1.3 Contributor",
@@ -696,7 +1171,12 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "status": "unavailable",
+        "reason": "Contributor 제공형의 동일 평가가 없습니다. 표준 모델 점수를 복사하지 않습니다.",
+        "checked_at": "2026-10-19"
+      }
     },
     {
       "model": "Muse Spark 1.2 Contributor",
@@ -738,7 +1218,12 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "status": "unavailable",
+        "reason": "Contributor 제공형의 동일 평가가 없습니다. 표준 모델 점수를 복사하지 않습니다.",
+        "checked_at": "2026-10-19"
+      }
     },
     {
       "model": "Qwen3.8 Max",
@@ -780,7 +1265,19 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": 2.5
+      "cached_write": 2.5,
+      "coding_evaluation": {
+        "status": "checkpoint_unconfirmed",
+        "reason": "AA는 별도 날짜 checkpoint를 평가했습니다. Go endpoint가 해당 checkpoint인지 확인되지 않아 정렬 점수에서 제외합니다.",
+        "source": "https://artificialanalysis.ai/models/qwen3-8-max",
+        "checked_at": "2026-10-19",
+        "reference": {
+          "evaluated_model": "Qwen3.8 Max (0902)",
+          "score_pct": 38.888889,
+          "benchmark": "Terminal-Bench 4.0",
+          "evidence_type": "independent"
+        }
+      }
     },
     {
       "model": "Qwen3.8 Flash",
@@ -821,7 +1318,12 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": 0.2
+      "cached_write": 0.2,
+      "coding_evaluation": {
+        "status": "unavailable",
+        "reason": "같은 원모델의 AA Terminal-Bench 4.0 결과를 확인하지 못했습니다. 기존 개발사 벤치마크는 별도로 참고하세요.",
+        "checked_at": "2026-10-19"
+      }
     },
     {
       "model": "Qwen3.7 Plus",
@@ -868,7 +1370,42 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": 0.5
+      "cached_write": 0.5,
+      "coding_evaluation": {
+        "model": "Qwen3.7 Plus",
+        "evaluated_model": "Qwen3.7 Plus",
+        "model_slug": "qwen3-7-plus",
+        "model_source": "https://artificialanalysis.ai/models/qwen3-7-plus",
+        "benchmark": "Terminal-Bench 4.0",
+        "benchmark_version": "4.0",
+        "score": 1.010101,
+        "unit": "percent",
+        "scoring": "pass@1 averaged over 3 repeats",
+        "tasks": 66,
+        "repeats": 3,
+        "scaffold": "mini-swe-agent",
+        "scaffold_version": null,
+        "effort": null,
+        "effort_note": "AA row effort not separately labeled",
+        "source": "https://artificialanalysis.ai/models/qwen3-7-plus",
+        "methodology_source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking#terminal-bench-4-0",
+        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "publisher": "Artificial Analysis",
+        "evidence_type": "independent",
+        "comparison_group": "aa-terminalbench-4.0-mini-swe-66x3",
+        "checked_at": "2026-10-19",
+        "evaluated_at": null,
+        "go_endpoint_tested": false,
+        "go_mapping": "same named base model; Go checkpoint, effort parity and routing unverified",
+        "note": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음.",
+        "status": "matched",
+        "cohort": "aa-terminalbench-4.0-mini-swe",
+        "score_pct": 1.010101,
+        "evaluator": "Artificial Analysis",
+        "harness": "mini-swe-agent",
+        "metric": "pass@1 averaged over 3 repeats",
+        "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음."
+      }
     },
     {
       "model": "DeepSeek V4.1 Flash",
@@ -920,7 +1457,19 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "status": "checkpoint_unconfirmed",
+        "reason": "AA는 별도 날짜 checkpoint를 평가했습니다. Go endpoint가 해당 checkpoint인지 확인되지 않아 정렬 점수에서 제외합니다.",
+        "source": "https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017",
+        "checked_at": "2026-10-19",
+        "reference": {
+          "evaluated_model": "DeepSeek V4.1 Flash 1017 (Max)",
+          "score_pct": 33.838384,
+          "benchmark": "Terminal-Bench 4.0",
+          "evidence_type": "independent"
+        }
+      }
     },
     {
       "model": "DeepSeek V4 Pro",
@@ -971,7 +1520,12 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "status": "unavailable",
+        "reason": "같은 원모델의 AA Terminal-Bench 4.0 결과를 확인하지 못했습니다. 기존 개발사 벤치마크는 별도로 참고하세요.",
+        "checked_at": "2026-10-19"
+      }
     },
     {
       "model": "Hy4 preview",
@@ -1013,7 +1567,12 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "status": "unavailable",
+        "reason": "같은 원모델의 AA Terminal-Bench 4.0 결과를 확인하지 못했습니다. 기존 개발사 벤치마크는 별도로 참고하세요.",
+        "checked_at": "2026-10-19"
+      }
     },
     {
       "model": "Hy3",
@@ -1054,7 +1613,42 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "model": "Hy3",
+        "evaluated_model": "Hy3",
+        "model_slug": "hy3",
+        "model_source": "https://artificialanalysis.ai/models/hy3",
+        "benchmark": "Terminal-Bench 4.0",
+        "benchmark_version": "4.0",
+        "score": 0.505051,
+        "unit": "percent",
+        "scoring": "pass@1 averaged over 3 repeats",
+        "tasks": 66,
+        "repeats": 3,
+        "scaffold": "mini-swe-agent",
+        "scaffold_version": null,
+        "effort": null,
+        "effort_note": "AA row effort not separately labeled",
+        "source": "https://artificialanalysis.ai/models/hy3",
+        "methodology_source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking#terminal-bench-4-0",
+        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "publisher": "Artificial Analysis",
+        "evidence_type": "independent",
+        "comparison_group": "aa-terminalbench-4.0-mini-swe-66x3",
+        "checked_at": "2026-10-19",
+        "evaluated_at": null,
+        "go_endpoint_tested": false,
+        "go_mapping": "same named base model; Go checkpoint, effort parity and routing unverified",
+        "note": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음.",
+        "status": "matched",
+        "cohort": "aa-terminalbench-4.0-mini-swe",
+        "score_pct": 0.505051,
+        "evaluator": "Artificial Analysis",
+        "harness": "mini-swe-agent",
+        "metric": "pass@1 averaged over 3 repeats",
+        "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음."
+      }
     },
     {
       "model": "Space Bunny",
@@ -1090,7 +1684,12 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "status": "unavailable",
+        "reason": "공식 원모델 식별/평가 매핑이 미확정입니다. 유사 이름 모델 점수를 복사하지 않습니다.",
+        "checked_at": "2026-10-19"
+      }
     },
     {
       "model": "Claude Haiku 5.5",
@@ -1136,7 +1735,42 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": 0.125
+      "cached_write": 0.125,
+      "coding_evaluation": {
+        "model": "Claude Haiku 5.5",
+        "evaluated_model": "Claude Haiku 5.5 (Max)",
+        "model_slug": "claude-haiku-5-5",
+        "model_source": "https://artificialanalysis.ai/models/claude-haiku-5-5",
+        "benchmark": "Terminal-Bench 4.0",
+        "benchmark_version": "4.0",
+        "score": 32.828283,
+        "unit": "percent",
+        "scoring": "pass@1 averaged over 3 repeats",
+        "tasks": 66,
+        "repeats": 3,
+        "scaffold": "mini-swe-agent",
+        "scaffold_version": null,
+        "effort": "max",
+        "effort_note": null,
+        "source": "https://artificialanalysis.ai/models/claude-haiku-5-5",
+        "methodology_source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking#terminal-bench-4-0",
+        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "publisher": "Artificial Analysis",
+        "evidence_type": "independent",
+        "comparison_group": "aa-terminalbench-4.0-mini-swe-66x3",
+        "checked_at": "2026-10-19",
+        "evaluated_at": null,
+        "go_endpoint_tested": false,
+        "go_mapping": "same named base model; Go checkpoint, effort parity and routing unverified",
+        "note": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음.",
+        "status": "matched",
+        "cohort": "aa-terminalbench-4.0-mini-swe",
+        "score_pct": 32.828283,
+        "evaluator": "Artificial Analysis",
+        "harness": "mini-swe-agent",
+        "metric": "pass@1 averaged over 3 repeats",
+        "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음."
+      }
     },
     {
       "model": "Gemini 4 Argon Contributor",
@@ -1175,7 +1809,12 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "status": "unavailable",
+        "reason": "Contributor 제공형의 동일 평가가 없습니다. 표준 모델 점수를 복사하지 않습니다.",
+        "checked_at": "2026-10-19"
+      }
     },
     {
       "model": "Step 5 Preview",
@@ -1215,7 +1854,42 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "model": "Step 5 Preview",
+        "evaluated_model": "Step 5 Preview",
+        "model_slug": "step-5",
+        "model_source": "https://artificialanalysis.ai/models/step-5",
+        "benchmark": "Terminal-Bench 4.0",
+        "benchmark_version": "4.0",
+        "score": 33.333333,
+        "unit": "percent",
+        "scoring": "pass@1 averaged over 3 repeats",
+        "tasks": 66,
+        "repeats": 3,
+        "scaffold": "mini-swe-agent",
+        "scaffold_version": null,
+        "effort": null,
+        "effort_note": "AA row effort not separately labeled",
+        "source": "https://artificialanalysis.ai/models/step-5",
+        "methodology_source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking#terminal-bench-4-0",
+        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "publisher": "Artificial Analysis",
+        "evidence_type": "independent",
+        "comparison_group": "aa-terminalbench-4.0-mini-swe-66x3",
+        "checked_at": "2026-10-19",
+        "evaluated_at": null,
+        "go_endpoint_tested": false,
+        "go_mapping": "same named base model; Go checkpoint, effort parity and routing unverified",
+        "note": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음.",
+        "status": "matched",
+        "cohort": "aa-terminalbench-4.0-mini-swe",
+        "score_pct": 33.333333,
+        "evaluator": "Artificial Analysis",
+        "harness": "mini-swe-agent",
+        "metric": "pass@1 averaged over 3 repeats",
+        "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음."
+      }
     },
     {
       "model": "Beam Free",
@@ -1251,8 +1925,38 @@
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
       "checked_at": "2026-10-18",
-      "cached_write": null
+      "cached_write": null,
+      "coding_evaluation": {
+        "status": "unavailable",
+        "reason": "공식 원모델 식별/평가 매핑이 미확정입니다. 유사 이름 모델 점수를 복사하지 않습니다.",
+        "checked_at": "2026-10-19"
+      }
     }
   ],
-  "recommendation_note": "No comparable independent Go model/provider/harness evaluation establishes an absolute winner. Value/cheap picks are conditional workload heuristics; vendor benchmarks are scaffold- and checkpoint-dependent. Letter grades removed because no reproducible grading rubric was supplied."
+  "recommendation_note": "Coding displays one reproducible independent evaluation cohort, not letter grades. Value is an illustrative fixed-token capacity metric, not a quality-adjusted success estimate. Existing Go recommendations remain conditional; do not infer a universal model ranking.",
+  "rating_methodology": {
+    "version": 1,
+    "coding": {
+      "cohort": "aa-terminalbench-4.0-mini-swe",
+      "source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+      "metric": "pass@1, 66 tasks, 3 repeats",
+      "harness": "mini-swe-agent; max 500 steps; full transcript, no compaction",
+      "endpoint_scope": "native model; OpenCode Go endpoint untested",
+      "effort_policy": "record evaluated effort per row; unknown stays null; not equal token budgets",
+      "unknown_policy": "exclude missing / ambiguous checkpoints / Contributor mappings from numeric sorting; zero is a valid measured score"
+    },
+    "value": {
+      "metric": "illustrative workloads per month",
+      "formula": "effective_monthly_usage_usd / (input_price + 0.2 * output_price)",
+      "workload": {
+        "input_tokens": 1000000,
+        "output_tokens": 200000,
+        "cache_hit_ratio": 0
+      },
+      "price_assumption": "base short-context tier; DeepSeek off-peak; active promotions included",
+      "limits": "shared Go quota; 5h and weekly windows still apply; capacities cannot be summed across models",
+      "exclusions": "free/unlimited and missing data are not ranked",
+      "not_equivalent_to": "official request estimates, completed tasks, or performance-adjusted value"
+    }
+  }
 }
