@@ -18,3 +18,11 @@ body.details-open{overflow:hidden}
 
 
 .metric-note{display:block;color:var(--muted);font-size:9px;line-height:1.35;margin-top:3px}.dialog-content h3{font-size:15px;color:var(--accent)}
+
+
+/* Native checkboxes keep independent privacy conditions compact and keyboard-operable. */
+.privacy-checks{margin:0;padding:8px 12px;border:1px solid #60708b;border-radius:8px;display:flex;flex-wrap:wrap;gap:8px 16px;min-width:0}
+.privacy-checks legend{font-size:12px;padding:0 4px}
+.privacy-checks label{display:flex;align-items:center;gap:6px;font-size:13px;cursor:pointer}
+.privacy-checks input[type=checkbox]{width:16px;height:16px;min-width:16px;margin:0;padding:0;accent-color:#60a5fa}
+.privacy-checks input:focus-visible{outline:2px solid #93c5fd;outline-offset:3px}
