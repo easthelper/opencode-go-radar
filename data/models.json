@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-19",
+  "as_of": "2026-10-20",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -1152,11 +1152,12 @@
         "성능 우선",
         "저가 서브에이전트"
       ],
-      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Meta explicitly excludes max effort from muse-spark-1.3-contributor. The 75.4 DeepSWE and 88.8 TB2.1 scores are standard Muse Spark 1.3 max results, not Contributor scores. DeepSWE used mini-SWE; TB2.1 used native coding harnesses. Avoid confidential code: Go permits training and is not ZDR. Go permits training on prompts/completions and is not ZDR; avoid confidential source code.",
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Meta explicitly excludes max effort from muse-spark-1.3-contributor. The 75.4 DeepSWE and 88.8 TB2.1 scores are standard Muse Spark 1.3 max results, not Contributor scores. DeepSWE used mini-SWE; TB2.1 used native coding harnesses. Avoid confidential code: Go permits training and is not ZDR. Go permits training on prompts/completions and is not ZDR; avoid confidential source code. Go availability is limited to regions permitted by Meta Geographic Use Policy; this is an access restriction, not evidence of processing location.",
       "sources": [
         "https://opencode.ai/v2/docs/console/go/#privacy",
         "https://dev.meta.ai/products/meta-model-api",
-        "https://dev.meta.ai/docs/reasoning"
+        "https://dev.meta.ai/docs/reasoning",
+        "https://ai.developer.meta.com/legal/geographic-use-policy"
       ],
       "reasoning_effort": "minimal, low, medium, high, xhigh; max unavailable for Contributor; none unsupported (native API)",
       "capability_source": "https://dev.meta.ai/products/meta-model-api",
@@ -1170,7 +1171,7 @@
         }
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
-      "checked_at": "2026-10-18",
+      "checked_at": "2026-10-20",
       "cached_write": null,
       "coding_evaluation": {
         "status": "unavailable",
@@ -1199,11 +1200,12 @@
       "positioning": [
         "저가 서브에이전트"
       ],
-      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Contributor data may train future Meta models. No Contributor-specific coding score verified. Go permits training on prompts/completions and is not ZDR; avoid confidential source code.",
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Contributor data may train future Meta models. No Contributor-specific coding score verified. Go permits training on prompts/completions and is not ZDR; avoid confidential source code. Go availability is limited to regions permitted by Meta Geographic Use Policy; this is an access restriction, not evidence of processing location.",
       "sources": [
         "https://opencode.ai/v2/docs/console/go/#privacy",
         "https://dev.meta.ai/products/meta-model-api",
-        "https://dev.meta.ai/docs/reasoning"
+        "https://dev.meta.ai/docs/reasoning",
+        "https://ai.developer.meta.com/legal/geographic-use-policy"
       ],
       "reasoning_effort": "minimal, low, medium, high, xhigh; none unsupported (native API)",
       "capability_source": "https://dev.meta.ai/products/meta-model-api",
@@ -1217,7 +1219,7 @@
         }
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
-      "checked_at": "2026-10-18",
+      "checked_at": "2026-10-20",
       "cached_write": null,
       "coding_evaluation": {
         "status": "unavailable",
@@ -1651,47 +1653,6 @@
       }
     },
     {
-      "model": "Space Bunny",
-      "developer": "Unknown",
-      "provider": "Unknown (Go upstream routing undisclosed)",
-      "input_price": 0.15,
-      "output_price": 0.6,
-      "cached_input": 0.03,
-      "context": "Unknown",
-      "reasoning": null,
-      "benchmark": "N/A",
-      "training": "No Training",
-      "retention": "0 days",
-      "chinese_model": false,
-      "hosting": "Unknown (Go hosting region undisclosed)",
-      "china_transfer": "Unknown",
-      "coding_grade": "N/A",
-      "value_grade": "N/A",
-      "privacy_risk": "Medium",
-      "positioning": [],
-      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Developer identity and model capabilities remain unverified.",
-      "sources": [
-        "https://opencode.ai/v2/docs/console/go/#privacy"
-      ],
-      "price_tiers": [
-        {
-          "label": "Space Bunny",
-          "input_price": 0.15,
-          "output_price": 0.6,
-          "cached_input": 0.03,
-          "cached_write": null
-        }
-      ],
-      "source": "https://opencode.ai/v2/docs/console/go/",
-      "checked_at": "2026-10-18",
-      "cached_write": null,
-      "coding_evaluation": {
-        "status": "unavailable",
-        "reason": "공식 원모델 식별/평가 매핑이 미확정입니다. 유사 이름 모델 점수를 복사하지 않습니다.",
-        "checked_at": "2026-10-19"
-      }
-    },
-    {
       "model": "Claude Haiku 5.5",
       "developer": "Anthropic",
       "provider": "Unknown (Go upstream routing undisclosed)",
@@ -1930,6 +1891,51 @@
         "status": "unavailable",
         "reason": "공식 원모델 식별/평가 매핑이 미확정입니다. 유사 이름 모델 점수를 복사하지 않습니다.",
         "checked_at": "2026-10-19"
+      }
+    },
+    {
+      "model": "MiniMax M3.1 Flash Free",
+      "model_id": "minimax-m3.1-flash-free",
+      "selection_id": "opencode-go/minimax-m3.1-flash-free",
+      "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "developer": "MiniMax",
+      "provider": "Unknown (Go upstream routing undisclosed)",
+      "input_price": 0,
+      "output_price": 0,
+      "cached_input": 0,
+      "cached_write": null,
+      "context": "Unknown",
+      "reasoning": null,
+      "benchmark": "N/A",
+      "training": "No Training",
+      "retention": "0 days",
+      "chinese_model": true,
+      "hosting": "Unknown (Go hosting region undisclosed)",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [],
+      "notes": "Current official Go model list, pricing, endpoint, estimated-request and privacy tables confirm limited-time free availability with unlimited usage. No promotion end date is published. Go upstream, region, context and reasoning settings remain unconfirmed. The separate Console free offering does not inherit these Go usage terms.",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/",
+        "https://opencode.ai/go"
+      ],
+      "checked_at": "2026-10-20",
+      "price_tiers": [
+        {
+          "label": "MiniMax M3.1 Flash Free",
+          "input_price": 0,
+          "output_price": 0,
+          "cached_input": 0,
+          "cached_write": null
+        }
+      ],
+      "coding_evaluation": {
+        "status": "unavailable",
+        "reason": "동일 제공 모델의 정확한 AA Terminal-Bench 4.0 매핑이 확인되지 않았습니다. 한시 무료 항목은 Value 산정에서 제외합니다.",
+        "checked_at": "2026-10-20"
       }
     }
   ],

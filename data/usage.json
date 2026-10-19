@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-17",
+  "as_of": "2026-10-20",
   "subscription_usd_per_month": 10,
   "limit_policy": {
     "five_hour_fraction": 0.2,
@@ -25,7 +25,7 @@
       "MiMo Code": "A proposed session-header fix exists but had not merged when checked."
     }
   },
-  "note": "OpenCode defines per-model usage limits as monthly dollar amounts: 5-hour = 20%, weekly = 50%, monthly = 100%. Request counts are estimates based on typical Go usage, not guaranteed quotas. As of 2026-10-17, the detailed Go v2 model, pricing, endpoint, request-estimate, and privacy tables identify Step 5 Preview (model ID step-5-preview) at $1.00 input / $2.70 output / $0.10 cached read per 1M tokens. Go base usage is $15/month with 430 / 1,070 / 2,130 estimated requests (5h/week/month); its limited-time 4x promotion changes the effective values to $60 and 1,720 / 4,280 / 8,520. No end date is published. The Go landing page now agrees on Step 5 Preview's paid base usage and 4x limited-time promotion. The landing page and detailed v2 tables now agree on 29 models. Beam Free is newly listed; Grok 4.6, Kimi K2.6, MiniMax M2.7, and Cat Jam Free are absent from the current model, pricing, endpoint, request-estimate, and privacy tables and are excluded from active data. This does not establish permanent retirement. The sensitive-code recommendation is pending renewed verification after Kimi K2.6 leaves the active list. DeepSeek V4.1 Flash is currently $80/month with 34,670 / 86,670 / 173,330 requests; off-peak pricing is $0.15/$0.60/$0.003 and weekday peak pricing $0.30/$1.20/$0.006. Older $60 and 26,000/65,000/130,000 figures were superseded on 2026-10-13; no promotion label is present. DeepSeek ZDR is stated valid through 2026-10-31. Claude Haiku 5.5 is listed at $15 and 3,850 / 9,620 / 19,230 requests. LongCat 2.5 Preview Free and Beam Free are limited-time free with unlimited requests and no published end date; their base usage/request values remain null because no separate base values are published. Beam Free's privacy row says training is not used and retention is 30 days; its access is region-restricted. Gemini 4 Argon Contributor remains $30 base with 220 / 540 / 1,060 requests and a separate 2x limited-time promotion of $60 and 440 / 1,080 / 2,120; no end date is published. Older Go documentation retains DeepSeek V4 Flash and DeepSeek V4 Flash Vision Exp, but those are absent from the current detailed model/pricing/endpoint/privacy tables and remain excluded.",
+  "note": "OpenCode defines per-model usage limits as monthly dollar amounts: 5-hour = 20%, weekly = 50%, monthly = 100%. Request counts are estimates based on typical Go usage, not guaranteed quotas. As of 2026-10-17, the detailed Go v2 model, pricing, endpoint, request-estimate, and privacy tables identify Step 5 Preview (model ID step-5-preview) at $1.00 input / $2.70 output / $0.10 cached read per 1M tokens. Go base usage is $15/month with 430 / 1,070 / 2,130 estimated requests (5h/week/month); its limited-time 4x promotion changes the effective values to $60 and 1,720 / 4,280 / 8,520. No end date is published. The Go landing page now agrees on Step 5 Preview's paid base usage and 4x limited-time promotion. The landing page and detailed v2 tables now agree on 29 models. Beam Free is newly listed; Grok 4.6, Kimi K2.6, MiniMax M2.7, and Cat Jam Free are absent from the current model, pricing, endpoint, request-estimate, and privacy tables and are excluded from active data. This does not establish permanent retirement. The sensitive-code recommendation is pending renewed verification after Kimi K2.6 leaves the active list. DeepSeek V4.1 Flash is currently $80/month with 34,670 / 86,670 / 173,330 requests; off-peak pricing is $0.15/$0.60/$0.003 and weekday peak pricing $0.30/$1.20/$0.006. Older $60 and 26,000/65,000/130,000 figures were superseded on 2026-10-13; no promotion label is present. DeepSeek ZDR is stated valid through 2026-10-31. Claude Haiku 5.5 is listed at $15 and 3,850 / 9,620 / 19,230 requests. LongCat 2.5 Preview Free and Beam Free are limited-time free with unlimited requests and no published end date; their base usage/request values remain null because no separate base values are published. Beam Free's privacy row says training is not used and retention is 30 days; its access is region-restricted. Gemini 4 Argon Contributor remains $30 base with 220 / 540 / 1,060 requests and a separate 2x limited-time promotion of $60 and 440 / 1,080 / 2,120; no end date is published. Older Go documentation retains DeepSeek V4 Flash and DeepSeek V4 Flash Vision Exp, but those are absent from the current detailed model/pricing/endpoint/privacy tables and remain excluded. Current 2026-10-20 audit: Space Bunny is absent from current Go model/pricing/API/privacy tables and removed from active data. MiniMax M3.1 Flash Free is explicitly offered with limited-time free/unlimited usage, no published end date, no training and zero retention. No retirement is inferred from removal; Console terms remain separate.",
   "models": {
     "Grok 4.7": {
       "monthly_usage_usd": 15,
@@ -174,12 +174,6 @@
       "requests_week": 5100,
       "requests_month": 10250
     },
-    "Space Bunny": {
-      "monthly_usage_usd": 30,
-      "requests_5h": 3130,
-      "requests_week": 7810,
-      "requests_month": 15630
-    },
     "Claude Haiku 5.5": {
       "monthly_usage_usd": 15,
       "requests_5h": 3850,
@@ -211,6 +205,15 @@
       "promotional_requests_month": 8520
     },
     "Beam Free": {
+      "monthly_usage_usd": null,
+      "requests_5h": null,
+      "requests_week": null,
+      "requests_month": null,
+      "unlimited": true,
+      "promotion": "Free for a limited time",
+      "promotion_end": null
+    },
+    "MiniMax M3.1 Flash Free": {
       "monthly_usage_usd": null,
       "requests_5h": null,
       "requests_week": null,
