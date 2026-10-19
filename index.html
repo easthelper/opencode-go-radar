@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="OpenCode Go 및 Console 무료·PAYG 모델 가격·코딩 성능·월간 사용 한도·프라이버시·데이터 처리 현황 추적" />
   <title>OpenCode Model Radar</title>
-  <link rel="stylesheet" href="assets/style.css?v=20261019-value" />
+  <link rel="stylesheet" href="assets/style.css?v=20261019-privacy" />
 </head>
 <body>
   <header class="hero">
@@ -39,9 +39,15 @@
         <label for="position">포지셔닝</label>
         <select id="position"><option value="">전체</option><option>성능 우선</option><option>균형형</option><option>가성비 우선</option><option>저가 서브에이전트</option><option>프라이버시 우선</option></select>
       </div>
+      <fieldset class="privacy-checks" aria-describedby="privacy-filter-help">
+        <legend>데이터 조건</legend>
+        <label><input id="no-training" type="checkbox" /> 학습 미사용 (No Training)</label>
+        <label><input id="zero-retention" type="checkbox" /> Retention 0 (ZDR)</label>
+      </fieldset>
       <button id="reset" type="button">필터 초기화</button>
     </section>
 
+    <p id="privacy-filter-help" class="scope-note">두 조건은 각각 선택할 수 있으며 함께 선택하면 모두 충족하는 항목만 표시합니다. 제공 방식별 공개 정책에서 확인된 경우만 포함하고, 미확인·조건 미확정·ZDR 확인 기한 만료는 제외합니다. 학습 미사용은 보존 0을 의미하지 않습니다. 처리 지역·upstream이 확인됐다는 뜻도 아닙니다.</p>
     <p id="benchmark-coverage" class="scope-note" role="status"></p>
     <section class="panel table-panel">
       <div class="table-head">
@@ -118,9 +124,10 @@
       <div id="model-dialog-content" class="dialog-content" tabindex="0" aria-label="모델 상세 및 조건"></div>
     </div>
   </dialog>
-  <script src="assets/app.js?v=20261019-value"></script>
+  <script src="assets/app.js?v=20261019-privacy"></script>
 </body>
 </html>
+
 
 
 
