@@ -27,7 +27,7 @@ GitHub Pages: https://easthelper.github.io/opencode-go-radar/
 - retention / ZDR
 - 모델 개발사 국적과 실제 호스팅 위치의 분리
 - 중국 전송 가능성
-- Coding / Value / Privacy 등급
+- Coding: 동일 AA Terminal-Bench 4.0 원모델 평가 점수 / Value: 고정 토큰 용량 예시 / Privacy 등급
 - 모델 포지셔닝 및 추천 우선순위
 
 `Unknown`은 임의 추정하지 않고 확인 불가 상태로 남긴 값입니다. 서로 다른 benchmark harness 결과는 단일 점수로 합산하지 않습니다.
@@ -70,3 +70,18 @@ Local regression checks: `node tests/dashboard.test.cjs`. Serve the repository r
 ### Compact filters and details
 
 The initial view and filter reset show Go + Console Free. Choose OpenCode Free only, Go only, PAYG only or all offerings from the offering selector. Details open in a shared native modal outside the table; its bounded content scrolls independently. Close with the button, Escape or backdrop, then keyboard focus returns to the triggering row.
+
+
+### Reproducible Coding / Value metrics (2026-10-19)
+
+- `coding_evaluation` records the exact evaluated model, effort (or null), benchmark version, task set, harness, metric, publisher and primary source. The numeric Coding column uses only Artificial Analysis Terminal-Bench 4.0 / mini-swe-agent / 66 tasks / pass@1 over three repeats. This is not a test of OpenCode Go routing or endpoint quality. Model-specific effort/token budgets vary; tiny differences are not statistically established wins.
+- Missing data, Contributor variants and unconfirmed dated checkpoints are excluded from score sorting. Measured zero remains zero. Existing developer-reported benchmarks remain separate and are not merged.
+- Value is a transparent token-budget illustration: current Go effective monthly usage divided by input price plus 0.2 × output price. A workload is aggregate 1M input + 200K output tokens, 0% cache, base short-context price (DeepSeek off-peak), with active promotions. It is not one long-context request, official requests/month, successful coding tasks or a quality-adjusted grade. Shared quota, 5h/week limits and actual prices constrain usage; do not sum capacities across models. Free/unlimited rows are not divided by zero or awarded infinite value.
+- Console does not inherit Go quota or benchmark mappings. The table shows Go-only/not evaluated with reasons instead of unexplained N/A grades.
+- Run `node tests/dashboard.test.cjs` for cohort/zero/null handling, promo expiry, scope separation, sorting, filter reset and modal regression checks.
+
+### Benchmark source coverage
+
+Artificial Analysis provides independently measured current base-model results at https://artificialanalysis.ai/leaderboards/models and per-model pages. The dashboard has 17 directly named base-model mappings (not verified Go endpoint/checkpoint parity). Qwen3.8 Max 0902, DeepSeek V4.1 Flash 1017 and MiMo-V2.5 0424 are reference-only because the Go checkpoint is unconfirmed. Contributor/anonymous offerings do not inherit standard-model scores.
+
+The official Terminal-Bench leaderboard, SWE-bench and Aider offer additional agent/model evaluations, but different task versions, agents, effort and model checkpoints cannot be treated as one ranking. Developer model cards remain useful vendor-reported evidence; their existing benchmark strings remain separate in this dashboard. The recorded `coding_evaluation` objects expose source and methodology URLs for every included value.
