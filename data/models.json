@@ -1933,7 +1933,7 @@
       }
     }
   ],
-  "recommendation_note": "Coding displays one reproducible independent evaluation cohort, not letter grades. Value is an illustrative fixed-token capacity metric, not a quality-adjusted success estimate. Existing Go recommendations remain conditional; do not infer a universal model ranking.",
+  "recommendation_note": "Coding uses one independent benchmark cohort. Value is a transparent same-subscription performance-capacity proxy, not predicted successful tasks. Existing Go recommendations remain conditional and unchanged.",
   "rating_methodology": {
     "version": 1,
     "coding": {
@@ -1946,8 +1946,8 @@
       "unknown_policy": "exclude missing / ambiguous checkpoints / Contributor mappings from numeric sorting; zero is a valid measured score"
     },
     "value": {
-      "metric": "illustrative workloads per month",
-      "formula": "effective_monthly_usage_usd / (input_price + 0.2 * output_price)",
+      "metric": "Go subscription performance-capacity value index; comparable cohort maximum=100",
+      "formula": "100 * (AA TB4 score_pct * effective_monthly_usage_usd / (input_price + 0.2 * output_price)) / max_same_cohort_score_times_capacity",
       "workload": {
         "input_tokens": 1000000,
         "output_tokens": 200000,
@@ -1956,7 +1956,9 @@
       "price_assumption": "base short-context tier; DeepSeek off-peak; active promotions included",
       "limits": "shared Go quota; 5h and weekly windows still apply; capacities cannot be summed across models",
       "exclusions": "free/unlimited and missing data are not ranked",
-      "not_equivalent_to": "official request estimates, completed tasks, or performance-adjusted value"
+      "not_equivalent_to": "official request estimates, successful tasks, success probabilities, measured cost per solved task, or universal recommendations",
+      "normalization": "all eligible Go rows, independent of UI filters; active promotions; re-evaluated at render time",
+      "limitations": "linear performance-capacity proxy at equal subscription fee; effort varies; low-capability inexpensive models may score high"
     }
   }
 }
