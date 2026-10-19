@@ -15,3 +15,6 @@ body.details-open{overflow:hidden}
 .dialog-content{overflow-y:auto;overscroll-behavior:contain;min-height:0;padding:8px 20px 20px;font-size:14px;line-height:1.65;overflow-wrap:anywhere}
 .dialog-content p{margin:12px 0}.dialog-content a{color:var(--accent)}
 @media(max-width:560px){#model-dialog{width:calc(100% - 16px);max-width:calc(100% - 16px)}.dialog-header{padding:14px;gap:10px}.dialog-header h2{font-size:18px}.dialog-content{padding:4px 14px 16px}.details-button{min-height:36px}}
+
+
+.metric-note{display:block;color:var(--muted);font-size:9px;line-height:1.35;margin-top:3px}.dialog-content h3{font-size:15px;color:var(--accent)}
