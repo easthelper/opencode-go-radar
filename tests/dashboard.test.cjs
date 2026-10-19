@@ -57,3 +57,25 @@ assert.ok(el('#benchmark-coverage').textContent.includes('미평가는 0점이 �
 for(const dir of [1,-1]) { run(`state.sortDir=${dir};state.sortKey='coding_grade'`);el('#offering').value='go';const scores=run('filtered().map(codingScore)');let missing=false;for(const score of scores){if(score===null)missing=true;else assert.ok(!missing,'missing scores must sort last');}}
 console.log('PASS: zero score, cohort/Console exclusion, nulls, finite capacity, promo expiry, missing-last sorting and rubric explanations.');
 },0);
+
+setTimeout(()=>{const run=s=>vm.runInContext(s,sandbox);
+run(`var fixture=(score,usage=60)=>({offering:'go',monthly_usage_usd:usage,input_price:1,output_price:1,coding_evaluation:{cohort:CODING_COHORT,status:'matched',score_pct:score}});var a=fixture(40),b=fixture(20),z=fixture(0);`);
+assert.equal(run('performancePerDollar(a)'),40/1.2);
+assert.equal(run('valueRaw(a)'),2000);
+assert.equal(run('valueIndex(a,[a,b,z])'),100);
+assert.equal(run('valueIndex(b,[a,b,z])'),50);
+assert.equal(run('valueIndex(z,[a,b,z])'),0);
+assert.equal(run('valueIndex(z,[z])'),null);
+assert.equal(run('valueRaw({...a,input_price:0,output_price:0})'),null);
+assert.equal(run('valueRaw({...a,offering:"console-payg"})'),null);
+assert.equal(run('valueRaw({...a,coding_evaluation:null})'),null);
+run('var promo={...b,monthly_usage_usd:15,promotion:"test",promotion_end:"2099-01-01",promotional_monthly_usage_usd:120};');
+assert.equal(run('valueIndex(a,[a,promo])'),100);
+assert.equal(run('valueIndex(promo,[a,promo])'),100);
+run('promo.promotion_end="2020-01-01"');
+assert.equal(run('valueIndex(promo,[a,promo])'),12.5);
+el('#offering').value='console-free';
+assert.deepEqual(run('state.rows.map(m=>valueIndex(m))'),run('state.rows.map(m=>valueIndex(m,state.rows))'));
+for(const dir of [1,-1]){run(`state.sortDir=${dir};state.sortKey='value_grade'`);el('#offering').value='';let missing=false;for(const v of run('filtered().map(m=>valueIndex(m))')){if(v===null)missing=true;else assert.ok(!missing);}}
+console.log('PASS: performance-weighted subscription value, exact token cost, normalization, measured zero, missing/free/Console exclusions, promo expiry and filter-independent missing-last sorting.');
+},0);
