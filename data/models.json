@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-20",
+  "as_of": "2026-10-21",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -40,16 +40,16 @@
       "price_tiers": [
         {
           "label": "Grok 4.7 (≤ 200K tokens)",
-          "input_price": 2.0,
-          "output_price": 6.0,
+          "input_price": 2,
+          "output_price": 6,
           "cached_input": 0.5,
           "cached_write": null
         },
         {
           "label": "Grok 4.7 (> 200K tokens)",
-          "input_price": 4.0,
-          "output_price": 12.0,
-          "cached_input": 1.0,
+          "input_price": 4,
+          "output_price": 12,
+          "cached_input": 1,
           "cached_write": null
         }
       ],
@@ -526,8 +526,8 @@
       "price_tiers": [
         {
           "label": "Kimi K3",
-          "input_price": 3.0,
-          "output_price": 15.0,
+          "input_price": 3,
+          "output_price": 15,
           "cached_input": 0.3,
           "cached_write": null
         }
@@ -602,7 +602,7 @@
         {
           "label": "Kimi K2.7 Code",
           "input_price": 0.95,
-          "output_price": 4.0,
+          "output_price": 4,
           "cached_input": 0.19,
           "cached_write": null
         }
@@ -1259,8 +1259,8 @@
       "price_tiers": [
         {
           "label": "Qwen3.8 Max",
-          "input_price": 2.0,
-          "output_price": 6.0,
+          "input_price": 2,
+          "output_price": 6,
           "cached_input": 0.25,
           "cached_write": 2.5
         }
@@ -1762,8 +1762,8 @@
       "price_tiers": [
         {
           "label": "Gemini 4 Argon Contributor",
-          "input_price": 4.0,
-          "output_price": 20.0,
+          "input_price": 4,
+          "output_price": 20,
           "cached_input": 0.2,
           "cached_write": null
         }
@@ -1807,7 +1807,7 @@
       "price_tiers": [
         {
           "label": "Step 5 Preview",
-          "input_price": 1.0,
+          "input_price": 1,
           "output_price": 2.7,
           "cached_input": 0.1,
           "cached_write": null
@@ -1861,7 +1861,7 @@
       "cached_input": 0,
       "context": "Unknown",
       "reasoning": null,
-      "benchmark": "N/A",
+      "benchmark": "AA Terminal-Bench 4.0 reference: Beam 1.0 3% (rounded chart); exact free-offering checkpoint mapping unconfirmed, excluded from Coding/Value.",
       "training": "No Training",
       "retention": "30 days",
       "chinese_model": null,
@@ -1889,9 +1889,10 @@
       "cached_write": null,
       "coding_evaluation": {
         "status": "unavailable",
-        "reason": "공식 원모델 식별/평가 매핑이 미확정입니다. 유사 이름 모델 점수를 복사하지 않습니다.",
-        "checked_at": "2026-10-19"
-      }
+        "reason": "AA의 Beam 1.0 TB4 결과(3%, 차트 반올림)는 확인했으나 이 무료 offering과 정확한 원모델/checkpoint 대응은 확인되지 않아 Coding 계산에 넣지 않습니다. 한시 무료는 Value 산정 제외입니다.",
+        "checked_at": "2026-10-21"
+      },
+      "benchmark_source": "https://artificialanalysis.ai/models/reflection-beam"
     },
     {
       "model": "MiniMax M3.1 Flash Free",
@@ -1906,7 +1907,7 @@
       "cached_write": null,
       "context": "Unknown",
       "reasoning": null,
-      "benchmark": "N/A",
+      "benchmark": "AA Terminal-Bench 4.0 reference: MiniMax-M3.1-Flash 25.8% (rounded chart); exact free-offering checkpoint mapping unconfirmed, excluded from Coding/Value.",
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": true,
@@ -1934,9 +1935,10 @@
       ],
       "coding_evaluation": {
         "status": "unavailable",
-        "reason": "동일 제공 모델의 정확한 AA Terminal-Bench 4.0 매핑이 확인되지 않았습니다. 한시 무료 항목은 Value 산정에서 제외합니다.",
-        "checked_at": "2026-10-20"
-      }
+        "reason": "AA의 MiniMax-M3.1-Flash TB4 결과(25.8%, 차트 반올림)는 확인했으나 이 무료 offering과 정확한 원모델/checkpoint 대응은 확인되지 않아 Coding 계산에 넣지 않습니다. 한시 무료는 Value 산정 제외입니다.",
+        "checked_at": "2026-10-21"
+      },
+      "benchmark_source": "https://artificialanalysis.ai/models/minimax-m3-1-flash"
     }
   ],
   "recommendation_note": "Coding uses one independent benchmark cohort. Value is a transparent same-subscription performance-capacity proxy, not predicted successful tasks. Existing Go recommendations remain conditional and unchanged.",

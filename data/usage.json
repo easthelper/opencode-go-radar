@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-20",
+  "as_of": "2026-10-21",
   "subscription_usd_per_month": 10,
   "limit_policy": {
     "five_hour_fraction": 0.2,
@@ -10,7 +10,7 @@
   "client_requirements": {
     "session_header": "OpenCode asks coding-agent clients to send a stable per-conversation session ID so routing and prompt caching can be optimized. x-opencode-session is the generic header; Go also recognizes some clients' native session headers.",
     "validated_clients": {
-      "Hermes": "Builds containing PR #101864 send the header on main and auxiliary OpenCode requests; v0.21.0 alone predates the merged fix.",
+      "Hermes": "Update to v0.21.6 or later, which sends the session header on main and auxiliary OpenCode requests (official PR #101864).",
       "Claude Code": "Native session header recognized; no custom-header wrapper required.",
       "Codex": "Native session header recognized; some versions and proxy setups may omit it, so forwarding must preserve the header.",
       "ZCode": "Native session header recognized; x-opencode-session is no longer specifically required.",

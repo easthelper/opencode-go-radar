@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-20",
+  "as_of": "2026-10-21",
   "schema_version": 1,
   "scope": "Official OpenCode Console (Zen) endpoint/pricing catalog only; arbitrary third-party provider catalogs excluded.",
   "sources": [
@@ -16,9 +16,9 @@
       "endpoint": "https://opencode.ai/inference/openai/v1/responses",
       "developer": "OpenAI",
       "provider": "Undisclosed",
-      "input_price": 10.0,
-      "output_price": 50.0,
-      "cached_input": 1.0,
+      "input_price": 10,
+      "output_price": 50,
+      "cached_input": 1,
       "cached_write": 12.5,
       "context": "Unknown",
       "reasoning": null,
@@ -40,17 +40,17 @@
       "price_tiers": [
         {
           "label": "GPT 6 Astra (≤ 272K tokens)",
-          "input_price": 10.0,
-          "output_price": 50.0,
-          "cached_input": 1.0,
+          "input_price": 10,
+          "output_price": 50,
+          "cached_input": 1,
           "cached_write": 12.5
         },
         {
           "label": "GPT 6 Astra (> 272K tokens)",
-          "input_price": 20.0,
-          "output_price": 75.0,
-          "cached_input": 2.0,
-          "cached_write": 25.0
+          "input_price": 20,
+          "output_price": 75,
+          "cached_input": 2,
+          "cached_write": 25
         }
       ],
       "sources": [
@@ -67,8 +67,8 @@
       "endpoint": "https://opencode.ai/inference/openai/v1/responses",
       "developer": "OpenAI",
       "provider": "Undisclosed",
-      "input_price": 2.0,
-      "output_price": 10.0,
+      "input_price": 2,
+      "output_price": 10,
       "cached_input": 0.2,
       "cached_write": 2.5,
       "context": "Unknown",
@@ -91,17 +91,17 @@
       "price_tiers": [
         {
           "label": "GPT 6 Sol (≤ 272K tokens)",
-          "input_price": 2.0,
-          "output_price": 10.0,
+          "input_price": 2,
+          "output_price": 10,
           "cached_input": 0.2,
           "cached_write": 2.5
         },
         {
           "label": "GPT 6 Sol (> 272K tokens)",
-          "input_price": 4.0,
-          "output_price": 15.0,
+          "input_price": 4,
+          "output_price": 15,
           "cached_input": 0.4,
-          "cached_write": 5.0
+          "cached_write": 5
         }
       ]
     },
@@ -114,8 +114,8 @@
       "endpoint": "https://opencode.ai/inference/openai/v1/responses",
       "developer": "OpenAI",
       "provider": "Undisclosed",
-      "input_price": 2.0,
-      "output_price": 10.0,
+      "input_price": 2,
+      "output_price": 10,
       "cached_input": 0.2,
       "cached_write": 2.5,
       "context": "Unknown",
@@ -138,17 +138,17 @@
       "price_tiers": [
         {
           "label": "GPT 6.1 Sol (≤ 272K tokens)",
-          "input_price": 2.0,
-          "output_price": 10.0,
+          "input_price": 2,
+          "output_price": 10,
           "cached_input": 0.2,
           "cached_write": 2.5
         },
         {
           "label": "GPT 6.1 Sol (> 272K tokens)",
-          "input_price": 4.0,
-          "output_price": 15.0,
+          "input_price": 4,
+          "output_price": 15,
           "cached_input": 0.4,
-          "cached_write": 5.0
+          "cached_write": 5
         }
       ],
       "sources": [
@@ -212,10 +212,10 @@
       "endpoint": "https://opencode.ai/inference/openai/v1/responses",
       "developer": "OpenAI",
       "provider": "Undisclosed",
-      "input_price": 4.0,
-      "output_price": 20.0,
+      "input_price": 4,
+      "output_price": 20,
       "cached_input": 0.4,
-      "cached_write": 5.0,
+      "cached_write": 5,
       "context": "Unknown",
       "reasoning": null,
       "benchmark": "N/A",
@@ -236,17 +236,17 @@
       "price_tiers": [
         {
           "label": "GPT 5.6 Sol (≤ 272K tokens)",
-          "input_price": 4.0,
-          "output_price": 20.0,
+          "input_price": 4,
+          "output_price": 20,
           "cached_input": 0.4,
-          "cached_write": 5.0
+          "cached_write": 5
         },
         {
           "label": "GPT 5.6 Sol (> 272K tokens)",
-          "input_price": 8.0,
-          "output_price": 30.0,
+          "input_price": 8,
+          "output_price": 30,
           "cached_input": 0.8,
-          "cached_write": 10.0
+          "cached_write": 10
         }
       ]
     },
@@ -259,8 +259,8 @@
       "endpoint": "https://opencode.ai/inference/openai/v1/responses",
       "developer": "OpenAI",
       "provider": "Undisclosed",
-      "input_price": 2.0,
-      "output_price": 12.0,
+      "input_price": 2,
+      "output_price": 12,
       "cached_input": 0.2,
       "cached_write": 2.5,
       "context": "Unknown",
@@ -283,17 +283,17 @@
       "price_tiers": [
         {
           "label": "GPT 5.6 Terra (≤ 272K tokens)",
-          "input_price": 2.0,
-          "output_price": 12.0,
+          "input_price": 2,
+          "output_price": 12,
           "cached_input": 0.2,
           "cached_write": 2.5
         },
         {
           "label": "GPT 5.6 Terra (> 272K tokens)",
-          "input_price": 4.0,
-          "output_price": 18.0,
+          "input_price": 4,
+          "output_price": 18,
           "cached_input": 0.4,
-          "cached_write": 5.0
+          "cached_write": 5
         }
       ]
     },
@@ -353,8 +353,8 @@
       "endpoint": "https://opencode.ai/inference/openai/v1/responses",
       "developer": "OpenAI",
       "provider": "Undisclosed",
-      "input_price": 5.0,
-      "output_price": 30.0,
+      "input_price": 5,
+      "output_price": 30,
       "cached_input": 0.5,
       "cached_write": null,
       "context": "Unknown",
@@ -377,16 +377,16 @@
       "price_tiers": [
         {
           "label": "GPT 5.5 (≤ 272K tokens)",
-          "input_price": 5.0,
-          "output_price": 30.0,
+          "input_price": 5,
+          "output_price": 30,
           "cached_input": 0.5,
           "cached_write": null
         },
         {
           "label": "GPT 5.5 (> 272K tokens)",
-          "input_price": 10.0,
-          "output_price": 45.0,
-          "cached_input": 1.0,
+          "input_price": 10,
+          "output_price": 45,
+          "cached_input": 1,
           "cached_write": null
         }
       ]
@@ -400,9 +400,9 @@
       "endpoint": "https://opencode.ai/inference/openai/v1/responses",
       "developer": "OpenAI",
       "provider": "Undisclosed",
-      "input_price": 30.0,
-      "output_price": 180.0,
-      "cached_input": 30.0,
+      "input_price": 30,
+      "output_price": 180,
+      "cached_input": 30,
       "cached_write": null,
       "context": "Unknown",
       "reasoning": null,
@@ -424,9 +424,9 @@
       "price_tiers": [
         {
           "label": "GPT 5.5 Pro",
-          "input_price": 30.0,
-          "output_price": 180.0,
-          "cached_input": 30.0,
+          "input_price": 30,
+          "output_price": 180,
+          "cached_input": 30,
           "cached_write": null
         }
       ]
@@ -441,7 +441,7 @@
       "developer": "OpenAI",
       "provider": "Undisclosed",
       "input_price": 2.5,
-      "output_price": 15.0,
+      "output_price": 15,
       "cached_input": 0.25,
       "cached_write": null,
       "context": "Unknown",
@@ -465,13 +465,13 @@
         {
           "label": "GPT 5.4 (≤ 272K tokens)",
           "input_price": 2.5,
-          "output_price": 15.0,
+          "output_price": 15,
           "cached_input": 0.25,
           "cached_write": null
         },
         {
           "label": "GPT 5.4 (> 272K tokens)",
-          "input_price": 5.0,
+          "input_price": 5,
           "output_price": 22.5,
           "cached_input": 0.5,
           "cached_write": null
@@ -487,9 +487,9 @@
       "endpoint": "https://opencode.ai/inference/openai/v1/responses",
       "developer": "OpenAI",
       "provider": "Undisclosed",
-      "input_price": 30.0,
-      "output_price": 180.0,
-      "cached_input": 30.0,
+      "input_price": 30,
+      "output_price": 180,
+      "cached_input": 30,
       "cached_write": null,
       "context": "Unknown",
       "reasoning": null,
@@ -511,9 +511,9 @@
       "price_tiers": [
         {
           "label": "GPT 5.4 Pro",
-          "input_price": 30.0,
-          "output_price": 180.0,
-          "cached_input": 30.0,
+          "input_price": 30,
+          "output_price": 180,
+          "cached_input": 30,
           "cached_write": null
         }
       ]
@@ -608,7 +608,7 @@
       "developer": "OpenAI",
       "provider": "Undisclosed",
       "input_price": 1.75,
-      "output_price": 14.0,
+      "output_price": 14,
       "cached_input": 0.175,
       "cached_write": null,
       "context": "Unknown",
@@ -632,7 +632,7 @@
         {
           "label": "GPT 5.3 Codex",
           "input_price": 1.75,
-          "output_price": 14.0,
+          "output_price": 14,
           "cached_input": 0.175,
           "cached_write": null
         }
@@ -648,7 +648,7 @@
       "developer": "OpenAI",
       "provider": "Undisclosed",
       "input_price": 1.75,
-      "output_price": 14.0,
+      "output_price": 14,
       "cached_input": 0.175,
       "cached_write": null,
       "context": "Unknown",
@@ -672,7 +672,7 @@
         {
           "label": "GPT 5.3 Codex Spark",
           "input_price": 1.75,
-          "output_price": 14.0,
+          "output_price": 14,
           "cached_input": 0.175,
           "cached_write": null
         }
@@ -688,7 +688,7 @@
       "developer": "OpenAI",
       "provider": "Undisclosed",
       "input_price": 1.75,
-      "output_price": 14.0,
+      "output_price": 14,
       "cached_input": 0.175,
       "cached_write": null,
       "context": "Unknown",
@@ -712,7 +712,7 @@
         {
           "label": "GPT 5.2",
           "input_price": 1.75,
-          "output_price": 14.0,
+          "output_price": 14,
           "cached_input": 0.175,
           "cached_write": null
         }
@@ -847,8 +847,8 @@
       "endpoint": "https://opencode.ai/inference/anthropic/v1/messages",
       "developer": "Anthropic",
       "provider": "Undisclosed",
-      "input_price": 10.0,
-      "output_price": 50.0,
+      "input_price": 10,
+      "output_price": 50,
       "cached_input": 0.25,
       "cached_write": 12.5,
       "context": "Unknown",
@@ -871,8 +871,8 @@
       "price_tiers": [
         {
           "label": "Claude Fable 5.1",
-          "input_price": 10.0,
-          "output_price": 50.0,
+          "input_price": 10,
+          "output_price": 50,
           "cached_input": 0.25,
           "cached_write": 12.5
         }
@@ -890,9 +890,9 @@
       "endpoint": "https://opencode.ai/inference/anthropic/v1/messages",
       "developer": "Anthropic",
       "provider": "Undisclosed",
-      "input_price": 10.0,
-      "output_price": 50.0,
-      "cached_input": 1.0,
+      "input_price": 10,
+      "output_price": 50,
+      "cached_input": 1,
       "cached_write": 12.5,
       "context": "Unknown",
       "reasoning": null,
@@ -914,9 +914,9 @@
       "price_tiers": [
         {
           "label": "Claude Fable 5",
-          "input_price": 10.0,
-          "output_price": 50.0,
-          "cached_input": 1.0,
+          "input_price": 10,
+          "output_price": 50,
+          "cached_input": 1,
           "cached_write": 12.5
         }
       ]
@@ -930,10 +930,10 @@
       "endpoint": "https://opencode.ai/inference/anthropic/v1/messages",
       "developer": "Anthropic",
       "provider": "Undisclosed",
-      "input_price": 4.0,
-      "output_price": 20.0,
+      "input_price": 4,
+      "output_price": 20,
       "cached_input": 0.2,
-      "cached_write": 5.0,
+      "cached_write": 5,
       "context": "Unknown",
       "reasoning": null,
       "benchmark": "N/A",
@@ -954,10 +954,10 @@
       "price_tiers": [
         {
           "label": "Claude Opus 5.5",
-          "input_price": 4.0,
-          "output_price": 20.0,
+          "input_price": 4,
+          "output_price": 20,
           "cached_input": 0.2,
-          "cached_write": 5.0
+          "cached_write": 5
         }
       ],
       "sources": [
@@ -973,8 +973,8 @@
       "endpoint": "https://opencode.ai/inference/anthropic/v1/messages",
       "developer": "Anthropic",
       "provider": "Undisclosed",
-      "input_price": 5.0,
-      "output_price": 25.0,
+      "input_price": 5,
+      "output_price": 25,
       "cached_input": 0.5,
       "cached_write": 6.25,
       "context": "Unknown",
@@ -997,8 +997,8 @@
       "price_tiers": [
         {
           "label": "Claude Opus 5",
-          "input_price": 5.0,
-          "output_price": 25.0,
+          "input_price": 5,
+          "output_price": 25,
           "cached_input": 0.5,
           "cached_write": 6.25
         }
@@ -1013,8 +1013,8 @@
       "endpoint": "https://opencode.ai/inference/anthropic/v1/messages",
       "developer": "Anthropic",
       "provider": "Undisclosed",
-      "input_price": 5.0,
-      "output_price": 25.0,
+      "input_price": 5,
+      "output_price": 25,
       "cached_input": 0.5,
       "cached_write": 6.25,
       "context": "Unknown",
@@ -1037,8 +1037,8 @@
       "price_tiers": [
         {
           "label": "Claude Opus 4.8",
-          "input_price": 5.0,
-          "output_price": 25.0,
+          "input_price": 5,
+          "output_price": 25,
           "cached_input": 0.5,
           "cached_write": 6.25
         }
@@ -1053,8 +1053,8 @@
       "endpoint": "https://opencode.ai/inference/anthropic/v1/messages",
       "developer": "Anthropic",
       "provider": "Undisclosed",
-      "input_price": 5.0,
-      "output_price": 25.0,
+      "input_price": 5,
+      "output_price": 25,
       "cached_input": 0.5,
       "cached_write": 6.25,
       "context": "Unknown",
@@ -1077,8 +1077,8 @@
       "price_tiers": [
         {
           "label": "Claude Opus 4.7",
-          "input_price": 5.0,
-          "output_price": 25.0,
+          "input_price": 5,
+          "output_price": 25,
           "cached_input": 0.5,
           "cached_write": 6.25
         }
@@ -1093,8 +1093,8 @@
       "endpoint": "https://opencode.ai/inference/anthropic/v1/messages",
       "developer": "Anthropic",
       "provider": "Undisclosed",
-      "input_price": 5.0,
-      "output_price": 25.0,
+      "input_price": 5,
+      "output_price": 25,
       "cached_input": 0.5,
       "cached_write": 6.25,
       "context": "Unknown",
@@ -1117,8 +1117,8 @@
       "price_tiers": [
         {
           "label": "Claude Opus 4.6",
-          "input_price": 5.0,
-          "output_price": 25.0,
+          "input_price": 5,
+          "output_price": 25,
           "cached_input": 0.5,
           "cached_write": 6.25
         }
@@ -1133,8 +1133,8 @@
       "endpoint": "https://opencode.ai/inference/anthropic/v1/messages",
       "developer": "Anthropic",
       "provider": "Undisclosed",
-      "input_price": 5.0,
-      "output_price": 25.0,
+      "input_price": 5,
+      "output_price": 25,
       "cached_input": 0.5,
       "cached_write": 6.25,
       "context": "Unknown",
@@ -1157,8 +1157,8 @@
       "price_tiers": [
         {
           "label": "Claude Opus 4.5",
-          "input_price": 5.0,
-          "output_price": 25.0,
+          "input_price": 5,
+          "output_price": 25,
           "cached_input": 0.5,
           "cached_write": 6.25
         }
@@ -1173,8 +1173,8 @@
       "endpoint": "https://opencode.ai/inference/anthropic/v1/messages",
       "developer": "Anthropic",
       "provider": "Undisclosed",
-      "input_price": 2.0,
-      "output_price": 10.0,
+      "input_price": 2,
+      "output_price": 10,
       "cached_input": 0.2,
       "cached_write": 2.5,
       "context": "Unknown",
@@ -1197,8 +1197,8 @@
       "price_tiers": [
         {
           "label": "Claude Sonnet 5.5",
-          "input_price": 2.0,
-          "output_price": 10.0,
+          "input_price": 2,
+          "output_price": 10,
           "cached_input": 0.2,
           "cached_write": 2.5
         }
@@ -1216,8 +1216,8 @@
       "endpoint": "https://opencode.ai/inference/anthropic/v1/messages",
       "developer": "Anthropic",
       "provider": "Undisclosed",
-      "input_price": 2.0,
-      "output_price": 10.0,
+      "input_price": 2,
+      "output_price": 10,
       "cached_input": 0.2,
       "cached_write": 2.5,
       "context": "Unknown",
@@ -1240,8 +1240,8 @@
       "price_tiers": [
         {
           "label": "Claude Sonnet 5",
-          "input_price": 2.0,
-          "output_price": 10.0,
+          "input_price": 2,
+          "output_price": 10,
           "cached_input": 0.2,
           "cached_write": 2.5
         }
@@ -1256,8 +1256,8 @@
       "endpoint": "https://opencode.ai/inference/anthropic/v1/messages",
       "developer": "Anthropic",
       "provider": "Undisclosed",
-      "input_price": 3.0,
-      "output_price": 15.0,
+      "input_price": 3,
+      "output_price": 15,
       "cached_input": 0.3,
       "cached_write": 3.75,
       "context": "Unknown",
@@ -1280,8 +1280,8 @@
       "price_tiers": [
         {
           "label": "Claude Sonnet 4.6",
-          "input_price": 3.0,
-          "output_price": 15.0,
+          "input_price": 3,
+          "output_price": 15,
           "cached_input": 0.3,
           "cached_write": 3.75
         }
@@ -1296,8 +1296,8 @@
       "endpoint": "https://opencode.ai/inference/anthropic/v1/messages",
       "developer": "Anthropic",
       "provider": "Undisclosed",
-      "input_price": 3.0,
-      "output_price": 15.0,
+      "input_price": 3,
+      "output_price": 15,
       "cached_input": 0.3,
       "cached_write": 3.75,
       "context": "Unknown",
@@ -1320,14 +1320,14 @@
       "price_tiers": [
         {
           "label": "Claude Sonnet 4.5 (≤ 200K tokens)",
-          "input_price": 3.0,
-          "output_price": 15.0,
+          "input_price": 3,
+          "output_price": 15,
           "cached_input": 0.3,
           "cached_write": 3.75
         },
         {
           "label": "Claude Sonnet 4.5 (> 200K tokens)",
-          "input_price": 6.0,
+          "input_price": 6,
           "output_price": 22.5,
           "cached_input": 0.6,
           "cached_write": 7.5
@@ -1393,8 +1393,8 @@
       "endpoint": "https://opencode.ai/inference/anthropic/v1/messages",
       "developer": "Anthropic",
       "provider": "Undisclosed",
-      "input_price": 1.0,
-      "output_price": 5.0,
+      "input_price": 1,
+      "output_price": 5,
       "cached_input": 0.1,
       "cached_write": 1.25,
       "context": "Unknown",
@@ -1417,8 +1417,8 @@
       "price_tiers": [
         {
           "label": "Claude Haiku 4.5",
-          "input_price": 1.0,
-          "output_price": 5.0,
+          "input_price": 1,
+          "output_price": 5,
           "cached_input": 0.1,
           "cached_write": 1.25
         }
@@ -1433,8 +1433,8 @@
       "endpoint": "https://opencode.ai/inference/google/v1beta/models/gemini-4-argon",
       "developer": "Google",
       "provider": "Undisclosed",
-      "input_price": 2.0,
-      "output_price": 10.0,
+      "input_price": 2,
+      "output_price": 10,
       "cached_input": 0.1,
       "cached_write": null,
       "context": "Unknown",
@@ -1457,15 +1457,15 @@
       "price_tiers": [
         {
           "label": "Gemini 4 Argon (50% off)",
-          "input_price": 2.0,
-          "output_price": 10.0,
+          "input_price": 2,
+          "output_price": 10,
           "cached_input": 0.1,
           "cached_write": null
         }
       ],
       "base_prices": {
-        "input_price": 4.0,
-        "output_price": 20.0,
+        "input_price": 4,
+        "output_price": 20,
         "cached_input": 0.2
       }
     },
@@ -1599,7 +1599,7 @@
       "developer": "Google",
       "provider": "Undisclosed",
       "input_price": 1.5,
-      "output_price": 9.0,
+      "output_price": 9,
       "cached_input": 0.15,
       "cached_write": null,
       "context": "Unknown",
@@ -1623,7 +1623,7 @@
         {
           "label": "Gemini 3.5 Flash",
           "input_price": 1.5,
-          "output_price": 9.0,
+          "output_price": 9,
           "cached_input": 0.15,
           "cached_write": null
         }
@@ -1678,8 +1678,8 @@
       "endpoint": "https://opencode.ai/inference/google/v1beta/models/gemini-3.1-pro",
       "developer": "Google",
       "provider": "Undisclosed",
-      "input_price": 2.0,
-      "output_price": 12.0,
+      "input_price": 2,
+      "output_price": 12,
       "cached_input": 0.2,
       "cached_write": null,
       "context": "Unknown",
@@ -1702,15 +1702,15 @@
       "price_tiers": [
         {
           "label": "Gemini 3.1 Pro (≤ 200K tokens)",
-          "input_price": 2.0,
-          "output_price": 12.0,
+          "input_price": 2,
+          "output_price": 12,
           "cached_input": 0.2,
           "cached_write": null
         },
         {
           "label": "Gemini 3.1 Pro (> 200K tokens)",
-          "input_price": 4.0,
-          "output_price": 18.0,
+          "input_price": 4,
+          "output_price": 18,
           "cached_input": 0.4,
           "cached_write": null
         }
@@ -1726,7 +1726,7 @@
       "developer": "Google",
       "provider": "Undisclosed",
       "input_price": 0.5,
-      "output_price": 3.0,
+      "output_price": 3,
       "cached_input": 0.05,
       "cached_write": null,
       "context": "Unknown",
@@ -1750,7 +1750,7 @@
         {
           "label": "Gemini 3 Flash",
           "input_price": 0.5,
-          "output_price": 3.0,
+          "output_price": 3,
           "cached_input": 0.05,
           "cached_write": null
         }
@@ -1765,8 +1765,8 @@
       "endpoint": "https://opencode.ai/inference/openai/v1/responses",
       "developer": "xAI",
       "provider": "Undisclosed",
-      "input_price": 2.0,
-      "output_price": 6.0,
+      "input_price": 2,
+      "output_price": 6,
       "cached_input": 0.5,
       "cached_write": null,
       "context": "Unknown",
@@ -1789,16 +1789,16 @@
       "price_tiers": [
         {
           "label": "Grok 4.7 (≤ 200K tokens)",
-          "input_price": 2.0,
-          "output_price": 6.0,
+          "input_price": 2,
+          "output_price": 6,
           "cached_input": 0.5,
           "cached_write": null
         },
         {
           "label": "Grok 4.7 (> 200K tokens)",
-          "input_price": 4.0,
-          "output_price": 12.0,
-          "cached_input": 1.0,
+          "input_price": 4,
+          "output_price": 12,
+          "cached_input": 1,
           "cached_write": null
         }
       ]
@@ -1812,8 +1812,8 @@
       "endpoint": "https://opencode.ai/inference/openai/v1/responses",
       "developer": "xAI",
       "provider": "Undisclosed",
-      "input_price": 2.0,
-      "output_price": 6.0,
+      "input_price": 2,
+      "output_price": 6,
       "cached_input": 0.5,
       "cached_write": null,
       "context": "Unknown",
@@ -1836,16 +1836,16 @@
       "price_tiers": [
         {
           "label": "Grok 4.6 (≤ 200K tokens)",
-          "input_price": 2.0,
-          "output_price": 6.0,
+          "input_price": 2,
+          "output_price": 6,
           "cached_input": 0.5,
           "cached_write": null
         },
         {
           "label": "Grok 4.6 (> 200K tokens)",
-          "input_price": 4.0,
-          "output_price": 12.0,
-          "cached_input": 1.0,
+          "input_price": 4,
+          "output_price": 12,
+          "cached_input": 1,
           "cached_write": null
         }
       ]
@@ -1859,8 +1859,8 @@
       "endpoint": "https://opencode.ai/inference/openai/v1/responses",
       "developer": "xAI",
       "provider": "Undisclosed",
-      "input_price": 2.0,
-      "output_price": 6.0,
+      "input_price": 2,
+      "output_price": 6,
       "cached_input": 0.3,
       "cached_write": null,
       "context": "Unknown",
@@ -1883,15 +1883,15 @@
       "price_tiers": [
         {
           "label": "Grok 4.5 (≤ 200K tokens)",
-          "input_price": 2.0,
-          "output_price": 6.0,
+          "input_price": 2,
+          "output_price": 6,
           "cached_input": 0.3,
           "cached_write": null
         },
         {
           "label": "Grok 4.5 (> 200K tokens)",
-          "input_price": 4.0,
-          "output_price": 12.0,
+          "input_price": 4,
+          "output_price": 12,
           "cached_input": 0.6,
           "cached_write": null
         }
@@ -1906,8 +1906,8 @@
       "endpoint": "https://opencode.ai/inference/openai/v1/responses",
       "developer": "xAI",
       "provider": "Undisclosed",
-      "input_price": 1.0,
-      "output_price": 2.0,
+      "input_price": 1,
+      "output_price": 2,
       "cached_input": 0.2,
       "cached_write": null,
       "context": "Unknown",
@@ -1930,8 +1930,8 @@
       "price_tiers": [
         {
           "label": "Grok Build 0.1",
-          "input_price": 1.0,
-          "output_price": 2.0,
+          "input_price": 1,
+          "output_price": 2,
           "cached_input": 0.2,
           "cached_write": null
         }
@@ -2026,8 +2026,8 @@
       "endpoint": "https://opencode.ai/inference/openai/v1/chat/completions",
       "developer": "Alibaba",
       "provider": "Undisclosed",
-      "input_price": 2.0,
-      "output_price": 6.0,
+      "input_price": 2,
+      "output_price": 6,
       "cached_input": 0.25,
       "cached_write": 2.5,
       "context": "Unknown",
@@ -2050,8 +2050,8 @@
       "price_tiers": [
         {
           "label": "Qwen3.8 Max",
-          "input_price": 2.0,
-          "output_price": 6.0,
+          "input_price": 2,
+          "output_price": 6,
           "cached_input": 0.25,
           "cached_write": 2.5
         }
@@ -2193,7 +2193,7 @@
       "developer": "Alibaba",
       "provider": "Undisclosed",
       "input_price": 0.5,
-      "output_price": 3.0,
+      "output_price": 3,
       "cached_input": 0.05,
       "cached_write": 0.625,
       "context": "Unknown",
@@ -2217,7 +2217,7 @@
         {
           "label": "Qwen3.6 Plus",
           "input_price": 0.5,
-          "output_price": 3.0,
+          "output_price": 3,
           "cached_input": 0.05,
           "cached_write": 0.625
         }
@@ -2596,7 +2596,7 @@
       "developer": "Moonshot AI",
       "provider": "Undisclosed",
       "input_price": 0.95,
-      "output_price": 4.0,
+      "output_price": 4,
       "cached_input": 0.16,
       "cached_write": null,
       "context": "Unknown",
@@ -2620,7 +2620,7 @@
         {
           "label": "Kimi K2.6",
           "input_price": 0.95,
-          "output_price": 4.0,
+          "output_price": 4,
           "cached_input": 0.16,
           "cached_write": null
         }
@@ -2636,7 +2636,7 @@
       "developer": "Moonshot AI",
       "provider": "Undisclosed",
       "input_price": 0.95,
-      "output_price": 4.0,
+      "output_price": 4,
       "cached_input": 0.19,
       "cached_write": null,
       "context": "Unknown",
@@ -2660,7 +2660,7 @@
         {
           "label": "Kimi K2.7 Code",
           "input_price": 0.95,
-          "output_price": 4.0,
+          "output_price": 4,
           "cached_input": 0.19,
           "cached_write": null
         }
@@ -2675,8 +2675,8 @@
       "endpoint": "https://opencode.ai/inference/openai/v1/chat/completions",
       "developer": "Moonshot AI",
       "provider": "Undisclosed",
-      "input_price": 3.0,
-      "output_price": 15.0,
+      "input_price": 3,
+      "output_price": 15,
       "cached_input": 0.3,
       "cached_write": null,
       "context": "Unknown",
@@ -2699,8 +2699,8 @@
       "price_tiers": [
         {
           "label": "Kimi K3",
-          "input_price": 3.0,
-          "output_price": 15.0,
+          "input_price": 3,
+          "output_price": 15,
           "cached_input": 0.3,
           "cached_write": null
         }
@@ -2816,9 +2816,9 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
+      "checked_at": "2026-10-21",
       "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Structured decision model (typed questions/probabilities), not text generation; not ranked as a coding LLM.",
-      "limits": "Not disclosed; free does not establish unlimited usage.",
+      "limits": "Not disclosed; free does not establish unlimited usage. The current Go landing-page FAQ describes a general free-model quota of 200 requests/day; per-endpoint allocation/reset details are not specified. This is separate from Go free/unlimited promotional allowances.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
       "price_tiers": [
@@ -2829,6 +2829,10 @@
           "cached_input": null,
           "cached_write": null
         }
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/go"
       ]
     },
     {
@@ -2856,9 +2860,9 @@
       "privacy_risk": "High",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
+      "checked_at": "2026-10-21",
       "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code.",
-      "limits": "Not disclosed; free does not establish unlimited usage.",
+      "limits": "Not disclosed; free does not establish unlimited usage. The current Go landing-page FAQ describes a general free-model quota of 200 requests/day; per-endpoint allocation/reset details are not specified. This is separate from Go free/unlimited promotional allowances.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
       "price_tiers": [
@@ -2869,6 +2873,10 @@
           "cached_input": 0,
           "cached_write": null
         }
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/go"
       ]
     },
     {
@@ -2896,9 +2904,9 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
+      "checked_at": "2026-10-21",
       "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings.",
-      "limits": "Not disclosed; free does not establish unlimited usage.",
+      "limits": "Not disclosed; free does not establish unlimited usage. The current Go landing-page FAQ describes a general free-model quota of 200 requests/day; per-endpoint allocation/reset details are not specified. This is separate from Go free/unlimited promotional allowances.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
       "price_tiers": [
@@ -2909,6 +2917,10 @@
           "cached_input": 0,
           "cached_write": null
         }
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/go"
       ]
     },
     {
@@ -2936,9 +2948,9 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-18",
+      "checked_at": "2026-10-21",
       "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Official free-model section explicitly confirms no training and zero retention. No free end date, numeric rate limit, or specific upstream is published here; Go ZDR expiry is not transferred. Native vendor capability (not a verified Console endpoint limit): context 1M; reasoning Integer effort 1–100. Different harnesses, not comparable endpoint measurements. Native deepseek-flash now points to V4.1-Flash-1017, but Console checkpoint and numeric effort exposure remain unknown. DeepSeek-reported max-effort TB2.1 90.6; DeepSWE v1.1 74.2. OpenCode scaffold in same model card: TB2.1 85.0, DeepSWE 65.5.",
-      "limits": "Not disclosed; free does not establish unlimited usage.",
+      "limits": "Not disclosed; free does not establish unlimited usage. The current Go landing-page FAQ describes a general free-model quota of 200 requests/day; per-endpoint allocation/reset details are not specified. This is separate from Go free/unlimited promotional allowances.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
       "price_tiers": [
@@ -2951,7 +2963,9 @@
         }
       ],
       "sources": [
-        "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+        "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/go"
       ]
     },
     {
@@ -2979,9 +2993,9 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-17",
+      "checked_at": "2026-10-21",
       "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Beam Free is explicitly listed as limited-time free, with no training and 30-day safety retention. No claim is made that it is a rename of a previous offering.",
-      "limits": "Region restrictions: unavailable in Angola, Belarus, Cambodia, China (including Hong Kong/Macau), Cuba, DR Congo, Equatorial Guinea, Iran, Iraq, Laos, Libya, Nigeria, North Korea, Russia, Syria, Turkmenistan, Uzbekistan, Venezuela, Crimea, Donetsk and Luhansk. Numeric request limits are not disclosed; free does not establish unlimited usage.",
+      "limits": "Region restrictions: unavailable in Angola, Belarus, Cambodia, China (including Hong Kong/Macau), Cuba, DR Congo, Equatorial Guinea, Iran, Iraq, Laos, Libya, Nigeria, North Korea, Russia, Syria, Turkmenistan, Uzbekistan, Venezuela, Crimea, Donetsk and Luhansk. Numeric request limits are not disclosed; free does not establish unlimited usage. The current Go landing-page FAQ describes a general free-model quota of 200 requests/day; per-endpoint allocation/reset details are not specified. This is separate from Go free/unlimited promotional allowances.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
       "price_tiers": [
@@ -2992,6 +3006,10 @@
           "cached_input": 0,
           "cached_write": null
         }
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/go"
       ]
     },
     {
@@ -3019,9 +3037,9 @@
       "privacy_risk": "High",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-18",
+      "checked_at": "2026-10-21",
       "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code. Listed in the official Console documentation, but absent from the public Console models API during the 2026-10-18 KST audit. Current executable availability is unconfirmed; not explicitly deprecated.",
-      "limits": "Not disclosed; free does not establish unlimited usage.",
+      "limits": "Not disclosed; free does not establish unlimited usage. The current Go landing-page FAQ describes a general free-model quota of 200 requests/day; per-endpoint allocation/reset details are not specified. This is separate from Go free/unlimited promotional allowances.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
       "price_tiers": [
@@ -3034,7 +3052,9 @@
         }
       ],
       "sources": [
-        "https://opencode.ai/inference/v1/models"
+        "https://opencode.ai/inference/v1/models",
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/go"
       ]
     },
     {
@@ -3062,9 +3082,9 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
+      "checked_at": "2026-10-21",
       "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings.",
-      "limits": "Not disclosed; free does not establish unlimited usage.",
+      "limits": "Not disclosed; free does not establish unlimited usage. The current Go landing-page FAQ describes a general free-model quota of 200 requests/day; per-endpoint allocation/reset details are not specified. This is separate from Go free/unlimited promotional allowances.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
       "price_tiers": [
@@ -3075,6 +3095,10 @@
           "cached_input": 0,
           "cached_write": null
         }
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/go"
       ]
     },
     {
@@ -3102,9 +3126,9 @@
       "privacy_risk": "High",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-18",
+      "checked_at": "2026-10-21",
       "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code. Listed in the official Console documentation, but absent from the public Console models API during the 2026-10-18 KST audit. Current executable availability is unconfirmed; not explicitly deprecated.",
-      "limits": "Not disclosed; free does not establish unlimited usage.",
+      "limits": "Not disclosed; free does not establish unlimited usage. The current Go landing-page FAQ describes a general free-model quota of 200 requests/day; per-endpoint allocation/reset details are not specified. This is separate from Go free/unlimited promotional allowances.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
       "price_tiers": [
@@ -3117,7 +3141,9 @@
         }
       ],
       "sources": [
-        "https://opencode.ai/inference/v1/models"
+        "https://opencode.ai/inference/v1/models",
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/go"
       ]
     },
     {
@@ -3145,9 +3171,9 @@
       "privacy_risk": "High",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
+      "checked_at": "2026-10-21",
       "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code.",
-      "limits": "Not disclosed; free does not establish unlimited usage.",
+      "limits": "Not disclosed; free does not establish unlimited usage. The current Go landing-page FAQ describes a general free-model quota of 200 requests/day; per-endpoint allocation/reset details are not specified. This is separate from Go free/unlimited promotional allowances.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
       "price_tiers": [
@@ -3158,6 +3184,10 @@
           "cached_input": 0,
           "cached_write": null
         }
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/go"
       ]
     },
     {
@@ -3185,9 +3215,9 @@
       "privacy_risk": "High",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-18",
+      "checked_at": "2026-10-21",
       "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code. Listed in the official Console documentation, but absent from the public Console models API during the 2026-10-18 KST audit. Current executable availability is unconfirmed; not explicitly deprecated.",
-      "limits": "Not disclosed; free does not establish unlimited usage.",
+      "limits": "Not disclosed; free does not establish unlimited usage. The current Go landing-page FAQ describes a general free-model quota of 200 requests/day; per-endpoint allocation/reset details are not specified. This is separate from Go free/unlimited promotional allowances.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
       "price_tiers": [
@@ -3200,7 +3230,9 @@
         }
       ],
       "sources": [
-        "https://opencode.ai/inference/v1/models"
+        "https://opencode.ai/inference/v1/models",
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/go"
       ]
     },
     {
@@ -3228,9 +3260,9 @@
       "privacy_risk": "High",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-20",
+      "checked_at": "2026-10-21",
       "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code. Listed in the official Console documentation, but absent from the public Console models API during the 2026-10-18 KST audit. Current executable availability is unconfirmed; not explicitly deprecated. Official Console privacy explicitly identifies NVIDIA free endpoints; this is an existing-data precision correction, not a newly observed policy change.",
-      "limits": "Trial use only; no personal or confidential data. Session logging for security and product/service improvement.",
+      "limits": "Trial use only; no personal or confidential data. Session logging for security and product/service improvement. The current Go landing-page FAQ describes a general free-model quota of 200 requests/day; per-endpoint allocation/reset details are not specified. This is separate from Go free/unlimited promotional allowances.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
       "price_tiers": [
@@ -3243,7 +3275,9 @@
         }
       ],
       "sources": [
-        "https://opencode.ai/inference/v1/models"
+        "https://opencode.ai/inference/v1/models",
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/go"
       ]
     },
     {
@@ -3271,9 +3305,9 @@
       "privacy_risk": "High",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-20",
+      "checked_at": "2026-10-21",
       "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code. Official Console privacy explicitly identifies NVIDIA free endpoints; this is an existing-data precision correction, not a newly observed policy change.",
-      "limits": "Trial use only; no personal or confidential data. Session logging for security and product/service improvement.",
+      "limits": "Trial use only; no personal or confidential data. Session logging for security and product/service improvement. The current Go landing-page FAQ describes a general free-model quota of 200 requests/day; per-endpoint allocation/reset details are not specified. This is separate from Go free/unlimited promotional allowances.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
       "price_tiers": [
@@ -3284,6 +3318,10 @@
           "cached_input": 0,
           "cached_write": null
         }
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/go"
       ]
     },
     {
@@ -3311,9 +3349,9 @@
       "privacy_risk": "High",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-20",
+      "checked_at": "2026-10-21",
       "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code. Official Console privacy explicitly identifies NVIDIA free endpoints; this is an existing-data precision correction, not a newly observed policy change.",
-      "limits": "Trial use only; no personal or confidential data. Session logging for security and product/service improvement.",
+      "limits": "Trial use only; no personal or confidential data. Session logging for security and product/service improvement. The current Go landing-page FAQ describes a general free-model quota of 200 requests/day; per-endpoint allocation/reset details are not specified. This is separate from Go free/unlimited promotional allowances.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
       "price_tiers": [
@@ -3324,6 +3362,10 @@
           "cached_input": 0,
           "cached_write": null
         }
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/go"
       ]
     },
     {
@@ -3351,9 +3393,9 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-20",
+      "checked_at": "2026-10-21",
       "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Official free-model section explicitly confirms no training and zero retention. No free end date, numeric rate limit, or specific upstream is published here. Listed in both official Console documentation and public models API on 2026-10-20 KST.",
-      "limits": "Not disclosed; free does not establish unlimited usage.",
+      "limits": "Not disclosed; free does not establish unlimited usage. The current Go landing-page FAQ describes a general free-model quota of 200 requests/day; per-endpoint allocation/reset details are not specified. This is separate from Go free/unlimited promotional allowances.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,
       "price_tiers": [
@@ -3364,7 +3406,52 @@
           "cached_input": 0,
           "cached_write": null
         }
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/go"
       ]
+    },
+    {
+      "offering_id": "console:muse-wonder-1.0",
+      "offering": "console-payg",
+      "model": "Muse Wonder 1.0",
+      "model_id": "muse-wonder-1.0",
+      "selection_id": "opencode/muse-wonder-1.0",
+      "endpoint": "https://opencode.ai/inference/openai/v1/responses",
+      "developer": "Meta",
+      "provider": "Undisclosed",
+      "input_price": 4,
+      "output_price": 20,
+      "cached_input": 0.2,
+      "cached_write": null,
+      "context": "Unknown",
+      "reasoning": null,
+      "benchmark": "AA Muse Wonder (max) reference exists; exact Console 1.0 checkpoint/effort mapping unconfirmed.",
+      "training": "No Training",
+      "retention": "0 days",
+      "hosting": "US / EU (Console-wide official policy; exact region undisclosed)",
+      "china_transfer": "No evidence",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [],
+      "source": "https://opencode.ai/v2/docs/console/models/",
+      "checked_at": "2026-10-21",
+      "notes": "Current official Console endpoint and pricing tables, corroborated by its public models endpoint, list muse-wonder-1.0. Console-wide no-training/zero-retention and US/EU hosting statements apply; exact upstream and processing region are undisclosed. AA lists Muse Wonder (max), but exact 1.0 checkpoint/effort correspondence is unconfirmed; no Coding or Go Value score is assigned.",
+      "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
+      "promotion": null,
+      "promotion_end": null,
+      "price_tiers": [
+        {
+          "label": "Muse Wonder 1.0",
+          "input_price": 4,
+          "output_price": 20,
+          "cached_input": 0.2,
+          "cached_write": null
+        }
+      ],
+      "benchmark_source": "https://artificialanalysis.ai/models/muse-wonder"
     }
   ],
   "excluded_models": [
@@ -3437,5 +3524,11 @@
       "reason": "Absent from current official Console endpoint, pricing, free-model and privacy sections and public models API on 2026-10-20 KST; no current offering evidence. Not explicitly marked deprecated.",
       "source": "https://opencode.ai/v2/docs/console/models/"
     }
-  ]
+  ],
+  "billing": {
+    "credit_purchase_fee_percent": 4.6,
+    "credit_purchase_fee_fixed_usd": 0.31,
+    "source": "https://opencode.ai/v2/docs/console/models/#pricing",
+    "notes": "Charged per credit purchase; excluded from token-workload price examples."
+  }
 }
