@@ -94,3 +94,27 @@ The official Terminal-Bench leaderboard, SWE-bench and Aider offer additional ag
 Independent native checkbox filters select **No Training** and **Retention 0 (ZDR)**; enabling both requires both, together with search/offering/risk/region/position filters. Both start unchecked and reset clears them while restoring Go + Free. They do not change the Value reference cohort.
 
 Eligibility uses exact recorded offering-level policies, not model names, numeric substrings, developer nationality or risk grades. Only `No Training` passes the training filter. Only `0 days` or the exact `0 days (ZDR valid through YYYY-MM-DD)` form with a valid unexpired date passes zero retention. Dates are inclusive through that UTC calendar date; expired assurances fail closed until data is reverified. Unknown, null, boolean, conditional/ambiguous and unfamiliar policy values are excluded. Updating policy wording requires an explicit parser/test update rather than a permissive guess. These filters reflect published policy, not measured enforcement. Unknown upstream/hosting region remains unknown even when the offering-level policy passes; region safety is not inferred. Console never inherits Go conditions or expiry.
+
+### OpenCode Data comparison (2026-10-20)
+
+`data/opencode-compare.json` is a **separate reference layer**, not a replacement for AA Coding/Value, recommendations, offering prices, quotas or privacy. It covers the current Go + Console Free rows, not arbitrary provider offerings or PAYG. Offering mappings record official `canonical_model_id`, an official Muse Contributor benchmark alias, or a unique exact published name/ID match. These map base-model reference data, **not measurements of the served endpoint**. Anonymous/unconfirmed models remain unmapped; dated checkpoint identity is never silently inferred.
+
+The six axes reproduce the OpenCode comparison formulas at recorded `source_commit` over the whole 555-model catalog population, independent of dashboard filters:
+
+- Reasoning/Coding: maximum benchmark-name-and-version percentile. Dataset, metric, effort and harness may differ, so these are broad relative indices, not controlled-condition performance rankings or percentage accuracy.
+- Tool use: average benchmark percentile, additionally grouped by harness (or variant if absent). A measured zero can mean lowest percentile, not no tool support.
+- Cost: inverse percentile of catalog input+output unit prices, **not Go subscription value or the dashboard workload cost**. Catalog reference prices never overwrite offering prices. Contributor/free cost conditions remain separate.
+- Context: catalog context percentile. Multimodal: relative count of non-text modalities and attachment support, not multimodal quality.
+- Official neutral 50 / capability-only fallback values are retained as `source_value` for audit but displayed as N/A/support-only, never as measured performance. Null differs from measured zero.
+
+Raw benchmark name, version, score, metric, harness, variant, dataset and source remain inspectable. Different tasks/harnesses are not merged into the existing AA cohort. General popularity/session/retention statistics are not used as performance evidence.
+
+To reproduce, download the two official JSON files from `sources.catalog` and `sources.pricing`, then run:
+
+```sh
+python scripts/build-opencode-data.py /path/catalog.json /path/api.json --checked-at 2026-10-20T04:53:29Z
+node tests/dashboard.test.cjs
+node tests/opencode-data.test.cjs
+```
+
+The builder records input SHA-256 hashes and a real retrieval timestamp. Empty/invalid source inputs fail before replacing the previous snapshot. Review mapping coverage and upstream formula changes before accepting a new snapshot; do not assume a newer model is the same checkpoint. The comparison layer fails independently so an unavailable JSON file does not hide the existing dashboard. This addition does not change automation configuration.
