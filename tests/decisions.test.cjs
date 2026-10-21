@@ -1,0 +1,30 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');
+const root=path.join(__dirname,'..'),read=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8'));
+const els={},el=id=>els[id]??={value:'',textContent:'',innerHTML:'',listeners:{},addEventListener(k,f){this.listeners[k]=f}};
+const sandbox={console,Date,document:{body:{classList:{add(){},remove(){}}},querySelector:el,querySelectorAll:()=>[]},fetch:async f=>({ok:true,json:async()=>read(f)})};
+vm.createContext(sandbox);vm.runInContext(fs.readFileSync(path.join(root,'assets/app.js'),'utf8'),sandbox);
+setTimeout(()=>{
+ const run=s=>vm.runInContext(s,sandbox),d=read('data/popularity.json');sandbox.d=d;
+ assert.equal(run('decisionLeaders().performance.model'),'GLM-5.3');
+ assert.notEqual(run('decisionLeaders().value.model'),null);
+ assert.equal(run('decisionLeaders().balanced.model'),'MiMo-V2.6-Flash');
+ assert.ok(el('#summary').innerHTML.includes('편집 추천'));
+ assert.equal(run('decisionLeaders([]).performance'),null);
+ assert.equal(run('popularityRows(d).length'),5);
+ assert.equal(run('popularityRows(d,"users").length'),8);
+ assert.equal(run('popularityRows(d)[1].telemetry_id'),'minimax-m3.1-flash');
+ assert.equal(run('popularityRows(d,"users")[1].telemetry_id'),'mimo-v2.6-flash');
+ assert.equal(run('popularityRows(d,"users")[2].daily_unique_users'),30000);
+ assert.equal(d.updated_at,'2026-10-20T23:45:00Z');assert.equal(d.users_approximate,true);
+ assert.ok(d.tokens_include.includes('cached'));
+ const ids=new Set(run('state.rows.map(m=>m.offering_id)'));
+ for(const m of d.models){assert.equal(m.mapping_status,'family_reference_only');for(const id of m.candidate_offering_ids)assert.ok(ids.has(id),id);assert.ok(!('monthly_usage_usd' in m));}
+ assert.deepEqual(d.models.find(m=>m.telemetry_id==='muse-spark-1.3-contributor').candidate_offering_ids,['go:Muse Spark 1.3 Contributor']);
+ assert.equal(run('popularityCandidates({mapping_status:"unknown",candidate_offering_ids:["go:GLM-5.3"]}).length'),0);
+ assert.ok(el('#popularity-list').innerHTML.includes('97T'));assert.ok(el('#popularity-meta').textContent.includes('UTC'));
+ el('#popularity-axis').value='users';el('#popularity-axis').listeners.change();assert.ok(el('#popularity-list').innerHTML.indexOf('MiMo-V2.6-Flash')<el('#popularity-list').innerHTML.indexOf('MiniMax-M3.1-Flash'));
+ el('#rank-axis').value='value_grade';el('#rank-axis').listeners.change();assert.equal(run('state.sortDir'),-1);assert.equal(run('filtered()[0].model'),run('decisionLeaders().value.model'));
+ el('#rank-axis').value='estimated_cost';el('#rank-axis').listeners.change();assert.equal(run('state.sortDir'),1);assert.equal(run('cost(filtered()[0])'),0);
+ el('#search').value='no-match-123';run('render()');assert.ok(el('#shortlist').innerHTML.includes('없습니다'));el('#reset').listeners.click();assert.equal(run('state.sortKey'),'coding_grade');assert.equal(el('#rank-axis').value,'coding_grade');
+ const before=el('#models').innerHTML;sandbox.fetch=async()=>({ok:false,status:503});run('loadPopularity()').then(()=>{assert.ok(el('#popularity-meta').textContent.includes('불러오지 못'));assert.equal(el('#models').innerHTML,before);console.log('PASS: recommendation separation, actual measured leader, popularity axes/units/mappings, missing telemetry, selectors/reset and isolated failure.');});
+},0);

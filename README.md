@@ -1,5 +1,15 @@
 # OpenCode Model Radar
 
+## Decision-first dashboard (2026-10-21)
+
+Start with three explicitly separate Go decisions: highest measured AA TB4 result among eligible rows, calculated Go Value leader, and the existing editorial practical candidate. None is an absolute all-model winner. Cards use the full Go cohort; filters change the shortlist and comparison. The ranking selector exposes measured performance, calculated Value, workload cost and name, with the tradeoff shown beside it. Free is excluded from Value rather than treated as infinite value. Sensitive-code recommendations remain unasserted.
+
+`data/popularity.json` is an independent official OpenCode Data snapshot, updated **2026-10-20 23:45 UTC**, checked 2026-10-21. The page switches between past-seven-day token top five and October 20 UTC daily approximate unique-user top eight. Token counts include input, output, reasoning and cached tokens; displayed figures are source-rounded. User counts are approximate distinct counts and are never added across models. No telemetry-derived composite, quality score, Go quota or active offering is created. Null weekly tokens mean outside this selected top-five snapshot, not zero.
+
+Every telemetry mapping is an explicit **model-family reference candidate**, not verified offering attribution or checkpoint parity. Go, Console PAYG and Free usage shares are unknown. Contributor telemetry never inherits the regular Muse Spark offering. Availability remains governed by the separate Go/Console data and official offering docs. `mapping_sources`, `methodology_source`, units, periods and retrieval/update dates are recorded in the snapshot. Popularity loading fails independently of the dashboard and the separate OpenCode Data benchmark reference.
+
+Additional regression: `node tests/decisions.test.cjs`. Existing checks remain `node tests/dashboard.test.cjs`, `node tests/opencode-data.test.cjs`, `node tests/opencode-data-ui.test.cjs`, and `python tests/opencode-builder.test.py`. Browser verification uses desktop 1440×1000 and mobile 390×844: default Go + Free, both independent privacy filters with search, reset, rank axes, popularity axes, native keyboard sorting, detail modal/Escape/focus return, independent Data reference and page overflow. Long comparison tables scroll within bounded panels; all hidden columns remain in model details.
+
 OpenCode Go 및 Console (Zen) 직접 제공 모델의 **가격 · 코딩 성능 · 프라이버시 · provider/routing · 데이터 보존 · 중국 관련 데이터 처리 상태**를 추적하는 정적 대시보드입니다.
 
 ## Dashboard

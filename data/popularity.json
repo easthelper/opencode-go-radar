@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "source": "https://opencode.ai/data",
+  "updated_at": "2026-10-20T23:45:00Z",
+  "checked_at": "2026-10-21",
+  "scope": "OpenCode-wide; offering and routing not disaggregated",
+  "token_period": "past 7 days as published on 2026-10-20",
+  "token_unit": "trillion tokens (T), rounded by source",
+  "users_date": "2026-10-20",
+  "users_unit": "daily unique users by model, rounded by source",
+  "mapping_policy": "Explicit model-family correspondence only; no verified offering attribution, served checkpoint parity or Go subscriber counts. Active offerings come from offering docs, never telemetry.",
+  "models": [
+    {
+      "telemetry_id": "deepseek-v4.1-flash",
+      "model": "DeepSeek V4.1 Flash",
+      "tokens_trillion": 97,
+      "change_pct": 90,
+      "daily_unique_users": 137000,
+      "candidate_offering_ids": [
+        "go:DeepSeek V4.1 Flash",
+        "console:deepseek-v4.1-flash",
+        "console:deepseek-v4.1-flash-free"
+      ],
+      "mapping_status": "family_reference_only",
+      "mapping_note": "모델 계열 대응 후보. Go / Console / Free별 사용량과 실제 checkpoint는 식별할 수 없음. Contributor는 일반 Muse Spark로 확장하지 않음."
+    },
+    {
+      "telemetry_id": "minimax-m3.1-flash",
+      "model": "MiniMax-M3.1-Flash",
+      "tokens_trillion": 28,
+      "change_pct": 17,
+      "daily_unique_users": 29000,
+      "candidate_offering_ids": [
+        "go:MiniMax M3.1 Flash Free",
+        "console:minimax-m3.1-flash-free"
+      ],
+      "mapping_status": "family_reference_only",
+      "mapping_note": "모델 계열 대응 후보. Go / Console / Free별 사용량과 실제 checkpoint는 식별할 수 없음. Contributor는 일반 Muse Spark로 확장하지 않음."
+    },
+    {
+      "telemetry_id": "muse-spark-1.3-contributor",
+      "model": "Muse Spark 1.3 Contributor",
+      "tokens_trillion": 21,
+      "change_pct": -48,
+      "daily_unique_users": 8800,
+      "candidate_offering_ids": [
+        "go:Muse Spark 1.3 Contributor"
+      ],
+      "mapping_status": "family_reference_only",
+      "mapping_note": "모델 계열 대응 후보. Go / Console / Free별 사용량과 실제 checkpoint는 식별할 수 없음. Contributor는 일반 Muse Spark로 확장하지 않음."
+    },
+    {
+      "telemetry_id": "mimo-v2.6-flash",
+      "model": "MiMo-V2.6-Flash",
+      "tokens_trillion": 11,
+      "change_pct": -13,
+      "daily_unique_users": 34000,
+      "candidate_offering_ids": [
+        "go:MiMo-V2.6-Flash",
+        "console:mimo-v2.6-flash-free"
+      ],
+      "mapping_status": "family_reference_only",
+      "mapping_note": "모델 계열 대응 후보. Go / Console / Free별 사용량과 실제 checkpoint는 식별할 수 없음. Contributor는 일반 Muse Spark로 확장하지 않음."
+    },
+    {
+      "telemetry_id": "glm-5.3-flash",
+      "model": "GLM-5.3-Flash",
+      "tokens_trillion": 6.8,
+      "change_pct": 184,
+      "daily_unique_users": 28000,
+      "candidate_offering_ids": [
+        "go:GLM-5.3-Flash",
+        "console:glm-5.3-flash",
+        "console:glm-5.3-flash-free"
+      ],
+      "mapping_status": "family_reference_only",
+      "mapping_note": "모델 계열 대응 후보. Go / Console / Free별 사용량과 실제 checkpoint는 식별할 수 없음. Contributor는 일반 Muse Spark로 확장하지 않음."
+    },
+    {
+      "telemetry_id": "gpt-6-luna",
+      "model": "GPT 6 Luna",
+      "tokens_trillion": null,
+      "change_pct": null,
+      "daily_unique_users": 30000,
+      "candidate_offering_ids": [
+        "go:GPT 6 Luna",
+        "console:gpt-6-luna"
+      ],
+      "mapping_status": "family_reference_only",
+      "mapping_note": "모델 계열 대응 후보이며 Free/Go 경로별 귀속 및 실제 checkpoint는 미확인. —는 이번 7일 토큰 상위 5 스냅샷에 없는 값이며 0이 아님."
+    },
+    {
+      "telemetry_id": "longcat-2.5-preview",
+      "model": "LongCat 2.5 Preview",
+      "tokens_trillion": null,
+      "change_pct": null,
+      "daily_unique_users": 12000,
+      "candidate_offering_ids": [
+        "go:LongCat 2.5 Preview Free",
+        "console:longcat-2.5-preview-free"
+      ],
+      "mapping_status": "family_reference_only",
+      "mapping_note": "모델 계열 대응 후보이며 Free/Go 경로별 귀속 및 실제 checkpoint는 미확인. —는 이번 7일 토큰 상위 5 스냅샷에 없는 값이며 0이 아님."
+    },
+    {
+      "telemetry_id": "beam",
+      "model": "Beam",
+      "tokens_trillion": null,
+      "change_pct": null,
+      "daily_unique_users": 11000,
+      "candidate_offering_ids": [
+        "go:Beam Free",
+        "console:beam-free"
+      ],
+      "mapping_status": "family_reference_only",
+      "mapping_note": "모델 계열 대응 후보이며 Free/Go 경로별 귀속 및 실제 checkpoint는 미확인. —는 이번 7일 토큰 상위 5 스냅샷에 없는 값이며 0이 아님."
+    }
+  ],
+  "methodology_source": "https://opencode.ai/data#methodology",
+  "aggregation": "hourly; days and weeks UTC",
+  "tokens_include": [
+    "input",
+    "output",
+    "reasoning",
+    "cached"
+  ],
+  "users_approximate": true,
+  "mapping_sources": [
+    "https://opencode.ai/v2/docs/console/go/",
+    "https://opencode.ai/v2/docs/console/models/"
+  ]
+}
