@@ -10,7 +10,7 @@ for(const [id,m] of Object.entries(d.offerings)){
  if(m.catalog_id){assert.ok(d.models[m.catalog_id]);assert.notEqual(m.status,'unmapped');}else assert.equal(m.status,'unmapped');
  for(const field of ['input_price','output_price','training','retention','monthly_usage_usd','coding_evaluation'])assert.ok(!(field in m));
 }
-for(const name of ['jev-1.13-free','big-pickle','ll-alpha-free','exo-free'])assert.equal(d.offerings['console:'+name].catalog_id,null);
+for(const name of ['jev-1.13-free','big-pickle','flint-40b-free','exo-free'])assert.equal(d.offerings['console:'+name].catalog_id,null);
 assert.equal(d.offerings['go:Beam Free'].catalog_id,'reflection/beam-1.0-501b-a23b');
 assert.equal(d.offerings['go:Gemini 4 Argon Contributor'].status,'canonical');
 assert.equal(d.offerings['go:Muse Spark 1.3 Contributor'].status,'official_alias');
@@ -29,3 +29,4 @@ for(const m of Object.values(d.models)){
 assert.ok(missing>0);assert.ok(benchmarks>0);
 assert.equal(d.models['minimax/MiniMax-M3.1-Flash'].axes.coding.value,null);
 console.log(`PASS: ${Object.keys(d.offerings).length} offerings, ${Object.keys(d.models).length} source models, ${benchmarks} raw benchmark records, ${missing} explicit fallback axes; source fixtures, mapping isolation, measured zero, unknowns.`);
+
