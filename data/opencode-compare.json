@@ -4747,12 +4747,12 @@
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
-    "console:ll-alpha-free": {
+    "console:flint-40b-free": {
       "catalog_id": null,
       "status": "unmapped",
-      "selection_id": "opencode/ll-alpha-free",
-      "evidence": "https://models.opencode.ai/api.json",
-      "note": "공식 canonical ID 또는 유일한 정확한 이름 대응을 확인하지 못했습니다. 익명·불명확 모델은 추정하지 않습니다."
+      "selection_id": "opencode/flint-40b-free",
+      "evidence": "https://opencode.ai/v2/docs/console/models/",
+      "note": "2026-10-22: Current Console offering verified; exact benchmark catalog mapping not verified. No previous LL Alpha identity or score is inherited."
     },
     "console:longcat-2.5-preview-free": {
       "catalog_id": "meituan/longcat-2.5-preview",
@@ -4812,3 +4812,4 @@
     }
   }
 }
+
