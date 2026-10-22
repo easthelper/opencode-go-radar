@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-21",
+  "as_of": "2026-10-22",
   "schema_version": 1,
   "scope": "Official OpenCode Console (Zen) endpoint/pricing catalog only; arbitrary third-party provider catalogs excluded.",
   "sources": [
@@ -3013,51 +3013,6 @@
       ]
     },
     {
-      "offering_id": "console:ll-alpha-free",
-      "offering": "console-free",
-      "model": "LL Alpha Free",
-      "model_id": "ll-alpha-free",
-      "selection_id": "opencode/ll-alpha-free",
-      "endpoint": "https://opencode.ai/inference/openai/v1/chat/completions",
-      "developer": "Unknown",
-      "provider": "Undisclosed",
-      "input_price": 0,
-      "output_price": 0,
-      "cached_input": 0,
-      "cached_write": null,
-      "context": "Unknown",
-      "reasoning": null,
-      "benchmark": "N/A",
-      "training": "May Train / model improvement",
-      "retention": "30 days",
-      "hosting": "US / EU (Console-wide official policy; exact region undisclosed)",
-      "china_transfer": "No evidence",
-      "coding_grade": "N/A",
-      "value_grade": "N/A",
-      "privacy_risk": "High",
-      "positioning": [],
-      "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-21",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code. Listed in the official Console documentation, but absent from the public Console models API during the 2026-10-18 KST audit. Current executable availability is unconfirmed; not explicitly deprecated.",
-      "limits": "Not disclosed; free does not establish unlimited usage. The current Go landing-page FAQ describes a general free-model quota of 200 requests/day; per-endpoint allocation/reset details are not specified. This is separate from Go free/unlimited promotional allowances.",
-      "promotion": "Limited-time free; end date unknown",
-      "promotion_end": null,
-      "price_tiers": [
-        {
-          "label": "LL Alpha Free",
-          "input_price": 0,
-          "output_price": 0,
-          "cached_input": 0,
-          "cached_write": null
-        }
-      ],
-      "sources": [
-        "https://opencode.ai/inference/v1/models",
-        "https://opencode.ai/v2/docs/console/models/",
-        "https://opencode.ai/go"
-      ]
-    },
-    {
       "offering_id": "console:longcat-2.5-preview-free",
       "offering": "console-free",
       "model": "LongCat 2.5 Preview Free",
@@ -3452,6 +3407,51 @@
         }
       ],
       "benchmark_source": "https://artificialanalysis.ai/models/muse-wonder"
+    },
+    {
+      "offering_id": "console:flint-40b-free",
+      "offering": "console-free",
+      "model": "Flint 40B Free",
+      "model_id": "flint-40b-free",
+      "selection_id": "opencode/flint-40b-free",
+      "endpoint": "https://opencode.ai/inference/openai/v1/chat/completions",
+      "developer": "Unknown",
+      "provider": "Undisclosed",
+      "input_price": 0,
+      "output_price": 0,
+      "cached_input": 0,
+      "cached_write": null,
+      "context": "Unknown",
+      "reasoning": null,
+      "benchmark": "N/A",
+      "training": "May Train / model improvement",
+      "retention": "30 days",
+      "hosting": "US / EU (Console-wide official policy; exact region undisclosed)",
+      "china_transfer": "No evidence",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "High",
+      "positioning": [],
+      "source": "https://opencode.ai/v2/docs/console/models/",
+      "checked_at": "2026-10-22",
+      "notes": "Current official Console endpoint, pricing and free-model tables list this offering. Free-period collected data may be used for model improvement and is retained for 30 days. Developer, upstream, context and reasoning are not established here; no relation to previous LL Alpha is inferred.",
+      "limits": "Not disclosed; free does not establish unlimited usage. The current Go landing-page FAQ describes a general free-model quota of 200 requests/day; per-endpoint allocation/reset details are not specified. This is separate from Go free/unlimited promotional allowances.",
+      "promotion": "Limited-time free; end date unknown",
+      "promotion_end": null,
+      "price_tiers": [
+        {
+          "label": "Flint 40B Free",
+          "input_price": 0,
+          "output_price": 0,
+          "cached_input": 0,
+          "cached_write": null
+        }
+      ],
+      "sources": [
+        "https://opencode.ai/inference/v1/models",
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/go"
+      ]
     }
   ],
   "excluded_models": [
@@ -3523,6 +3523,14 @@
       "deprecation_date": null,
       "reason": "Absent from current official Console endpoint, pricing, free-model and privacy sections and public models API on 2026-10-20 KST; no current offering evidence. Not explicitly marked deprecated.",
       "source": "https://opencode.ai/v2/docs/console/models/"
+    },
+    {
+      "model": "LL Alpha Free",
+      "model_id": "ll-alpha-free",
+      "deprecation_date": null,
+      "checked_at": "2026-10-22",
+      "source": "https://opencode.ai/v2/docs/console/models/",
+      "reason": "Absent from current official endpoint, pricing, free-model and privacy tables and public models endpoint. Excluded from current offerings; permanent retirement or a rename to Flint is not established."
     }
   ],
   "billing": {
@@ -3532,3 +3540,4 @@
     "notes": "Charged per credit purchase; excluded from token-workload price examples."
   }
 }
+
