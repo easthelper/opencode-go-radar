@@ -1,6 +1,6 @@
 const state = { rows: [], recommendations: {}, sortKey: 'coding_grade', sortDir: -1 };
 const DEFAULT_OFFERING = 'go-free';
-const LAST_CHECKED = '2026-10-21';
+const LAST_CHECKED = '2026-10-22';
 const $ = (s) => document.querySelector(s);
 // Coding is one named evaluation, not a synthetic cross-benchmark grade.
 const CODING_COHORT = 'aa-terminalbench-4.0-mini-swe';
@@ -145,3 +145,4 @@ $('#rank-axis')?.addEventListener('change',()=>{state.sortKey=$('#rank-axis').va
 document.querySelectorAll('th[data-key]').forEach(th=>{
  th.innerHTML=`<button type="button" class="sort-button" aria-label="${esc(th.textContent)} 정렬">${esc(th.textContent)}</button>`;
 });
+
