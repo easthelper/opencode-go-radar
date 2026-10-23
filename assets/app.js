@@ -1,6 +1,6 @@
 const state = { rows: [], recommendations: {}, sortKey: 'coding_grade', sortDir: -1 };
 const DEFAULT_OFFERING = 'go-free';
-const LAST_CHECKED = '2026-10-22';
+const LAST_CHECKED = '2026-10-23';
 const $ = (s) => document.querySelector(s);
 // Coding is one named evaluation, not a synthetic cross-benchmark grade.
 const CODING_COHORT = 'aa-terminalbench-4.0-mini-swe';
@@ -19,7 +19,7 @@ function metricDetails(m) {
  const coding=score===null?codingReason(m):`${e.benchmark} · ${score.toFixed(2)}% · ${e.evaluator} 독립 평가 · ${e.evaluated_model} · ${e.harness} · ${e.metric} · effort ${e.effort||"미공개"}. 동일 taskset/harness라도 모델별 effort·토큰 사용량은 다를 수 있습니다. 원모델 평가이며 Go endpoint 직접 측정이 아닙니다. Go의 checkpoint/effort 일치는 검증되지 않았습니다.`;
  const reference=e?.reference?`<p>별도 checkpoint 참고: ${esc(e.reference.evaluated_model)} · ${esc(e.reference.score_pct)}% (${esc(e.reference.benchmark)}). Go 모델 매핑 미확정이므로 Coding 정렬에서 제외.</p>`:'';
  const idx=valueIndex(m),raw=valueRaw(m),perDollar=performancePerDollar(m);
- const value=m.offering!=='go'?'Console에는 Go 가성비·사용량을 적용하지 않습니다.':m.unlimited?'한시 무료는 무한 가성비나 최고 등급으로 변환하지 않습니다.':score===null?'동일 코호트의 벤치 결과가 없어 가성비를 산정하지 않습니다.':idx===null?'가격·Effective Usage 또는 비교 기준이 미확인입니다.':`Go 구독 가성비 지수 ${idx.toFixed(2)} = (AA TB4 ${score.toFixed(4)}%p × 월 토큰 용량 ${n.toFixed(4)}) ÷ 전체 Go 평가 가능 코호트의 최대 곱 × 100. 원시 곱 ${raw.toFixed(4)}, 성능/비용 ${perDollar.toFixed(4)} %p/$입니다. 같은 월 구독비에서 성능과 용량을 선형으로 결합한 대리지수로, 낮은 성능의 저가 모델이 높아질 수 있으며 절대 추천·성공확률·해결 작업 수·실측 성공당 비용을 뜻하지 않습니다. 기준 데이터 2026-10-19, 전체 Go 동일 AA TB4 코호트 최고=100이며 필터와 무관합니다. effort와 실제 토큰 사용량은 모델별로 다릅니다.`;
+ const value=m.offering!=='go'?'Console에는 Go 가성비·사용량을 적용하지 않습니다.':m.unlimited?'한시 무료는 무한 가성비나 최고 등급으로 변환하지 않습니다.':score===null?'동일 코호트의 벤치 결과가 없어 가성비를 산정하지 않습니다.':idx===null?'가격·Effective Usage 또는 비교 기준이 미확인입니다.':`Go 구독 가성비 지수 ${idx.toFixed(2)} = (AA TB4 ${score.toFixed(4)}%p × 월 토큰 용량 ${n.toFixed(4)}) ÷ 전체 Go 평가 가능 코호트의 최대 곱 × 100. 원시 곱 ${raw.toFixed(4)}, 성능/비용 ${perDollar.toFixed(4)} %p/$입니다. 같은 월 구독비에서 성능과 용량을 선형으로 결합한 대리지수로, 낮은 성능의 저가 모델이 높아질 수 있으며 절대 추천·성공확률·해결 작업 수·실측 성공당 비용을 뜻하지 않습니다. 기준 데이터 2026-10-23, 전체 Go 동일 AA TB4 코호트 최고=100이며 필터와 무관합니다. effort와 실제 토큰 사용량은 모델별로 다릅니다.`;
  const capacity=n===null?'':`보조 월 용량 ${n.toFixed(2)} workloads/mo = 현재 Effective Usage ${money(effectiveMonthlyUsage(m),2)} ÷ workload 비용 ${money(workloadCost(m),4)}. 1 workload는 여러 짧은-context 요청에 걸친 input 1M + output 200K tokens, 캐시 0%, 기본 가격(DeepSeek off-peak) 가정입니다. 활성 프로모션을 반영하고 만료 시 가격·한도·지수를 재계산합니다. 공유 Go quota와 5h/주간 제한이 함께 적용되어 모델별 용량을 더할 수 없습니다. 공식 Req/mo와 별도이며 실제 요청 수가 아닙니다.`;
  return `<h3>Coding / Value 산정 근거</h3><p>${esc(coding)}</p>${e?.source?`<p><a href="${esc(e.source)}" target="_blank" rel="noopener noreferrer">평가 원문 · ${esc(e.checked_at)}</a>${e.methodology_source?` · <a href="${esc(e.methodology_source)}" target="_blank" rel="noopener noreferrer">평가 방법</a>`:''}</p>`:''}${reference}<p>${esc(value)}</p><p>${esc(capacity)}</p>`;
 }
@@ -145,4 +145,5 @@ $('#rank-axis')?.addEventListener('change',()=>{state.sortKey=$('#rank-axis').va
 document.querySelectorAll('th[data-key]').forEach(th=>{
  th.innerHTML=`<button type="button" class="sort-button" aria-label="${esc(th.textContent)} 정렬">${esc(th.textContent)}</button>`;
 });
+
 

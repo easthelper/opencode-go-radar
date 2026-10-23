@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-21",
+  "as_of": "2026-10-23",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -1895,19 +1895,19 @@
       "benchmark_source": "https://artificialanalysis.ai/models/reflection-beam"
     },
     {
-      "model": "MiniMax M3.1 Flash Free",
-      "model_id": "minimax-m3.1-flash-free",
-      "selection_id": "opencode-go/minimax-m3.1-flash-free",
+      "model": "MiniMax M3.1 Flash",
+      "model_id": "minimax-m3.1-flash",
+      "selection_id": "opencode-go/minimax-m3.1-flash",
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
       "developer": "MiniMax",
       "provider": "Unknown (Go upstream routing undisclosed)",
-      "input_price": 0,
-      "output_price": 0,
-      "cached_input": 0,
+      "input_price": 0.15,
+      "output_price": 0.6,
+      "cached_input": 0.015,
       "cached_write": null,
-      "context": "Unknown",
-      "reasoning": null,
-      "benchmark": "AA Terminal-Bench 4.0 reference: MiniMax-M3.1-Flash 25.8% (rounded chart); exact free-offering checkpoint mapping unconfirmed, excluded from Coding/Value.",
+      "context": "1,000,000 (native model; Go limit unverified)",
+      "reasoning": true,
+      "benchmark": "AA Terminal-Bench 4.0 reference: MiniMax-M3.1-Flash 25.8% (published rounded chart). Evaluated checkpoint/effort and exact cohort mapping remain unverified; excluded from Coding/Value.",
       "training": "No Training",
       "retention": "0 days",
       "chinese_model": true,
@@ -1917,28 +1917,34 @@
       "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [],
-      "notes": "Current official Go model list, pricing, endpoint, estimated-request and privacy tables confirm limited-time free availability with unlimited usage. No promotion end date is published. Go upstream, region, context and reasoning settings remain unconfirmed. The separate Console free offering does not inherit these Go usage terms.",
+      "notes": "Current official Go model, price, endpoint, request and privacy tables list the paid MiniMax M3.1 Flash offering. The previous free ID is absent; a permanent retirement date is not established. Native model capabilities are not a verification of Go checkpoint, effort exposure, routing or region.",
       "source": "https://opencode.ai/v2/docs/console/go/",
       "sources": [
         "https://opencode.ai/v2/docs/console/go/",
-        "https://opencode.ai/go"
+        "https://opencode.ai/go",
+        "https://platform.minimax.io/docs/guides/text-generation",
+        "https://artificialanalysis.ai/models/minimax-m3-1-flash"
       ],
-      "checked_at": "2026-10-20",
+      "checked_at": "2026-10-23",
       "price_tiers": [
         {
-          "label": "MiniMax M3.1 Flash Free",
-          "input_price": 0,
-          "output_price": 0,
-          "cached_input": 0,
+          "label": "MiniMax M3.1 Flash",
+          "input_price": 0.15,
+          "output_price": 0.6,
+          "cached_input": 0.015,
           "cached_write": null
         }
       ],
       "coding_evaluation": {
         "status": "unavailable",
-        "reason": "AA의 MiniMax-M3.1-Flash TB4 결과(25.8%, 차트 반올림)는 확인했으나 이 무료 offering과 정확한 원모델/checkpoint 대응은 확인되지 않아 Coding 계산에 넣지 않습니다. 한시 무료는 Value 산정 제외입니다.",
-        "checked_at": "2026-10-21"
+        "reason": "AA publishes MiniMax-M3.1-Flash at 25.8% on the Terminal-Bench 4.0 chart, but the evaluated checkpoint/effort and exact cohort mapping are not fully verified. Reference only; excluded from Coding/Value.",
+        "checked_at": "2026-10-23",
+        "source": "https://artificialanalysis.ai/models/minimax-m3-1-flash",
+        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0"
       },
-      "benchmark_source": "https://artificialanalysis.ai/models/minimax-m3-1-flash"
+      "benchmark_source": "https://artificialanalysis.ai/models/minimax-m3-1-flash",
+      "reasoning_effort": "low, medium, high, xhigh, max (default); native API, Go exposure unverified",
+      "capability_source": "https://platform.minimax.io/docs/guides/text-generation"
     }
   ],
   "recommendation_note": "Coding uses one independent benchmark cohort. Value is a transparent same-subscription performance-capacity proxy, not predicted successful tasks. Existing Go recommendations remain conditional and unchanged.",
@@ -1970,3 +1976,4 @@
     }
   }
 }
+

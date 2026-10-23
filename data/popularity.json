@@ -31,8 +31,7 @@
       "change_pct": 17,
       "daily_unique_users": 29000,
       "candidate_offering_ids": [
-        "go:MiniMax M3.1 Flash Free",
-        "console:minimax-m3.1-flash-free"
+        "go:MiniMax M3.1 Flash"
       ],
       "mapping_status": "family_reference_only",
       "mapping_note": "모델 계열 대응 후보. Go / Console / Free별 사용량과 실제 checkpoint는 식별할 수 없음. Contributor는 일반 Muse Spark로 확장하지 않음."
@@ -130,3 +129,4 @@
     "https://opencode.ai/v2/docs/console/models/"
   ]
 }
+

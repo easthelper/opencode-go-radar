@@ -100,7 +100,8 @@ el('#offering').value='console-free';el('#no-training').checked=true;el('#zero-r
 assert.equal(run('filtered().length'),1);assert.equal(run('filtered()[0].model_id'),'deepseek-v4.1-flash-free');
 el('#privacy').value='High';assert.equal(run('filtered().length'),0);
 assert.equal(JSON.stringify(run('state.rows.map(m=>valueIndex(m))')),before);
-el('#reset').listeners.click();assert.equal(el('#no-training').checked,false);assert.equal(el('#zero-retention').checked,false);assert.equal(el('#offering').value,'go-free');assert.equal(run('filtered().length'),43);
+el('#reset').listeners.click();assert.equal(el('#no-training').checked,false);assert.equal(el('#zero-retention').checked,false);assert.equal(el('#offering').value,'go-free');assert.equal(run('filtered().length'),42);
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');assert.ok(html.includes('id="no-training" type="checkbox"'));assert.ok(html.includes('id="zero-retention" type="checkbox"'));assert.ok(html.includes('aria-describedby="privacy-filter-help"'));
 console.log('PASS: independent privacy filters/AND across all offerings, null/boolean/unknown/conditional false positives, inclusive expiry, free scope, risk/search intersection, reset and invariant Value cohort.');
 },0);
+

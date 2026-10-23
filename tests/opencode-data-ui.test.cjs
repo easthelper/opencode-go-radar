@@ -8,7 +8,7 @@ const sandbox={console,document:{querySelector:el,querySelectorAll:()=>buttons},
 vm.createContext(sandbox);vm.runInContext(fs.readFileSync(path.join(root,'assets/opencode-data.js'),'utf8'),sandbox);
 setTimeout(async()=>{
  const api=sandbox.OpenCodeData;
- assert.equal(api.view.rows.length,43);assert.ok(el('#oc-count').textContent.includes('39 대응'));
+ assert.equal(api.view.rows.length,42);assert.ok(el('#oc-count').textContent.includes('38 대응'));
  assert.ok(el('#oc-models').innerHTML.includes('Jev 1.13 Free'));
  assert.ok(el('#oc-models').innerHTML.includes('N/A · 미측정'));
  const unknown=rows.find(m=>m.model==='Big Pickle');assert.equal(api.score(unknown,'coding'),null);assert.ok(api.details(unknown).includes('N/A'));
@@ -25,5 +25,6 @@ setTimeout(async()=>{
  const emptyRow=rows.find(r=>compare.offerings[r.offering_id]?.catalog_id===empty[0]);assert.equal(api.score(emptyRow,'coding'),null);assert.ok(!api.axisCell(emptyRow,'coding').includes('oc-score'));
  // Loading failure remains isolated from all existing data and formulas.
  sandbox.fetch=async()=>({ok:false,status:503});sandbox.console={error(){}};await api.load();assert.ok(el('#oc-status').textContent.includes('기존 가격·AA 점수·추천은 그대로'));
- console.log('PASS: independent OpenCode Data UI, 43 rows/39 mappings, fallback exclusions, missing-last sort, filter rendering, modal dispatch, Contributor price separation and isolated load failure.');
+ console.log('PASS: independent OpenCode Data UI, 42 rows/38 mappings, fallback exclusions, missing-last sort, filter rendering, modal dispatch, Contributor price separation and isolated load failure.');
 },0);
+

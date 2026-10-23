@@ -4705,12 +4705,12 @@
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
-    "go:MiniMax M3.1 Flash Free": {
+    "go:MiniMax M3.1 Flash": {
       "catalog_id": "minimax/MiniMax-M3.1-Flash",
-      "status": "canonical",
-      "selection_id": "opencode-go/minimax-m3.1-flash-free",
-      "evidence": "https://models.opencode.ai/api.json",
-      "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
+      "status": "exact_name",
+      "selection_id": "opencode-go/minimax-m3.1-flash",
+      "evidence": "https://opencode.ai/v2/docs/console/go/",
+      "note": "현재 Go 공식 offering과 카탈로그 원모델의 정확한 이름 대응. endpoint·checkpoint 동일성은 미검증인 참고 평가입니다."
     },
     "console:jev-1.13-free": {
       "catalog_id": null,
@@ -4802,14 +4802,8 @@
       "selection_id": "opencode/nemotron-3.5-super-vl-free",
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
-    },
-    "console:minimax-m3.1-flash-free": {
-      "catalog_id": "minimax/MiniMax-M3.1-Flash",
-      "status": "canonical",
-      "selection_id": "opencode/minimax-m3.1-flash-free",
-      "evidence": "https://models.opencode.ai/api.json",
-      "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     }
   }
 }
+
 
