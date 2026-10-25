@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-23",
+  "as_of": "2026-10-24",
   "schema_version": 1,
   "scope": "Official OpenCode Console (Zen) endpoint/pricing catalog only; arbitrary third-party provider catalogs excluded.",
   "sources": [
@@ -2098,92 +2098,6 @@
       ]
     },
     {
-      "offering_id": "console:qwen3.7-max",
-      "offering": "console-payg",
-      "model": "Qwen3.7 Max",
-      "model_id": "qwen3.7-max",
-      "selection_id": "opencode/qwen3.7-max",
-      "endpoint": "https://opencode.ai/inference/anthropic/v1/messages",
-      "developer": "Alibaba",
-      "provider": "Undisclosed",
-      "input_price": 2.5,
-      "output_price": 7.5,
-      "cached_input": 0.5,
-      "cached_write": 3.125,
-      "context": "Unknown",
-      "reasoning": null,
-      "benchmark": "N/A",
-      "training": "No Training",
-      "retention": "0 days",
-      "hosting": "US / EU (Console-wide official policy; exact region undisclosed)",
-      "china_transfer": "No evidence",
-      "coding_grade": "N/A",
-      "value_grade": "N/A",
-      "privacy_risk": "Medium",
-      "positioning": [],
-      "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-18",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Listed in the official Console documentation, but absent from the public Console models API during the 2026-10-18 KST audit. Current executable availability is unconfirmed; not explicitly deprecated.",
-      "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
-      "promotion": null,
-      "promotion_end": null,
-      "price_tiers": [
-        {
-          "label": "Qwen3.7 Max",
-          "input_price": 2.5,
-          "output_price": 7.5,
-          "cached_input": 0.5,
-          "cached_write": 3.125
-        }
-      ],
-      "sources": [
-        "https://opencode.ai/inference/v1/models"
-      ]
-    },
-    {
-      "offering_id": "console:qwen3.7-plus",
-      "offering": "console-payg",
-      "model": "Qwen3.7 Plus",
-      "model_id": "qwen3.7-plus",
-      "selection_id": "opencode/qwen3.7-plus",
-      "endpoint": "https://opencode.ai/inference/anthropic/v1/messages",
-      "developer": "Alibaba",
-      "provider": "Undisclosed",
-      "input_price": 0.4,
-      "output_price": 1.6,
-      "cached_input": 0.04,
-      "cached_write": 0.5,
-      "context": "Unknown",
-      "reasoning": null,
-      "benchmark": "N/A",
-      "training": "No Training",
-      "retention": "0 days",
-      "hosting": "US / EU (Console-wide official policy; exact region undisclosed)",
-      "china_transfer": "No evidence",
-      "coding_grade": "N/A",
-      "value_grade": "N/A",
-      "privacy_risk": "Medium",
-      "positioning": [],
-      "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-18",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Listed in the official Console documentation, but absent from the public Console models API during the 2026-10-18 KST audit. Current executable availability is unconfirmed; not explicitly deprecated.",
-      "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
-      "promotion": null,
-      "promotion_end": null,
-      "price_tiers": [
-        {
-          "label": "Qwen3.7 Plus",
-          "input_price": 0.4,
-          "output_price": 1.6,
-          "cached_input": 0.04,
-          "cached_write": 0.5
-        }
-      ],
-      "sources": [
-        "https://opencode.ai/inference/v1/models"
-      ]
-    },
-    {
       "offering_id": "console:qwen3.6-plus",
       "offering": "console-payg",
       "model": "Qwen3.6 Plus",
@@ -2678,7 +2592,7 @@
       "input_price": 3,
       "output_price": 15,
       "cached_input": 0.3,
-      "cached_write": null,
+      "cached_write": 3,
       "context": "Unknown",
       "reasoning": null,
       "benchmark": "N/A",
@@ -2691,7 +2605,7 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
+      "checked_at": "2026-10-24",
       "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings.",
       "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
       "promotion": null,
@@ -2702,7 +2616,7 @@
           "input_price": 3,
           "output_price": 15,
           "cached_input": 0.3,
-          "cached_write": null
+          "cached_write": 3
         }
       ]
     },
@@ -3057,51 +2971,6 @@
       ]
     },
     {
-      "offering_id": "console:exo-free",
-      "offering": "console-free",
-      "model": "Exo Free",
-      "model_id": "exo-free",
-      "selection_id": "opencode/exo-free",
-      "endpoint": "https://opencode.ai/inference/openai/v1/chat/completions",
-      "developer": "Unknown",
-      "provider": "Undisclosed",
-      "input_price": 0,
-      "output_price": 0,
-      "cached_input": 0,
-      "cached_write": null,
-      "context": "Unknown",
-      "reasoning": null,
-      "benchmark": "N/A",
-      "training": "May Train / model improvement",
-      "retention": "Unknown (data collection permitted)",
-      "hosting": "US / EU (Console-wide official policy; exact region undisclosed)",
-      "china_transfer": "No evidence",
-      "coding_grade": "N/A",
-      "value_grade": "N/A",
-      "privacy_risk": "High",
-      "positioning": [],
-      "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-23",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code. Listed in the official Console documentation, but absent from the public Console models API during the 2026-10-18 KST audit. Current executable availability is unconfirmed; not explicitly deprecated.",
-      "limits": "Not disclosed; free does not establish unlimited usage. The current official pages do not state a numeric free-model request limit; the previous 200 requests/day claim is not currently substantiated. This does not establish unlimited usage or the date of a policy change. This is separate from Go free/unlimited promotional allowances.",
-      "promotion": "Limited-time free; end date unknown",
-      "promotion_end": null,
-      "price_tiers": [
-        {
-          "label": "Exo Free",
-          "input_price": 0,
-          "output_price": 0,
-          "cached_input": 0,
-          "cached_write": null
-        }
-      ],
-      "sources": [
-        "https://opencode.ai/inference/v1/models",
-        "https://opencode.ai/v2/docs/console/models/",
-        "https://opencode.ai/go"
-      ]
-    },
-    {
       "offering_id": "console:mimo-v2.6-flash-free",
       "offering": "console-free",
       "model": "MiMo-V2.6-Flash Free",
@@ -3141,51 +3010,6 @@
         }
       ],
       "sources": [
-        "https://opencode.ai/v2/docs/console/models/",
-        "https://opencode.ai/go"
-      ]
-    },
-    {
-      "offering_id": "console:mimo-v2.5-free",
-      "offering": "console-free",
-      "model": "MiMo-V2.5 Free",
-      "model_id": "mimo-v2.5-free",
-      "selection_id": "opencode/mimo-v2.5-free",
-      "endpoint": "https://opencode.ai/inference/openai/v1/chat/completions",
-      "developer": "Xiaomi",
-      "provider": "Undisclosed",
-      "input_price": 0,
-      "output_price": 0,
-      "cached_input": 0,
-      "cached_write": null,
-      "context": "Unknown",
-      "reasoning": null,
-      "benchmark": "N/A",
-      "training": "May Train / model improvement",
-      "retention": "Unknown (data collection permitted)",
-      "hosting": "US / EU (Console-wide official policy; exact region undisclosed)",
-      "china_transfer": "No evidence",
-      "coding_grade": "N/A",
-      "value_grade": "N/A",
-      "privacy_risk": "High",
-      "positioning": [],
-      "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-23",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Free-tier data may be collected for model/product improvement. Do not use for confidential code. Listed in the official Console documentation, but absent from the public Console models API during the 2026-10-18 KST audit. Current executable availability is unconfirmed; not explicitly deprecated.",
-      "limits": "Not disclosed; free does not establish unlimited usage. The current official pages do not state a numeric free-model request limit; the previous 200 requests/day claim is not currently substantiated. This does not establish unlimited usage or the date of a policy change. This is separate from Go free/unlimited promotional allowances.",
-      "promotion": "Limited-time free; end date unknown",
-      "promotion_end": null,
-      "price_tiers": [
-        {
-          "label": "MiMo-V2.5 Free",
-          "input_price": 0,
-          "output_price": 0,
-          "cached_input": 0,
-          "cached_write": null
-        }
-      ],
-      "sources": [
-        "https://opencode.ai/inference/v1/models",
         "https://opencode.ai/v2/docs/console/models/",
         "https://opencode.ai/go"
       ]
@@ -3495,6 +3319,38 @@
       "checked_at": "2026-10-23",
       "source": "https://opencode.ai/v2/docs/console/models/",
       "reason": "Absent from current official Console endpoint, pricing, free-model and privacy sections and public models endpoint. Excluded from current offerings; permanent retirement or an exact end date is not established."
+    },
+    {
+      "model": "Qwen3.7 Max",
+      "model_id": "qwen3.7-max",
+      "deprecation_date": null,
+      "checked_at": "2026-10-24",
+      "source": "https://opencode.ai/v2/docs/console/models/",
+      "reason": "Absent from current official Console endpoint and pricing tables and public models endpoint. Excluded from current offerings; permanent retirement and exact removal date are not established."
+    },
+    {
+      "model": "Qwen3.7 Plus",
+      "model_id": "qwen3.7-plus",
+      "deprecation_date": null,
+      "checked_at": "2026-10-24",
+      "source": "https://opencode.ai/v2/docs/console/models/",
+      "reason": "Absent from current official Console endpoint and pricing tables and public models endpoint. Excluded from current offerings; permanent retirement and exact removal date are not established."
+    },
+    {
+      "model": "Exo Free",
+      "model_id": "exo-free",
+      "deprecation_date": null,
+      "checked_at": "2026-10-24",
+      "source": "https://opencode.ai/v2/docs/console/models/",
+      "reason": "Absent from current official Console endpoint and pricing tables and public models endpoint. Excluded from current offerings; permanent retirement and exact removal date are not established."
+    },
+    {
+      "model": "MiMo-V2.5 Free",
+      "model_id": "mimo-v2.5-free",
+      "deprecation_date": null,
+      "checked_at": "2026-10-24",
+      "source": "https://opencode.ai/v2/docs/console/models/",
+      "reason": "Absent from current official Console endpoint and pricing tables and public models endpoint. Excluded from current offerings; permanent retirement and exact removal date are not established."
     }
   ],
   "billing": {

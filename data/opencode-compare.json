@@ -4684,13 +4684,6 @@
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
-    "go:Gemini 4 Argon Contributor": {
-      "catalog_id": "google/gemini-4-argon",
-      "status": "canonical",
-      "selection_id": "opencode-go/gemini-4-argon-contributor",
-      "evidence": "https://models.opencode.ai/api.json",
-      "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
-    },
     "go:Step 5 Preview": {
       "catalog_id": "stepfun/step-5-preview",
       "status": "canonical",
@@ -4761,26 +4754,12 @@
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
-    "console:exo-free": {
-      "catalog_id": null,
-      "status": "unmapped",
-      "selection_id": "opencode/exo-free",
-      "evidence": "https://models.opencode.ai/api.json",
-      "note": "공식 canonical ID 또는 유일한 정확한 이름 대응을 확인하지 못했습니다. 익명·불명확 모델은 추정하지 않습니다."
-    },
     "console:mimo-v2.6-flash-free": {
       "catalog_id": "xiaomi/mimo-v2.6-flash",
       "status": "canonical",
       "selection_id": "opencode/mimo-v2.6-flash-free",
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
-    },
-    "console:mimo-v2.5-free": {
-      "catalog_id": "xiaomi/mimo-v2.5",
-      "status": "exact_name",
-      "selection_id": "opencode/mimo-v2.5-free",
-      "evidence": "https://models.opencode.ai/api.json",
-      "note": "공개 offering 이름과 카탈로그 모델의 정확한 이름 대응. endpoint·체크포인트 동일성은 별도 미검증인 참고 평가입니다."
     },
     "console:nemotron-3-ultra-free": {
       "catalog_id": "nvidia/nemotron-3-ultra-550b-a55b",
@@ -4802,6 +4781,20 @@
       "selection_id": "opencode/nemotron-3.5-super-vl-free",
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
+    },
+    "go:Kimi K3.1 Pro": {
+      "catalog_id": null,
+      "status": "unmapped",
+      "selection_id": "opencode-go/kimi-k3.1-pro",
+      "evidence": "https://opencode.ai/v2/docs/console/go/",
+      "note": "New official Go offering; no verified mapping to this stored comparison catalog. Do not substitute Kimi K3."
+    },
+    "go:Gemini 4 Argon": {
+      "catalog_id": "google/gemini-4-argon",
+      "status": "exact_name",
+      "selection_id": "opencode-go/gemini-4-argon",
+      "evidence": "https://opencode.ai/v2/docs/console/go/",
+      "note": "현재 공식 Go 모델명과 저장된 카탈로그 이름의 정확 이름 대응. 원모델 참고 자료이며 Go endpoint/checkpoint/effort 실측 검증이 아닙니다. 기존 카탈로그 평가·수집 날짜는 보존합니다."
     }
   }
 }

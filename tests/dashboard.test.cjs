@@ -100,8 +100,34 @@ el('#offering').value='console-free';el('#no-training').checked=true;el('#zero-r
 assert.equal(run('filtered().length'),1);assert.equal(run('filtered()[0].model_id'),'deepseek-v4.1-flash-free');
 el('#privacy').value='High';assert.equal(run('filtered().length'),0);
 assert.equal(JSON.stringify(run('state.rows.map(m=>valueIndex(m))')),before);
-el('#reset').listeners.click();assert.equal(el('#no-training').checked,false);assert.equal(el('#zero-retention').checked,false);assert.equal(el('#offering').value,'go-free');assert.equal(run('filtered().length'),42);
+el('#reset').listeners.click();assert.equal(el('#no-training').checked,false);assert.equal(el('#zero-retention').checked,false);assert.equal(el('#offering').value,'go-free');assert.equal(run('filtered().length'),41);
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');assert.ok(html.includes('id="no-training" type="checkbox"'));assert.ok(html.includes('id="zero-retention" type="checkbox"'));assert.ok(html.includes('aria-describedby="privacy-filter-help"'));
 console.log('PASS: independent privacy filters/AND across all offerings, null/boolean/unknown/conditional false positives, inclusive expiry, free scope, risk/search intersection, reset and invariant Value cohort.');
+},0);
+
+
+
+setTimeout(()=>{const run=s=>vm.runInContext(s,sandbox);
+const g=go.models.find(m=>m.model==='Gemini 4 Argon'),u=usage.models[g.model];
+assert.ok(!go.models.some(m=>m.model==='Gemini 4 Argon Contributor'));
+assert.ok(!usage.models['Gemini 4 Argon Contributor']);
+assert.equal(g.model_id,'gemini-4-argon');assert.equal(g.selection_id,'opencode-go/gemini-4-argon');
+assert.equal(g.training,'No Training');assert.equal(g.retention,'0 days');
+assert.equal(u.monthly_usage_usd,30);assert.equal(u.promotional_monthly_usage_usd,undefined);
+assert.deepEqual([u.requests_5h,u.requests_week,u.requests_month],[220,540,1060]);
+assert.deepEqual([u.promotional_requests_5h,u.promotional_requests_week,u.promotional_requests_month],[440,1080,2120]);
+sandbox.gemini={...g,...u,offering:'go'};
+for(const [day,active,price,requests] of [['2026-11-30',true,2,2120],['2026-12-01',false,4,1060]]){
+ sandbox.Date=class extends Date {toISOString(){return day+'T12:00:00.000Z';}};
+ assert.equal(run('isPromotionActive(gemini)'),active);
+ assert.equal(run('activePrice(gemini,"input_price")'),price);
+ assert.equal(run('effectiveMonthlyUsage(gemini)'),30);
+ assert.equal(run('effectiveRequestsMonth(gemini)'),requests);
+ assert.equal(run('codingScore(gemini)'),null);assert.equal(run('valueIndex(gemini)'),null);
+ assert.equal(run('privacyEligibility(gemini).noTraining'),true);
+ assert.equal(run('privacyEligibility(gemini).zeroRetention'),true);
+}
+sandbox.Date=Date;
+console.log('PASS: Gemini rename/identity, separate price discount versus allowance, preserved base estimates, inclusive UTC expiry/fallback, privacy eligibility and no unverified Coding/Value.');
 },0);
 
