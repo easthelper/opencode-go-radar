@@ -3,6 +3,9 @@ const root=path.join(__dirname,'..');
 const read=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8'));
 const go=read('data/models.json'),usage=read('data/usage.json'),con=read('data/console.json');
 assert.equal(con.schema_version,1);
+assert.ok(!go.models.some(m=>m.model==='LongCat 2.5 Preview Free'));
+assert.ok(!con.models.some(m=>m.offering_id==='console:longcat-2.5-preview-free'));
+assert.ok(!Object.hasOwn(usage.models,'LongCat 2.5 Preview Free'));
 assert.equal(new Set(con.models.map(m=>m.offering_id)).size,con.models.length);
 for(const m of con.models){assert.equal(m.offering_id,'console:'+m.model_id);assert.equal(m.selection_id,'opencode/'+m.model_id);assert.ok(['console-free','console-payg'].includes(m.offering));assert.ok(!('monthly_usage_usd'in m));assert.ok(!('requests_month'in m));assert.ok(!('unlimited'in m));assert.ok(!con.excluded_models.some(x=>x.model_id===m.model_id));assert.ok(m.source.startsWith('https://opencode.ai/'));for(const k of ['input_price','output_price','cached_input'])assert.ok(m[k]===null||typeof m[k]==='number');}
 for(const name of Object.values(go.recommendations).filter(Boolean))assert.ok(go.models.some(m=>m.model===name));
@@ -100,7 +103,7 @@ el('#offering').value='console-free';el('#no-training').checked=true;el('#zero-r
 assert.equal(run('filtered().length'),1);assert.equal(run('filtered()[0].model_id'),'deepseek-v4.1-flash-free');
 el('#privacy').value='High';assert.equal(run('filtered().length'),0);
 assert.equal(JSON.stringify(run('state.rows.map(m=>valueIndex(m))')),before);
-el('#reset').listeners.click();assert.equal(el('#no-training').checked,false);assert.equal(el('#zero-retention').checked,false);assert.equal(el('#offering').value,'go-free');assert.equal(run('filtered().length'),41);
+el('#reset').listeners.click();assert.equal(el('#no-training').checked,false);assert.equal(el('#zero-retention').checked,false);assert.equal(el('#offering').value,'go-free');assert.equal(run('filtered().length'),39);
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');assert.ok(html.includes('id="no-training" type="checkbox"'));assert.ok(html.includes('id="zero-retention" type="checkbox"'));assert.ok(html.includes('aria-describedby="privacy-filter-help"'));
 console.log('PASS: independent privacy filters/AND across all offerings, null/boolean/unknown/conditional false positives, inclusive expiry, free scope, risk/search intersection, reset and invariant Value cohort.');
 },0);

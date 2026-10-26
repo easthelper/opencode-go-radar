@@ -4572,13 +4572,6 @@
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
-    "go:LongCat 2.5 Preview Free": {
-      "catalog_id": "meituan/longcat-2.5-preview",
-      "status": "canonical",
-      "selection_id": "opencode-go/longcat-2.5-preview-free",
-      "evidence": "https://models.opencode.ai/api.json",
-      "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
-    },
     "go:MiMo-V2.6-Flash": {
       "catalog_id": "xiaomi/mimo-v2.6-flash",
       "status": "canonical",
@@ -4746,13 +4739,6 @@
       "selection_id": "opencode/flint-40b-free",
       "evidence": "https://opencode.ai/v2/docs/console/models/",
       "note": "2026-10-22: Current Console offering verified; exact benchmark catalog mapping not verified. No previous LL Alpha identity or score is inherited."
-    },
-    "console:longcat-2.5-preview-free": {
-      "catalog_id": "meituan/longcat-2.5-preview",
-      "status": "canonical",
-      "selection_id": "opencode/longcat-2.5-preview-free",
-      "evidence": "https://models.opencode.ai/api.json",
-      "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
     "console:mimo-v2.6-flash-free": {
       "catalog_id": "xiaomi/mimo-v2.6-flash",

@@ -94,10 +94,7 @@
       "tokens_trillion": null,
       "change_pct": null,
       "daily_unique_users": 12000,
-      "candidate_offering_ids": [
-        "go:LongCat 2.5 Preview Free",
-        "console:longcat-2.5-preview-free"
-      ],
+      "candidate_offering_ids": [],
       "mapping_status": "family_reference_only",
       "mapping_note": "모델 계열 대응 후보이며 Free/Go 경로별 귀속 및 실제 checkpoint는 미확인. —는 이번 7일 토큰 상위 5 스냅샷에 없는 값이며 0이 아님."
     },

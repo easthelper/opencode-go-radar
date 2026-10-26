@@ -1,6 +1,6 @@
 const state = { rows: [], recommendations: {}, sortKey: 'coding_grade', sortDir: -1 };
 const DEFAULT_OFFERING = 'go-free';
-const LAST_CHECKED = '2026-10-24';
+const LAST_CHECKED = '2026-10-26';
 const $ = (s) => document.querySelector(s);
 // Coding is one named evaluation, not a synthetic cross-benchmark grade.
 const CODING_COHORT = 'aa-terminalbench-4.0-mini-swe';

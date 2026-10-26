@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-26",
   "schema_version": 1,
   "scope": "Official OpenCode Console (Zen) endpoint/pricing catalog only; arbitrary third-party provider catalogs excluded.",
   "sources": [
@@ -2927,50 +2927,6 @@
       ]
     },
     {
-      "offering_id": "console:longcat-2.5-preview-free",
-      "offering": "console-free",
-      "model": "LongCat 2.5 Preview Free",
-      "model_id": "longcat-2.5-preview-free",
-      "selection_id": "opencode/longcat-2.5-preview-free",
-      "endpoint": "https://opencode.ai/inference/openai/v1/chat/completions",
-      "developer": "Meituan",
-      "provider": "Undisclosed",
-      "input_price": 0,
-      "output_price": 0,
-      "cached_input": 0,
-      "cached_write": null,
-      "context": "Unknown",
-      "reasoning": null,
-      "benchmark": "N/A",
-      "training": "No Training",
-      "retention": "0 days",
-      "hosting": "US / EU (Console-wide official policy; exact region undisclosed)",
-      "china_transfer": "No evidence",
-      "coding_grade": "N/A",
-      "value_grade": "N/A",
-      "privacy_risk": "Medium",
-      "positioning": [],
-      "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-23",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings.",
-      "limits": "Not disclosed; free does not establish unlimited usage. The current official pages do not state a numeric free-model request limit; the previous 200 requests/day claim is not currently substantiated. This does not establish unlimited usage or the date of a policy change. This is separate from Go free/unlimited promotional allowances.",
-      "promotion": "Limited-time free; end date unknown",
-      "promotion_end": null,
-      "price_tiers": [
-        {
-          "label": "LongCat 2.5 Preview Free",
-          "input_price": 0,
-          "output_price": 0,
-          "cached_input": 0,
-          "cached_write": null
-        }
-      ],
-      "sources": [
-        "https://opencode.ai/v2/docs/console/models/",
-        "https://opencode.ai/go"
-      ]
-    },
-    {
       "offering_id": "console:mimo-v2.6-flash-free",
       "offering": "console-free",
       "model": "MiMo-V2.6-Flash Free",
@@ -3349,6 +3305,14 @@
       "model_id": "mimo-v2.5-free",
       "deprecation_date": null,
       "checked_at": "2026-10-24",
+      "source": "https://opencode.ai/v2/docs/console/models/",
+      "reason": "Absent from current official Console endpoint and pricing tables and public models endpoint. Excluded from current offerings; permanent retirement and exact removal date are not established."
+    },
+    {
+      "model": "LongCat 2.5 Preview Free",
+      "model_id": "longcat-2.5-preview-free",
+      "deprecation_date": null,
+      "checked_at": "2026-10-26",
       "source": "https://opencode.ai/v2/docs/console/models/",
       "reason": "Absent from current official Console endpoint and pricing tables and public models endpoint. Excluded from current offerings; permanent retirement and exact removal date are not established."
     }

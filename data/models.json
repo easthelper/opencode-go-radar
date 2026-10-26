@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-26",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -720,50 +720,6 @@
         "harness": "mini-swe-agent",
         "metric": "pass@1 averaged over 3 repeats",
         "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음."
-      }
-    },
-    {
-      "model": "LongCat 2.5 Preview Free",
-      "developer": "Meituan",
-      "provider": "Unknown (Go upstream routing undisclosed)",
-      "input_price": 0,
-      "output_price": 0,
-      "cached_input": 0,
-      "context": "1,048,576 (native model)",
-      "reasoning": true,
-      "benchmark": "N/A",
-      "training": "No Training",
-      "retention": "0 days",
-      "chinese_model": true,
-      "hosting": "Unknown (Go hosting region undisclosed)",
-      "china_transfer": "Unknown",
-      "coding_grade": "N/A",
-      "value_grade": "N/A",
-      "privacy_risk": "Medium",
-      "positioning": [],
-      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Native docs disagree on max output: parameter reference 256K vs quickstart 128K; Go cap unconfirmed. Go currently confirms limited-time free usage with unlimited requests; no end date published. This does not apply to the separate Console offering.",
-      "sources": [
-        "https://opencode.ai/v2/docs/console/go/#privacy",
-        "https://longcat.ai/platform/docs/api/model-params"
-      ],
-      "reasoning_effort": "thinking enabled (default) / disabled; native API",
-      "capability_source": "https://longcat.ai/platform/docs/api/model-params",
-      "price_tiers": [
-        {
-          "label": "LongCat 2.5 Preview Free",
-          "input_price": 0,
-          "output_price": 0,
-          "cached_input": 0,
-          "cached_write": null
-        }
-      ],
-      "source": "https://opencode.ai/v2/docs/console/go/",
-      "checked_at": "2026-10-18",
-      "cached_write": null,
-      "coding_evaluation": {
-        "status": "unavailable",
-        "reason": "같은 원모델의 AA Terminal-Bench 4.0 결과를 확인하지 못했습니다. 기존 개발사 벤치마크는 별도로 참고하세요.",
-        "checked_at": "2026-10-19"
       }
     },
     {
