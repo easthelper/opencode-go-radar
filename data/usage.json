@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-26",
+  "as_of": "2026-10-31",
   "subscription_usd_per_month": 10,
   "limit_policy": {
     "five_hour_fraction": 0.2,
@@ -130,10 +130,10 @@
       "requests_month": 21600
     },
     "DeepSeek V4.1 Flash": {
-      "monthly_usage_usd": 80,
-      "requests_5h": 34670,
-      "requests_week": 86670,
-      "requests_month": 173330
+      "monthly_usage_usd": 100,
+      "requests_5h": 43330,
+      "requests_week": 108330,
+      "requests_month": 216670
     },
     "DeepSeek V4 Pro": {
       "monthly_usage_usd": 15,
