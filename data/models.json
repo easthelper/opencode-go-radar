@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-27",
+  "as_of": "2026-11-02",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -1380,7 +1380,7 @@
       "reasoning_effort": "1–100 (card); max benchmark=100",
       "benchmark": "TB2.1 90.6 DSH Minimal; DeepSWE v1.1 74.2 mini-SWE; OpenCode scaffold 85.0 TB2.1 and 65.5 DeepSWE (all DeepSeek-reported)",
       "training": "No Training",
-      "retention": "0 days (ZDR valid through 2026-10-31)",
+      "retention": "0 days (ZDR valid through 2026-11-30)",
       "chinese_model": true,
       "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
@@ -1391,7 +1391,7 @@
         "성능 우선",
         "가성비 우선"
       ],
-      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Native API deepseek-flash now V4.1-Flash-1017 per https://api-docs.deepseek.com/ ; no proof Go same checkpoint. Go zero-retention agreement is valid through October31,2026 and renewed monthly. Go DeepSeek ZDR agreement is currently valid through 2026-10-31. Peak pricing applies Monday–Friday 01:00–04:00 and 06:00–10:00 UTC; all other times, including weekends, are off-peak. Go checkpoint is unconfirmed. Official Go workspace privacy settings govern access: the owner or admin must allow Global under Settings > Privacy > Regions for this restricted model. This access setting does not establish the upstream hosting or processing region.",
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Native API deepseek-flash now V4.1-Flash-1017 per https://api-docs.deepseek.com/ ; no proof Go same checkpoint. Go zero-retention agreement is valid through November 30, 2026 and renewed monthly. Go DeepSeek ZDR agreement is currently valid through 2026-11-30. Peak pricing applies Monday–Friday 01:00–04:00 and 06:00–10:00 UTC; all other times, including weekends, are off-peak. Go checkpoint is unconfirmed. Official Go workspace privacy settings govern access: the owner or admin must allow Global under Settings > Privacy > Regions for this restricted model. This access setting does not establish the upstream hosting or processing region.",
       "sources": [
         "https://opencode.ai/v2/docs/console/go/#privacy",
         "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
@@ -1414,7 +1414,7 @@
         }
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
-      "checked_at": "2026-10-27",
+      "checked_at": "2026-11-02",
       "cached_write": null,
       "coding_evaluation": {
         "status": "checkpoint_unconfirmed",
@@ -1443,7 +1443,7 @@
       "reasoning": true,
       "benchmark": "SWE-bench Verified 80.6 / Terminal-Bench 2.0 67.9 (DeepSeek original V4-Pro card, max effort); TB2.1 87.9 is later V4.1-Flash comparison-table result, checkpoint/scaffold not established for Go",
       "training": "No Training",
-      "retention": "0 days (ZDR valid through 2026-10-31)",
+      "retention": "0 days (ZDR valid through 2026-11-30)",
       "chinese_model": true,
       "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
@@ -1454,7 +1454,7 @@
         "성능 우선",
         "가성비 우선"
       ],
-      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Original card SWE-bench Verified 80.6 and TB2.0 67.9 are one release/evaluation. Z.ai GLM-5.3 comparison identifies TB2.1 87.9 as DeepSeek-V4-Pro-0813. Do not mix these as a single Go checkpoint; Go checkpoint and region are undisclosed. Go zero-retention agreement is valid through October31,2026 and renewed monthly. Go DeepSeek ZDR agreement is currently valid through 2026-10-31. Peak pricing applies Monday–Friday 01:00–04:00 and 06:00–10:00 UTC; all other times, including weekends, are off-peak. Go checkpoint is unconfirmed. Official Go workspace privacy settings govern access: the owner or admin must allow Global under Settings > Privacy > Regions for this restricted model. This access setting does not establish the upstream hosting or processing region.",
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Original card SWE-bench Verified 80.6 and TB2.0 67.9 are one release/evaluation. Z.ai GLM-5.3 comparison identifies TB2.1 87.9 as DeepSeek-V4-Pro-0813. Do not mix these as a single Go checkpoint; Go checkpoint and region are undisclosed. Go zero-retention agreement is valid through November 30, 2026 and renewed monthly. Go DeepSeek ZDR agreement is currently valid through 2026-11-30. Peak pricing applies Monday–Friday 01:00–04:00 and 06:00–10:00 UTC; all other times, including weekends, are off-peak. Go checkpoint is unconfirmed. Official Go workspace privacy settings govern access: the owner or admin must allow Global under Settings > Privacy > Regions for this restricted model. This access setting does not establish the upstream hosting or processing region.",
       "sources": [
         "https://opencode.ai/v2/docs/console/go/#privacy",
         "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
@@ -1477,7 +1477,7 @@
         }
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
-      "checked_at": "2026-10-27",
+      "checked_at": "2026-11-02",
       "cached_write": null,
       "coding_evaluation": {
         "status": "unavailable",
@@ -1986,4 +1986,3 @@
     }
   }
 }
-
