@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-04",
+  "as_of": "2026-11-05",
   "schema_version": 1,
   "scope": "Official OpenCode Console (Zen) endpoint/pricing catalog only; arbitrary third-party provider catalogs excluded.",
   "sources": [
@@ -3232,6 +3232,50 @@
       ],
       "offering": "console-free",
       "offering_id": "console:pulse-alpha-free"
+    },
+    {
+      "model": "Crouton Alpha Free",
+      "model_id": "crouton-alpha-free",
+      "selection_id": "opencode/crouton-alpha-free",
+      "endpoint": "https://opencode.ai/inference/openai/v1/chat/completions",
+      "developer": "Unknown",
+      "provider": "Undisclosed",
+      "input_price": 0,
+      "output_price": 0,
+      "cached_input": 0,
+      "cached_write": null,
+      "context": "1M (Console models endpoint: 1,048,576 context, 270,000 output)",
+      "reasoning": true,
+      "benchmark": "N/A",
+      "training": "No Training",
+      "retention": "30 days (free period)",
+      "hosting": "US / EU (Console-wide official policy; exact region undisclosed)",
+      "china_transfer": "No evidence",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [],
+      "source": "https://opencode.ai/v2/docs/console/models/",
+      "checked_at": "2026-11-05",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Promoted from API-only to an active offering on 2026-11-05: the official Console endpoint table, pricing table, free-model section and privacy section now all list Crouton Alpha Free, and the live Console models endpoint still returns crouton-alpha-free (stealth reasoning model, release 2026-11-03, text/image/video/PDF input, context 1,048,576, output 270,000, cost 0). Official privacy: during its free period, collected data is retained for 30 days and is not used for model training. Developer, reasoning quality and benchmarks are not published, so it is excluded from Coding/Value rather than scored low.",
+      "limits": "Not disclosed; free does not establish unlimited usage. The official Go landing FAQ states free models have a daily request limit, but no numeric Console limit is published, so no number is recorded. Region restrictions: unavailable in the European Union, Afghanistan, Belarus, China (including Hong Kong and Macau), Cambodia, Cuba, Eritrea, Ethiopia, Haiti, Iran, Iraq, Libya, Myanmar, Nicaragua, North Korea, Pakistan, Russia, Somalia, Syria, Venezuela, Western Sahara, and some regions within otherwise supported countries. Free-tier chat models require OpenCode. This is separate from Go free/unlimited promotional allowances.",
+      "promotion": "Limited-time free; end date unknown",
+      "promotion_end": null,
+      "price_tiers": [
+        {
+          "label": "Crouton Alpha Free",
+          "input_price": 0,
+          "output_price": 0,
+          "cached_input": 0,
+          "cached_write": null
+        }
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/inference/v1/models"
+      ],
+      "offering": "console-free",
+      "offering_id": "console:crouton-alpha-free"
     }
   ],
   "excluded_models": [
@@ -3367,14 +3411,6 @@
       "checked_at": "2026-11-04",
       "source": "https://opencode.ai/v2/docs/console/models/#deprecated-models",
       "reason": "Explicitly listed in the official Console deprecated-models table with deprecation date October 26, 2026. Absent from the current Console endpoint and pricing tables; excluded from active offerings."
-    },
-    {
-      "model": "Crouton Alpha Free",
-      "model_id": "crouton-alpha-free",
-      "deprecation_date": null,
-      "checked_at": "2026-11-04",
-      "source": "https://opencode.ai/inference/v1/models",
-      "reason": "Returned by the public Console models endpoint on 2026-11-04 KST (stealth, cost 0, context 1048576, release_date 2026-11-03) but absent from the official Console endpoint, pricing, free-model and privacy sections; not added as an active offering until documentation states availability, free-tier limits and data terms. Not marked deprecated."
     }
   ],
   "billing": {
