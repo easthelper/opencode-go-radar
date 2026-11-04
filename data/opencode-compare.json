@@ -4781,6 +4781,20 @@
       "selection_id": "opencode-go/gemini-4-argon",
       "evidence": "https://opencode.ai/v2/docs/console/go/",
       "note": "현재 공식 Go 모델명과 저장된 카탈로그 이름의 정확 이름 대응. 원모델 참고 자료이며 Go endpoint/checkpoint/effort 실측 검증이 아닙니다. 기존 카탈로그 평가·수집 날짜는 보존합니다."
+    },
+    "go:Iceman Contributor Free": {
+      "catalog_id": null,
+      "status": "unmapped",
+      "selection_id": "opencode-go/iceman-contributor-free",
+      "evidence": "https://models.opencode.ai/api.json",
+      "note": "공식 canonical ID 또는 유일한 정확한 이름 대응을 확인하지 못했습니다. 익명·불명확 모델은 추정하지 않습니다."
+    },
+    "console:pulse-alpha-free": {
+      "catalog_id": null,
+      "status": "unmapped",
+      "selection_id": "opencode/pulse-alpha-free",
+      "evidence": "https://models.opencode.ai/api.json",
+      "note": "공식 canonical ID 또는 유일한 정확한 이름 대응을 확인하지 못했습니다. 익명·불명확 모델은 추정하지 않습니다."
     }
   }
 }

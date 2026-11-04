@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-02",
+  "as_of": "2026-11-04",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -1040,10 +1040,17 @@
       "benchmark_source": "https://www.minimax.io/blog/minimax-m3",
       "price_tiers": [
         {
-          "label": "MiniMax M3",
+          "label": "MiniMax M3 (≤ 512K tokens)",
           "input_price": 0.3,
           "output_price": 1.2,
           "cached_input": 0.06,
+          "cached_write": null
+        },
+        {
+          "label": "MiniMax M3 (> 512K tokens)",
+          "input_price": 0.6,
+          "output_price": 2.4,
+          "cached_input": 0.12,
           "cached_write": null
         }
       ],
@@ -1856,6 +1863,52 @@
         "checked_at": "2026-10-21"
       },
       "benchmark_source": "https://artificialanalysis.ai/models/reflection-beam"
+    },
+    {
+      "model": "Iceman Contributor Free",
+      "model_id": "iceman-contributor-free",
+      "selection_id": "opencode-go/iceman-contributor-free",
+      "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "developer": "Unknown",
+      "provider": "Unknown (Go upstream routing undisclosed)",
+      "input_price": 0,
+      "output_price": 0,
+      "cached_input": 0,
+      "context": "Unknown",
+      "reasoning": null,
+      "benchmark": "N/A",
+      "training": "May Train",
+      "retention": "Not ZDR",
+      "chinese_model": null,
+      "hosting": "Unknown (Go hosting region undisclosed)",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "High",
+      "positioning": [],
+      "notes": "Added on 2026-11-04 after the official Go model list, Go/Go Plus/Go Teams price tables, estimated-request tables, endpoint table, privacy table and the live Go models endpoint all listed iceman-contributor-free. Official Go tables: free input, output and cached read; unlimited requests for a limited time; training Yes (free access is offered in exchange for permission to use prompts and completions to improve the model); retention Not ZDR. Developer, provider, context, reasoning, benchmark, hosting, data region and promotion end date are not published. Free is not treated as unlimited usage and this row is excluded from Coding/Value.",
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://opencode.ai/v2/docs/console/go/#usage-limits",
+        "https://opencode.ai/inference/go/v1/models"
+      ],
+      "price_tiers": [
+        {
+          "label": "Iceman Contributor Free",
+          "input_price": 0,
+          "output_price": 0,
+          "cached_input": 0,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-11-04",
+      "cached_write": null,
+      "coding_evaluation": {
+        "status": "unavailable",
+        "reason": "개발사, 원모델 checkpoint, effort가 공개되지 않아 AA Terminal-Bench 4.0 대응을 확인할 수 없습니다. Coding/Value 계산에서 제외합니다.",
+        "checked_at": "2026-11-04"
+      }
     },
     {
       "model": "MiniMax M3.1 Flash",
