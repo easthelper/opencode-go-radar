@@ -3367,6 +3367,14 @@
       "checked_at": "2026-11-04",
       "source": "https://opencode.ai/v2/docs/console/models/#deprecated-models",
       "reason": "Explicitly listed in the official Console deprecated-models table with deprecation date October 26, 2026. Absent from the current Console endpoint and pricing tables; excluded from active offerings."
+    },
+    {
+      "model": "Crouton Alpha Free",
+      "model_id": "crouton-alpha-free",
+      "deprecation_date": null,
+      "checked_at": "2026-11-04",
+      "source": "https://opencode.ai/inference/v1/models",
+      "reason": "Returned by the public Console models endpoint on 2026-11-04 KST (stealth, cost 0, context 1048576, release_date 2026-11-03) but absent from the official Console endpoint, pricing, free-model and privacy sections; not added as an active offering until documentation states availability, free-tier limits and data terms. Not marked deprecated."
     }
   ],
   "billing": {

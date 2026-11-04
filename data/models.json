@@ -904,7 +904,7 @@
         "https://opencode.ai/v2/docs/console/go/#privacy",
         "https://mimo.mi.com/models/en-US/mimo-v2.5"
       ],
-      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.  Earlier numeric coding benchmark not reverified; omitted pending primary evidence.",
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.  Earlier numeric coding benchmark not reverified; omitted pending primary evidence. The public Go models endpoint did not return mimo-v2.5 during the 2026-11-04 KST check while the official Go price, endpoint, request-estimate and privacy tables still list it; kept active on documentation evidence, serving availability unconfirmed.",
       "capability_source": "https://mimo.mi.com/models/en-US/mimo-v2.5",
       "price_tiers": [
         {
@@ -957,7 +957,7 @@
         "https://opencode.ai/v2/docs/console/go/#privacy",
         "https://mimo.mi.com/models/en-US/mimo-v2.5-pro"
       ],
-      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.  Earlier numeric coding benchmark not reverified; omitted pending primary evidence.",
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.  Earlier numeric coding benchmark not reverified; omitted pending primary evidence. The public Go models endpoint did not return mimo-v2.5-pro during the 2026-11-04 KST check while the official Go price, endpoint, request-estimate and privacy tables still list it; kept active on documentation evidence, serving availability unconfirmed.",
       "capability_source": "https://mimo.mi.com/models/en-US/mimo-v2.5-pro",
       "price_tiers": [
         {
