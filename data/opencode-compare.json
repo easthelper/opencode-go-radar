@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-20T04:53:29Z",
+  "checked_at": "2026-11-05T23:06:33Z",
   "source_commit": "40cdf4fbdd9d60316f339113e7f9c9a121aece4a",
   "sources": {
     "catalog": "https://models.opencode.ai/catalog.json",
@@ -10,10 +10,10 @@
     "normalization": "https://github.com/anomalyco/opencode/blob/40cdf4fbdd9d60316f339113e7f9c9a121aece4a/packages/stats/app/src/routes/model-catalog.ts"
   },
   "input_sha256": {
-    "catalog": "0dbd22061fc4c50d0fef1c1fa663a8ec8ac35a1486defde9f2377fb74817f029",
-    "pricing": "e7d51dd21b9132ca4779d2d1d2170b5bb5059b6f09c5bf2a5359244170894390"
+    "catalog": "e6d947dd8e33312ebfa952f1b093cf3fc69c66248a9d3afbf2866eaabe80bc9f",
+    "pricing": "151c04bd9718dcc1da544a34db350f97b98e3f279c00bf24ad787a885eac9f57"
   },
-  "population": 555,
+  "population": 608,
   "axis_keys": [
     "reasoning",
     "coding",
@@ -49,14 +49,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 27.157895,
-          "source_value": 27.157895,
+          "value": 25.454545,
+          "source_value": 25.454545,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 74.00722,
-          "source_value": 74.00722,
+          "value": 74.46458,
+          "source_value": 74.46458,
           "status": "specification",
           "fallback": null
         },
@@ -146,23 +146,7 @@
       "catalog_cost": {
         "input": 2,
         "output": 6,
-        "cache_read": 0.5,
-        "tiers": [
-          {
-            "input": 4,
-            "output": 12,
-            "cache_read": 1,
-            "tier": {
-              "type": "context",
-              "size": 200000
-            }
-          }
-        ],
-        "context_over_200k": {
-          "input": 4,
-          "output": 12,
-          "cache_read": 1
-        }
+        "cache_read": 0.5
       }
     },
     "openai/gpt-6-luna": {
@@ -183,14 +167,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 73.894737,
-          "source_value": 73.894737,
+          "value": 71.010101,
+          "source_value": 71.010101,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 98.01444,
-          "source_value": 98.01444,
+          "value": 98.105437,
+          "source_value": 98.105437,
           "status": "specification",
           "fallback": null
         },
@@ -221,7 +205,26 @@
       "catalog_cost": {
         "input": 0.1,
         "output": 0.5,
-        "cache_read": 0.01
+        "cache_read": 0.01,
+        "cache_write": 0.125,
+        "tiers": [
+          {
+            "input": 0.2,
+            "output": 0.75,
+            "cache_read": 0.02,
+            "cache_write": 0.25,
+            "tier": {
+              "type": "context",
+              "size": 272000
+            }
+          }
+        ],
+        "context_over_200k": {
+          "input": 0.2,
+          "output": 0.75,
+          "cache_read": 0.02,
+          "cache_write": 0.25
+        }
       }
     },
     "openai/gpt-5.6-luna": {
@@ -242,14 +245,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 60.947368,
-          "source_value": 60.947368,
+          "value": 57.878788,
+          "source_value": 57.878788,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 98.01444,
-          "source_value": 98.01444,
+          "value": 98.105437,
+          "source_value": 98.105437,
           "status": "specification",
           "fallback": null
         },
@@ -365,7 +368,26 @@
       "catalog_cost": {
         "input": 0.2,
         "output": 1.2,
-        "cache_read": 0.02
+        "cache_read": 0.02,
+        "cache_write": 0.25,
+        "tiers": [
+          {
+            "input": 0.4,
+            "output": 1.8,
+            "cache_read": 0.04,
+            "cache_write": 0.5,
+            "tier": {
+              "type": "context",
+              "size": 272000
+            }
+          }
+        ],
+        "context_over_200k": {
+          "input": 0.4,
+          "output": 1.8,
+          "cache_read": 0.04,
+          "cache_write": 0.5
+        }
       }
     },
     "zhipuai/glm-5.3-flash": {
@@ -386,14 +408,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 74.736842,
-          "source_value": 74.736842,
+          "value": 72.121212,
+          "source_value": 72.121212,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 81.046931,
-          "source_value": 81.046931,
+          "value": 81.21911,
+          "source_value": 81.21911,
           "status": "specification",
           "fallback": null
         },
@@ -486,14 +508,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 31.894737,
-          "source_value": 31.894737,
+          "value": 31.212121,
+          "source_value": 31.212121,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 81.046931,
-          "source_value": 81.046931,
+          "value": 81.21911,
+          "source_value": 81.21911,
           "status": "specification",
           "fallback": null
         },
@@ -675,14 +697,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 31.894737,
-          "source_value": 31.894737,
+          "value": 31.212121,
+          "source_value": 31.212121,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 81.046931,
-          "source_value": 81.046931,
+          "value": 81.21911,
+          "source_value": 81.21911,
           "status": "specification",
           "fallback": null
         },
@@ -870,14 +892,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 11.894737,
-          "source_value": 11.894737,
+          "value": 10.0,
+          "source_value": 10.0,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 92.418773,
-          "source_value": 92.418773,
+          "value": 92.339374,
+          "source_value": 92.339374,
           "status": "specification",
           "fallback": null
         },
@@ -1014,7 +1036,8 @@
       ],
       "catalog_cost": {
         "input": 3,
-        "output": 15
+        "output": 15,
+        "cache_read": 0.3
       }
     },
     "moonshotai/kimi-k2.7-code": {
@@ -1035,14 +1058,14 @@
           "fallback": "No data; neutral placeholder"
         },
         "cost": {
-          "value": 33.894737,
-          "source_value": 33.894737,
+          "value": 32.626263,
+          "source_value": 32.626263,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 62.815884,
-          "source_value": 62.815884,
+          "value": 63.097199,
+          "source_value": 63.097199,
           "status": "specification",
           "fallback": null
         },
@@ -1109,7 +1132,7 @@
       "catalog_cost": {
         "input": 0.95,
         "output": 4,
-        "cache_read": 0.16
+        "cache_read": 0.19
       }
     },
     "meituan/longcat-2.0": {
@@ -1130,14 +1153,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 39.473684,
-          "source_value": 39.473684,
+          "value": 55.858586,
+          "source_value": 55.858586,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 81.046931,
-          "source_value": 81.046931,
+          "value": 81.21911,
+          "source_value": 81.21911,
           "status": "specification",
           "fallback": null
         },
@@ -1207,55 +1230,6 @@
         }
       ],
       "catalog_cost": {
-        "input": 0.75,
-        "output": 3,
-        "cache_read": 0.015
-      }
-    },
-    "meituan/longcat-2.5-preview": {
-      "id": "meituan/longcat-2.5-preview",
-      "name": "LongCat-2.5-Preview",
-      "source_url": "https://opencode.ai/ko/data/meituan/longcat-2-5-preview",
-      "axes": {
-        "reasoning": {
-          "value": null,
-          "source_value": 50,
-          "status": "support_only",
-          "fallback": "Supported; no comparable benchmark"
-        },
-        "coding": {
-          "value": null,
-          "source_value": 50,
-          "status": "missing",
-          "fallback": "No data; neutral placeholder"
-        },
-        "cost": {
-          "value": 58.526316,
-          "source_value": 58.526316,
-          "status": "price",
-          "fallback": null
-        },
-        "context": {
-          "value": 81.046931,
-          "source_value": 81.046931,
-          "status": "specification",
-          "fallback": null
-        },
-        "multimodal": {
-          "value": 33.333333,
-          "source_value": 33.333333,
-          "status": "specification",
-          "fallback": null
-        },
-        "tool": {
-          "value": null,
-          "source_value": 50,
-          "status": "support_only",
-          "fallback": "Supported; no comparable benchmark"
-        }
-      },
-      "benchmarks": [],
-      "catalog_cost": {
         "input": 0.3,
         "output": 1.2,
         "cache_read": 0.006
@@ -1279,14 +1253,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 76.631579,
-          "source_value": 76.631579,
+          "value": 75.858586,
+          "source_value": 75.858586,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 92.418773,
-          "source_value": 92.418773,
+          "value": 92.339374,
+          "source_value": 92.339374,
           "status": "specification",
           "fallback": null
         },
@@ -1406,10 +1380,9 @@
         }
       ],
       "catalog_cost": {
-        "input": 0.16,
-        "output": 0.32,
-        "cache_read": 0.004,
-        "cache_write": 0.16
+        "input": 0.14,
+        "output": 0.28,
+        "cache_read": 0.0028
       }
     },
     "xiaomi/mimo-v2.6-pro": {
@@ -1430,14 +1403,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 60.421053,
-          "source_value": 60.421053,
+          "value": 59.292929,
+          "source_value": 59.292929,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 92.418773,
-          "source_value": 92.418773,
+          "value": 92.339374,
+          "source_value": 92.339374,
           "status": "specification",
           "fallback": null
         },
@@ -1581,10 +1554,9 @@
         }
       ],
       "catalog_cost": {
-        "input": 0.47,
-        "output": 0.94,
-        "cache_read": 0.005,
-        "cache_write": 0.47
+        "input": 0.43,
+        "output": 0.87,
+        "cache_read": 0.0036
       }
     },
     "xiaomi/mimo-v2.5": {
@@ -1605,14 +1577,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 48.421053,
-          "source_value": 48.421053,
+          "value": 75.858586,
+          "source_value": 75.858586,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 92.418773,
-          "source_value": 92.418773,
+          "value": 92.339374,
+          "source_value": 92.339374,
           "status": "specification",
           "fallback": null
         },
@@ -1708,10 +1680,9 @@
         }
       ],
       "catalog_cost": {
-        "input": 0.4,
-        "output": 2,
-        "cache_read": 0.08,
-        "cache_write": 0
+        "input": 0.14,
+        "output": 0.28,
+        "cache_read": 0.0028
       }
     },
     "xiaomi/mimo-v2.5-pro": {
@@ -1732,14 +1703,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 60.421053,
-          "source_value": 60.421053,
+          "value": 58.787879,
+          "source_value": 58.787879,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 92.418773,
-          "source_value": 92.418773,
+          "value": 92.339374,
+          "source_value": 92.339374,
           "status": "specification",
           "fallback": null
         },
@@ -1889,10 +1860,9 @@
         }
       ],
       "catalog_cost": {
-        "input": 0.47,
-        "output": 0.94,
-        "cache_read": 0.005,
-        "cache_write": 0.47
+        "input": 0.435,
+        "output": 0.87,
+        "cache_read": 0.0036
       }
     },
     "minimax/MiniMax-M3": {
@@ -1913,14 +1883,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 58.526316,
-          "source_value": 58.526316,
+          "value": 55.858586,
+          "source_value": 55.858586,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 92.418773,
-          "source_value": 92.418773,
+          "value": 92.339374,
+          "source_value": 92.339374,
           "status": "specification",
           "fallback": null
         },
@@ -1987,23 +1957,7 @@
       "catalog_cost": {
         "input": 0.3,
         "output": 1.2,
-        "cache_read": 0.06,
-        "tiers": [
-          {
-            "input": 0.6,
-            "output": 2.4,
-            "cache_read": 0.12,
-            "tier": {
-              "type": "context",
-              "size": 512000
-            }
-          }
-        ],
-        "context_over_200k": {
-          "input": 0.6,
-          "output": 2.4,
-          "cache_read": 0.12
-        }
+        "cache_read": 0.06
       }
     },
     "meta/muse-spark-1.3": {
@@ -2024,14 +1978,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 31.052632,
-          "source_value": 31.052632,
+          "value": 30.40404,
+          "source_value": 30.40404,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 92.418773,
-          "source_value": 92.418773,
+          "value": 92.339374,
+          "source_value": 92.339374,
           "status": "specification",
           "fallback": null
         },
@@ -2191,14 +2145,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 31.052632,
-          "source_value": 31.052632,
+          "value": 30.40404,
+          "source_value": 30.40404,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 92.418773,
-          "source_value": 92.418773,
+          "value": 92.339374,
+          "source_value": 92.339374,
           "status": "specification",
           "fallback": null
         },
@@ -2377,14 +2331,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 27.157895,
-          "source_value": 27.157895,
+          "value": 25.454545,
+          "source_value": 25.454545,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 81.046931,
-          "source_value": 81.046931,
+          "value": 81.21911,
+          "source_value": 81.21911,
           "status": "specification",
           "fallback": null
         },
@@ -2633,7 +2587,8 @@
       "catalog_cost": {
         "input": 2,
         "output": 6,
-        "cache_read": 0.25
+        "cache_read": 0.25,
+        "cache_write": 2.5
       }
     },
     "alibaba/qwen3.8-flash": {
@@ -2654,14 +2609,14 @@
           "fallback": "No data; neutral placeholder"
         },
         "cost": {
-          "value": 73.157895,
-          "source_value": 73.157895,
+          "value": 70.40404,
+          "source_value": 70.40404,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 81.046931,
-          "source_value": 81.046931,
+          "value": 81.21911,
+          "source_value": 81.21911,
           "status": "specification",
           "fallback": null
         },
@@ -2704,14 +2659,14 @@
           "fallback": "No data; neutral placeholder"
         },
         "cost": {
-          "value": 52.631579,
-          "source_value": 52.631579,
+          "value": 50.808081,
+          "source_value": 50.808081,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 81.046931,
-          "source_value": 81.046931,
+          "value": 81.21911,
+          "source_value": 81.21911,
           "status": "specification",
           "fallback": null
         },
@@ -2733,25 +2688,7 @@
         "input": 0.4,
         "output": 1.6,
         "cache_read": 0.08,
-        "cache_write": 0.5,
-        "tiers": [
-          {
-            "input": 1.2,
-            "output": 4.8,
-            "cache_read": 0.24,
-            "cache_write": 1.5,
-            "tier": {
-              "type": "context",
-              "size": 256000
-            }
-          }
-        ],
-        "context_over_200k": {
-          "input": 1.2,
-          "output": 4.8,
-          "cache_read": 0.24,
-          "cache_write": 1.5
-        }
+        "cache_write": 0.5
       }
     },
     "deepseek/deepseek-v4.1-flash": {
@@ -2772,14 +2709,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 58.526316,
-          "source_value": 58.526316,
+          "value": 71.515152,
+          "source_value": 71.515152,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 81.046931,
-          "source_value": 81.046931,
+          "value": 81.21911,
+          "source_value": 81.21911,
           "status": "specification",
           "fallback": null
         },
@@ -3082,10 +3019,9 @@
         }
       ],
       "catalog_cost": {
-        "input": 0.3,
-        "output": 1.2,
-        "cache_read": 0.03,
-        "cache_write": 0.3
+        "input": 0.14,
+        "output": 0.42,
+        "cache_read": 0.0042
       }
     },
     "deepseek/deepseek-v4-pro": {
@@ -3106,14 +3042,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 46.526316,
-          "source_value": 46.526316,
+          "value": 41.212121,
+          "source_value": 41.212121,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 81.046931,
-          "source_value": 81.046931,
+          "value": 81.21911,
+          "source_value": 81.21911,
           "status": "specification",
           "fallback": null
         },
@@ -3325,10 +3261,58 @@
         }
       ],
       "catalog_cost": {
-        "input": 0.66,
-        "output": 1.98,
-        "reasoning": 1.98,
-        "cache_read": 0.022
+        "input": 1.044,
+        "output": 2.088,
+        "cache_read": 0.2088
+      }
+    },
+    "tencent/hy4": {
+      "id": "tencent/hy4",
+      "name": "Hy4",
+      "source_url": "https://opencode.ai/ko/data/tencent/hy4",
+      "axes": {
+        "reasoning": {
+          "value": null,
+          "source_value": 50,
+          "status": "support_only",
+          "fallback": "Supported; no comparable benchmark"
+        },
+        "coding": {
+          "value": null,
+          "source_value": 50,
+          "status": "missing",
+          "fallback": "No data; neutral placeholder"
+        },
+        "cost": {
+          "value": 54.545455,
+          "source_value": 54.545455,
+          "status": "price",
+          "fallback": null
+        },
+        "context": {
+          "value": 92.339374,
+          "source_value": 92.339374,
+          "status": "specification",
+          "fallback": null
+        },
+        "multimodal": {
+          "value": 33.333333,
+          "source_value": 33.333333,
+          "status": "specification",
+          "fallback": null
+        },
+        "tool": {
+          "value": null,
+          "source_value": 50,
+          "status": "support_only",
+          "fallback": "Supported; no comparable benchmark"
+        }
+      },
+      "benchmarks": [],
+      "catalog_cost": {
+        "input": 0.417,
+        "output": 1.2505,
+        "cache_read": 0.021
       }
     },
     "tencent/hy4-preview": {
@@ -3349,14 +3333,14 @@
           "fallback": "No data; neutral placeholder"
         },
         "cost": {
-          "value": 38.947368,
-          "source_value": 38.947368,
+          "value": 40.0,
+          "source_value": 40.0,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 87.274368,
-          "source_value": 87.274368,
+          "value": 87.067545,
+          "source_value": 87.067545,
           "status": "specification",
           "fallback": null
         },
@@ -3375,10 +3359,9 @@
       },
       "benchmarks": [],
       "catalog_cost": {
-        "input": 0.96,
-        "output": 2.88,
-        "cache_read": 0.048,
-        "cache_write": 0.96
+        "input": 0.834,
+        "output": 2.501,
+        "cache_read": 0.042
       }
     },
     "tencent/hy3": {
@@ -3399,14 +3382,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 68.0,
-          "source_value": 68.0,
+          "value": 69.89899,
+          "source_value": 69.89899,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 53.158845,
-          "source_value": 53.158845,
+          "value": 53.130148,
+          "source_value": 53.130148,
           "status": "specification",
           "fallback": null
         },
@@ -3663,10 +3646,9 @@
         }
       ],
       "catalog_cost": {
-        "input": 0.16,
-        "output": 0.64,
-        "cache_read": 0.04,
-        "cache_write": 0.16
+        "input": 0.132,
+        "output": 0.528,
+        "cache_read": 0.033
       }
     },
     "anthropic/claude-haiku-5-5": {
@@ -3687,14 +3669,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 73.894737,
-          "source_value": 73.894737,
+          "value": 71.010101,
+          "source_value": 71.010101,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 81.046931,
-          "source_value": 81.046931,
+          "value": 81.21911,
+          "source_value": 81.21911,
           "status": "specification",
           "fallback": null
         },
@@ -3816,14 +3798,14 @@
           "fallback": "No data; neutral placeholder"
         },
         "cost": {
-          "value": 18.736842,
-          "source_value": 18.736842,
+          "value": 17.171717,
+          "source_value": 17.171717,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 92.418773,
-          "source_value": 92.418773,
+          "value": 92.339374,
+          "source_value": 92.339374,
           "status": "specification",
           "fallback": null
         },
@@ -3866,14 +3848,14 @@
           "fallback": "No data; neutral placeholder"
         },
         "cost": {
-          "value": 40.0,
-          "source_value": 40.0,
+          "value": 37.676768,
+          "source_value": 37.676768,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 81.046931,
-          "source_value": 81.046931,
+          "value": 81.21911,
+          "source_value": 81.21911,
           "status": "specification",
           "fallback": null
         },
@@ -3892,9 +3874,9 @@
       },
       "benchmarks": [],
       "catalog_cost": {
-        "input": 0.959,
-        "output": 2.741,
-        "cache_read": 0.048
+        "input": 1,
+        "output": 2.7,
+        "cache_read": 0.1
       }
     },
     "reflection/beam-1.0-501b-a23b": {
@@ -3915,14 +3897,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 57.157895,
-          "source_value": 57.157895,
+          "value": 59.292929,
+          "source_value": 59.292929,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 92.418773,
-          "source_value": 92.418773,
+          "value": 92.339374,
+          "source_value": 92.339374,
           "status": "specification",
           "fallback": null
         },
@@ -4112,8 +4094,8 @@
         }
       ],
       "catalog_cost": {
-        "input": 0.4,
-        "output": 1.2,
+        "input": 0.3,
+        "output": 1,
         "cache_read": 0.04
       }
     },
@@ -4135,14 +4117,14 @@
           "fallback": "No data; neutral placeholder"
         },
         "cost": {
-          "value": 69.789474,
-          "source_value": 69.789474,
+          "value": 67.373737,
+          "source_value": 67.373737,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 81.046931,
-          "source_value": 81.046931,
+          "value": 81.21911,
+          "source_value": 81.21911,
           "status": "specification",
           "fallback": null
         },
@@ -4166,6 +4148,55 @@
         "cache_read": 0.015
       }
     },
+    "moonshotai/kimi-k3.1-pro": {
+      "id": "moonshotai/kimi-k3.1-pro",
+      "name": "Kimi K3.1 Pro",
+      "source_url": "https://opencode.ai/ko/data/moonshotai/kimi-k3-1-pro",
+      "axes": {
+        "reasoning": {
+          "value": null,
+          "source_value": 50,
+          "status": "support_only",
+          "fallback": "Supported; no comparable benchmark"
+        },
+        "coding": {
+          "value": null,
+          "source_value": 50,
+          "status": "missing",
+          "fallback": "No data; neutral placeholder"
+        },
+        "cost": {
+          "value": 14.343434,
+          "source_value": 14.343434,
+          "status": "price",
+          "fallback": null
+        },
+        "context": {
+          "value": 92.339374,
+          "source_value": 92.339374,
+          "status": "specification",
+          "fallback": null
+        },
+        "multimodal": {
+          "value": 50.0,
+          "source_value": 50.0,
+          "status": "specification",
+          "fallback": null
+        },
+        "tool": {
+          "value": null,
+          "source_value": 50,
+          "status": "support_only",
+          "fallback": "Supported; no comparable benchmark"
+        }
+      },
+      "benchmarks": [],
+      "catalog_cost": {
+        "input": 2,
+        "output": 11,
+        "cache_read": 0.2
+      }
+    },
     "nvidia/nemotron-3-ultra-550b-a55b": {
       "id": "nvidia/nemotron-3-ultra-550b-a55b",
       "name": "Nemotron 3 Ultra 550B A55B",
@@ -4184,14 +4215,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 37.789474,
-          "source_value": 37.789474,
+          "value": 36.262626,
+          "source_value": 36.262626,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 81.046931,
-          "source_value": 81.046931,
+          "value": 81.21911,
+          "source_value": 81.21911,
           "status": "specification",
           "fallback": null
         },
@@ -4296,7 +4327,7 @@
       "catalog_cost": {
         "input": 1,
         "output": 3,
-        "cache_read": 1
+        "cache_read": 0.12
       }
     },
     "nvidia/nemotron-3.5-lightning": {
@@ -4317,14 +4348,14 @@
           "fallback": null
         },
         "cost": {
-          "value": 83.368421,
-          "source_value": 83.368421,
+          "value": 81.212121,
+          "source_value": 81.212121,
           "status": "price",
           "fallback": null
         },
         "context": {
-          "value": 62.815884,
-          "source_value": 62.815884,
+          "value": 63.097199,
+          "source_value": 63.097199,
           "status": "specification",
           "fallback": null
         },
@@ -4483,8 +4514,8 @@
           "fallback": null
         },
         "context": {
-          "value": 92.418773,
-          "source_value": 92.418773,
+          "value": 92.339374,
+          "source_value": 92.339374,
           "status": "specification",
           "fallback": null
         },
@@ -4506,6 +4537,51 @@
         "input": 0,
         "output": 0
       }
+    },
+    "recursive/flint": {
+      "id": "recursive/flint",
+      "name": "Flint",
+      "source_url": "https://opencode.ai/ko/data/recursive/flint",
+      "axes": {
+        "reasoning": {
+          "value": null,
+          "source_value": 50,
+          "status": "support_only",
+          "fallback": "Supported; no comparable benchmark"
+        },
+        "coding": {
+          "value": null,
+          "source_value": 50,
+          "status": "missing",
+          "fallback": "No data; neutral placeholder"
+        },
+        "cost": {
+          "value": null,
+          "source_value": 50,
+          "status": "missing",
+          "fallback": "No data; neutral placeholder"
+        },
+        "context": {
+          "value": 63.097199,
+          "source_value": 63.097199,
+          "status": "specification",
+          "fallback": null
+        },
+        "multimodal": {
+          "value": 0.0,
+          "source_value": 0.0,
+          "status": "specification",
+          "fallback": null
+        },
+        "tool": {
+          "value": null,
+          "source_value": 50,
+          "status": "support_only",
+          "fallback": "Supported; no comparable benchmark"
+        }
+      },
+      "benchmarks": [],
+      "catalog_cost": null
     }
   },
   "offerings": {
@@ -4588,31 +4664,31 @@
     },
     "go:MiMo-V2.5": {
       "catalog_id": "xiaomi/mimo-v2.5",
-      "status": "exact_name",
+      "status": "canonical",
       "selection_id": "opencode-go/mimo-v2.5",
       "evidence": "https://models.opencode.ai/api.json",
-      "note": "공개 offering 이름과 카탈로그 모델의 정확한 이름 대응. endpoint·체크포인트 동일성은 별도 미검증인 참고 평가입니다."
+      "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
     "go:MiMo-V2.5-Pro": {
       "catalog_id": "xiaomi/mimo-v2.5-pro",
-      "status": "exact_name",
+      "status": "canonical",
       "selection_id": "opencode-go/mimo-v2.5-pro",
       "evidence": "https://models.opencode.ai/api.json",
-      "note": "공개 offering 이름과 카탈로그 모델의 정확한 이름 대응. endpoint·체크포인트 동일성은 별도 미검증인 참고 평가입니다."
+      "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
     "go:MiniMax M3": {
       "catalog_id": "minimax/MiniMax-M3",
-      "status": "exact_name",
+      "status": "canonical",
       "selection_id": "opencode-go/minimax-m3",
       "evidence": "https://models.opencode.ai/api.json",
-      "note": "공개 offering 이름과 카탈로그 모델의 정확한 이름 대응. endpoint·체크포인트 동일성은 별도 미검증인 참고 평가입니다."
+      "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
     "go:Muse Spark 1.3 Contributor": {
       "catalog_id": "meta/muse-spark-1.3",
-      "status": "official_alias",
+      "status": "canonical",
       "selection_id": "opencode-go/muse-spark-1.3-contributor",
-      "evidence": "https://github.com/anomalyco/opencode/blob/40cdf4fbdd9d60316f339113e7f9c9a121aece4a/packages/stats/app/src/routes/model-catalog.ts",
-      "note": "공식 Contributor → 기본 모델 벤치 alias. 기본 모델 참고이며 Contributor endpoint·가격·사용 통계와 별개입니다."
+      "evidence": "https://models.opencode.ai/api.json",
+      "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
     "go:Muse Spark 1.2 Contributor": {
       "catalog_id": "meta/muse-spark-1.2",
@@ -4637,10 +4713,10 @@
     },
     "go:Qwen3.7 Plus": {
       "catalog_id": "alibaba/qwen3.7-plus",
-      "status": "exact_name",
+      "status": "canonical",
       "selection_id": "opencode-go/qwen3.7-plus",
       "evidence": "https://models.opencode.ai/api.json",
-      "note": "공개 offering 이름과 카탈로그 모델의 정확한 이름 대응. endpoint·체크포인트 동일성은 별도 미검증인 참고 평가입니다."
+      "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
     "go:DeepSeek V4.1 Flash": {
       "catalog_id": "deepseek/deepseek-v4.1-flash",
@@ -4651,10 +4727,17 @@
     },
     "go:DeepSeek V4 Pro": {
       "catalog_id": "deepseek/deepseek-v4-pro",
-      "status": "exact_name",
+      "status": "canonical",
       "selection_id": "opencode-go/deepseek-v4-pro",
       "evidence": "https://models.opencode.ai/api.json",
-      "note": "공개 offering 이름과 카탈로그 모델의 정확한 이름 대응. endpoint·체크포인트 동일성은 별도 미검증인 참고 평가입니다."
+      "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
+    },
+    "go:Hy4": {
+      "catalog_id": "tencent/hy4",
+      "status": "canonical",
+      "selection_id": "opencode-go/hy4",
+      "evidence": "https://models.opencode.ai/api.json",
+      "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
     "go:Hy4 preview": {
       "catalog_id": "tencent/hy4-preview",
@@ -4677,6 +4760,13 @@
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
+    "go:Gemini 4 Argon": {
+      "catalog_id": "google/gemini-4-argon",
+      "status": "canonical",
+      "selection_id": "opencode-go/gemini-4-argon",
+      "evidence": "https://models.opencode.ai/api.json",
+      "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
+    },
     "go:Step 5 Preview": {
       "catalog_id": "stepfun/step-5-preview",
       "status": "canonical",
@@ -4691,12 +4781,26 @@
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
+    "go:Iceman Contributor Free": {
+      "catalog_id": null,
+      "status": "unmapped",
+      "selection_id": "opencode-go/iceman-contributor-free",
+      "evidence": "https://models.opencode.ai/api.json",
+      "note": "공식 canonical ID 또는 유일한 정확한 이름 대응을 확인하지 못했습니다. 익명·불명확 모델은 추정하지 않습니다."
+    },
     "go:MiniMax M3.1 Flash": {
       "catalog_id": "minimax/MiniMax-M3.1-Flash",
-      "status": "exact_name",
+      "status": "canonical",
       "selection_id": "opencode-go/minimax-m3.1-flash",
-      "evidence": "https://opencode.ai/v2/docs/console/go/",
-      "note": "현재 Go 공식 offering과 카탈로그 원모델의 정확한 이름 대응. endpoint·checkpoint 동일성은 미검증인 참고 평가입니다."
+      "evidence": "https://models.opencode.ai/api.json",
+      "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
+    },
+    "go:Kimi K3.1 Pro": {
+      "catalog_id": "moonshotai/kimi-k3.1-pro",
+      "status": "canonical",
+      "selection_id": "opencode-go/kimi-k3.1-pro",
+      "evidence": "https://models.opencode.ai/api.json",
+      "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
     "console:jev-1.13-free": {
       "catalog_id": null,
@@ -4733,13 +4837,6 @@
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
-    "console:flint-40b-free": {
-      "catalog_id": null,
-      "status": "unmapped",
-      "selection_id": "opencode/flint-40b-free",
-      "evidence": "https://opencode.ai/v2/docs/console/models/",
-      "note": "2026-10-22: Current Console offering verified; exact benchmark catalog mapping not verified. No previous LL Alpha identity or score is inherited."
-    },
     "console:mimo-v2.6-flash-free": {
       "catalog_id": "xiaomi/mimo-v2.6-flash",
       "status": "canonical",
@@ -4768,26 +4865,12 @@
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
-    "go:Kimi K3.1 Pro": {
-      "catalog_id": null,
-      "status": "unmapped",
-      "selection_id": "opencode-go/kimi-k3.1-pro",
-      "evidence": "https://opencode.ai/v2/docs/console/go/",
-      "note": "New official Go offering; no verified mapping to this stored comparison catalog. Do not substitute Kimi K3."
-    },
-    "go:Gemini 4 Argon": {
-      "catalog_id": "google/gemini-4-argon",
-      "status": "exact_name",
-      "selection_id": "opencode-go/gemini-4-argon",
-      "evidence": "https://opencode.ai/v2/docs/console/go/",
-      "note": "현재 공식 Go 모델명과 저장된 카탈로그 이름의 정확 이름 대응. 원모델 참고 자료이며 Go endpoint/checkpoint/effort 실측 검증이 아닙니다. 기존 카탈로그 평가·수집 날짜는 보존합니다."
-    },
-    "go:Iceman Contributor Free": {
-      "catalog_id": null,
-      "status": "unmapped",
-      "selection_id": "opencode-go/iceman-contributor-free",
+    "console:flint-40b-free": {
+      "catalog_id": "recursive/flint",
+      "status": "canonical",
+      "selection_id": "opencode/flint-40b-free",
       "evidence": "https://models.opencode.ai/api.json",
-      "note": "공식 canonical ID 또는 유일한 정확한 이름 대응을 확인하지 못했습니다. 익명·불명확 모델은 추정하지 않습니다."
+      "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
     "console:pulse-alpha-free": {
       "catalog_id": null,
@@ -4795,8 +4878,13 @@
       "selection_id": "opencode/pulse-alpha-free",
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical ID 또는 유일한 정확한 이름 대응을 확인하지 못했습니다. 익명·불명확 모델은 추정하지 않습니다."
+    },
+    "console:crouton-alpha-free": {
+      "catalog_id": null,
+      "status": "unmapped",
+      "selection_id": "opencode/crouton-alpha-free",
+      "evidence": "https://models.opencode.ai/api.json",
+      "note": "공식 canonical ID 또는 유일한 정확한 이름 대응을 확인하지 못했습니다. 익명·불명확 모델은 추정하지 않습니다."
     }
   }
 }
-
-

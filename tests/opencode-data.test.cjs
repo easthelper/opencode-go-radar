@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const root=path.join(__dirname,'..'),read=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8'));
 const d=read('data/opencode-compare.json'),go=read('data/models.json'),con=read('data/console.json');
-assert.equal(d.schema_version,1);assert.equal(d.population,555);assert.ok(!Number.isNaN(Date.parse(d.checked_at)));
+assert.equal(d.schema_version,1);assert.equal(d.population,608);assert.ok(!Number.isNaN(Date.parse(d.checked_at)));
 assert.equal(Object.keys(d.offerings).length,go.models.length+con.models.filter(m=>m.offering==='console-free').length);
 for(const m of go.models)assert.ok(d.offerings['go:'+m.model]);
 for(const m of con.models)assert.equal(Boolean(d.offerings[m.offering_id]),m.offering==='console-free');
@@ -10,12 +10,13 @@ for(const [id,m] of Object.entries(d.offerings)){
  if(m.catalog_id){assert.ok(d.models[m.catalog_id]);assert.notEqual(m.status,'unmapped');}else assert.equal(m.status,'unmapped');
  for(const field of ['input_price','output_price','training','retention','monthly_usage_usd','coding_evaluation'])assert.ok(!(field in m));
 }
-for(const name of ['jev-1.13-free','big-pickle','flint-40b-free'])assert.equal(d.offerings['console:'+name].catalog_id,null);
+for(const name of ['jev-1.13-free','big-pickle'])assert.equal(d.offerings['console:'+name].catalog_id,null);
+assert.equal(d.offerings['console:flint-40b-free'].catalog_id,'recursive/flint');
 assert.equal(d.offerings['go:Beam Free'].catalog_id,'reflection/beam-1.0-501b-a23b');
-assert.equal(d.offerings['go:Gemini 4 Argon'].status,'exact_name');
-assert.equal(d.offerings['go:Muse Spark 1.3 Contributor'].status,'official_alias');
-assert.equal(d.offerings['go:DeepSeek V4 Pro'].status,'exact_name');
-const fixtures={'deepseek/deepseek-v4.1-flash':[100,100,59,81,33,92],'meta/muse-spark-1.3':[100,90,31,92,83,100],'zhipuai/glm-5.3-flash':[56,35,75,81,67,0]};
+assert.equal(d.offerings['go:Gemini 4 Argon'].status,'canonical');
+assert.equal(d.offerings['go:Muse Spark 1.3 Contributor'].status,'canonical');
+assert.equal(d.offerings['go:DeepSeek V4 Pro'].status,'canonical');
+const fixtures={'deepseek/deepseek-v4.1-flash':[100,100,72,81,33,92],'meta/muse-spark-1.3':[100,90,30,92,83,100],'zhipuai/glm-5.3-flash':[56,35,72,81,67,0]};
 for(const[id,expected]of Object.entries(fixtures))assert.deepEqual(d.axis_keys.map(k=>Math.round(d.models[id].axes[k].source_value)),expected);
 assert.equal(d.models['zhipuai/glm-5.3-flash'].axes.tool.value,0);assert.equal(d.models['zhipuai/glm-5.3-flash'].axes.tool.status,'measured');
 let missing=0,benchmarks=0;
