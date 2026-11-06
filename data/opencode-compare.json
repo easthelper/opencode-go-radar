@@ -4802,6 +4802,13 @@
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
+    "go:Crouton Alpha Free": {
+      "catalog_id": null,
+      "status": "unmapped",
+      "selection_id": "opencode-go/crouton-alpha-free",
+      "evidence": "https://models.opencode.ai/api.json",
+      "note": "공식 canonical ID 또는 유일한 정확한 이름 대응을 확인하지 못했습니다. 익명·불명확 모델은 추정하지 않습니다."
+    },
     "console:jev-1.13-free": {
       "catalog_id": null,
       "status": "unmapped",
