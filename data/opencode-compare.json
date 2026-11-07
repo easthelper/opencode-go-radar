@@ -4879,12 +4879,19 @@
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
-    "console:pulse-alpha-free": {
+    "console:iceman-free": {
       "catalog_id": null,
       "status": "unmapped",
-      "selection_id": "opencode/pulse-alpha-free",
+      "selection_id": "opencode/iceman-free",
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical ID 또는 유일한 정확한 이름 대응을 확인하지 못했습니다. 익명·불명확 모델은 추정하지 않습니다."
+    },
+    "console:inkling-2-small-free": {
+      "catalog_id": null,
+      "status": "unmapped",
+      "selection_id": "opencode/inkling-2-small-free",
+      "evidence": "https://models.opencode.ai/api.json",
+      "note": "공식 Console models API의 canonical_id는 thinkingmachines/inkling-2-small이지만, 이 Data 카탈로그 스냅샷에는 해당 항목이 없어 대응을 확정하지 않았습니다. 추정하지 않습니다."
     },
     "console:crouton-alpha-free": {
       "catalog_id": null,
