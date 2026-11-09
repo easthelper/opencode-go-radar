@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-07",
+  "as_of": "2026-11-10",
   "subscription_usd_per_month": 10,
   "limit_policy": {
     "five_hour_fraction": 0.2,
@@ -239,6 +239,16 @@
       "promotional_requests_week": 1080,
       "promotional_requests_month": 2120,
       "notes": "Monthly limit remains $30; this is a token-price discount, not a doubled allowance. Current official estimated requests are recorded in promotional_requests_*; historical base request estimates are preserved, not newly derived. Recheck official prices and estimates at expiry. The source does not specify an expiry time zone."
+    },
+    "LongCat 2.5 Free": {
+      "monthly_usage_usd": null,
+      "requests_5h": null,
+      "requests_week": null,
+      "requests_month": null,
+      "unlimited": true,
+      "promotion": "Free for a limited time",
+      "promotion_end": null,
+      "notes": "Official Go, Go Plus and Go Teams tables publish Unlimited monthly usage and Unlimited estimated requests with no dollar limit for this row, so the dollar and request fields stay null rather than being derived. Free access continues only for the limited-time promotion; the end date is not published. Added 2026-11-10 KST together with the model row. The separate Console free offering of the same model publishes 100 requests per day; that Console limit does not apply to Go and is not recorded here."
     }
   }
 }

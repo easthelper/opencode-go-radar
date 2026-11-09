@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-08",
+  "as_of": "2026-11-10",
   "schema_version": 1,
   "scope": "Official OpenCode Console (Zen) endpoint/pricing catalog only; arbitrary third-party provider catalogs excluded.",
   "sources": [
@@ -3320,6 +3320,86 @@
       ],
       "offering": "console-free",
       "offering_id": "console:inkling-2-small-free"
+    },
+    {
+      "offering_id": "console:longcat-2.5-free",
+      "offering": "console-free",
+      "model": "LongCat 2.5 Free",
+      "model_id": "longcat-2.5-free",
+      "selection_id": "opencode/longcat-2.5-free",
+      "endpoint": "https://opencode.ai/inference/openai/v1/chat/completions",
+      "developer": "Meituan",
+      "provider": "Undisclosed",
+      "input_price": 0,
+      "output_price": 0,
+      "cached_input": 0,
+      "cached_write": null,
+      "context": "1,000,000 (public models endpoint; max output 262,144)",
+      "reasoning": true,
+      "benchmark": "N/A",
+      "training": "No Training",
+      "retention": "0 days",
+      "hosting": "China (official Console free-model note)",
+      "china_transfer": "Yes - hosted in China",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [],
+      "source": "https://opencode.ai/v2/docs/console/models/",
+      "checked_at": "2026-11-10",
+      "notes": "Added 2026-11-10 KST: the official Console endpoint table, the free-model section, the privacy section and the public Console models endpoint all list longcat-2.5-free. Console pricing table lists Free input, output and cached read; free only for a limited time with no published end date. Free-model note states a limit of 100 requests per day, so free is not unlimited. Provider follows a zero-retention policy and does not use data for training, but the model is hosted in China, which is a separate processing-location consideration from the token price. No region exclusion list is published for this Console offering. Native metadata: multimodal reasoning model (text/image in), context 1,000,000, max output 262,144, release 2026-11-02. This is a Console offering; Go subscription limits, Go ZDR terms and Go quota do not apply. No independent Terminal-Bench 4.0 evaluation exists yet, so it is excluded from Coding/Value rather than scored low.",
+      "limits": "100 requests per day (official Console free-model note); free does not establish unlimited usage. Free-tier chat models require OpenCode. Separate from Go free/unlimited promotional allowances.",
+      "promotion": "Free for a limited time",
+      "promotion_end": null,
+      "price_tiers": [
+        {
+          "label": "LongCat 2.5 Free",
+          "input_price": 0,
+          "output_price": 0,
+          "cached_input": 0,
+          "cached_write": null
+        }
+      ]
+    },
+    {
+      "offering_id": "console:muse-ember-1.0",
+      "offering": "console-payg",
+      "model": "Muse Ember 1.0",
+      "model_id": "muse-ember-1.0",
+      "selection_id": "opencode/muse-ember-1.0",
+      "endpoint": "https://opencode.ai/inference/openai/v1/responses",
+      "developer": "Meta",
+      "provider": "Undisclosed",
+      "input_price": 0.1,
+      "output_price": 0.5,
+      "cached_input": 0.004,
+      "cached_write": null,
+      "context": "1,048,576 (public models endpoint; max output 270,000)",
+      "reasoning": true,
+      "benchmark": "N/A",
+      "training": "No Training",
+      "retention": "0 days",
+      "hosting": "US / EU (Console-wide official policy; exact region undisclosed)",
+      "china_transfer": "No evidence",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [],
+      "source": "https://opencode.ai/v2/docs/console/models/",
+      "checked_at": "2026-11-10",
+      "notes": "Added 2026-11-10 KST: the official Console endpoint table, the pricing table and the public Console models endpoint all list muse-ember-1.0 at $0.10 input / $0.50 output / $0.004 cached read per 1M tokens. Muse Ember is not among the named privacy exceptions, so the Console-wide no-training, zero-retention and US/EU hosting statements apply; exact upstream and processing region are undisclosed. Native metadata: reasoning model (effort minimal, low, medium, high, xhigh, max), text/image/video/PDF input, context 1,048,576, max output 270,000, structured output, release 2026-11-09. No independent coding benchmark for this checkpoint is verified, so it is excluded from Coding/Value rather than scored low.",
+      "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
+      "promotion": null,
+      "promotion_end": null,
+      "price_tiers": [
+        {
+          "label": "Muse Ember 1.0",
+          "input_price": 0.1,
+          "output_price": 0.5,
+          "cached_input": 0.004,
+          "cached_write": null
+        }
+      ]
     }
   ],
   "excluded_models": [
@@ -3470,6 +3550,7 @@
     "credit_purchase_fee_fixed_usd": 0.31,
     "source": "https://opencode.ai/v2/docs/console/models/#pricing",
     "notes": "Charged per credit purchase; excluded from token-workload price examples."
-  }
+  },
+  "notes": "2026-11-10 KST catalog gap: claude-fable-5-2 is returned by the public Console models endpoint (release 2026-11-09; endpoint cost metadata $8 input / $40 output / $0.20 cached read / $10 cached write per 1M, context 1,000,000, max output 128,000) but is absent from the official Console endpoint and pricing tables on the same date. It is recorded here as a gap rather than added as an active offering with a price the pricing table does not publish. Recheck next run."
 }
 
