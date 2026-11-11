@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-05T23:06:33Z",
+  "checked_at": "2026-11-12T00:00:00Z",
   "source_commit": "40cdf4fbdd9d60316f339113e7f9c9a121aece4a",
   "sources": {
     "catalog": "https://models.opencode.ai/catalog.json",
@@ -4802,13 +4802,6 @@
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
-    "go:Crouton Alpha Free": {
-      "catalog_id": null,
-      "status": "unmapped",
-      "selection_id": "opencode-go/crouton-alpha-free",
-      "evidence": "https://models.opencode.ai/api.json",
-      "note": "공식 canonical ID 또는 유일한 정확한 이름 대응을 확인하지 못했습니다. 익명·불명확 모델은 추정하지 않습니다."
-    },
     "console:jev-1.13-free": {
       "catalog_id": null,
       "status": "unmapped",
@@ -4893,12 +4886,26 @@
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 Console models API의 canonical_id는 thinkingmachines/inkling-2-small이지만, 이 Data 카탈로그 스냅샷에는 해당 항목이 없어 대응을 확정하지 않았습니다. 추정하지 않습니다."
     },
-    "console:crouton-alpha-free": {
+    "go:LongCat 2.5 Free": {
       "catalog_id": null,
       "status": "unmapped",
-      "selection_id": "opencode/crouton-alpha-free",
+      "selection_id": "opencode-go/longcat-2.5-free",
       "evidence": "https://models.opencode.ai/api.json",
-      "note": "공식 canonical ID 또는 유일한 정확한 이름 대응을 확인하지 못했습니다. 익명·불명확 모델은 추정하지 않습니다."
+      "note": "공식 api.json은 canonical_model_id를 meituan/longcat-2.5로 표기하지만, 현재 카탈로그 스냅샷(population 608)에 해당 모델 항목이 없어 catalog_id 대응을 주장하지 않습니다. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
+    },
+    "console:longcat-2.5-free": {
+      "catalog_id": null,
+      "status": "unmapped",
+      "selection_id": "opencode/longcat-2.5-free",
+      "evidence": "https://models.opencode.ai/api.json",
+      "note": "공식 api.json은 canonical_model_id를 meituan/longcat-2.5로 표기하지만, 현재 카탈로그 스냅샷(population 608)에 해당 모델 항목이 없어 catalog_id 대응을 주장하지 않습니다. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
+    },
+    "console:minimax-m3.1-flash-free": {
+      "catalog_id": "minimax/MiniMax-M3.1-Flash",
+      "status": "canonical",
+      "selection_id": "opencode/minimax-m3.1-flash-free",
+      "evidence": "https://models.opencode.ai/api.json",
+      "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     }
   }
 }
