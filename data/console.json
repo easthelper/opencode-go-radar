@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-10",
+  "as_of": "2026-11-12",
   "schema_version": 1,
   "scope": "Official OpenCode Console (Zen) endpoint/pricing catalog only; arbitrary third-party provider catalogs excluded.",
   "sources": [
@@ -1175,7 +1175,7 @@
       "provider": "Undisclosed",
       "input_price": 2,
       "output_price": 10,
-      "cached_input": 0.2,
+      "cached_input": 0.1,
       "cached_write": 2.5,
       "context": "Unknown",
       "reasoning": null,
@@ -1190,7 +1190,7 @@
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
       "checked_at": "2026-10-18",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Native vendor capability (not a verified Console endpoint limit): context 1M; reasoning Adaptive; always-on for Fable and Opus. Confirmed vendor comparison table. Keep Console fields unknown unless explicitly labeled native model capability rather than endpoint guarantee.",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Native vendor capability (not a verified Console endpoint limit): context 1M; reasoning Adaptive; always-on for Fable and Opus. Confirmed vendor comparison table. Keep Console fields unknown unless explicitly labeled native model capability rather than endpoint guarantee. Cached read corrected on 2026-11-12 KST from 0.20 to 0.10: the official Console pricing table lists Claude Sonnet 5.5 cached read at $0.10 and the live Console models endpoint reports the same, while Claude Sonnet 5 is $0.20.",
       "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
       "promotion": null,
       "promotion_end": null,
@@ -1199,7 +1199,7 @@
           "label": "Claude Sonnet 5.5",
           "input_price": 2,
           "output_price": 10,
-          "cached_input": 0.2,
+          "cached_input": 0.1,
           "cached_write": 2.5
         }
       ],
@@ -1478,9 +1478,9 @@
       "endpoint": "https://opencode.ai/inference/google/v1beta/models/gemini-3.8-flash",
       "developer": "Google",
       "provider": "Undisclosed",
-      "input_price": 1.5,
-      "output_price": 7.5,
-      "cached_input": 0.15,
+      "input_price": 0.75,
+      "output_price": 3.75,
+      "cached_input": 0.075,
       "cached_write": null,
       "context": "Unknown",
       "reasoning": null,
@@ -1495,19 +1495,24 @@
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
       "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings.",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Corrected on 2026-11-12 KST: the official Console pricing table lists this model at 50% off through 2026-12-31 ($1.50 to $0.75 input, $7.50 to $3.75 output, $0.15 to $0.075 cached read) and the live Console models endpoint reports 0.75/3.75/0.075 with a 2x multiplier from 2027-01-01. The stored values were the undiscounted list price, so the effective price is now stored with base_prices kept separate.",
       "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
-      "promotion": null,
-      "promotion_end": null,
+      "promotion": "50% off",
+      "promotion_end": "2026-12-31",
       "price_tiers": [
         {
-          "label": "Gemini 3.8 Flash",
-          "input_price": 1.5,
-          "output_price": 7.5,
-          "cached_input": 0.15,
+          "label": "Gemini 3.8 Flash (50% off)",
+          "input_price": 0.75,
+          "output_price": 3.75,
+          "cached_input": 0.075,
           "cached_write": null
         }
-      ]
+      ],
+      "base_prices": {
+        "input_price": 1.5,
+        "output_price": 7.5,
+        "cached_input": 0.15
+      }
     },
     {
       "offering_id": "console:gemini-3.7-flash",
@@ -1518,9 +1523,9 @@
       "endpoint": "https://opencode.ai/inference/google/v1beta/models/gemini-3.7-flash",
       "developer": "Google",
       "provider": "Undisclosed",
-      "input_price": 1.5,
-      "output_price": 7.5,
-      "cached_input": 0.15,
+      "input_price": 0.75,
+      "output_price": 3.75,
+      "cached_input": 0.075,
       "cached_write": null,
       "context": "Unknown",
       "reasoning": null,
@@ -1535,19 +1540,24 @@
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
       "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings.",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Corrected on 2026-11-12 KST: the official Console pricing table lists this model at 50% off through 2026-12-31 ($1.50 to $0.75 input, $7.50 to $3.75 output, $0.15 to $0.075 cached read) and the live Console models endpoint reports 0.75/3.75/0.075 with a 2x multiplier from 2027-01-01. The stored values were the undiscounted list price, so the effective price is now stored with base_prices kept separate.",
       "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
-      "promotion": null,
-      "promotion_end": null,
+      "promotion": "50% off",
+      "promotion_end": "2026-12-31",
       "price_tiers": [
         {
-          "label": "Gemini 3.7 Flash",
-          "input_price": 1.5,
-          "output_price": 7.5,
-          "cached_input": 0.15,
+          "label": "Gemini 3.7 Flash (50% off)",
+          "input_price": 0.75,
+          "output_price": 3.75,
+          "cached_input": 0.075,
           "cached_write": null
         }
-      ]
+      ],
+      "base_prices": {
+        "input_price": 1.5,
+        "output_price": 7.5,
+        "cached_input": 0.15
+      }
     },
     {
       "offering_id": "console:gemini-3.6-flash",
@@ -1558,9 +1568,9 @@
       "endpoint": "https://opencode.ai/inference/google/v1beta/models/gemini-3.6-flash",
       "developer": "Google",
       "provider": "Undisclosed",
-      "input_price": 1.5,
-      "output_price": 7.5,
-      "cached_input": 0.15,
+      "input_price": 0.75,
+      "output_price": 3.75,
+      "cached_input": 0.075,
       "cached_write": null,
       "context": "Unknown",
       "reasoning": null,
@@ -1575,19 +1585,24 @@
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
       "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings.",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. Corrected on 2026-11-12 KST: the official Console pricing table lists this model at 50% off through 2026-12-31 ($1.50 to $0.75 input, $7.50 to $3.75 output, $0.15 to $0.075 cached read) and the live Console models endpoint reports 0.75/3.75/0.075 with a 2x multiplier from 2027-01-01. The stored values were the undiscounted list price, so the effective price is now stored with base_prices kept separate.",
       "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
-      "promotion": null,
-      "promotion_end": null,
+      "promotion": "50% off",
+      "promotion_end": "2026-12-31",
       "price_tiers": [
         {
-          "label": "Gemini 3.6 Flash",
-          "input_price": 1.5,
-          "output_price": 7.5,
-          "cached_input": 0.15,
+          "label": "Gemini 3.6 Flash (50% off)",
+          "input_price": 0.75,
+          "output_price": 3.75,
+          "cached_input": 0.075,
           "cached_write": null
         }
-      ]
+      ],
+      "base_prices": {
+        "input_price": 1.5,
+        "output_price": 7.5,
+        "cached_input": 0.15
+      }
     },
     {
       "offering_id": "console:gemini-3.5-flash",
@@ -3190,50 +3205,6 @@
       ]
     },
     {
-      "model": "Crouton Alpha Free",
-      "model_id": "crouton-alpha-free",
-      "selection_id": "opencode/crouton-alpha-free",
-      "endpoint": "https://opencode.ai/inference/openai/v1/chat/completions",
-      "developer": "Unknown",
-      "provider": "Undisclosed",
-      "input_price": 0,
-      "output_price": 0,
-      "cached_input": 0,
-      "cached_write": null,
-      "context": "1M (Console models endpoint: 1,048,576 context, 270,000 output)",
-      "reasoning": true,
-      "benchmark": "N/A",
-      "training": "No Training",
-      "retention": "30 days (free period)",
-      "hosting": "US / EU (Console-wide official policy; exact region undisclosed)",
-      "china_transfer": "No evidence",
-      "coding_grade": "N/A",
-      "value_grade": "N/A",
-      "privacy_risk": "Medium",
-      "positioning": [],
-      "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-11-05",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Promoted from API-only to an active offering on 2026-11-05: the official Console endpoint table, pricing table, free-model section and privacy section now all list Crouton Alpha Free, and the live Console models endpoint still returns crouton-alpha-free (stealth reasoning model, release 2026-11-03, text/image/video/PDF input, context 1,048,576, output 270,000, cost 0). Official privacy: during its free period, collected data is retained for 30 days and is not used for model training. Developer, reasoning quality and benchmarks are not published, so it is excluded from Coding/Value rather than scored low.",
-      "limits": "Not disclosed; free does not establish unlimited usage. The official Go landing FAQ states free models have a daily request limit, but no numeric Console limit is published, so no number is recorded. Region restrictions: unavailable in the European Union, Afghanistan, Belarus, China (including Hong Kong and Macau), Cambodia, Cuba, Eritrea, Ethiopia, Haiti, Iran, Iraq, Libya, Myanmar, Nicaragua, North Korea, Pakistan, Russia, Somalia, Syria, Venezuela, Western Sahara, and some regions within otherwise supported countries. Free-tier chat models require OpenCode. This is separate from Go free/unlimited promotional allowances.",
-      "promotion": "Limited-time free; end date unknown",
-      "promotion_end": null,
-      "price_tiers": [
-        {
-          "label": "Crouton Alpha Free",
-          "input_price": 0,
-          "output_price": 0,
-          "cached_input": 0,
-          "cached_write": null
-        }
-      ],
-      "sources": [
-        "https://opencode.ai/v2/docs/console/models/",
-        "https://opencode.ai/inference/v1/models"
-      ],
-      "offering": "console-free",
-      "offering_id": "console:crouton-alpha-free"
-    },
-    {
       "model": "Iceman Free",
       "model_id": "iceman-free",
       "selection_id": "opencode/iceman-free",
@@ -3400,6 +3371,143 @@
           "cached_write": null
         }
       ]
+    },
+    {
+      "offering_id": "console:gemini-4-carbon",
+      "offering": "console-payg",
+      "model": "Gemini 4 Carbon",
+      "model_id": "gemini-4-carbon",
+      "selection_id": "opencode/gemini-4-carbon",
+      "endpoint": "https://opencode.ai/inference/google/v1beta/models/gemini-4-carbon",
+      "developer": "Google",
+      "provider": "Undisclosed",
+      "input_price": 2,
+      "output_price": 10,
+      "cached_input": 0.1,
+      "cached_write": null,
+      "context": "1,048,576 (public models endpoint; max output 65,536)",
+      "reasoning": true,
+      "benchmark": "N/A",
+      "training": "No Training",
+      "retention": "0 days",
+      "hosting": "US / EU (Console-wide official policy; exact region undisclosed)",
+      "china_transfer": "No evidence",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [],
+      "source": "https://opencode.ai/v2/docs/console/models/",
+      "checked_at": "2026-11-12",
+      "notes": "Added 2026-11-12 KST: the official Console endpoint table, pricing table, discount note and the live Console models endpoint all list gemini-4-carbon. The stored price is the current 50% discount of $2.00 input / $10.00 output / $0.10 cached read per 1M tokens; the undiscounted $4.00 / $20.00 / $0.20 is kept in base_prices. The official note gives a 2026-11-30 end date and the live endpoint reports a 2x multiplier from 2026-12-01, which agrees. Gemini is not among the named Console privacy exceptions, so the Console-wide no-training, zero-retention and US/EU hosting statements apply; the exact upstream and processing region are undisclosed. Native metadata: reasoning model (effort low, medium, high), text/image/video/audio/PDF input, context 1,048,576, max output 65,536, release 2026-11-10, open weights false. No independent coding benchmark for this checkpoint is verified, so it is excluded from Coding/Value rather than scored low.",
+      "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
+      "promotion": "50% off",
+      "promotion_end": "2026-11-30",
+      "base_prices": {
+        "input_price": 4,
+        "output_price": 20,
+        "cached_input": 0.2
+      },
+      "price_tiers": [
+        {
+          "label": "Gemini 4 Carbon (50% off)",
+          "input_price": 2,
+          "output_price": 10,
+          "cached_input": 0.1,
+          "cached_write": null
+        }
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/inference/v1/models"
+      ]
+    },
+    {
+      "offering_id": "console:claude-fable-5-2",
+      "offering": "console-payg",
+      "model": "Claude Fable 5.2",
+      "model_id": "claude-fable-5-2",
+      "selection_id": "opencode/claude-fable-5-2",
+      "endpoint": "https://opencode.ai/inference/anthropic/v1/messages",
+      "developer": "Anthropic",
+      "provider": "Undisclosed",
+      "input_price": 8,
+      "output_price": 40,
+      "cached_input": 0.2,
+      "cached_write": 10,
+      "context": "1,000,000 (public models endpoint; max output 128,000)",
+      "reasoning": true,
+      "benchmark": "N/A",
+      "training": "No Training",
+      "retention": "30 days",
+      "hosting": "US / EU (Console-wide official policy; exact region undisclosed)",
+      "china_transfer": "No evidence",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [],
+      "source": "https://opencode.ai/v2/docs/console/models/",
+      "checked_at": "2026-11-12",
+      "notes": "Added 2026-11-12 KST, resolving the 2026-11-10 catalog gap: the model was returned by the public Console models endpoint but missing from the official tables, and the official Console endpoint and pricing tables now list it at $8.00 input / $40.00 output / $0.20 cached read / $10.00 cached write per 1M tokens, matching the endpoint cost metadata. Retention follows the Console-wide Anthropic exception (requests retained 30 days); hosting is the Console-wide US/EU statement and the exact region is undisclosed. Native metadata: reasoning model (effort low through max), text/image/PDF input, context 1,000,000, max output 128,000, release 2026-11-09, open weights false. No independent coding benchmark for this checkpoint is verified, so it is excluded from Coding/Value rather than scored low.",
+      "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
+      "promotion": null,
+      "promotion_end": null,
+      "price_tiers": [
+        {
+          "label": "Claude Fable 5.2",
+          "input_price": 8,
+          "output_price": 40,
+          "cached_input": 0.2,
+          "cached_write": 10
+        }
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/inference/v1/models"
+      ]
+    },
+    {
+      "offering_id": "console:minimax-m3.1-flash-free",
+      "offering": "console-free",
+      "model": "MiniMax M3.1 Flash Free",
+      "model_id": "minimax-m3.1-flash-free",
+      "selection_id": "opencode/minimax-m3.1-flash-free",
+      "endpoint": "https://opencode.ai/inference/openai/v1/chat/completions",
+      "developer": "MiniMax",
+      "provider": "Undisclosed",
+      "input_price": 0,
+      "output_price": 0,
+      "cached_input": 0,
+      "cached_write": null,
+      "context": "1,000,000 (public models endpoint; max output 512,000)",
+      "reasoning": true,
+      "benchmark": "N/A",
+      "training": "No Training",
+      "retention": "0 days",
+      "hosting": "US / EU (Console-wide official policy; exact region undisclosed)",
+      "china_transfer": "No evidence",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [],
+      "source": "https://opencode.ai/v2/docs/console/models/",
+      "checked_at": "2026-11-12",
+      "notes": "Restored to the active Console list on 2026-11-12 KST: after being absent on 2026-10-23 it is again listed in the official Console pricing table, the free-model section and the live Console models endpoint (cost 0). The official free-model note says it is free on OpenCode for a limited time and that its provider follows a zero-retention policy and does not use data for model training. Its earlier absence did not establish retirement, so the exclusion is reversed rather than presented as a new model. Native metadata: reasoning model (effort low through max), text/image/video input, context 1,000,000, max output 512,000, open weights true, release 2026-10-19. Free does not establish unlimited usage and no numeric Console limit is published for this offer.",
+      "limits": "Not disclosed; free does not establish unlimited usage. Console free offering, separate from Go free/unlimited promotional allowances. Free-tier chat models require OpenCode.",
+      "promotion": "Free for a limited time",
+      "promotion_end": null,
+      "price_tiers": [
+        {
+          "label": "MiniMax M3.1 Flash Free",
+          "input_price": 0,
+          "output_price": 0,
+          "cached_input": 0,
+          "cached_write": null
+        }
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/inference/v1/models"
+      ]
     }
   ],
   "excluded_models": [
@@ -3481,14 +3589,6 @@
       "reason": "Absent from current official endpoint, pricing, free-model and privacy tables and public models endpoint. Excluded from current offerings; permanent retirement or a rename to Flint is not established."
     },
     {
-      "model": "MiniMax M3.1 Flash Free",
-      "model_id": "minimax-m3.1-flash-free",
-      "deprecation_date": null,
-      "checked_at": "2026-10-23",
-      "source": "https://opencode.ai/v2/docs/console/models/",
-      "reason": "Absent from current official Console endpoint, pricing, free-model and privacy sections and public models endpoint. Excluded from current offerings; permanent retirement or an exact end date is not established."
-    },
-    {
       "model": "Qwen3.7 Max",
       "model_id": "qwen3.7-max",
       "deprecation_date": null,
@@ -3543,6 +3643,12 @@
       "checked_at": "2026-11-08",
       "source": "https://opencode.ai/v2/docs/console/models/#deprecated-models",
       "reason": "Explicitly listed in the official Console deprecated-models table with deprecation date November 6, 2026. Also absent from the current Console endpoint, pricing, free-model and privacy tables and from the public Console models endpoint on 2026-11-08; removed from active offerings."
+    },
+    {
+      "model": "Crouton Alpha Free",
+      "model_id": "crouton-alpha-free",
+      "deprecation_date": "November 9, 2026",
+      "reason": "Explicitly listed in the official Console deprecated-models table with a November 9, 2026 deprecation date; also absent from the current Console endpoint, pricing and free-model tables and from the live Console models endpoint. Removed from active offerings on 2026-11-12."
     }
   ],
   "billing": {
@@ -3551,6 +3657,5 @@
     "source": "https://opencode.ai/v2/docs/console/models/#pricing",
     "notes": "Charged per credit purchase; excluded from token-workload price examples."
   },
-  "notes": "2026-11-10 KST catalog gap: claude-fable-5-2 is returned by the public Console models endpoint (release 2026-11-09; endpoint cost metadata $8 input / $40 output / $0.20 cached read / $10 cached write per 1M, context 1,000,000, max output 128,000) but is absent from the official Console endpoint and pricing tables on the same date. It is recorded here as a gap rather than added as an active offering with a price the pricing table does not publish. Recheck next run."
+  "notes": "2026-11-12 KST: the 2026-11-10 catalog gap for claude-fable-5-2 is resolved, because the official Console endpoint and pricing tables now publish it at $8 / $40 / $0.20 cached read / $10 cached write, so it is added as an active offering. Gemini 4 Carbon is added from the same tables and the live models endpoint. MiniMax M3.1 Flash Free is restored after reappearing in the pricing table, free-model section and live endpoint. Crouton Alpha Free is removed from active offerings because the official deprecated-models table now lists it with a November 9, 2026 deprecation date and the live models endpoint no longer returns it. Claude Sonnet 5.5 cached read is corrected to $0.10, and Gemini 3.6/3.7/3.8 Flash now store their discounted effective price ($0.75 / $3.75 / $0.075) with the undiscounted list price in base_prices; that discount ends 2026-12-31. Free offers remain limited-time and are not unlimited usage."
 }
-

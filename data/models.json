@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-10",
+  "as_of": "2026-11-12",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -2058,52 +2058,6 @@
       }
     },
     {
-      "model": "Crouton Alpha Free",
-      "model_id": "crouton-alpha-free",
-      "selection_id": "opencode-go/crouton-alpha-free",
-      "endpoint": "https://opencode.ai/inference/go/openai/v1/responses",
-      "developer": "Unknown (stealth model)",
-      "provider": "Unknown (Go upstream routing undisclosed)",
-      "input_price": 0,
-      "output_price": 0,
-      "cached_input": 0,
-      "cached_write": null,
-      "context": "1,048,576 (Go endpoint) / 270,000 max output",
-      "reasoning": true,
-      "reasoning_effort": "minimal, low, medium, high, xhigh, max (Go endpoint capability list)",
-      "benchmark": "N/A",
-      "training": "No Training",
-      "retention": "30 days",
-      "chinese_model": null,
-      "hosting": "Unknown (Go hosting region undisclosed)",
-      "china_transfer": "Unknown",
-      "coding_grade": "N/A",
-      "value_grade": "N/A",
-      "privacy_risk": "Medium",
-      "positioning": [],
-      "notes": "Added on 2026-11-07 KST after the official Go model list, the Go/Go Plus/Go Teams price tables, the estimated-request table, the endpoint table, the privacy table and the live Go models endpoint all listed crouton-alpha-free. Official Go tables: free input, output and cached read; monthly limit Unlimited and Unlimited estimated requests; free only for a limited time, with no published end date. Privacy table: training not used, retention 30 days (unlike Iceman Contributor Free, this free offering does not train on requests). Go restricts availability by region: not offered in the EU, Afghanistan, Belarus, China including Hong Kong and Macau, Cambodia, Cuba, Eritrea, Ethiopia, Haiti, Iran, Iraq, Libya, Myanmar, Nicaragua, North Korea, Pakistan, Russia, Somalia, Syria, Venezuela, Western Sahara, or some regions within otherwise supported countries; this is an access restriction, not evidence of processing location. Live Go endpoint metadata: stealth reasoning model, release 2026-11-03, text/image/video/PDF input, context 1,048,576, max output 270,000, effort minimal through max, open_weights false, cost 0. Developer, upstream routing, hosting region and cross-border transfer are not published. The Go landing page still shows the older 'View all 31 models' label on 2026-11-07 while the docs list 32; the docs tables are authoritative and the landing count is recorded as stale. No published benchmark; excluded from Coding/Value rather than scored low. The public Go models endpoint did not return crouton-alpha-free during the 2026-11-10 KST check (it did on 2026-11-07) while the official Go model, price, endpoint, request-estimate and privacy tables still list it; kept active on documentation evidence, serving availability unconfirmed.",
-      "sources": [
-        "https://opencode.ai/docs/go/",
-        "https://opencode.ai/inference/go/v1/models"
-      ],
-      "source": "https://opencode.ai/docs/go/",
-      "checked_at": "2026-11-07",
-      "price_tiers": [
-        {
-          "label": "Crouton Alpha Free",
-          "input_price": 0,
-          "output_price": 0,
-          "cached_input": 0,
-          "cached_write": null
-        }
-      ],
-      "coding_evaluation": {
-        "status": "unavailable",
-        "reason": "개발사와 원모델 checkpoint가 공개되지 않은 stealth 모델이며 AA Terminal-Bench 4.0 대응 결과가 없습니다. 미평가이며 0점이 아니므로 Coding/Value 계산에서 제외합니다.",
-        "checked_at": "2026-11-07"
-      }
-    },
-    {
       "model": "LongCat 2.5 Free",
       "developer": "Meituan",
       "provider": "Unknown (Go upstream routing undisclosed)",
@@ -2174,4 +2128,3 @@
     }
   }
 }
-
