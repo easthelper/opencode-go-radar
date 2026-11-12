@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-12",
+  "as_of": "2026-11-13",
   "schema_version": 1,
   "scope": "Official OpenCode Console (Zen) endpoint/pricing catalog only; arbitrary third-party provider catalogs excluded.",
   "sources": [
@@ -3369,6 +3369,13 @@
           "output_price": 0.5,
           "cached_input": 0.004,
           "cached_write": null
+        },
+        {
+          "label": "Muse Ember 1.0 (> 200K tokens)",
+          "input_price": 0.3,
+          "output_price": 1.5,
+          "cached_input": 0.012,
+          "cached_write": null
         }
       ]
     },
@@ -3507,6 +3514,46 @@
       "sources": [
         "https://opencode.ai/v2/docs/console/models/",
         "https://opencode.ai/inference/v1/models"
+      ]
+    },
+    {
+      "offering_id": "console:gemini-4-hydrogen",
+      "offering": "console-payg",
+      "model": "Gemini 4 Hydrogen",
+      "model_id": "gemini-4-hydrogen",
+      "selection_id": "opencode/gemini-4-hydrogen",
+      "endpoint": "https://opencode.ai/inference/google/v1beta/models/gemini-4-hydrogen",
+      "developer": "Google",
+      "provider": "Undisclosed",
+      "input_price": 1.5,
+      "output_price": 7.5,
+      "cached_input": 0.075,
+      "cached_write": null,
+      "context": "1,048,576 (public models endpoint; max output 65,536)",
+      "reasoning": true,
+      "benchmark": "N/A",
+      "training": "No Training",
+      "retention": "0 days",
+      "hosting": "US / EU (Console-wide official policy; exact region undisclosed)",
+      "china_transfer": "No evidence",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [],
+      "source": "https://opencode.ai/v2/docs/console/models/",
+      "checked_at": "2026-11-13",
+      "notes": "Added 2026-11-13 KST: the official Console endpoint and pricing tables and the live Console models endpoint all list gemini-4-hydrogen at $1.50 input / $7.50 output / $0.075 cached read per 1M tokens, with no discount row. It is not in the official Go model list, so no Go allowance applies. Gemini 4 Hydrogen is not among the named privacy exceptions, so the Console-wide no-training, zero-retention and US/EU hosting statements apply; exact upstream and processing region are undisclosed. Native metadata: reasoning model (effort low, medium, high (default), xhigh), text/image/audio/video/PDF input, context 1,048,576, max output 65,536, implicit cache, release 2026-11-12. No independent coding benchmark for this checkpoint is verified, so it is excluded from Coding/Value rather than scored low.",
+      "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
+      "promotion": null,
+      "promotion_end": null,
+      "price_tiers": [
+        {
+          "label": "Gemini 4 Hydrogen",
+          "input_price": 1.5,
+          "output_price": 7.5,
+          "cached_input": 0.075,
+          "cached_write": null
+        }
       ]
     }
   ],
@@ -3657,5 +3704,5 @@
     "source": "https://opencode.ai/v2/docs/console/models/#pricing",
     "notes": "Charged per credit purchase; excluded from token-workload price examples."
   },
-  "notes": "2026-11-12 KST: the 2026-11-10 catalog gap for claude-fable-5-2 is resolved, because the official Console endpoint and pricing tables now publish it at $8 / $40 / $0.20 cached read / $10 cached write, so it is added as an active offering. Gemini 4 Carbon is added from the same tables and the live models endpoint. MiniMax M3.1 Flash Free is restored after reappearing in the pricing table, free-model section and live endpoint. Crouton Alpha Free is removed from active offerings because the official deprecated-models table now lists it with a November 9, 2026 deprecation date and the live models endpoint no longer returns it. Claude Sonnet 5.5 cached read is corrected to $0.10, and Gemini 3.6/3.7/3.8 Flash now store their discounted effective price ($0.75 / $3.75 / $0.075) with the undiscounted list price in base_prices; that discount ends 2026-12-31. Free offers remain limited-time and are not unlimited usage."
+  "notes": "2026-11-13 KST: Gemini 4 Hydrogen (gemini-4-hydrogen) is added as an active Console pay-as-you-go offering, because the official Console endpoint table, pricing table and the live Console models endpoint all publish it at $1.50 input / $7.50 output / $0.075 cached read per 1M tokens with no discount row, and it is absent from the official Go model list. Muse Ember 1.0 gains its published >200K-token tier ($0.30 / $1.50 / $0.012); the 200K-and-under tier was already recorded and is unchanged. No Console token price changed and no offering was deprecated today. 2026-11-12 KST: the 2026-11-10 catalog gap for claude-fable-5-2 is resolved, because the official Console endpoint and pricing tables now publish it at $8 / $40 / $0.20 cached read / $10 cached write, so it is added as an active offering. Gemini 4 Carbon is added from the same tables and the live models endpoint. MiniMax M3.1 Flash Free is restored after reappearing in the pricing table, free-model section and live endpoint. Crouton Alpha Free is removed from active offerings because the official deprecated-models table now lists it with a November 9, 2026 deprecation date and the live models endpoint no longer returns it. Claude Sonnet 5.5 cached read is corrected to $0.10, and Gemini 3.6/3.7/3.8 Flash now store their discounted effective price ($0.75 / $3.75 / $0.075) with the undiscounted list price in base_prices; that discount ends 2026-12-31. Free offers remain limited-time and are not unlimited usage."
 }
