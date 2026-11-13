@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-13",
+  "as_of": "2026-11-14",
   "schema_version": 1,
   "scope": "Official OpenCode Console (Zen) endpoint/pricing catalog only; arbitrary third-party provider catalogs excluded.",
   "sources": [
@@ -3555,6 +3555,101 @@
           "cached_write": null
         }
       ]
+    },
+    {
+      "offering_id": "console:gpt-6-luna-decision",
+      "offering": "console-payg",
+      "model": "GPT 6 Luna Decision",
+      "model_id": "gpt-6-luna-decision",
+      "selection_id": "opencode/gpt-6-luna-decision",
+      "endpoint": "https://opencode.ai/inference/systemone/v1/systemone",
+      "developer": "OpenAI",
+      "provider": "Undisclosed",
+      "input_price": 0.1,
+      "output_price": 0,
+      "cached_input": 0.01,
+      "cached_write": 0.125,
+      "context": "Unknown",
+      "reasoning": null,
+      "benchmark": "N/A",
+      "training": "No Training",
+      "retention": "30 days",
+      "hosting": "US / EU (Console-wide official policy; exact region undisclosed)",
+      "china_transfer": "No evidence",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [],
+      "source": "https://opencode.ai/v2/docs/console/models/",
+      "checked_at": "2026-11-14",
+      "notes": "Added 2026-11-14 KST: the official Console endpoint and pricing tables list gpt-6-luna-decision at $0.10 input / Free output per 1M tokens, with cached read $0.01 and cached write $0.125 at or under 272K tokens, and $0.20 / Free / $0.02 / $0.25 above 272K. It is a System One decision model (typed questions in, values and probabilities out), not a text-generation chat model, so it is not ranked as a coding LLM. The same page snapshot from 2026-11-06 does not contain it, so the listing is recent. It is absent from the live Console models endpoint on 2026-11-14; the documented-but-unserved gap is recorded rather than assumed. Retention follows the Console OpenAI note (30 days); no zero-retention claim is published for this endpoint. Context limits, reasoning support and benchmarks are not inferred from other offerings.",
+      "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
+      "promotion": null,
+      "promotion_end": null,
+      "price_tiers": [
+        {
+          "label": "GPT 6 Luna Decision (≤ 272K tokens)",
+          "input_price": 0.1,
+          "output_price": 0,
+          "cached_input": 0.01,
+          "cached_write": 0.125
+        },
+        {
+          "label": "GPT 6 Luna Decision (> 272K tokens)",
+          "input_price": 0.2,
+          "output_price": 0,
+          "cached_input": 0.02,
+          "cached_write": 0.25
+        }
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/inference/v1/models"
+      ]
+    },
+    {
+      "offering_id": "console:gemini-decision-1",
+      "offering": "console-payg",
+      "model": "Gemini Decision 1",
+      "model_id": "gemini-decision-1",
+      "selection_id": "opencode/gemini-decision-1",
+      "endpoint": "https://opencode.ai/inference/systemone/v1/systemone",
+      "developer": "Google",
+      "provider": "Undisclosed",
+      "input_price": 0.1,
+      "output_price": 0,
+      "cached_input": null,
+      "cached_write": null,
+      "context": "Unknown",
+      "reasoning": null,
+      "benchmark": "N/A",
+      "training": "No Training",
+      "retention": "0 days",
+      "hosting": "US / EU (Console-wide official policy; exact region undisclosed)",
+      "china_transfer": "No evidence",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [],
+      "source": "https://opencode.ai/v2/docs/console/models/",
+      "checked_at": "2026-11-14",
+      "notes": "Added 2026-11-14 KST: the official Console endpoint and pricing tables list gemini-decision-1 at $0.10 input / Free output per 1M tokens, with no cached read or cached write price. It takes the same System One request as Jev and accepts text and images as well as audio, video and PDF parts in state, but it is a decision model (values and probabilities out), not a text-generation chat model, so it is not ranked as a coding LLM. The same page snapshot from 2026-11-06 does not contain it, so the listing is recent. It is absent from the live Console models endpoint on 2026-11-14; the documented-but-unserved gap is recorded rather than assumed. Google is not among the named privacy exceptions, so the Console-wide no-training, zero-retention and US/EU hosting statements apply; the exact processing region is undisclosed.",
+      "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
+      "promotion": null,
+      "promotion_end": null,
+      "price_tiers": [
+        {
+          "label": "Gemini Decision 1",
+          "input_price": 0.1,
+          "output_price": 0,
+          "cached_input": null,
+          "cached_write": null
+        }
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/models/",
+        "https://opencode.ai/inference/v1/models"
+      ]
     }
   ],
   "excluded_models": [
@@ -3704,5 +3799,5 @@
     "source": "https://opencode.ai/v2/docs/console/models/#pricing",
     "notes": "Charged per credit purchase; excluded from token-workload price examples."
   },
-  "notes": "2026-11-13 KST: Gemini 4 Hydrogen (gemini-4-hydrogen) is added as an active Console pay-as-you-go offering, because the official Console endpoint table, pricing table and the live Console models endpoint all publish it at $1.50 input / $7.50 output / $0.075 cached read per 1M tokens with no discount row, and it is absent from the official Go model list. Muse Ember 1.0 gains its published >200K-token tier ($0.30 / $1.50 / $0.012); the 200K-and-under tier was already recorded and is unchanged. No Console token price changed and no offering was deprecated today. 2026-11-12 KST: the 2026-11-10 catalog gap for claude-fable-5-2 is resolved, because the official Console endpoint and pricing tables now publish it at $8 / $40 / $0.20 cached read / $10 cached write, so it is added as an active offering. Gemini 4 Carbon is added from the same tables and the live models endpoint. MiniMax M3.1 Flash Free is restored after reappearing in the pricing table, free-model section and live endpoint. Crouton Alpha Free is removed from active offerings because the official deprecated-models table now lists it with a November 9, 2026 deprecation date and the live models endpoint no longer returns it. Claude Sonnet 5.5 cached read is corrected to $0.10, and Gemini 3.6/3.7/3.8 Flash now store their discounted effective price ($0.75 / $3.75 / $0.075) with the undiscounted list price in base_prices; that discount ends 2026-12-31. Free offers remain limited-time and are not unlimited usage."
+  "notes": "2026-11-14 KST: GPT 6 Luna Decision (gpt-6-luna-decision) and Gemini Decision 1 (gemini-decision-1) are added as active Console pay-as-you-go decision offerings, because the official Console endpoint and pricing tables publish both at $0.10 input / Free output per 1M tokens, with GPT 6 Luna Decision also at $0.01 cached read / $0.125 cached write (≤272K) and $0.20 / Free / $0.02 / $0.25 (>272K). Neither ID appears in the 2026-11-06 snapshot of the same page, so both listings are recent, and both are still absent from the live Console models endpoint, so the documented-but-unserved gap is recorded instead of assumed. Neither is a text-generation chat model, so neither is scored for Coding/Value. No other Console token price changed, no offering was deprecated, and the LongCat 2.5 Free 100 requests/day note, the 4.6% + $0.31 credit-purchase fee and the published discount end dates (Gemini 4 Carbon/Argon 2026-11-30; Gemini 3.6/3.7/3.8 Flash 2026-12-31; Mistral Large 4 without a date) are unchanged. 2026-11-13 KST: Gemini 4 Hydrogen (gemini-4-hydrogen) is added as an active Console pay-as-you-go offering, because the official Console endpoint table, pricing table and the live Console models endpoint all publish it at $1.50 input / $7.50 output / $0.075 cached read per 1M tokens with no discount row, and it is absent from the official Go model list. Muse Ember 1.0 gains its published >200K-token tier ($0.30 / $1.50 / $0.012); the 200K-and-under tier was already recorded and is unchanged. No Console token price changed and no offering was deprecated today. 2026-11-12 KST: the 2026-11-10 catalog gap for claude-fable-5-2 is resolved, because the official Console endpoint and pricing tables now publish it at $8 / $40 / $0.20 cached read / $10 cached write, so it is added as an active offering. Gemini 4 Carbon is added from the same tables and the live models endpoint. MiniMax M3.1 Flash Free is restored after reappearing in the pricing table, free-model section and live endpoint. Crouton Alpha Free is removed from active offerings because the official deprecated-models table now lists it with a November 9, 2026 deprecation date and the live models endpoint no longer returns it. Claude Sonnet 5.5 cached read is corrected to $0.10, and Gemini 3.6/3.7/3.8 Flash now store their discounted effective price ($0.75 / $3.75 / $0.075) with the undiscounted list price in base_prices; that discount ends 2026-12-31. Free offers remain limited-time and are not unlimited usage."
 }
