@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-14",
+  "as_of": "2026-11-17",
   "schema_version": 1,
   "scope": "Official OpenCode Console (Zen) endpoint/pricing catalog only; arbitrary third-party provider catalogs excluded.",
   "sources": [
@@ -3333,6 +3333,46 @@
       ]
     },
     {
+      "offering_id": "console:hy4-flash-free",
+      "offering": "console-free",
+      "model": "Hy4 flash Free",
+      "model_id": "hy4-flash-free",
+      "selection_id": "opencode/hy4-flash-free",
+      "endpoint": "https://opencode.ai/inference/openai/v1/chat/completions",
+      "developer": "Tencent",
+      "provider": "Undisclosed",
+      "input_price": 0,
+      "output_price": 0,
+      "cached_input": 0,
+      "cached_write": null,
+      "context": "1,048,576 (public models endpoint; max output 65,536)",
+      "reasoning": true,
+      "benchmark": "N/A",
+      "training": "No Training",
+      "retention": "0 days",
+      "hosting": "US / EU (Console-wide official policy; exact region undisclosed)",
+      "china_transfer": "No evidence",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [],
+      "source": "https://opencode.ai/v2/docs/console/models/",
+      "checked_at": "2026-11-17",
+      "notes": "Added 2026-11-17 KST: the official Console endpoint table, the pricing table, the free-model section, the privacy section and the public Console models endpoint all list hy4-flash-free. Console pricing lists Free input, output and cached read; free only for a limited time with no published end date. The free-model note states a zero-retention policy and no training on request data, and Hy4 flash is not among the named privacy exceptions, so the Console-wide no-training, zero-retention and US/EU hosting statements apply. No numeric free-model request limit is published for this row, so free is not treated as unlimited usage. Native metadata: multimodal reasoning model (text/image in), context 1,048,576, input 983,040, max output 65,536, release 2026-11-16. This is a Console offering; Go subscription limits, Go quota and Go promotional terms do not apply. No independent Terminal-Bench 4.0 evaluation exists, so it is excluded from Coding/Value rather than scored low.",
+      "limits": "Not disclosed; free does not establish unlimited usage. Free-tier chat models require OpenCode. Separate from Go free/unlimited promotional allowances.",
+      "promotion": "Free for a limited time",
+      "promotion_end": null,
+      "price_tiers": [
+        {
+          "label": "Hy4 flash Free",
+          "input_price": 0,
+          "output_price": 0,
+          "cached_input": 0,
+          "cached_write": null
+        }
+      ]
+    },
+    {
       "offering_id": "console:muse-ember-1.0",
       "offering": "console-payg",
       "model": "Muse Ember 1.0",
@@ -3799,5 +3839,5 @@
     "source": "https://opencode.ai/v2/docs/console/models/#pricing",
     "notes": "Charged per credit purchase; excluded from token-workload price examples."
   },
-  "notes": "2026-11-14 KST: GPT 6 Luna Decision (gpt-6-luna-decision) and Gemini Decision 1 (gemini-decision-1) are added as active Console pay-as-you-go decision offerings, because the official Console endpoint and pricing tables publish both at $0.10 input / Free output per 1M tokens, with GPT 6 Luna Decision also at $0.01 cached read / $0.125 cached write (≤272K) and $0.20 / Free / $0.02 / $0.25 (>272K). Neither ID appears in the 2026-11-06 snapshot of the same page, so both listings are recent, and both are still absent from the live Console models endpoint, so the documented-but-unserved gap is recorded instead of assumed. Neither is a text-generation chat model, so neither is scored for Coding/Value. No other Console token price changed, no offering was deprecated, and the LongCat 2.5 Free 100 requests/day note, the 4.6% + $0.31 credit-purchase fee and the published discount end dates (Gemini 4 Carbon/Argon 2026-11-30; Gemini 3.6/3.7/3.8 Flash 2026-12-31; Mistral Large 4 without a date) are unchanged. 2026-11-13 KST: Gemini 4 Hydrogen (gemini-4-hydrogen) is added as an active Console pay-as-you-go offering, because the official Console endpoint table, pricing table and the live Console models endpoint all publish it at $1.50 input / $7.50 output / $0.075 cached read per 1M tokens with no discount row, and it is absent from the official Go model list. Muse Ember 1.0 gains its published >200K-token tier ($0.30 / $1.50 / $0.012); the 200K-and-under tier was already recorded and is unchanged. No Console token price changed and no offering was deprecated today. 2026-11-12 KST: the 2026-11-10 catalog gap for claude-fable-5-2 is resolved, because the official Console endpoint and pricing tables now publish it at $8 / $40 / $0.20 cached read / $10 cached write, so it is added as an active offering. Gemini 4 Carbon is added from the same tables and the live models endpoint. MiniMax M3.1 Flash Free is restored after reappearing in the pricing table, free-model section and live endpoint. Crouton Alpha Free is removed from active offerings because the official deprecated-models table now lists it with a November 9, 2026 deprecation date and the live models endpoint no longer returns it. Claude Sonnet 5.5 cached read is corrected to $0.10, and Gemini 3.6/3.7/3.8 Flash now store their discounted effective price ($0.75 / $3.75 / $0.075) with the undiscounted list price in base_prices; that discount ends 2026-12-31. Free offers remain limited-time and are not unlimited usage."
+  "notes": "2026-11-17 KST: Hy4 flash Free (hy4-flash-free) is added as an active Console free offering, because the official Console endpoint table, the pricing table, the free-model section, the privacy section and the public Console models endpoint all list it at Free input / output / cached read per 1M tokens. No numeric free-model request limit is published for it, so free is not recorded as unlimited usage; the free-tier chat models still require OpenCode. No other Console token price changed, no offering was deprecated today, and the LongCat 2.5 Free 100 requests/day note, the 4.6% + $0.31 credit-purchase fee and the published discount end dates (Gemini 4 Carbon/Argon 2026-11-30; Gemini 3.6/3.7/3.8 Flash 2026-12-31; Mistral Large 4 without a date) are unchanged. The older deprecations still listed in the official deprecated-models table (Claude Haiku 3.5, Claude Opus 4.1, Claude Sonnet 4, GLM 4.6, GLM 4.7, Gemini 3 Pro, Kimi K2, Kimi K2 Thinking, MiniMax M2.1, Qwen3 Coder 480B) are absent from the active Console endpoint and pricing tables and were never active rows in this dataset, so no active offering changes because of them. 2026-11-14 KST: GPT 6 Luna Decision (gpt-6-luna-decision) and Gemini Decision 1 (gemini-decision-1) are added as active Console pay-as-you-go decision offerings, because the official Console endpoint and pricing tables publish both at $0.10 input / Free output per 1M tokens, with GPT 6 Luna Decision also at $0.01 cached read / $0.125 cached write (≤272K) and $0.20 / Free / $0.02 / $0.25 (>272K). Neither ID appears in the 2026-11-06 snapshot of the same page, so both listings are recent, and both are still absent from the live Console models endpoint, so the documented-but-unserved gap is recorded instead of assumed. Neither is a text-generation chat model, so neither is scored for Coding/Value. No other Console token price changed, no offering was deprecated, and the LongCat 2.5 Free 100 requests/day note, the 4.6% + $0.31 credit-purchase fee and the published discount end dates (Gemini 4 Carbon/Argon 2026-11-30; Gemini 3.6/3.7/3.8 Flash 2026-12-31; Mistral Large 4 without a date) are unchanged. 2026-11-13 KST: Gemini 4 Hydrogen (gemini-4-hydrogen) is added as an active Console pay-as-you-go offering, because the official Console endpoint table, pricing table and the live Console models endpoint all publish it at $1.50 input / $7.50 output / $0.075 cached read per 1M tokens with no discount row, and it is absent from the official Go model list. Muse Ember 1.0 gains its published >200K-token tier ($0.30 / $1.50 / $0.012); the 200K-and-under tier was already recorded and is unchanged. No Console token price changed and no offering was deprecated today. 2026-11-12 KST: the 2026-11-10 catalog gap for claude-fable-5-2 is resolved, because the official Console endpoint and pricing tables now publish it at $8 / $40 / $0.20 cached read / $10 cached write, so it is added as an active offering. Gemini 4 Carbon is added from the same tables and the live models endpoint. MiniMax M3.1 Flash Free is restored after reappearing in the pricing table, free-model section and live endpoint. Crouton Alpha Free is removed from active offerings because the official deprecated-models table now lists it with a November 9, 2026 deprecation date and the live models endpoint no longer returns it. Claude Sonnet 5.5 cached read is corrected to $0.10, and Gemini 3.6/3.7/3.8 Flash now store their discounted effective price ($0.75 / $3.75 / $0.075) with the undiscounted list price in base_prices; that discount ends 2026-12-31. Free offers remain limited-time and are not unlimited usage."
 }

@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-12",
+  "as_of": "2026-11-17",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -1191,6 +1191,56 @@
       }
     },
     {
+      "model": "Qwen4 Max",
+      "model_id": "qwen4-max",
+      "selection_id": "opencode-go/qwen4-max",
+      "endpoint": "https://opencode.ai/inference/go/anthropic/v1/messages",
+      "developer": "Alibaba",
+      "provider": "Unknown (Go upstream routing undisclosed)",
+      "input_price": 1.5,
+      "output_price": 4.5,
+      "cached_input": 0.075,
+      "context": "1,000,000 (live Go endpoint; max output 262,144)",
+      "reasoning": true,
+      "benchmark": "N/A",
+      "training": "No Training",
+      "retention": "0 days",
+      "chinese_model": true,
+      "hosting": "Unknown (Go hosting region undisclosed)",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [
+        "성능 우선"
+      ],
+      "notes": "Added 2026-11-17 KST: the official Go model list, the Go/Go Plus/Go Teams price tables, the estimated-request table, the endpoint table, the privacy table, the Go landing page (badged New) and the live Go models endpoint all list qwen4-max (alibaba/qwen4-max, release 2026-11-16). Official: $1.50 input / $4.50 output / $0.075 cached read / $1.875 cached write (an explicit 1-hour cache write is $3.00) per 1M tokens, $15 monthly usage on Go (Go Plus $60, Go Teams $20), 460 / 1,160 / 2,310 estimated requests on Go. The landing page shows 463 estimated requests per 5 hours for Go and 1,850 for Go Plus against the docs' 460 and 1,840; the docs table is recorded and the landing difference is noted rather than reconciled. Privacy table: training not used, retention 0 days. Live Go endpoint metadata: text, image and video input, Anthropic messages endpoint, context 1,000,000, output 262,144, reasoning toggle with low/high/xhigh effort and a 262,144 budget, implicit plus explicit cache. Upstream routing, hosting region and cross-border transfer are not established. No Terminal-Bench 4.0 score for this checkpoint was verified, so the row is excluded from Coding/Value rather than scored low.",
+      "sources": [
+        "https://opencode.ai/docs/go/",
+        "https://opencode.ai/inference/go/v1/models"
+      ],
+      "reasoning_effort": "low, high, xhigh (Go endpoint capability list)",
+      "capability_source": "https://opencode.ai/inference/go/v1/models",
+      "price_tiers": [
+        {
+          "label": "Qwen4 Max",
+          "input_price": 1.5,
+          "output_price": 4.5,
+          "cached_input": 0.075,
+          "cached_write": 1.875
+        }
+      ],
+      "source": "https://opencode.ai/docs/go/",
+      "checked_at": "2026-11-17",
+      "cached_write": 1.875,
+      "coding_evaluation": {
+        "status": "unavailable",
+        "reason": "2026-11-16 공개된 신모델로, AA 모델 페이지는 있으나 이 체크포인트의 Terminal-Bench 4.0 세부 점수를 확인하지 못했습니다. 미평가이며 0점이 아니므로 Coding/Value 계산에서 제외합니다.",
+        "source": "https://artificialanalysis.ai/models/qwen4-max",
+        "checked_at": "2026-11-17"
+      }
+    },
+    {
       "model": "Qwen3.8 Max",
       "developer": "Alibaba",
       "provider": "Unknown (Go upstream routing undisclosed)",
@@ -2097,6 +2147,56 @@
       "source": "https://opencode.ai/docs/go/",
       "checked_at": "2026-11-10",
       "cached_write": null
+    },
+    {
+      "model": "Hy4 flash Free",
+      "model_id": "hy4-flash-free",
+      "selection_id": "opencode-go/hy4-flash-free",
+      "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "developer": "Tencent",
+      "provider": "Unknown (Go upstream routing undisclosed)",
+      "input_price": 0,
+      "output_price": 0,
+      "cached_input": 0,
+      "context": "1,048,576 (live Go endpoint; max output 65,536)",
+      "reasoning": true,
+      "benchmark": "N/A",
+      "training": "No Training",
+      "retention": "0 days",
+      "chinese_model": true,
+      "hosting": "Unknown (Go hosting region undisclosed)",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [
+        "가성비 우선",
+        "무료"
+      ],
+      "notes": "Added 2026-11-17 KST: the official Go model list, the Go/Go Plus/Go Teams price tables, the estimated-request table, the endpoint table, the privacy table, the Go landing page (badged New) and the live Go models endpoint all list hy4-flash-free (tencent/hy4-flash, release 2026-11-16). Free input, output and cached read; monthly limit Unlimited and estimated requests Unlimited; free only for a limited time with no published end date. Privacy table: training not used, retention 0 days. Live Go endpoint metadata: multimodal reasoning model, text and image input, context 1,048,576, input 983,040, output 65,536, reasoning effort none/high, open_weights false. The same ID is also listed on the official Console endpoint and pricing tables as a free offering (recorded separately as a Console row; Go quota and Console terms are not merged). Upstream routing, hosting region and cross-border transfer are not established. No Terminal-Bench 4.0 evaluation exists for this model, so the row is excluded from Coding/Value rather than scored low.",
+      "sources": [
+        "https://opencode.ai/docs/go/",
+        "https://opencode.ai/inference/go/v1/models"
+      ],
+      "reasoning_effort": "none, high (Go endpoint capability list)",
+      "capability_source": "https://opencode.ai/inference/go/v1/models",
+      "price_tiers": [
+        {
+          "label": "Hy4 flash Free",
+          "input_price": 0,
+          "output_price": 0,
+          "cached_input": 0,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/docs/go/",
+      "checked_at": "2026-11-17",
+      "cached_write": null,
+      "coding_evaluation": {
+        "status": "unavailable",
+        "reason": "2026-11-16 공개된 신모델로 AA 모델 페이지가 없습니다(404). 미평가이며 0점이 아니므로 Coding/Value 계산에서 제외합니다.",
+        "checked_at": "2026-11-17"
+      }
     }
   ],
   "recommendation_note": "Coding uses one independent benchmark cohort. Value is a transparent same-subscription performance-capacity proxy, not predicted successful tasks. Existing Go recommendations remain conditional and unchanged.",
