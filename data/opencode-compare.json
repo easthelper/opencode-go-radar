@@ -4620,13 +4620,6 @@
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
-    "go:GLM-5.2": {
-      "catalog_id": "zhipuai/glm-5.2",
-      "status": "canonical",
-      "selection_id": "opencode-go/glm-5.2",
-      "evidence": "https://models.opencode.ai/api.json",
-      "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
-    },
     "go:Kimi K3": {
       "catalog_id": "moonshotai/kimi-k3",
       "status": "canonical",
@@ -4801,13 +4794,6 @@
       "selection_id": "opencode/big-pickle",
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical ID 또는 유일한 정확한 이름 대응을 확인하지 못했습니다. 익명·불명확 모델은 추정하지 않습니다."
-    },
-    "console:glm-5.3-flash-free": {
-      "catalog_id": "zhipuai/glm-5.3-flash",
-      "status": "canonical",
-      "selection_id": "opencode/glm-5.3-flash-free",
-      "evidence": "https://models.opencode.ai/api.json",
-      "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
     "console:deepseek-v4.1-flash-free": {
       "catalog_id": "deepseek/deepseek-v4.1-flash",
