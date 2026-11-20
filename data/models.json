@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-20",
+  "as_of": "2026-11-21",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -415,6 +415,82 @@
         "harness": "mini-swe-agent",
         "metric": "pass@1 averaged over 3 repeats",
         "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음."
+      }
+    },
+    {
+      "model": "GLM-5.2",
+      "developer": "Z.ai",
+      "provider": "Unknown (Go upstream routing undisclosed)",
+      "input_price": 1.4,
+      "output_price": 4.4,
+      "cached_input": 0.26,
+      "context": "1M",
+      "reasoning": true,
+      "benchmark": "Terminal-Bench 2.1 81.0 / SWE-bench Pro 62.1 (Z.ai-reported)",
+      "training": "No Training",
+      "retention": "0 days",
+      "chinese_model": true,
+      "hosting": "Unknown (Go hosting region undisclosed)",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [
+        "균형형"
+      ],
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/#privacy",
+        "https://docs.z.ai/guides/llm/glm-5.2"
+      ],
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Re-listed 2026-11-21 KST: the official Go limits/pricing table (32 rows) and the Go docs privacy table list this model again at 792 (Go) / 2,370 (Go Plus) estimated requests per 5 hours and $60 / $180 monthly usage, and the Console pricing table prices it at $1.40 input / $4.40 output / $0.26 cached read, but the live Go models endpoint returns 31 models without it and the official OpenCode models dataset still marks opencode-go/glm-5.2 as deprecated, so current Go serving is unconfirmed.",
+      "capability_source": "https://docs.z.ai/guides/llm/glm-5.2",
+      "price_tiers": [
+        {
+          "label": "GLM-5.2",
+          "input_price": 1.4,
+          "output_price": 4.4,
+          "cached_input": 0.26,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "checked_at": "2026-11-21",
+      "cached_write": null,
+      "coding_evaluation": {
+        "model": "GLM-5.2",
+        "evaluated_model": "GLM-5.2 (Max)",
+        "model_slug": "glm-5-2",
+        "model_source": "https://artificialanalysis.ai/models/glm-5-2",
+        "benchmark": "Terminal-Bench 4.0",
+        "benchmark_version": "4.0",
+        "score": 1.010101,
+        "unit": "percent",
+        "scoring": "pass@1 averaged over 3 repeats",
+        "tasks": 66,
+        "repeats": 3,
+        "scaffold": "mini-swe-agent",
+        "scaffold_version": null,
+        "effort": "max",
+        "effort_note": null,
+        "source": "https://artificialanalysis.ai/models/glm-5-2",
+        "methodology_source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking#terminal-bench-4-0",
+        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "publisher": "Artificial Analysis",
+        "evidence_type": "independent",
+        "comparison_group": "aa-terminalbench-4.0-mini-swe-66x3",
+        "checked_at": "2026-10-19",
+        "evaluated_at": null,
+        "go_endpoint_tested": false,
+        "go_mapping": "same named base model; Go checkpoint, effort parity and routing unverified",
+        "note": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음. AA deprecated 표시는 AA 평가상태이며 Go 제공종료를 뜻하지 않음.",
+        "aa_deprecated": true,
+        "status": "matched",
+        "cohort": "aa-terminalbench-4.0-mini-swe",
+        "score_pct": 1.010101,
+        "evaluator": "Artificial Analysis",
+        "harness": "mini-swe-agent",
+        "metric": "pass@1 averaged over 3 repeats",
+        "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음. AA deprecated 표시는 AA 평가상태이며 Go 제공종료를 뜻하지 않음."
       }
     },
     {

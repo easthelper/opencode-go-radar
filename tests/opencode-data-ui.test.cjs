@@ -8,7 +8,7 @@ const sandbox={console,document:{querySelector:el,querySelectorAll:()=>buttons},
 vm.createContext(sandbox);vm.runInContext(fs.readFileSync(path.join(root,'assets/opencode-data.js'),'utf8'),sandbox);
 setTimeout(async()=>{
  const api=sandbox.OpenCodeData;
- assert.equal(api.view.rows.length,43);assert.ok(el('#oc-count').textContent.includes('33 대응'));
+ assert.equal(api.view.rows.length,44);assert.ok(el('#oc-count').textContent.includes('34 대응'));
  assert.ok(el('#oc-models').innerHTML.includes('Jev 1.13 Free'));
  assert.ok(el('#oc-models').innerHTML.includes('N/A · 미측정'));
  const unknown=rows.find(m=>m.model==='Big Pickle');assert.equal(api.score(unknown,'coding'),null);assert.ok(api.details(unknown).includes('N/A'));
