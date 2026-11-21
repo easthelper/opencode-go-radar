@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-21",
+  "as_of": "2026-11-22",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -442,7 +442,7 @@
         "https://opencode.ai/v2/docs/console/go/#privacy",
         "https://docs.z.ai/guides/llm/glm-5.2"
       ],
-      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Re-listed 2026-11-21 KST: the official Go limits/pricing table (32 rows) and the Go docs privacy table list this model again at 792 (Go) / 2,370 (Go Plus) estimated requests per 5 hours and $60 / $180 monthly usage, and the Console pricing table prices it at $1.40 input / $4.40 output / $0.26 cached read, but the live Go models endpoint returns 31 models without it and the official OpenCode models dataset still marks opencode-go/glm-5.2 as deprecated, so current Go serving is unconfirmed.",
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Re-listed 2026-11-21 KST: the official Go limits/pricing table (32 rows) and the Go docs privacy table list this model again at 792 (Go) / 2,370 (Go Plus) estimated requests per 5 hours and $60 / $180 monthly usage, and the Console pricing table prices it at $1.40 input / $4.40 output / $0.26 cached read, but the live Go models endpoint returns 31 models without it and the official OpenCode models dataset still marks opencode-go/glm-5.2 as deprecated, so current Go serving is unconfirmed. Updated 2026-11-22 KST: the Go docs privacy table no longer lists GLM-5.2 (it now covers the 31 models also served by the live Go endpoint), so the only remaining official Go trace of this model is the landing page limits/pricing table (32 rows, 792 Go estimated requests per 5 hours, $60 Go monthly usage). Because that price/limits table is a current official Go page that states the model is offered, the row stays active with the documented-versus-served gap recorded rather than resolved.",
       "capability_source": "https://docs.z.ai/guides/llm/glm-5.2",
       "price_tiers": [
         {
@@ -454,7 +454,7 @@
         }
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
-      "checked_at": "2026-11-21",
+      "checked_at": "2026-11-22",
       "cached_write": null,
       "coding_evaluation": {
         "model": "GLM-5.2",
