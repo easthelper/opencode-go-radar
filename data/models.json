@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-22",
+  "as_of": "2026-11-23",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -640,82 +640,6 @@
         "status": "matched",
         "cohort": "aa-terminalbench-4.0-mini-swe",
         "score_pct": 1.010101,
-        "evaluator": "Artificial Analysis",
-        "harness": "mini-swe-agent",
-        "metric": "pass@1 averaged over 3 repeats",
-        "reason": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음."
-      }
-    },
-    {
-      "model": "LongCat-2.0",
-      "developer": "Meituan",
-      "provider": "Unknown (Go upstream routing undisclosed)",
-      "input_price": 0.3,
-      "output_price": 1.2,
-      "cached_input": 0.006,
-      "context": "1M",
-      "reasoning": true,
-      "benchmark": "SWE-bench Pro 59.5 / Terminal-Bench 2.1 70.8 (Meituan-reported, Claude Code)",
-      "training": "No Training",
-      "retention": "0 days",
-      "chinese_model": true,
-      "hosting": "Unknown (Go hosting region undisclosed)",
-      "china_transfer": "Unknown",
-      "coding_grade": "N/A",
-      "value_grade": "N/A",
-      "privacy_risk": "Medium",
-      "positioning": [
-        "가성비 우선",
-        "저가 서브에이전트"
-      ],
-      "sources": [
-        "https://opencode.ai/v2/docs/console/go/#privacy",
-        "https://longcat.ai/blog/longcat-2.0/"
-      ],
-      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified.",
-      "capability_source": "https://longcat.ai/blog/longcat-2.0/",
-      "price_tiers": [
-        {
-          "label": "LongCat-2.0",
-          "input_price": 0.3,
-          "output_price": 1.2,
-          "cached_input": 0.006,
-          "cached_write": null
-        }
-      ],
-      "source": "https://opencode.ai/v2/docs/console/go/",
-      "checked_at": "2026-10-18",
-      "cached_write": null,
-      "coding_evaluation": {
-        "model": "LongCat-2.0",
-        "evaluated_model": "LongCat 2.0",
-        "model_slug": "longcat-2-0",
-        "model_source": "https://artificialanalysis.ai/models/longcat-2-0",
-        "benchmark": "Terminal-Bench 4.0",
-        "benchmark_version": "4.0",
-        "score": 0,
-        "unit": "percent",
-        "scoring": "pass@1 averaged over 3 repeats",
-        "tasks": 66,
-        "repeats": 3,
-        "scaffold": "mini-swe-agent",
-        "scaffold_version": null,
-        "effort": null,
-        "effort_note": "AA row effort not separately labeled",
-        "source": "https://artificialanalysis.ai/models/longcat-2-0",
-        "methodology_source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking#terminal-bench-4-0",
-        "benchmark_source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
-        "publisher": "Artificial Analysis",
-        "evidence_type": "independent",
-        "comparison_group": "aa-terminalbench-4.0-mini-swe-66x3",
-        "checked_at": "2026-10-19",
-        "evaluated_at": null,
-        "go_endpoint_tested": false,
-        "go_mapping": "same named base model; Go checkpoint, effort parity and routing unverified",
-        "note": "AA 독립 원모델 평가. OpenCode Go endpoint 실측 아님. 동일 taskset/harness이지만 모델별 effort·토큰 사용량은 다를 수 있음.",
-        "status": "matched",
-        "cohort": "aa-terminalbench-4.0-mini-swe",
-        "score_pct": 0,
         "evaluator": "Artificial Analysis",
         "harness": "mini-swe-agent",
         "metric": "pass@1 averaged over 3 repeats",
@@ -1676,7 +1600,7 @@
       "reasoning": true,
       "benchmark": "N/A",
       "training": "No Training",
-      "retention": "0 days",
+      "retention": "Up to 55 days (Google abuse monitoring)",
       "chinese_model": false,
       "hosting": "Unknown (Go hosting region undisclosed)",
       "china_transfer": "Unknown",
@@ -1684,7 +1608,7 @@
       "value_grade": "N/A",
       "privacy_risk": "High",
       "positioning": [],
-      "notes": "Current official Go offering is Gemini 4 Argon, with no training and 0-day retention. Upstream routing, hosting region and cross-border transfer remain unverified. Context/reasoning are base-model specifications; Go limits and effort exposure remain unverified. Token prices are 50% off through 2026-11-30; the official source does not specify an expiry time zone. Base prices are retained separately. Privacy filters do not establish processing region or authorize sensitive-code use.",
+      "notes": "2026-11-23 KST: the official Go privacy table states up to 55 days retention for Gemini 4 Argon (Google abuse monitoring, per Google's Gemini API Terms); the previous 0-day entry did not match the current table and is corrected. Training not used. Upstream routing, hosting region and cross-border transfer remain unverified. Context/reasoning are base-model specifications; Go limits and effort exposure remain unverified. Token prices are 50% off through 2026-11-30; the official source does not specify an expiry time zone. Base prices are retained separately. Privacy filters do not establish processing region or authorize sensitive-code use.",
       "sources": [
         "https://opencode.ai/v2/docs/console/go/#privacy",
         "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon"
@@ -1701,7 +1625,7 @@
         }
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
-      "checked_at": "2026-10-24",
+      "checked_at": "2026-11-23",
       "cached_write": null,
       "coding_evaluation": {
         "status": "unavailable",
@@ -1979,12 +1903,15 @@
       }
     },
     {
-      "model": "LongCat 2.5 Free",
+      "model": "LongCat 2.5",
+      "model_id": "longcat-2.5",
+      "selection_id": "opencode-go/longcat-2.5",
+      "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
       "developer": "Meituan",
       "provider": "Unknown (Go upstream routing undisclosed)",
-      "input_price": 0,
-      "output_price": 0,
-      "cached_input": 0,
+      "input_price": 0.3,
+      "output_price": 1.2,
+      "cached_input": 0.006,
       "context": "1,000,000 (live Go endpoint; max output 262,144)",
       "reasoning": true,
       "benchmark": "N/A",
@@ -1997,27 +1924,32 @@
       "value_grade": "N/A",
       "privacy_risk": "Medium",
       "positioning": [
-        "가성비 우선",
-        "무료"
+        "가성비 우선"
       ],
+      "notes": "2026-11-23 KST: LongCat 2.5 is now a paid Go model. The official Go limits/pricing table on the Go landing page publishes 11,400 (Go) / 45,700 (Go Plus) estimated requests per 5 hours and $60 (Go) / $240 (Go Plus) monthly usage; the Go privacy table lists LongCat 2.5 with 0-day retention, no training, and states the provider is hosted in China and requires Global regions in workspace privacy settings; the live Go models endpoint serves longcat-2.5 (meituan/longcat-2.5, release 2026-11-02) at $0.30 input / $1.20 output / $0.006 cached read / $0 cache write per 1M tokens, context 1,000,000, max output 262,144, reasoning toggle. The earlier free longcat-2.5-free offering is gone from all three sources and the Console deprecated-models table dates 'LongCat 2.5 Free' November 22, 2026, so this row is rewritten from free to paid rather than duplicated. Discrepancy recorded, not resolved: the landing page badges the row 'Limited regions' while the live endpoint metadata sets limited_regions to false; the China hosting statement and the required Global region setting are treated as the region limit. Upstream routing and cross-border transfer beyond the China hosting statement are not established. No independent Terminal-Bench 4.0 evaluation for this model was verified, so the row is excluded from Coding/Value rather than scored low.",
       "sources": [
         "https://opencode.ai/docs/go/",
         "https://opencode.ai/inference/go/v1/models"
       ],
-      "notes": "Added 2026-11-10 KST: the official Go model list, the Go/Go Plus/Go Teams price tables, the estimated-request table, the endpoint table, the privacy table and the live Go models endpoint all list longcat-2.5-free. Free input, output and cached read; monthly limit Unlimited and estimated requests Unlimited; free only for a limited time with no published end date. Privacy table: training not used, retention 0 days, but the official note states the provider is hosted in China and that Global regions must be selected in workspace settings. Live Go endpoint metadata: multimodal reasoning model, release 2026-11-02, text and image input, context 1,000,000, max output 262,144, reasoning toggle, cost 0. Upstream routing, processing region and cross-border transfer beyond the China hosting statement are not established. No independent Terminal-Bench 4.0 evaluation exists yet (Artificial Analysis still lists only LongCat 2.0), so this row is excluded from Coding/Value rather than scored low.",
+      "reasoning_effort": "toggle; no effort levels published on the Go endpoint",
       "capability_source": "https://opencode.ai/inference/go/v1/models",
       "price_tiers": [
         {
-          "label": "LongCat 2.5 Free",
-          "input_price": 0,
-          "output_price": 0,
-          "cached_input": 0,
-          "cached_write": null
+          "label": "LongCat 2.5",
+          "input_price": 0.3,
+          "output_price": 1.2,
+          "cached_input": 0.006,
+          "cached_write": 0
         }
       ],
       "source": "https://opencode.ai/docs/go/",
-      "checked_at": "2026-11-10",
-      "cached_write": null
+      "checked_at": "2026-11-23",
+      "cached_write": 0,
+      "coding_evaluation": {
+        "status": "unavailable",
+        "reason": "LongCat 2.5에 대한 독립 Terminal-Bench 4.0 평가를 확인하지 못했습니다. 미평가이며 0점이 아니므로 Coding/Value 계산에서 제외합니다.",
+        "checked_at": "2026-11-23"
+      }
     },
     {
       "model": "Hy4 flash Free",
