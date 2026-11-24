@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-23",
+  "as_of": "2026-11-25",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -1756,6 +1756,55 @@
         "checked_at": "2026-10-21"
       },
       "benchmark_source": "https://artificialanalysis.ai/models/reflection-beam"
+    },
+    {
+      "model": "HungerG Free",
+      "model_id": "hungerg-free",
+      "selection_id": "opencode-go/hungerg-free",
+      "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "developer": "Unknown (stealth model; developer not disclosed)",
+      "provider": "Unknown (Go upstream routing undisclosed)",
+      "input_price": 0,
+      "output_price": 0,
+      "cached_input": 0,
+      "context": "1,048,576 (live Go endpoint; max output 65,536)",
+      "reasoning": true,
+      "benchmark": "N/A",
+      "training": "No Training",
+      "retention": "Not published (no row in the Go privacy table; live Go endpoint reports ZDR)",
+      "chinese_model": null,
+      "hosting": "Unknown (Go hosting region undisclosed)",
+      "china_transfer": "Unknown",
+      "coding_grade": "N/A",
+      "value_grade": "N/A",
+      "privacy_risk": "Medium",
+      "positioning": [
+        "무료"
+      ],
+      "notes": "Added 2026-11-25 KST: the Go landing page (New badge, banner 'HungerG is now available in Go', Unlimited monthly limit and unlimited estimated requests), the Go docs privacy section ('HungerG Free: Free for a limited time. No data training.') and the live Go models endpoint (hungerg-free, release 2026-11-24) all list this model, so it is an active Go offering rather than a served-only ID. Free input, output and cached read; the unlimited monthly limit and request estimates apply only for the limited-time promotion, whose end date is not published. The official Go privacy table carries no retention row for HungerG Free, so retention stays unpublished; the live endpoint reports zdr true and training false. Unlike Beam Free the landing page adds no limited-regions badge, and the docs name no regional restriction. Live Go endpoint metadata: stealth reasoning model, tools supported, text/image/video input, context 1,048,576, output 65,536, open_weights false. No independent Terminal-Bench 4.0 evaluation exists for this stealth model, so the row is excluded from Coding/Value instead of being scored low.",
+      "sources": [
+        "https://opencode.ai/docs/go/",
+        "https://opencode.ai/go",
+        "https://opencode.ai/inference/go/v1/models"
+      ],
+      "capability_source": "https://opencode.ai/inference/go/v1/models",
+      "price_tiers": [
+        {
+          "label": "HungerG Free",
+          "input_price": 0,
+          "output_price": 0,
+          "cached_input": 0,
+          "cached_write": null
+        }
+      ],
+      "source": "https://opencode.ai/docs/go/",
+      "checked_at": "2026-11-25",
+      "cached_write": null,
+      "coding_evaluation": {
+        "status": "unavailable",
+        "reason": "2026-11-24 공개된 stealth 무료 모델로 개발사·원모델 checkpoint가 공개되지 않아 독립 Terminal-Bench 4.0 평가가 없습니다. 미평가이며 0점이 아니므로 Coding/Value 계산에서 제외합니다.",
+        "checked_at": "2026-11-25"
+      }
     },
     {
       "model": "Iceman Contributor Free",

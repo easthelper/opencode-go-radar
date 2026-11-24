@@ -4760,6 +4760,13 @@
       "evidence": "https://models.opencode.ai/api.json",
       "note": "공식 canonical_model_id 대응. 원모델 참고 평가이며 이 제공 endpoint의 실측이 아닙니다."
     },
+    "go:HungerG Free": {
+      "catalog_id": null,
+      "status": "unmapped",
+      "selection_id": "opencode-go/hungerg-free",
+      "evidence": "https://opencode.ai/inference/go/v1/models",
+      "note": "Go endpoint는 hungerg-free를 stealth 모델(release 2026-11-24)로 제공하고 canonical_id를 노출하지 않습니다. 이 비교 스냅샷(checked 2026-11-18, population 608)은 해당 모델보다 먼저 생성되어 catalog_id 대응을 주장하지 않습니다. 익명·불명확 모델은 추정하지 않습니다."
+    },
     "go:Iceman Contributor Free": {
       "catalog_id": null,
       "status": "unmapped",
