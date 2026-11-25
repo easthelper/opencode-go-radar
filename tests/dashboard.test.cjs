@@ -95,7 +95,7 @@ assert.ok(run('privacyFilterDetails({retention:"0 days (ZDR valid through 2020-0
 const goRows=go.models.map(m=>({...m,offering:'go'})),all=[...goRows,...con.models];
 for(const offering of ['go-free','go','console-free','console-payg','']) for(const a of [false,true]) for(const b of [false,true]){
  el('#offering').value=offering;el('#no-training').checked=a;el('#zero-retention').checked=b;
- const expected=all.filter(m=>(!offering||(offering==='go-free'?['go','console-free'].includes(m.offering):m.offering===offering))&&(!a||m.training==='No Training')&&(!b||m.retention==='0 days'||m.retention==='0 days (ZDR valid through 2026-11-30)')).length;
+ const expected=all.filter(m=>(!offering||(offering==='go-free'?['go','console-free'].includes(m.offering):m.offering===offering))&&(!a||m.training==='No Training')&&(!b||m.retention==='0 days'||m.retention==='0 days (ZDR valid through 2026-12-31)')).length;
  assert.equal(run('filtered().length'),expected);
 }
 const before=JSON.stringify(run('state.rows.map(m=>valueIndex(m))'));
