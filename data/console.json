@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-27",
+  "as_of": "2026-11-28",
   "schema_version": 1,
   "scope": "Official OpenCode Console (Zen) endpoint/pricing catalog only; arbitrary third-party provider catalogs excluded.",
   "sources": [
@@ -2473,8 +2473,8 @@
       "privacy_risk": "Medium",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-10-16",
-      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings.",
+      "checked_at": "2026-11-28",
+      "notes": "Console offering; Go subscription limits and Go routing/privacy claims do not apply. Context, reasoning and benchmarks are not inferred from other offerings. 2026-11-28 KST: still listed in the official Console endpoint table and pricing table ($0.95 / $4.00 / $0.16 cached read per 1M tokens), but the live public Console models endpoint no longer returns kimi-k2.6 (110 models), so serving is unconfirmed and the row stays active with the gap recorded rather than retired. The official deprecated-models table does not list it.",
       "limits": "Pay-as-you-go credits; workspace/member budgets are configurable, not included Go quota.",
       "promotion": null,
       "promotion_end": null,
@@ -3694,8 +3694,8 @@
       "privacy_risk": "High",
       "positioning": [],
       "source": "https://opencode.ai/v2/docs/console/models/",
-      "checked_at": "2026-11-22",
-      "notes": "Added 2026-11-22 KST: the official Console endpoint table, the pricing table (Free), the free-model section and the privacy section all list Tidepool Alpha Free, and the live public Console models endpoint returns tidepool-alpha-free (stealth reasoning model, release 2026-11-18, text input/output, effort levels minimal/low/medium/high/xhigh/max, cost 0, context 1,048,576, max output 131,072). Official privacy: during its free period, collected data is retained and used to improve the model. No developer identity, region restriction or benchmark is published, so Coding/Value are excluded rather than scored low. This is a Console offering: Go subscription limits, Go ZDR terms and Go quota do not apply.",
+      "checked_at": "2026-11-28",
+      "notes": "Added 2026-11-22 KST: the official Console endpoint table, the pricing table (Free), the free-model section and the privacy section all list Tidepool Alpha Free, and the live public Console models endpoint returns tidepool-alpha-free (stealth reasoning model, release 2026-11-18, text input/output, effort levels minimal/low/medium/high/xhigh/max, cost 0, context 1,048,576, max output 131,072). Official privacy: during its free period, collected data is retained and used to improve the model. No developer identity, region restriction or benchmark is published, so Coding/Value are excluded rather than scored low. This is a Console offering: Go subscription limits, Go ZDR terms and Go quota do not apply. 2026-11-28 KST: the live public Console models endpoint no longer returns tidepool-alpha-free, although the official endpoint table, pricing table (Free), free-model section and privacy section still list it; the earlier note that the endpoint served it is corrected and the row stays active with the gap recorded. Serving is unconfirmed.",
       "limits": "Not disclosed; free does not establish unlimited usage. The official pages publish no numeric Console free-model request limit, so no number is recorded. No region restriction is published for this model. Free-tier chat models require OpenCode. Separate from Go free/unlimited promotional allowances.",
       "promotion": "Limited-time free; end date unknown",
       "promotion_end": null,

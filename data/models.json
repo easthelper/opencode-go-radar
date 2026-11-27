@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-26",
+  "as_of": "2026-11-28",
   "workload": {
     "input_tokens": 1000000,
     "output_tokens": 200000
@@ -1243,7 +1243,7 @@
         "성능 우선",
         "가성비 우선"
       ],
-      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Native API deepseek-flash now V4.1-Flash-1017 per https://api-docs.deepseek.com/ ; no proof Go same checkpoint. Go zero-retention agreement is renewed monthly and the current agreement is valid through December 31, 2026. 2026-11-26 KST: the official Go privacy section moved the DeepSeek ZDR end date forward from 2026-11-30 to 2026-12-31, so the retention field is updated to match. Peak pricing applies Monday–Friday 01:00–04:00 and 06:00–10:00 UTC; all other times, including weekends, are off-peak. Go checkpoint is unconfirmed. Official Go workspace privacy settings govern access: the owner or admin must allow Global under Settings > Privacy > Regions for this restricted model. This access setting does not establish the upstream hosting or processing region.",
+      "notes": "Go training/retention verified in official privacy table. Upstream routing, hosting region and cross-border transfer are not established. Context/reasoning are native developer model specifications; Go limits and effort exposure are unverified. Native API deepseek-flash now V4.1-Flash-1017 per https://api-docs.deepseek.com/ ; no proof Go same checkpoint. Go zero-retention agreement is renewed monthly and the current agreement is valid through December 31, 2026. 2026-11-26 KST: the official Go privacy section moved the DeepSeek ZDR end date forward from 2026-11-30 to 2026-12-31, so the retention field is updated to match. Peak pricing applies Monday–Friday 01:00–04:00 and 06:00–10:00 UTC; all other times, including weekends, are off-peak. 2026-11-28 KST: the Go landing limits table (https://opencode.ai/go) and the live Go models endpoint both display this offering as \"DeepSeek V4.1 Flash 1017\", matching the checkpoint Artificial Analysis evaluated, while the Go docs privacy table still prints the short name; the earlier note that the Go checkpoint was unconfirmed is withdrawn. The display label is the only official evidence of the served checkpoint and no separate official statement ties it to an API checkpoint, so the coding evaluation stays unconfirmed rather than re-scored. Token prices, monthly usage and request estimates are unchanged. Official Go workspace privacy settings govern access: the owner or admin must allow Global under Settings > Privacy > Regions for this restricted model. This access setting does not establish the upstream hosting or processing region.",
       "sources": [
         "https://opencode.ai/v2/docs/console/go/#privacy",
         "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
@@ -1266,7 +1266,7 @@
         }
       ],
       "source": "https://opencode.ai/v2/docs/console/go/",
-      "checked_at": "2026-11-02",
+      "checked_at": "2026-11-28",
       "cached_write": null,
       "coding_evaluation": {
         "status": "checkpoint_unconfirmed",
